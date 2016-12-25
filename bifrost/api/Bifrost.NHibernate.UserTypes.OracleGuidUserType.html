@@ -1,0 +1,692 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class OracleGuidUserType
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class OracleGuidUserType
+   ">
+    <meta name="generator" content="docfx 2.9.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Bifrost_NHibernate_UserTypes_OracleGuidUserType" data-uid="Bifrost.NHibernate.UserTypes.OracleGuidUserType">Class OracleGuidUserType
+              </h1>
+              <div class="markdown level0 summary"><p>A User type that wraps up transforming between a .NET type of Guid and the RAW(16) data type in Oracle</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">OracleGuidUserType</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Bifrost.NHibernate.UserTypes</h6>
+              <h6><strong>Assembly</strong>:Bifrost.NHibernate.dll</h6>
+              <h5 id="Bifrost_NHibernate_UserTypes_OracleGuidUserType_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public class OracleGuidUserType : IUserType</code></pre>
+              </div>
+              <h3 id="properties">Properties
+              </h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_NHibernate_UserTypes_OracleGuidUserType_IsMutable.md&amp;value=---%0Auid%3A%20Bifrost.NHibernate.UserTypes.OracleGuidUserType.IsMutable%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.NHibernate/UserTypes/OracleGuidUserType.cs/#L60">View Source</a>
+              </span>
+              <a id="Bifrost_NHibernate_UserTypes_OracleGuidUserType_IsMutable_" data-uid="Bifrost.NHibernate.UserTypes.OracleGuidUserType.IsMutable*"></a>
+              <h4 id="Bifrost_NHibernate_UserTypes_OracleGuidUserType_IsMutable" data-uid="Bifrost.NHibernate.UserTypes.OracleGuidUserType.IsMutable">IsMutable</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool IsMutable { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">NHibernate.UserTypes.IUserType.IsMutable</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_NHibernate_UserTypes_OracleGuidUserType_ReturnedType.md&amp;value=---%0Auid%3A%20Bifrost.NHibernate.UserTypes.OracleGuidUserType.ReturnedType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.NHibernate/UserTypes/OracleGuidUserType.cs/#L91">View Source</a>
+              </span>
+              <a id="Bifrost_NHibernate_UserTypes_OracleGuidUserType_ReturnedType_" data-uid="Bifrost.NHibernate.UserTypes.OracleGuidUserType.ReturnedType*"></a>
+              <h4 id="Bifrost_NHibernate_UserTypes_OracleGuidUserType_ReturnedType" data-uid="Bifrost.NHibernate.UserTypes.OracleGuidUserType.ReturnedType">ReturnedType</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Type ReturnedType { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">NHibernate.UserTypes.IUserType.ReturnedType</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_NHibernate_UserTypes_OracleGuidUserType_SqlTypes.md&amp;value=---%0Auid%3A%20Bifrost.NHibernate.UserTypes.OracleGuidUserType.SqlTypes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.NHibernate/UserTypes/OracleGuidUserType.cs/#L96">View Source</a>
+              </span>
+              <a id="Bifrost_NHibernate_UserTypes_OracleGuidUserType_SqlTypes_" data-uid="Bifrost.NHibernate.UserTypes.OracleGuidUserType.SqlTypes*"></a>
+              <h4 id="Bifrost_NHibernate_UserTypes_OracleGuidUserType_SqlTypes" data-uid="Bifrost.NHibernate.UserTypes.OracleGuidUserType.SqlTypes">SqlTypes</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public SqlType[] SqlTypes { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">NHibernate.SqlTypes.SqlType</span>[]</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">NHibernate.UserTypes.IUserType.SqlTypes</span></div>
+              <h3 id="methods">Methods
+              </h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_NHibernate_UserTypes_OracleGuidUserType_Assemble_System_Object_System_Object_.md&amp;value=---%0Auid%3A%20Bifrost.NHibernate.UserTypes.OracleGuidUserType.Assemble(System.Object%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.NHibernate/UserTypes/OracleGuidUserType.cs/#L35">View Source</a>
+              </span>
+              <a id="Bifrost_NHibernate_UserTypes_OracleGuidUserType_Assemble_" data-uid="Bifrost.NHibernate.UserTypes.OracleGuidUserType.Assemble*"></a>
+              <h4 id="Bifrost_NHibernate_UserTypes_OracleGuidUserType_Assemble_System_Object_System_Object_" data-uid="Bifrost.NHibernate.UserTypes.OracleGuidUserType.Assemble(System.Object,System.Object)">Assemble(Object, Object)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public object Assemble(object cached, object owner)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><span class="parametername">cached</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><span class="parametername">owner</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">NHibernate.UserTypes.IUserType.Assemble(System.Object, System.Object)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_NHibernate_UserTypes_OracleGuidUserType_DeepCopy_System_Object_.md&amp;value=---%0Auid%3A%20Bifrost.NHibernate.UserTypes.OracleGuidUserType.DeepCopy(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.NHibernate/UserTypes/OracleGuidUserType.cs/#L45">View Source</a>
+              </span>
+              <a id="Bifrost_NHibernate_UserTypes_OracleGuidUserType_DeepCopy_" data-uid="Bifrost.NHibernate.UserTypes.OracleGuidUserType.DeepCopy*"></a>
+              <h4 id="Bifrost_NHibernate_UserTypes_OracleGuidUserType_DeepCopy_System_Object_" data-uid="Bifrost.NHibernate.UserTypes.OracleGuidUserType.DeepCopy(System.Object)">DeepCopy(Object)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public object DeepCopy(object value)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><span class="parametername">value</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">NHibernate.UserTypes.IUserType.DeepCopy(System.Object)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_NHibernate_UserTypes_OracleGuidUserType_Disassemble_System_Object_.md&amp;value=---%0Auid%3A%20Bifrost.NHibernate.UserTypes.OracleGuidUserType.Disassemble(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.NHibernate/UserTypes/OracleGuidUserType.cs/#L50">View Source</a>
+              </span>
+              <a id="Bifrost_NHibernate_UserTypes_OracleGuidUserType_Disassemble_" data-uid="Bifrost.NHibernate.UserTypes.OracleGuidUserType.Disassemble*"></a>
+              <h4 id="Bifrost_NHibernate_UserTypes_OracleGuidUserType_Disassemble_System_Object_" data-uid="Bifrost.NHibernate.UserTypes.OracleGuidUserType.Disassemble(System.Object)">Disassemble(Object)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public object Disassemble(object value)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><span class="parametername">value</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">NHibernate.UserTypes.IUserType.Disassemble(System.Object)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_NHibernate_UserTypes_OracleGuidUserType_Equals_System_Object_System_Object_.md&amp;value=---%0Auid%3A%20Bifrost.NHibernate.UserTypes.OracleGuidUserType.Equals(System.Object%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.NHibernate/UserTypes/OracleGuidUserType.cs/#L40">View Source</a>
+              </span>
+              <a id="Bifrost_NHibernate_UserTypes_OracleGuidUserType_Equals_" data-uid="Bifrost.NHibernate.UserTypes.OracleGuidUserType.Equals*"></a>
+              <h4 id="Bifrost_NHibernate_UserTypes_OracleGuidUserType_Equals_System_Object_System_Object_" data-uid="Bifrost.NHibernate.UserTypes.OracleGuidUserType.Equals(System.Object,System.Object)">Equals(Object, Object)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool Equals(object x, object y)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><span class="parametername">x</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><span class="parametername">y</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">NHibernate.UserTypes.IUserType.Equals(System.Object, System.Object)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_NHibernate_UserTypes_OracleGuidUserType_GetHashCode_System_Object_.md&amp;value=---%0Auid%3A%20Bifrost.NHibernate.UserTypes.OracleGuidUserType.GetHashCode(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.NHibernate/UserTypes/OracleGuidUserType.cs/#L55">View Source</a>
+              </span>
+              <a id="Bifrost_NHibernate_UserTypes_OracleGuidUserType_GetHashCode_" data-uid="Bifrost.NHibernate.UserTypes.OracleGuidUserType.GetHashCode*"></a>
+              <h4 id="Bifrost_NHibernate_UserTypes_OracleGuidUserType_GetHashCode_System_Object_" data-uid="Bifrost.NHibernate.UserTypes.OracleGuidUserType.GetHashCode(System.Object)">GetHashCode(Object)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public int GetHashCode(object x)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><span class="parametername">x</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">NHibernate.UserTypes.IUserType.GetHashCode(System.Object)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_NHibernate_UserTypes_OracleGuidUserType_NullSafeGet_System_Data_IDataReader_System_String___System_Object_.md&amp;value=---%0Auid%3A%20Bifrost.NHibernate.UserTypes.OracleGuidUserType.NullSafeGet(System.Data.IDataReader%2CSystem.String%5B%5D%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.NHibernate/UserTypes/OracleGuidUserType.cs/#L65">View Source</a>
+              </span>
+              <a id="Bifrost_NHibernate_UserTypes_OracleGuidUserType_NullSafeGet_" data-uid="Bifrost.NHibernate.UserTypes.OracleGuidUserType.NullSafeGet*"></a>
+              <h4 id="Bifrost_NHibernate_UserTypes_OracleGuidUserType_NullSafeGet_System_Data_IDataReader_System_String___System_Object_" data-uid="Bifrost.NHibernate.UserTypes.OracleGuidUserType.NullSafeGet(System.Data.IDataReader,System.String[],System.Object)">NullSafeGet(IDataReader, String[], Object)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public object NullSafeGet(IDataReader rs, string[] names, object owner)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Data.IDataReader</span></td>
+                    <td><span class="parametername">rs</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span>[]</td>
+                    <td><span class="parametername">names</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><span class="parametername">owner</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">NHibernate.UserTypes.IUserType.NullSafeGet(System.Data.IDataReader, System.String[], System.Object)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_NHibernate_UserTypes_OracleGuidUserType_NullSafeSet_System_Data_IDbCommand_System_Object_System_Int32_.md&amp;value=---%0Auid%3A%20Bifrost.NHibernate.UserTypes.OracleGuidUserType.NullSafeSet(System.Data.IDbCommand%2CSystem.Object%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.NHibernate/UserTypes/OracleGuidUserType.cs/#L76">View Source</a>
+              </span>
+              <a id="Bifrost_NHibernate_UserTypes_OracleGuidUserType_NullSafeSet_" data-uid="Bifrost.NHibernate.UserTypes.OracleGuidUserType.NullSafeSet*"></a>
+              <h4 id="Bifrost_NHibernate_UserTypes_OracleGuidUserType_NullSafeSet_System_Data_IDbCommand_System_Object_System_Int32_" data-uid="Bifrost.NHibernate.UserTypes.OracleGuidUserType.NullSafeSet(System.Data.IDbCommand,System.Object,System.Int32)">NullSafeSet(IDbCommand, Object, Int32)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void NullSafeSet(IDbCommand cmd, object value, int index)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Data.IDbCommand</span></td>
+                    <td><span class="parametername">cmd</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><span class="parametername">value</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td><span class="parametername">index</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">NHibernate.UserTypes.IUserType.NullSafeSet(System.Data.IDbCommand, System.Object, System.Int32)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_NHibernate_UserTypes_OracleGuidUserType_Replace_System_Object_System_Object_System_Object_.md&amp;value=---%0Auid%3A%20Bifrost.NHibernate.UserTypes.OracleGuidUserType.Replace(System.Object%2CSystem.Object%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.NHibernate/UserTypes/OracleGuidUserType.cs/#L86">View Source</a>
+              </span>
+              <a id="Bifrost_NHibernate_UserTypes_OracleGuidUserType_Replace_" data-uid="Bifrost.NHibernate.UserTypes.OracleGuidUserType.Replace*"></a>
+              <h4 id="Bifrost_NHibernate_UserTypes_OracleGuidUserType_Replace_System_Object_System_Object_System_Object_" data-uid="Bifrost.NHibernate.UserTypes.OracleGuidUserType.Replace(System.Object,System.Object,System.Object)">Replace(Object, Object, Object)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public object Replace(object original, object target, object owner)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><span class="parametername">original</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><span class="parametername">target</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><span class="parametername">owner</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><span class="xref">NHibernate.UserTypes.IUserType.Replace(System.Object, System.Object, System.Object)</span></div>
+              <h3 id="extensionmethods">Extension Methods</h3>
+              <div>
+                  <a class="xref" href="Bifrost.Concepts.ConceptExtensions.html#Bifrost_Concepts_ConceptExtensions_IsConcept_System_Object_">ConceptExtensions.IsConcept(Object)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Concepts.ConceptExtensions.html#Bifrost_Concepts_ConceptExtensions_GetConceptValue_System_Object_">ConceptExtensions.GetConceptValue(Object)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Dynamic.DynamicExtensions.html#Bifrost_Dynamic_DynamicExtensions_AsExpandoObject_System_Object_">DynamicExtensions.AsExpandoObject(Object)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Extensions.MethodCalls.html#Bifrost_Extensions_MethodCalls_CallGenericMethod__5___1_System_Linq_Expressions_Expression_System_Func___1_System_Func___2___3___4___0______2___3___4_System_Type___">MethodCalls.CallGenericMethod&lt;TOut, T, T1, T2, T3&gt;(T, Expression&lt;Func&lt;T, Func&lt;T1, T2, T3, TOut&gt;&gt;&gt;, T1, T2, T3, Type[])</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Extensions.MethodCalls.html#Bifrost_Extensions_MethodCalls_CallGenericMethod__4___1_System_Linq_Expressions_Expression_System_Func___1_System_Func___2___3___0______2___3_System_Type___">MethodCalls.CallGenericMethod&lt;TOut, T, T1, T2&gt;(T, Expression&lt;Func&lt;T, Func&lt;T1, T2, TOut&gt;&gt;&gt;, T1, T2, Type[])</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Extensions.MethodCalls.html#Bifrost_Extensions_MethodCalls_CallGenericMethod__3___1_System_Linq_Expressions_Expression_System_Func___1_System_Func___2___0______2_System_Type___">MethodCalls.CallGenericMethod&lt;TOut, T, T1&gt;(T, Expression&lt;Func&lt;T, Func&lt;T1, TOut&gt;&gt;&gt;, T1, Type[])</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Extensions.MethodCalls.html#Bifrost_Extensions_MethodCalls_CallGenericMethod__2___1_System_Linq_Expressions_Expression_System_Func___1_System_Func___0____System_Type___">MethodCalls.CallGenericMethod&lt;TOut, T&gt;(T, Expression&lt;Func&lt;T, Func&lt;TOut&gt;&gt;&gt;, Type[])</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Extensions.MethodCalls.html#Bifrost_Extensions_MethodCalls_Generics__1___0_">MethodCalls.Generics&lt;T&gt;(T)</a>
+              </div>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_NHibernate_UserTypes_OracleGuidUserType.md&amp;value=---%0Auid%3A%20Bifrost.NHibernate.UserTypes.OracleGuidUserType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.NHibernate/UserTypes/OracleGuidUserType.cs/#L30" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2008-2017 Dolittle<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

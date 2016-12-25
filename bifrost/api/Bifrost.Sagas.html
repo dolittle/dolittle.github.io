@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Bifrost.Sagas
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Bifrost.Sagas
+   ">
+    <meta name="generator" content="docfx 2.9.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              <h1 id="Bifrost_Sagas" data-uid="Bifrost.Sagas">Namespace Bifrost.Sagas
+              </h1>
+              <div class="markdown level0 summary"></div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="markdown level0 remarks"></div>
+                <h3 id="classes">Classes
+              </h3>
+                  <h4><a class="xref" href="Bifrost.Sagas.Chapter.html">Chapter</a></h4>
+                  <section><p>Represents a <a class="xref" href="Bifrost.Sagas.IChapter.html">IChapter</a></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Sagas.ChapterAlreadyExistException.html">ChapterAlreadyExistException</a></h4>
+                  <section><p>The exception that is thrown if a <a class="xref" href="Bifrost.Sagas.IChapter.html">IChapter</a> already exists within a <a class="xref" href="Bifrost.Sagas.ISaga.html">ISaga</a></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Sagas.ChapterDoesNotExistException.html">ChapterDoesNotExistException</a></h4>
+                  <section><p>The exception that is thrown if a <a class="xref" href="Bifrost.Sagas.IChapter.html">IChapter</a> does not exist in a <a class="xref" href="Bifrost.Sagas.ISaga.html">ISaga</a></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Sagas.ChapterHolder.html">ChapterHolder</a></h4>
+                  <section><p>Represents a holder for a <a class="xref" href="Bifrost.Sagas.IChapter.html">IChapter</a>, typically used for serializing a chapter</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Sagas.ChapterTransition.html">ChapterTransition</a></h4>
+                  <section><p>Represents the result of a transition between <a class="xref" href="Bifrost.Sagas.IChapter.html">IChapter</a> </p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Sagas.ChapterTransitionHelper.html">ChapterTransitionHelper</a></h4>
+                  <section><p>Provides helper methods for chapters and transitions</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Sagas.ChapterTransitionNotAllowedException.html">ChapterTransitionNotAllowedException</a></h4>
+                  <section><p>The exception that is thrown if a transition between two chapters are not allowed</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Sagas.Constants.html">Constants</a></h4>
+                  <section><p>Constants that are used within Bifrost.Sagas</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Sagas.NullSagaLibrarian.html">NullSagaLibrarian</a></h4>
+                  <section><p>Represents a null implementation of <a class="xref" href="Bifrost.Sagas.ISagaLibrarian.html">ISagaLibrarian</a></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Sagas.Saga.html">Saga</a></h4>
+                  <section><p>Represents a <a class="xref" href="Bifrost.Sagas.ISaga.html">ISaga</a></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Sagas.SagaCommandContext.html">SagaCommandContext</a></h4>
+                  <section><p>Represents a <a class="xref" href="Bifrost.Commands.ICommandContext.html">ICommandContext</a> as a <a class="xref" href="Bifrost.Lifecycle.ITransaction.html">ITransaction</a> for a <a class="xref" href="Bifrost.Commands.ICommand.html">ICommand</a> applied to a <a class="xref" href="Bifrost.Sagas.ISaga.html">ISaga</a></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Sagas.SagaConclusion.html">SagaConclusion</a></h4>
+                  <section><p>Represents the conclusion of a saga</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Sagas.SagaConverter.html">SagaConverter</a></h4>
+                  <section><p>Represents a <a class="xref" href="Bifrost.Sagas.ISagaConverter.html">ISagaConverter</a></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Sagas.SagaHolder.html">SagaHolder</a></h4>
+                  <section><p>Represents a holder for a <a class="xref" href="Bifrost.Sagas.ISaga.html">ISaga</a> for persisting purposes</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Sagas.SagaLibrarian.html">SagaLibrarian</a></h4>
+                  <section><p>Represents a <a class="xref" href="Bifrost.Sagas.ISagaLibrarian.html">ISagaLibrarian</a></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Sagas.SagaNarrator.html">SagaNarrator</a></h4>
+                  <section><p>Represents a <a class="xref" href="Bifrost.Sagas.ISagaNarrator.html">ISagaNarrator</a></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Sagas.SagaNotInChapterException.html">SagaNotInChapterException</a></h4>
+                  <section><p>The exception that is thrown when a <a class="xref" href="Bifrost.Sagas.ISaga.html">ISaga</a> is not in a <a class="xref" href="Bifrost.Sagas.IChapter.html">IChapter</a></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Sagas.SagaState.html">SagaState</a></h4>
+                  <section><p>Represents the state of a saga</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Sagas.State.html">State</a></h4>
+                  <section><p>Represents a state used in a <a class="xref" href="Bifrost.Sagas.ISaga.html">ISaga</a></p>
+</section>
+                <h3 id="interfaces">Interfaces
+              </h3>
+                  <h4><a class="xref" href="Bifrost.Sagas.ICanTransitionTo-1.html">ICanTransitionTo&lt;T&gt;</a></h4>
+                  <section><p>Defines a marker interface to allow transitions between chapters</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Sagas.IChapter.html">IChapter</a></h4>
+                  <section><p>Defines a chapter in a <a class="xref" href="Bifrost.Sagas.ISaga.html">ISaga</a></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Sagas.IChapterValidationService.html">IChapterValidationService</a></h4>
+                  <section><p>Validates that the chapter is valid and conforms to specified business rules</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Sagas.ISaga.html">ISaga</a></h4>
+                  <section><p>Defines a saga</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Sagas.ISagaConverter.html">ISagaConverter</a></h4>
+                  <section><p>Defines a converter for converting a <a class="xref" href="Bifrost.Sagas.ISaga.html">ISaga</a> to a <a class="xref" href="Bifrost.Sagas.SagaHolder.html">SagaHolder</a> and back</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Sagas.ISagaLibrarian.html">ISagaLibrarian</a></h4>
+                  <section><p>Defines a librarian for handling sagas</p>
+<p>The purpose of the librarian is to persist and get a <a class="xref" href="Bifrost.Sagas.ISaga.html">ISaga</a> or multiple
+sagas</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Sagas.ISagaNarrator.html">ISagaNarrator</a></h4>
+                  <section><p>Defines the recorder for <a class="xref" href="Bifrost.Sagas.ISaga.html">ISaga</a></p>
+</section>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Sagas.md&amp;value=---%0Auid%3A%20Bifrost.Sagas%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2008-2017 Dolittle<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

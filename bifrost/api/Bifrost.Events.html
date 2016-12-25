@@ -1,0 +1,279 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Bifrost.Events
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Bifrost.Events
+   ">
+    <meta name="generator" content="docfx 2.9.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              <h1 id="Bifrost_Events" data-uid="Bifrost.Events">Namespace Bifrost.Events
+              </h1>
+              <div class="markdown level0 summary"></div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="markdown level0 remarks"></div>
+                <h3 id="classes">Classes
+              </h3>
+                  <h4><a class="xref" href="Bifrost.Events.AsynchronousUncommittedEventStreamCoordinator.html">AsynchronousUncommittedEventStreamCoordinator</a></h4>
+                  <section><p>Represents a <a class="xref" href="Bifrost.Events.IUncommittedEventStreamCoordinator.html">IUncommittedEventStreamCoordinator</a> that commits asynchronously</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.CommittedEventStream.html">CommittedEventStream</a></h4>
+                  <section><p>Represents a special version of an <a class="xref" href="Bifrost.Events.EventStream.html">EventStream</a>
+that holds committed <a class="xref" href="Bifrost.Events.IEvent.html">IEvent</a></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.DuplicateInEventMigrationHierarchyException.html">DuplicateInEventMigrationHierarchyException</a></h4>
+                  <section><p>Represents an exceptional situation where an event in an <a class="xref" href="Bifrost.Events.EventMigrationHierarchy.html">EventMigrationHierarchy</a>
+has more than one migration path.</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.Event.html">Event</a></h4>
+                  <section><p>Represents an event</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.EventExtensions.html">EventExtensions</a></h4>
+                  <section><p>Extensions for an enumerable of <a class="xref" href="Bifrost.Events.IEvent.html">IEvent</a> </p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.EventMigrationHierarchy.html">EventMigrationHierarchy</a></h4>
+                  <section><p>Represents a migration hierarchy for a logical event, containing the concrete type for each step in the chain.</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.EventMigrationHierarchyDiscoverer.html">EventMigrationHierarchyDiscoverer</a></h4>
+                  <section><p>Represents a <a class="xref" href="Bifrost.Events.IEventMigrationHierarchyDiscoverer.html">IEventMigrationHierarchyDiscoverer</a></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.EventMigrationHierarchyManager.html">EventMigrationHierarchyManager</a></h4>
+                  <section><p>Represents a <a class="xref" href="Bifrost.Events.IEventMigrationHierarchyManager.html">IEventMigrationHierarchyManager</a></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.EventMigratorManager.html">EventMigratorManager</a></h4>
+                  <section><p>Represents a <a class="xref" href="Bifrost.Events.IEventMigratorManager.html">IEventMigratorManager</a></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.EventOutOfSequenceException.html">EventOutOfSequenceException</a></h4>
+                  <section><p>The exception that is thrown when an <a class="xref" href="Bifrost.Events.IEvent.html">IEvent</a> is out of sequence in an <a class="xref" href="Bifrost.Events.EventStream.html">EventStream</a></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.EventSource.html">EventSource</a></h4>
+                  <section><p>Represents a <a class="xref" href="Bifrost.Events.IEventSource.html">IEventSource</a></p>
+<p>This is a base abstract class for any EventSource</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.EventSourceExtensions.html">EventSourceExtensions</a></h4>
+                  <section><p>Extensions for <a class="xref" href="Bifrost.Events.EventSource.html">EventSource</a></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.EventSourceExtensions.EventSourceHandleMethods-1.html">EventSourceExtensions.EventSourceHandleMethods&lt;T&gt;</a></h4>
+                  <section></section>
+                  <h4><a class="xref" href="Bifrost.Events.EventStoreChangeManager.html">EventStoreChangeManager</a></h4>
+                  <section><p>Represents a <a class="xref" href="Bifrost.Events.IEventStoreChangeManager.html">IEventStoreChangeManager</a></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.EventStream.html">EventStream</a></h4>
+                  <section><p>Represents a collection of events in the order that they were applied.</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.EventSubscriber-1.html">EventSubscriber&lt;T&gt;</a></h4>
+                  <section><p>Represents a base class implementation of an <a class="xref" href="Bifrost.Events.IProcessEvents.html">IProcessEvents</a></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.EventSubscription.html">EventSubscription</a></h4>
+                  <section><p>Represents a subscription for a specific <a class="xref" href="Bifrost.Events.IProcessEvents.html">IProcessEvents</a> and method on it that can receive a method</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.EventSubscriptionManager.html">EventSubscriptionManager</a></h4>
+                  <section><p>Represents an implementation of <a class="xref" href="Bifrost.Events.IEventSubscriptionManager.html">IEventSubscriptionManager</a></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.InvalidFastForwardException.html">InvalidFastForwardException</a></h4>
+                  <section><p>Represents an exceptional situation where an <a class="xref" href="Bifrost.Events.IEventSource.html">IEventSource</a> is stateful 
+but there has been an attempt to retrieve it without restoring state by replaying events (fast-forwarding)</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.InvalidMigrationTypeException.html">InvalidMigrationTypeException</a></h4>
+                  <section><p>Represents an exceptional situation where an <a class="xref" href="Bifrost.Events.IEvent.html">IEvent</a> in an <a class="xref" href="Bifrost.Events.EventMigrationHierarchy.html">EventMigrationHierarchy</a>
+has does not migrate from the previous event in the migration hierarchy.</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.MethodEvent.html">MethodEvent</a></h4>
+                  <section><p>Represents an event that represents a method on a domain object</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.MethodEventArguments.html">MethodEventArguments</a></h4>
+                  <section><p>Represents arguments for a <a class="xref" href="Bifrost.Events.MethodEvent.html">MethodEvent</a></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.MethodEventFactory.html">MethodEventFactory</a></h4>
+                  <section><p>Provides functionality for creating method events</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.MigrationLevelOutOfRangeException.html">MigrationLevelOutOfRangeException</a></h4>
+                  <section><p>Represents an exception situation where a <a class="xref" href="Bifrost.Events.EventMigrationHierarchy.html">EventMigrationHierarchy</a> is
+asked for a concrete type at a level that does not exist.</p>
+<p>This could be a level less than 0, or a level greater than the hierarchy depth.</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.NotAMigratedEventTypeException.html">NotAMigratedEventTypeException</a></h4>
+                  <section><p>Represents an exceptional situation where an <a class="xref" href="Bifrost.Events.IEvent.html">IEvent</a> in an <a class="xref" href="Bifrost.Events.EventMigrationHierarchy.html">EventMigrationHierarchy</a>
+has not implemented the correct <a class="xref" href="Bifrost.Events.IAmNextGenerationOf-1.html">IAmNextGenerationOf&lt;T&gt;</a>.</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.NullEventStore.html">NullEventStore</a></h4>
+                  <section><p>Represents a null implementation of <a class="xref" href="Bifrost.Events.IEventStore.html">IEventStore</a></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.NullEventSubscriptions.html">NullEventSubscriptions</a></h4>
+                  <section><p>Represents a null implementation of <a class="xref" href="Bifrost.Events.IEventSubscriptions.html">IEventSubscriptions</a></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.NullUncommittedEventStreamCoordinator.html">NullUncommittedEventStreamCoordinator</a></h4>
+                  <section><p>A null implementation for <a class="xref" href="Bifrost.Events.IUncommittedEventStreamCoordinator.html">IUncommittedEventStreamCoordinator</a></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.ProcessMethodInvoker.html">ProcessMethodInvoker</a></h4>
+                  <section><p>Represents an implementation of <a class="xref" href="Bifrost.Events.IProcessMethodInvoker.html">IProcessMethodInvoker</a></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.UncommittedEventStream.html">UncommittedEventStream</a></h4>
+                  <section><p>Represents a stream of events that are uncommitted</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.UncommittedEventStreamCoordinator.html">UncommittedEventStreamCoordinator</a></h4>
+                  <section><p>Represents a <a class="xref" href="Bifrost.Events.IUncommittedEventStreamCoordinator.html">IUncommittedEventStreamCoordinator</a></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.UnregisteredEventException.html">UnregisteredEventException</a></h4>
+                  <section><p>Represents an exceptional situation where an <a class="xref" href="Bifrost.Events.IEvent.html">IEvent</a> in an <a class="xref" href="Bifrost.Events.EventMigrationHierarchy.html">EventMigrationHierarchy</a>
+has not been registered as an <a class="xref" href="Bifrost.Events.IEvent.html">IEvent</a>.</p>
+</section>
+                <h3 id="structs">Structs
+              </h3>
+                  <h4><a class="xref" href="Bifrost.Events.EventSourceVersion.html">EventSourceVersion</a></h4>
+                  <section><p>Represents the versioning for an <a class="xref" href="Bifrost.Events.EventSource.html">EventSource</a></p>
+</section>
+                <h3 id="interfaces">Interfaces
+              </h3>
+                  <h4><a class="xref" href="Bifrost.Events.IAmNextGenerationOf-1.html">IAmNextGenerationOf&lt;T&gt;</a></h4>
+                  <section><p>Defines an event which is the subsequent generation of the <a class="xref" href="Bifrost.Events.IEvent.html">IEvent</a></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.IEvent.html">IEvent</a></h4>
+                  <section><p>Defines the basics of an event</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.IEventMigrationHierarchyDiscoverer.html">IEventMigrationHierarchyDiscoverer</a></h4>
+                  <section><p>Defines a discoverer that is able to detect all events and group them into <a class="xref" href="Bifrost.Events.EventMigrationHierarchy.html">EventMigrationHierarchy</a></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.IEventMigrationHierarchyManager.html">IEventMigrationHierarchyManager</a></h4>
+                  <section><p>Defines a manager that is able to determine what the current migration level for an <a class="xref" href="Bifrost.Events.IEvent.html">IEvent</a>
+and what the <span class="xref">System.Type</span> of any specified migration level.</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.IEventMigrator-2.html">IEventMigrator&lt;TIn, TOut&gt;</a></h4>
+                  <section><p>Defines the functionality for a migrator that migrates from an older generation of <a class="xref" href="Bifrost.Events.IEvent.html">IEvent</a> to a newer generation</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.IEventMigratorManager.html">IEventMigratorManager</a></h4>
+                  <section><p>Defines the functionality for a manager that handles the migration of events from older generations to newer generations.</p>
+<p>Migrates an <a class="xref" href="Bifrost.Events.IEvent.html">IEvent</a> to the current generation</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.IEventSource.html">IEventSource</a></h4>
+                  <section><p>An EventSource is a domain object that is capable of generating and applying events.  It is an AggregateRoot in the context
+of event sourcing.</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.IEventStore.html">IEventStore</a></h4>
+                  <section><p>Defines a repository that holds events generated</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.IEventStoreChangeListener.html">IEventStoreChangeListener</a></h4>
+                  <section><p>Defines a listener for changes occuring on a <a class="xref" href="Bifrost.Events.IEventStore.html">IEventStore</a></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.IEventStoreChangeManager.html">IEventStoreChangeManager</a></h4>
+                  <section><p>Defines a manager for notifying changes to registered notifiers</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.IEventStoreChangeNotifier.html">IEventStoreChangeNotifier</a></h4>
+                  <section><p>Defines a notifier for notifying when changes occur on an <a class="xref" href="Bifrost.Events.IEventStore.html">IEventStore</a></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.IEventSubscriptionManager.html">IEventSubscriptionManager</a></h4>
+                  <section><p>Defines a manager for dealing with <a class="xref" href="Bifrost.Events.EventSubscription.html">EventSubscription</a></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.IEventSubscriptions.html">IEventSubscriptions</a></h4>
+                  <section><p>Defines a system for working with <see cref="!:IEventSubscription">Event Subscriptions</see></p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.IProcessEvents.html">IProcessEvents</a></h4>
+                  <section><p>Defines an event subscriber</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.IProcessMethodInvoker.html">IProcessMethodInvoker</a></h4>
+                  <section><p>Defines an invoker for handle methods - it should recognize methods called Handle and be able to 
+call them</p>
+</section>
+                  <h4><a class="xref" href="Bifrost.Events.IUncommittedEventStreamCoordinator.html">IUncommittedEventStreamCoordinator</a></h4>
+                  <section><p>Defines a coordinator for dealing with <a class="xref" href="Bifrost.Events.UncommittedEventStream.html">UncommittedEventStream</a></p>
+</section>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Events.md&amp;value=---%0Auid%3A%20Bifrost.Events%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2008-2017 Dolittle<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

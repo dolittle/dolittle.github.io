@@ -1,0 +1,2319 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class BindableExpandoType
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class BindableExpandoType
+   ">
+    <meta name="generator" content="docfx 2.9.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Bifrost_Dynamic_BindableExpandoType" data-uid="Bifrost.Dynamic.BindableExpandoType">Class BindableExpandoType
+              </h1>
+              <div class="markdown level0 summary"></div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">System.Reflection.MemberInfo</span></div>
+                  <div class="level2"><span class="xref">System.Type</span></div>
+                  <div class="level3"><span class="xref">BindableExpandoType</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Type.FilterAttribute</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.FilterName</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.FilterNameIgnoreCase</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.Missing</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.Delimiter</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.EmptyTypes</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetType(System.String, System.Boolean, System.Boolean)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetType(System.String, System.Boolean)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetType(System.String)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetType(System.String, System.Func&lt;System.Reflection.AssemblyName, System.Reflection.Assembly&gt;, System.Func&lt;System.Reflection.Assembly, System.String, System.Boolean, System.Type&gt;)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetType(System.String, System.Func&lt;System.Reflection.AssemblyName, System.Reflection.Assembly&gt;, System.Func&lt;System.Reflection.Assembly, System.String, System.Boolean, System.Type&gt;, System.Boolean)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetType(System.String, System.Func&lt;System.Reflection.AssemblyName, System.Reflection.Assembly&gt;, System.Func&lt;System.Reflection.Assembly, System.String, System.Boolean, System.Type&gt;, System.Boolean, System.Boolean)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.ReflectionOnlyGetType(System.String, System.Boolean, System.Boolean)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.MakePointerType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.MakeByRefType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.MakeArrayType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.MakeArrayType(System.Int32)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetTypeFromProgID(System.String)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetTypeFromProgID(System.String, System.Boolean)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetTypeFromProgID(System.String, System.String)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetTypeFromProgID(System.String, System.String, System.Boolean)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetTypeFromCLSID(System.Guid)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetTypeFromCLSID(System.Guid, System.Boolean)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetTypeFromCLSID(System.Guid, System.String)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetTypeFromCLSID(System.Guid, System.String, System.Boolean)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetTypeCode(System.Type)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetTypeCodeImpl()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.InvokeMember(System.String, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object, System.Object[], System.Globalization.CultureInfo)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.InvokeMember(System.String, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object, System.Object[])</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetTypeHandle(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetTypeFromHandle(System.RuntimeTypeHandle)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetArrayRank()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetConstructor(System.Reflection.BindingFlags, System.Reflection.Binder, System.Reflection.CallingConventions, System.Type[], System.Reflection.ParameterModifier[])</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetConstructor(System.Reflection.BindingFlags, System.Reflection.Binder, System.Type[], System.Reflection.ParameterModifier[])</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetConstructor(System.Type[])</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetConstructors()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetMethod(System.String, System.Reflection.BindingFlags, System.Reflection.Binder, System.Reflection.CallingConventions, System.Type[], System.Reflection.ParameterModifier[])</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetMethod(System.String, System.Reflection.BindingFlags, System.Reflection.Binder, System.Type[], System.Reflection.ParameterModifier[])</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetMethod(System.String, System.Type[], System.Reflection.ParameterModifier[])</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetMethod(System.String, System.Type[])</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetMethod(System.String, System.Reflection.BindingFlags)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetMethod(System.String)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetMethods()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetField(System.String)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetFields()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetInterface(System.String)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.FindInterfaces(System.Reflection.TypeFilter, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetEvent(System.String)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetEvents()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetProperty(System.String, System.Reflection.BindingFlags, System.Reflection.Binder, System.Type, System.Type[], System.Reflection.ParameterModifier[])</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetProperty(System.String, System.Type, System.Type[], System.Reflection.ParameterModifier[])</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetProperty(System.String, System.Reflection.BindingFlags)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetProperty(System.String, System.Type, System.Type[])</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetProperty(System.String, System.Type[])</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetProperty(System.String, System.Type)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetProperty(System.String)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetProperties()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetNestedTypes()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetNestedType(System.String)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetMember(System.String)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetMember(System.String, System.Reflection.BindingFlags)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetMember(System.String, System.Reflection.MemberTypes, System.Reflection.BindingFlags)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetMembers()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetDefaultMembers()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.FindMembers(System.Reflection.MemberTypes, System.Reflection.BindingFlags, System.Reflection.MemberFilter, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetGenericParameterConstraints()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsValueTypeImpl()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.MakeGenericType(System.Type[])</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsContextfulImpl()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsMarshalByRefImpl()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetGenericArguments()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetGenericTypeDefinition()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetEnumNames()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetEnumValues()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetEnumUnderlyingType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsEnumDefined(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetEnumName(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsSubclassOf(System.Type)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsInstanceOfType(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsAssignableFrom(System.Type)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsEquivalentTo(System.Type)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetTypeArray(System.Object[])</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.Equals(System.Type)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GetInterfaceMap(System.Type)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.System.Runtime.InteropServices._Type.GetTypeInfoCount(System.UInt32)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.System.Runtime.InteropServices._Type.GetTypeInfo(System.UInt32, System.UInt32, System.IntPtr)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.System.Runtime.InteropServices._Type.GetIDsOfNames(System.Guid, System.IntPtr, System.UInt32, System.UInt32, System.IntPtr)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.System.Runtime.InteropServices._Type.Invoke(System.UInt32, System.Guid, System.UInt32, System.Int16, System.IntPtr, System.IntPtr, System.IntPtr, System.IntPtr)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.MemberType</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.DeclaringType</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.DeclaringMethod</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.ReflectedType</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.StructLayoutAttribute</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.DefaultBinder</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.TypeHandle</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.TypeInitializer</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsNested</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.Attributes</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GenericParameterAttributes</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsVisible</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsNotPublic</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsPublic</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsNestedPublic</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsNestedPrivate</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsNestedFamily</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsNestedAssembly</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsNestedFamANDAssem</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsNestedFamORAssem</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsAutoLayout</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsLayoutSequential</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsExplicitLayout</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsClass</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsInterface</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsValueType</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsAbstract</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsSealed</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsEnum</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsSpecialName</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsImport</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsSerializable</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsAnsiClass</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsUnicodeClass</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsAutoClass</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsArray</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsGenericType</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsGenericTypeDefinition</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsConstructedGenericType</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsGenericParameter</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GenericParameterPosition</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.ContainsGenericParameters</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsByRef</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsPointer</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsPrimitive</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsCOMObject</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.HasElementType</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsContextful</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsMarshalByRef</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.GenericTypeArguments</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsSecurityCritical</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsSecuritySafeCritical</span>
+                </div>
+                <div>
+                  <span class="xref">System.Type.IsSecurityTransparent</span>
+                </div>
+                <div>
+                  <span class="xref">System.Reflection.MemberInfo.GetCustomAttributesData()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Reflection.MemberInfo.System.Runtime.InteropServices._MemberInfo.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Reflection.MemberInfo.System.Runtime.InteropServices._MemberInfo.GetTypeInfoCount(System.UInt32)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Reflection.MemberInfo.System.Runtime.InteropServices._MemberInfo.GetTypeInfo(System.UInt32, System.UInt32, System.IntPtr)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Reflection.MemberInfo.System.Runtime.InteropServices._MemberInfo.GetIDsOfNames(System.Guid, System.IntPtr, System.UInt32, System.UInt32, System.IntPtr)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Reflection.MemberInfo.System.Runtime.InteropServices._MemberInfo.Invoke(System.UInt32, System.Guid, System.UInt32, System.Int16, System.IntPtr, System.IntPtr, System.IntPtr, System.IntPtr)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Reflection.MemberInfo.CustomAttributes</span>
+                </div>
+                <div>
+                  <span class="xref">System.Reflection.MemberInfo.MetadataToken</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Bifrost.Dynamic</h6>
+              <h6><strong>Assembly</strong>:Bifrost.Client.dll</h6>
+              <h5 id="Bifrost_Dynamic_BindableExpandoType_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public class BindableExpandoType : Type, ICustomAttributeProvider, _MemberInfo, _Type, IReflect</code></pre>
+              </div>
+              <h3 id="constructors">Constructors
+              </h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType__ctor_System_Type_Bifrost_Dynamic_BindableExpandoObject_.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.%23ctor(System.Type%2CBifrost.Dynamic.BindableExpandoObject)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L30">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType__ctor_" data-uid="Bifrost.Dynamic.BindableExpandoType.#ctor*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType__ctor_System_Type_Bifrost_Dynamic_BindableExpandoObject_" data-uid="Bifrost.Dynamic.BindableExpandoType.#ctor(System.Type,Bifrost.Dynamic.BindableExpandoObject)">BindableExpandoType(Type, BindableExpandoObject)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public BindableExpandoType(Type delegatingType, BindableExpandoObject target)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td><span class="parametername">delegatingType</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="Bifrost.Dynamic.BindableExpandoObject.html">BindableExpandoObject</a></td>
+                    <td><span class="parametername">target</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="properties">Properties
+              </h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_Assembly.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.Assembly%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L35">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_Assembly_" data-uid="Bifrost.Dynamic.BindableExpandoType.Assembly*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_Assembly" data-uid="Bifrost.Dynamic.BindableExpandoType.Assembly">Assembly</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Assembly Assembly { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Reflection.Assembly</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.Assembly</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_AssemblyQualifiedName.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.AssemblyQualifiedName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L40">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_AssemblyQualifiedName_" data-uid="Bifrost.Dynamic.BindableExpandoType.AssemblyQualifiedName*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_AssemblyQualifiedName" data-uid="Bifrost.Dynamic.BindableExpandoType.AssemblyQualifiedName">AssemblyQualifiedName</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override string AssemblyQualifiedName { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.AssemblyQualifiedName</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_BaseType.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.BaseType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L45">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_BaseType_" data-uid="Bifrost.Dynamic.BindableExpandoType.BaseType*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_BaseType" data-uid="Bifrost.Dynamic.BindableExpandoType.BaseType">BaseType</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Type BaseType { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.BaseType</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_FullName.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.FullName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L50">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_FullName_" data-uid="Bifrost.Dynamic.BindableExpandoType.FullName*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_FullName" data-uid="Bifrost.Dynamic.BindableExpandoType.FullName">FullName</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override string FullName { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.FullName</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_GUID.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.GUID%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L55">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_GUID_" data-uid="Bifrost.Dynamic.BindableExpandoType.GUID*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_GUID" data-uid="Bifrost.Dynamic.BindableExpandoType.GUID">GUID</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Guid GUID { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Guid</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.GUID</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_Module.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.Module%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L188">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_Module_" data-uid="Bifrost.Dynamic.BindableExpandoType.Module*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_Module" data-uid="Bifrost.Dynamic.BindableExpandoType.Module">Module</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Module Module { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Reflection.Module</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.Module</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_Name.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L218">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_Name_" data-uid="Bifrost.Dynamic.BindableExpandoType.Name*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_Name" data-uid="Bifrost.Dynamic.BindableExpandoType.Name">Name</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override string Name { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Reflection.MemberInfo.Name</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_Namespace.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.Namespace%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L193">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_Namespace_" data-uid="Bifrost.Dynamic.BindableExpandoType.Namespace*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_Namespace" data-uid="Bifrost.Dynamic.BindableExpandoType.Namespace">Namespace</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override string Namespace { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.Namespace</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_UnderlyingSystemType.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.UnderlyingSystemType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L198">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_UnderlyingSystemType_" data-uid="Bifrost.Dynamic.BindableExpandoType.UnderlyingSystemType*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_UnderlyingSystemType" data-uid="Bifrost.Dynamic.BindableExpandoType.UnderlyingSystemType">UnderlyingSystemType</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Type UnderlyingSystemType { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.UnderlyingSystemType</span></div>
+              <h3 id="methods">Methods
+              </h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_GetAttributeFlagsImpl.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.GetAttributeFlagsImpl%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L60">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_GetAttributeFlagsImpl_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetAttributeFlagsImpl*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_GetAttributeFlagsImpl" data-uid="Bifrost.Dynamic.BindableExpandoType.GetAttributeFlagsImpl">GetAttributeFlagsImpl()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override TypeAttributes GetAttributeFlagsImpl()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Reflection.TypeAttributes</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.GetAttributeFlagsImpl()</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_GetConstructorImpl_System_Reflection_BindingFlags_System_Reflection_Binder_System_Reflection_CallingConventions_System_Type___System_Reflection_ParameterModifier___.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.GetConstructorImpl(System.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Reflection.CallingConventions%2CSystem.Type%5B%5D%2CSystem.Reflection.ParameterModifier%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L65">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_GetConstructorImpl_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetConstructorImpl*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_GetConstructorImpl_System_Reflection_BindingFlags_System_Reflection_Binder_System_Reflection_CallingConventions_System_Type___System_Reflection_ParameterModifier___" data-uid="Bifrost.Dynamic.BindableExpandoType.GetConstructorImpl(System.Reflection.BindingFlags,System.Reflection.Binder,System.Reflection.CallingConventions,System.Type[],System.Reflection.ParameterModifier[])">GetConstructorImpl(BindingFlags, Binder, CallingConventions, Type[], ParameterModifier[])</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override ConstructorInfo GetConstructorImpl(BindingFlags bindingAttr, Binder binder, CallingConventions callConvention, Type[] types, ParameterModifier[] modifiers)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Reflection.BindingFlags</span></td>
+                    <td><span class="parametername">bindingAttr</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Reflection.Binder</span></td>
+                    <td><span class="parametername">binder</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Reflection.CallingConventions</span></td>
+                    <td><span class="parametername">callConvention</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Type</span>[]</td>
+                    <td><span class="parametername">types</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Reflection.ParameterModifier</span>[]</td>
+                    <td><span class="parametername">modifiers</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Reflection.ConstructorInfo</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.GetConstructorImpl(System.Reflection.BindingFlags, System.Reflection.Binder, System.Reflection.CallingConventions, System.Type[], System.Reflection.ParameterModifier[])</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_GetConstructors_System_Reflection_BindingFlags_.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.GetConstructors(System.Reflection.BindingFlags)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L71">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_GetConstructors_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetConstructors*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_GetConstructors_System_Reflection_BindingFlags_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetConstructors(System.Reflection.BindingFlags)">GetConstructors(BindingFlags)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override ConstructorInfo[] GetConstructors(BindingFlags bindingAttr)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Reflection.BindingFlags</span></td>
+                    <td><span class="parametername">bindingAttr</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Reflection.ConstructorInfo</span>[]</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.GetConstructors(System.Reflection.BindingFlags)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_GetCustomAttributes_System_Boolean_.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.GetCustomAttributes(System.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L208">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_GetCustomAttributes_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetCustomAttributes*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_GetCustomAttributes_System_Boolean_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetCustomAttributes(System.Boolean)">GetCustomAttributes(Boolean)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override object[] GetCustomAttributes(bool inherit)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><span class="parametername">inherit</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span>[]</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Reflection.MemberInfo.GetCustomAttributes(System.Boolean)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_GetCustomAttributes_System_Type_System_Boolean_.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.GetCustomAttributes(System.Type%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L203">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_GetCustomAttributes_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetCustomAttributes*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_GetCustomAttributes_System_Type_System_Boolean_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetCustomAttributes(System.Type,System.Boolean)">GetCustomAttributes(Type, Boolean)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override object[] GetCustomAttributes(Type attributeType, bool inherit)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td><span class="parametername">attributeType</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><span class="parametername">inherit</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span>[]</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Reflection.MemberInfo.GetCustomAttributes(System.Type, System.Boolean)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_GetElementType.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.GetElementType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L76">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_GetElementType_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetElementType*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_GetElementType" data-uid="Bifrost.Dynamic.BindableExpandoType.GetElementType">GetElementType()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Type GetElementType()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.GetElementType()</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_GetEvent_System_String_System_Reflection_BindingFlags_.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.GetEvent(System.String%2CSystem.Reflection.BindingFlags)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L81">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_GetEvent_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetEvent*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_GetEvent_System_String_System_Reflection_BindingFlags_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetEvent(System.String,System.Reflection.BindingFlags)">GetEvent(String, BindingFlags)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override EventInfo GetEvent(string name, BindingFlags bindingAttr)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">name</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Reflection.BindingFlags</span></td>
+                    <td><span class="parametername">bindingAttr</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Reflection.EventInfo</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.GetEvent(System.String, System.Reflection.BindingFlags)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_GetEvents_System_Reflection_BindingFlags_.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.GetEvents(System.Reflection.BindingFlags)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L86">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_GetEvents_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetEvents*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_GetEvents_System_Reflection_BindingFlags_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetEvents(System.Reflection.BindingFlags)">GetEvents(BindingFlags)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override EventInfo[] GetEvents(BindingFlags bindingAttr)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Reflection.BindingFlags</span></td>
+                    <td><span class="parametername">bindingAttr</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Reflection.EventInfo</span>[]</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.GetEvents(System.Reflection.BindingFlags)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_GetField_System_String_System_Reflection_BindingFlags_.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.GetField(System.String%2CSystem.Reflection.BindingFlags)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L91">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_GetField_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetField*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_GetField_System_String_System_Reflection_BindingFlags_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetField(System.String,System.Reflection.BindingFlags)">GetField(String, BindingFlags)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override FieldInfo GetField(string name, BindingFlags bindingAttr)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">name</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Reflection.BindingFlags</span></td>
+                    <td><span class="parametername">bindingAttr</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Reflection.FieldInfo</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.GetField(System.String, System.Reflection.BindingFlags)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_GetFields_System_Reflection_BindingFlags_.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.GetFields(System.Reflection.BindingFlags)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L96">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_GetFields_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetFields*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_GetFields_System_Reflection_BindingFlags_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetFields(System.Reflection.BindingFlags)">GetFields(BindingFlags)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override FieldInfo[] GetFields(BindingFlags bindingAttr)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Reflection.BindingFlags</span></td>
+                    <td><span class="parametername">bindingAttr</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Reflection.FieldInfo</span>[]</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.GetFields(System.Reflection.BindingFlags)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_GetInterface_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.GetInterface(System.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L101">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_GetInterface_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetInterface*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_GetInterface_System_String_System_Boolean_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetInterface(System.String,System.Boolean)">GetInterface(String, Boolean)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Type GetInterface(string name, bool ignoreCase)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">name</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><span class="parametername">ignoreCase</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.GetInterface(System.String, System.Boolean)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_GetInterfaces.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.GetInterfaces%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L106">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_GetInterfaces_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetInterfaces*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_GetInterfaces" data-uid="Bifrost.Dynamic.BindableExpandoType.GetInterfaces">GetInterfaces()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Type[] GetInterfaces()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span>[]</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.GetInterfaces()</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_GetMembers_System_Reflection_BindingFlags_.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.GetMembers(System.Reflection.BindingFlags)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L111">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_GetMembers_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetMembers*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_GetMembers_System_Reflection_BindingFlags_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetMembers(System.Reflection.BindingFlags)">GetMembers(BindingFlags)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override MemberInfo[] GetMembers(BindingFlags bindingAttr)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Reflection.BindingFlags</span></td>
+                    <td><span class="parametername">bindingAttr</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Reflection.MemberInfo</span>[]</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.GetMembers(System.Reflection.BindingFlags)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_GetMethodImpl_System_String_System_Reflection_BindingFlags_System_Reflection_Binder_System_Reflection_CallingConventions_System_Type___System_Reflection_ParameterModifier___.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.GetMethodImpl(System.String%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Reflection.CallingConventions%2CSystem.Type%5B%5D%2CSystem.Reflection.ParameterModifier%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L116">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_GetMethodImpl_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetMethodImpl*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_GetMethodImpl_System_String_System_Reflection_BindingFlags_System_Reflection_Binder_System_Reflection_CallingConventions_System_Type___System_Reflection_ParameterModifier___" data-uid="Bifrost.Dynamic.BindableExpandoType.GetMethodImpl(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Reflection.CallingConventions,System.Type[],System.Reflection.ParameterModifier[])">GetMethodImpl(String, BindingFlags, Binder, CallingConventions, Type[], ParameterModifier[])</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override MethodInfo GetMethodImpl(string name, BindingFlags bindingAttr, Binder binder, CallingConventions callConvention, Type[] types, ParameterModifier[] modifiers)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">name</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Reflection.BindingFlags</span></td>
+                    <td><span class="parametername">bindingAttr</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Reflection.Binder</span></td>
+                    <td><span class="parametername">binder</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Reflection.CallingConventions</span></td>
+                    <td><span class="parametername">callConvention</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Type</span>[]</td>
+                    <td><span class="parametername">types</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Reflection.ParameterModifier</span>[]</td>
+                    <td><span class="parametername">modifiers</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Reflection.MethodInfo</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.GetMethodImpl(System.String, System.Reflection.BindingFlags, System.Reflection.Binder, System.Reflection.CallingConventions, System.Type[], System.Reflection.ParameterModifier[])</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_GetMethods_System_Reflection_BindingFlags_.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.GetMethods(System.Reflection.BindingFlags)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L121">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_GetMethods_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetMethods*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_GetMethods_System_Reflection_BindingFlags_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetMethods(System.Reflection.BindingFlags)">GetMethods(BindingFlags)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override MethodInfo[] GetMethods(BindingFlags bindingAttr)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Reflection.BindingFlags</span></td>
+                    <td><span class="parametername">bindingAttr</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Reflection.MethodInfo</span>[]</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.GetMethods(System.Reflection.BindingFlags)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_GetNestedType_System_String_System_Reflection_BindingFlags_.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.GetNestedType(System.String%2CSystem.Reflection.BindingFlags)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L126">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_GetNestedType_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetNestedType*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_GetNestedType_System_String_System_Reflection_BindingFlags_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetNestedType(System.String,System.Reflection.BindingFlags)">GetNestedType(String, BindingFlags)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Type GetNestedType(string name, BindingFlags bindingAttr)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">name</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Reflection.BindingFlags</span></td>
+                    <td><span class="parametername">bindingAttr</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.GetNestedType(System.String, System.Reflection.BindingFlags)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_GetNestedTypes_System_Reflection_BindingFlags_.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.GetNestedTypes(System.Reflection.BindingFlags)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L131">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_GetNestedTypes_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetNestedTypes*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_GetNestedTypes_System_Reflection_BindingFlags_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetNestedTypes(System.Reflection.BindingFlags)">GetNestedTypes(BindingFlags)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override Type[] GetNestedTypes(BindingFlags bindingAttr)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Reflection.BindingFlags</span></td>
+                    <td><span class="parametername">bindingAttr</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span>[]</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.GetNestedTypes(System.Reflection.BindingFlags)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_GetProperties_System_Reflection_BindingFlags_.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.GetProperties(System.Reflection.BindingFlags)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L136">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_GetProperties_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetProperties*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_GetProperties_System_Reflection_BindingFlags_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetProperties(System.Reflection.BindingFlags)">GetProperties(BindingFlags)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override PropertyInfo[] GetProperties(BindingFlags bindingAttr)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Reflection.BindingFlags</span></td>
+                    <td><span class="parametername">bindingAttr</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Reflection.PropertyInfo</span>[]</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.GetProperties(System.Reflection.BindingFlags)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_GetPropertyImpl_System_String_System_Reflection_BindingFlags_System_Reflection_Binder_System_Type_System_Type___System_Reflection_ParameterModifier___.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.GetPropertyImpl(System.String%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Reflection.ParameterModifier%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L146">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_GetPropertyImpl_" data-uid="Bifrost.Dynamic.BindableExpandoType.GetPropertyImpl*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_GetPropertyImpl_System_String_System_Reflection_BindingFlags_System_Reflection_Binder_System_Type_System_Type___System_Reflection_ParameterModifier___" data-uid="Bifrost.Dynamic.BindableExpandoType.GetPropertyImpl(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Type,System.Type[],System.Reflection.ParameterModifier[])">GetPropertyImpl(String, BindingFlags, Binder, Type, Type[], ParameterModifier[])</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override PropertyInfo GetPropertyImpl(string name, BindingFlags bindingAttr, Binder binder, Type returnType, Type[] types, ParameterModifier[] modifiers)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">name</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Reflection.BindingFlags</span></td>
+                    <td><span class="parametername">bindingAttr</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Reflection.Binder</span></td>
+                    <td><span class="parametername">binder</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td><span class="parametername">returnType</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Type</span>[]</td>
+                    <td><span class="parametername">types</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Reflection.ParameterModifier</span>[]</td>
+                    <td><span class="parametername">modifiers</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Reflection.PropertyInfo</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.GetPropertyImpl(System.String, System.Reflection.BindingFlags, System.Reflection.Binder, System.Type, System.Type[], System.Reflection.ParameterModifier[])</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_HasElementTypeImpl.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.HasElementTypeImpl%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L153">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_HasElementTypeImpl_" data-uid="Bifrost.Dynamic.BindableExpandoType.HasElementTypeImpl*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_HasElementTypeImpl" data-uid="Bifrost.Dynamic.BindableExpandoType.HasElementTypeImpl">HasElementTypeImpl()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override bool HasElementTypeImpl()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.HasElementTypeImpl()</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_InvokeMember_System_String_System_Reflection_BindingFlags_System_Reflection_Binder_System_Object_System_Object___System_Reflection_ParameterModifier___System_Globalization_CultureInfo_System_String___.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.InvokeMember(System.String%2CSystem.Reflection.BindingFlags%2CSystem.Reflection.Binder%2CSystem.Object%2CSystem.Object%5B%5D%2CSystem.Reflection.ParameterModifier%5B%5D%2CSystem.Globalization.CultureInfo%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L158">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_InvokeMember_" data-uid="Bifrost.Dynamic.BindableExpandoType.InvokeMember*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_InvokeMember_System_String_System_Reflection_BindingFlags_System_Reflection_Binder_System_Object_System_Object___System_Reflection_ParameterModifier___System_Globalization_CultureInfo_System_String___" data-uid="Bifrost.Dynamic.BindableExpandoType.InvokeMember(System.String,System.Reflection.BindingFlags,System.Reflection.Binder,System.Object,System.Object[],System.Reflection.ParameterModifier[],System.Globalization.CultureInfo,System.String[])">InvokeMember(String, BindingFlags, Binder, Object, Object[], ParameterModifier[], CultureInfo, String[])</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override object InvokeMember(string name, BindingFlags invokeAttr, Binder binder, object target, object[] args, ParameterModifier[] modifiers, CultureInfo culture, string[] namedParameters)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><span class="parametername">name</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Reflection.BindingFlags</span></td>
+                    <td><span class="parametername">invokeAttr</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Reflection.Binder</span></td>
+                    <td><span class="parametername">binder</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><span class="parametername">target</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Object</span>[]</td>
+                    <td><span class="parametername">args</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Reflection.ParameterModifier</span>[]</td>
+                    <td><span class="parametername">modifiers</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Globalization.CultureInfo</span></td>
+                    <td><span class="parametername">culture</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.String</span>[]</td>
+                    <td><span class="parametername">namedParameters</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.InvokeMember(System.String, System.Reflection.BindingFlags, System.Reflection.Binder, System.Object, System.Object[], System.Reflection.ParameterModifier[], System.Globalization.CultureInfo, System.String[])</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_IsArrayImpl.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.IsArrayImpl%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L163">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_IsArrayImpl_" data-uid="Bifrost.Dynamic.BindableExpandoType.IsArrayImpl*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_IsArrayImpl" data-uid="Bifrost.Dynamic.BindableExpandoType.IsArrayImpl">IsArrayImpl()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override bool IsArrayImpl()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.IsArrayImpl()</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_IsByRefImpl.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.IsByRefImpl%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L168">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_IsByRefImpl_" data-uid="Bifrost.Dynamic.BindableExpandoType.IsByRefImpl*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_IsByRefImpl" data-uid="Bifrost.Dynamic.BindableExpandoType.IsByRefImpl">IsByRefImpl()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override bool IsByRefImpl()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.IsByRefImpl()</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_IsCOMObjectImpl.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.IsCOMObjectImpl%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L173">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_IsCOMObjectImpl_" data-uid="Bifrost.Dynamic.BindableExpandoType.IsCOMObjectImpl*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_IsCOMObjectImpl" data-uid="Bifrost.Dynamic.BindableExpandoType.IsCOMObjectImpl">IsCOMObjectImpl()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override bool IsCOMObjectImpl()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.IsCOMObjectImpl()</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_IsDefined_System_Type_System_Boolean_.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.IsDefined(System.Type%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L213">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_IsDefined_" data-uid="Bifrost.Dynamic.BindableExpandoType.IsDefined*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_IsDefined_System_Type_System_Boolean_" data-uid="Bifrost.Dynamic.BindableExpandoType.IsDefined(System.Type,System.Boolean)">IsDefined(Type, Boolean)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override bool IsDefined(Type attributeType, bool inherit)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td><span class="parametername">attributeType</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><span class="parametername">inherit</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Reflection.MemberInfo.IsDefined(System.Type, System.Boolean)</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_IsPointerImpl.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.IsPointerImpl%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L178">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_IsPointerImpl_" data-uid="Bifrost.Dynamic.BindableExpandoType.IsPointerImpl*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_IsPointerImpl" data-uid="Bifrost.Dynamic.BindableExpandoType.IsPointerImpl">IsPointerImpl()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override bool IsPointerImpl()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.IsPointerImpl()</span></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType_IsPrimitiveImpl.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType.IsPrimitiveImpl%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L183">View Source</a>
+              </span>
+              <a id="Bifrost_Dynamic_BindableExpandoType_IsPrimitiveImpl_" data-uid="Bifrost.Dynamic.BindableExpandoType.IsPrimitiveImpl*"></a>
+              <h4 id="Bifrost_Dynamic_BindableExpandoType_IsPrimitiveImpl" data-uid="Bifrost.Dynamic.BindableExpandoType.IsPrimitiveImpl">IsPrimitiveImpl()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected override bool IsPrimitiveImpl()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Type.IsPrimitiveImpl()</span></div>
+              <h3 id="extensionmethods">Extension Methods</h3>
+              <div>
+                  <a class="xref" href="Bifrost.FluentValidation.TypeExtensions.html#Bifrost_FluentValidation_TypeExtensions_IsModelRuleProperty_System_Type_">TypeExtensions.IsModelRuleProperty(Type)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Concepts.ConceptExtensions.html#Bifrost_Concepts_ConceptExtensions_IsConcept_System_Type_">ConceptExtensions.IsConcept(Type)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Concepts.ConceptExtensions.html#Bifrost_Concepts_ConceptExtensions_IsConcept_System_Object_">ConceptExtensions.IsConcept(Object)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Concepts.ConceptExtensions.html#Bifrost_Concepts_ConceptExtensions_GetConceptValueType_System_Type_">ConceptExtensions.GetConceptValueType(Type)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Concepts.ConceptExtensions.html#Bifrost_Concepts_ConceptExtensions_GetConceptValue_System_Object_">ConceptExtensions.GetConceptValue(Object)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Dynamic.DynamicExtensions.html#Bifrost_Dynamic_DynamicExtensions_AsExpandoObject_System_Object_">DynamicExtensions.AsExpandoObject(Object)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Extensions.MethodCalls.html#Bifrost_Extensions_MethodCalls_CallGenericMethod__5___1_System_Linq_Expressions_Expression_System_Func___1_System_Func___2___3___4___0______2___3___4_System_Type___">MethodCalls.CallGenericMethod&lt;TOut, T, T1, T2, T3&gt;(T, Expression&lt;Func&lt;T, Func&lt;T1, T2, T3, TOut&gt;&gt;&gt;, T1, T2, T3, Type[])</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Extensions.MethodCalls.html#Bifrost_Extensions_MethodCalls_CallGenericMethod__4___1_System_Linq_Expressions_Expression_System_Func___1_System_Func___2___3___0______2___3_System_Type___">MethodCalls.CallGenericMethod&lt;TOut, T, T1, T2&gt;(T, Expression&lt;Func&lt;T, Func&lt;T1, T2, TOut&gt;&gt;&gt;, T1, T2, Type[])</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Extensions.MethodCalls.html#Bifrost_Extensions_MethodCalls_CallGenericMethod__3___1_System_Linq_Expressions_Expression_System_Func___1_System_Func___2___0______2_System_Type___">MethodCalls.CallGenericMethod&lt;TOut, T, T1&gt;(T, Expression&lt;Func&lt;T, Func&lt;T1, TOut&gt;&gt;&gt;, T1, Type[])</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Extensions.MethodCalls.html#Bifrost_Extensions_MethodCalls_CallGenericMethod__2___1_System_Linq_Expressions_Expression_System_Func___1_System_Func___0____System_Type___">MethodCalls.CallGenericMethod&lt;TOut, T&gt;(T, Expression&lt;Func&lt;T, Func&lt;TOut&gt;&gt;&gt;, Type[])</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Extensions.MethodCalls.html#Bifrost_Extensions_MethodCalls_Generics__1___0_">MethodCalls.Generics&lt;T&gt;(T)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Extensions.TypeExtensions.html#Bifrost_Extensions_TypeExtensions_HasAttribute__1_System_Type_">TypeExtensions.HasAttribute&lt;T&gt;(Type)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Extensions.TypeExtensions.html#Bifrost_Extensions_TypeExtensions_IsNullable_System_Type_">TypeExtensions.IsNullable(Type)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Extensions.TypeExtensions.html#Bifrost_Extensions_TypeExtensions_IsNumericType_System_Type_">TypeExtensions.IsNumericType(Type)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Extensions.TypeExtensions.html#Bifrost_Extensions_TypeExtensions_IsDate_System_Type_">TypeExtensions.IsDate(Type)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Extensions.TypeExtensions.html#Bifrost_Extensions_TypeExtensions_IsBoolean_System_Type_">TypeExtensions.IsBoolean(Type)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Extensions.TypeExtensions.html#Bifrost_Extensions_TypeExtensions_HasDefaultConstructor_System_Type_">TypeExtensions.HasDefaultConstructor(Type)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Extensions.TypeExtensions.html#Bifrost_Extensions_TypeExtensions_HasNonDefaultConstructor_System_Type_">TypeExtensions.HasNonDefaultConstructor(Type)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Extensions.TypeExtensions.html#Bifrost_Extensions_TypeExtensions_GetDefaultConstructor_System_Type_">TypeExtensions.GetDefaultConstructor(Type)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Extensions.TypeExtensions.html#Bifrost_Extensions_TypeExtensions_GetNonDefaultConstructor_System_Type_">TypeExtensions.GetNonDefaultConstructor(Type)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Extensions.TypeExtensions.html#Bifrost_Extensions_TypeExtensions_HasInterface__1_System_Type_">TypeExtensions.HasInterface&lt;T&gt;(Type)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Extensions.TypeExtensions.html#Bifrost_Extensions_TypeExtensions_HasInterface_System_Type_System_Type_">TypeExtensions.HasInterface(Type, Type)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Extensions.TypeExtensions.html#Bifrost_Extensions_TypeExtensions_IsDerivedFromOpenGeneric_System_Type_System_Type_">TypeExtensions.IsDerivedFromOpenGeneric(Type, Type)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Extensions.TypeExtensions.html#Bifrost_Extensions_TypeExtensions_ImplementsOpenGeneric_System_Type_System_Type_">TypeExtensions.ImplementsOpenGeneric(Type, Type)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Extensions.TypeExtensions.html#Bifrost_Extensions_TypeExtensions_IsAPrimitiveType_System_Type_">TypeExtensions.IsAPrimitiveType(Type)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Extensions.TypeExtensions.html#Bifrost_Extensions_TypeExtensions_Implements_System_Type_System_Type_">TypeExtensions.Implements(Type, Type)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Extensions.TypeExtensions.html#Bifrost_Extensions_TypeExtensions_AllBaseAndImplementingTypes_System_Type_">TypeExtensions.AllBaseAndImplementingTypes(Type)</a>
+              </div>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Dynamic_BindableExpandoType.md&amp;value=---%0Auid%3A%20Bifrost.Dynamic.BindableExpandoType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost.Client/Dynamic/BindableExpandoType.cs/#L25" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2008-2017 Dolittle<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

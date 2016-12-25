@@ -1,0 +1,1001 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class TypeExtensions
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class TypeExtensions
+   ">
+    <meta name="generator" content="docfx 2.9.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Bifrost_Extensions_TypeExtensions" data-uid="Bifrost.Extensions.TypeExtensions">Class TypeExtensions
+              </h1>
+              <div class="markdown level0 summary"><p>Provides a set of methods for working with <span class="xref">System.Type</span></p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">TypeExtensions</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Bifrost.Extensions</h6>
+              <h6><strong>Assembly</strong>:Bifrost.dll</h6>
+              <h5 id="Bifrost_Extensions_TypeExtensions_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static class TypeExtensions</code></pre>
+              </div>
+              <h3 id="methods">Methods
+              </h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Extensions_TypeExtensions_AllBaseAndImplementingTypes_System_Type_.md&amp;value=---%0Auid%3A%20Bifrost.Extensions.TypeExtensions.AllBaseAndImplementingTypes(System.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Extensions/TypeExtensions.cs/#L282">View Source</a>
+              </span>
+              <a id="Bifrost_Extensions_TypeExtensions_AllBaseAndImplementingTypes_" data-uid="Bifrost.Extensions.TypeExtensions.AllBaseAndImplementingTypes*"></a>
+              <h4 id="Bifrost_Extensions_TypeExtensions_AllBaseAndImplementingTypes_System_Type_" data-uid="Bifrost.Extensions.TypeExtensions.AllBaseAndImplementingTypes(System.Type)">AllBaseAndImplementingTypes(Type)</h4>
+              <div class="markdown level1 summary"><p>Returns all base types of a given type, both open and closed generic (if any), including itself.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static IEnumerable&lt;Type&gt; AllBaseAndImplementingTypes(this Type type)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td><span class="parametername">type</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.Type</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Extensions_TypeExtensions_GetDefaultConstructor_System_Type_.md&amp;value=---%0Auid%3A%20Bifrost.Extensions.TypeExtensions.GetDefaultConstructor(System.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Extensions/TypeExtensions.cs/#L146">View Source</a>
+              </span>
+              <a id="Bifrost_Extensions_TypeExtensions_GetDefaultConstructor_" data-uid="Bifrost.Extensions.TypeExtensions.GetDefaultConstructor*"></a>
+              <h4 id="Bifrost_Extensions_TypeExtensions_GetDefaultConstructor_System_Type_" data-uid="Bifrost.Extensions.TypeExtensions.GetDefaultConstructor(System.Type)">GetDefaultConstructor(Type)</h4>
+              <div class="markdown level1 summary"><p>Get the default constructor from a type</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static ConstructorInfo GetDefaultConstructor(this Type type)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td><span class="parametername">type</span></td>
+                    <td><p>Type to get from</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Reflection.ConstructorInfo</span></td>
+                    <td><p>The default <span class="xref">System.Reflection.ConstructorInfo</span></p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Extensions_TypeExtensions_GetNonDefaultConstructor_System_Type_.md&amp;value=---%0Auid%3A%20Bifrost.Extensions.TypeExtensions.GetNonDefaultConstructor(System.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Extensions/TypeExtensions.cs/#L160">View Source</a>
+              </span>
+              <a id="Bifrost_Extensions_TypeExtensions_GetNonDefaultConstructor_" data-uid="Bifrost.Extensions.TypeExtensions.GetNonDefaultConstructor*"></a>
+              <h4 id="Bifrost_Extensions_TypeExtensions_GetNonDefaultConstructor_System_Type_" data-uid="Bifrost.Extensions.TypeExtensions.GetNonDefaultConstructor(System.Type)">GetNonDefaultConstructor(Type)</h4>
+              <div class="markdown level1 summary"><p>Get the non default constructor, assuming there is only one</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static ConstructorInfo GetNonDefaultConstructor(this Type type)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td><span class="parametername">type</span></td>
+                    <td><p>Type to get from</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Reflection.ConstructorInfo</span></td>
+                    <td><p>The <span class="xref">System.Reflection.ConstructorInfo</span> for the constructor</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Extensions_TypeExtensions_HasAttribute__1_System_Type_.md&amp;value=---%0Auid%3A%20Bifrost.Extensions.TypeExtensions.HasAttribute%60%601(System.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Extensions/TypeExtensions.cs/#L60">View Source</a>
+              </span>
+              <a id="Bifrost_Extensions_TypeExtensions_HasAttribute_" data-uid="Bifrost.Extensions.TypeExtensions.HasAttribute*"></a>
+              <h4 id="Bifrost_Extensions_TypeExtensions_HasAttribute__1_System_Type_" data-uid="Bifrost.Extensions.TypeExtensions.HasAttribute``1(System.Type)">HasAttribute&lt;T&gt;(Type)</h4>
+              <div class="markdown level1 summary"><p>Check if a type has an attribute associated with it</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static bool HasAttribute&lt;T&gt;(this Type type)where T : Attribute</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td><span class="parametername">type</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><p>True if there is an attribute, false if not</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="parametername">T</span></td>
+                    <td>Type to check</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Extensions_TypeExtensions_HasDefaultConstructor_System_Type_.md&amp;value=---%0Auid%3A%20Bifrost.Extensions.TypeExtensions.HasDefaultConstructor(System.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Extensions/TypeExtensions.cs/#L120">View Source</a>
+              </span>
+              <a id="Bifrost_Extensions_TypeExtensions_HasDefaultConstructor_" data-uid="Bifrost.Extensions.TypeExtensions.HasDefaultConstructor*"></a>
+              <h4 id="Bifrost_Extensions_TypeExtensions_HasDefaultConstructor_System_Type_" data-uid="Bifrost.Extensions.TypeExtensions.HasDefaultConstructor(System.Type)">HasDefaultConstructor(Type)</h4>
+              <div class="markdown level1 summary"><p>Check if a type has a default constructor that does not take any arguments</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static bool HasDefaultConstructor(this Type type)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td><span class="parametername">type</span></td>
+                    <td><p>Type to check</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><p>true if it has a default constructor, false if not</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Extensions_TypeExtensions_HasInterface_System_Type_System_Type_.md&amp;value=---%0Auid%3A%20Bifrost.Extensions.TypeExtensions.HasInterface(System.Type%2CSystem.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Extensions/TypeExtensions.cs/#L188">View Source</a>
+              </span>
+              <a id="Bifrost_Extensions_TypeExtensions_HasInterface_" data-uid="Bifrost.Extensions.TypeExtensions.HasInterface*"></a>
+              <h4 id="Bifrost_Extensions_TypeExtensions_HasInterface_System_Type_System_Type_" data-uid="Bifrost.Extensions.TypeExtensions.HasInterface(System.Type,System.Type)">HasInterface(Type, Type)</h4>
+              <div class="markdown level1 summary"><p>Check if a type implements a specific interface</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static bool HasInterface(this Type type, Type interfaceType)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td><span class="parametername">type</span></td>
+                    <td><p>Type to check</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td><span class="parametername">interfaceType</span></td>
+                    <td><p>Interface to check for</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><p>True if the type implements the interface, false if not</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Extensions_TypeExtensions_HasInterface__1_System_Type_.md&amp;value=---%0Auid%3A%20Bifrost.Extensions.TypeExtensions.HasInterface%60%601(System.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Extensions/TypeExtensions.cs/#L176">View Source</a>
+              </span>
+              <a id="Bifrost_Extensions_TypeExtensions_HasInterface_" data-uid="Bifrost.Extensions.TypeExtensions.HasInterface*"></a>
+              <h4 id="Bifrost_Extensions_TypeExtensions_HasInterface__1_System_Type_" data-uid="Bifrost.Extensions.TypeExtensions.HasInterface``1(System.Type)">HasInterface&lt;T&gt;(Type)</h4>
+              <div class="markdown level1 summary"><p>Check if a type implements a specific interface</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static bool HasInterface&lt;T&gt;(this Type type)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td><span class="parametername">type</span></td>
+                    <td><p>Type to check</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><p>True if the type implements the interface, false if not</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="parametername">T</span></td>
+                    <td>Interface to check for</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Extensions_TypeExtensions_HasNonDefaultConstructor_System_Type_.md&amp;value=---%0Auid%3A%20Bifrost.Extensions.TypeExtensions.HasNonDefaultConstructor(System.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Extensions/TypeExtensions.cs/#L131">View Source</a>
+              </span>
+              <a id="Bifrost_Extensions_TypeExtensions_HasNonDefaultConstructor_" data-uid="Bifrost.Extensions.TypeExtensions.HasNonDefaultConstructor*"></a>
+              <h4 id="Bifrost_Extensions_TypeExtensions_HasNonDefaultConstructor_System_Type_" data-uid="Bifrost.Extensions.TypeExtensions.HasNonDefaultConstructor(System.Type)">HasNonDefaultConstructor(Type)</h4>
+              <div class="markdown level1 summary"><p>Check if a type has a non default constructor</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static bool HasNonDefaultConstructor(this Type type)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td><span class="parametername">type</span></td>
+                    <td><p>Type to check</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><p>true if it has a non default constructor, false if not</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Extensions_TypeExtensions_Implements_System_Type_System_Type_.md&amp;value=---%0Auid%3A%20Bifrost.Extensions.TypeExtensions.Implements(System.Type%2CSystem.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Extensions/TypeExtensions.cs/#L272">View Source</a>
+              </span>
+              <a id="Bifrost_Extensions_TypeExtensions_Implements_" data-uid="Bifrost.Extensions.TypeExtensions.Implements*"></a>
+              <h4 id="Bifrost_Extensions_TypeExtensions_Implements_System_Type_System_Type_" data-uid="Bifrost.Extensions.TypeExtensions.Implements(System.Type,System.Type)">Implements(Type, Type)</h4>
+              <div class="markdown level1 summary"><p>Check if a type implements another type - supporting interfaces, abstract types, with or without generics</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static bool Implements(this Type type, Type super)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td><span class="parametername">type</span></td>
+                    <td><p>Type to check</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td><span class="parametername">super</span></td>
+                    <td><p>Super / parent type to check against</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><p>True if derived, false if not</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Extensions_TypeExtensions_ImplementsOpenGeneric_System_Type_System_Type_.md&amp;value=---%0Auid%3A%20Bifrost.Extensions.TypeExtensions.ImplementsOpenGeneric(System.Type%2CSystem.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Extensions/TypeExtensions.cs/#L233">View Source</a>
+              </span>
+              <a id="Bifrost_Extensions_TypeExtensions_ImplementsOpenGeneric_" data-uid="Bifrost.Extensions.TypeExtensions.ImplementsOpenGeneric*"></a>
+              <h4 id="Bifrost_Extensions_TypeExtensions_ImplementsOpenGeneric_System_Type_System_Type_" data-uid="Bifrost.Extensions.TypeExtensions.ImplementsOpenGeneric(System.Type,System.Type)">ImplementsOpenGeneric(Type, Type)</h4>
+              <div class="markdown level1 summary"><p>Check if a type implements an open generic type</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static bool ImplementsOpenGeneric(this Type type, Type openGenericType)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td><span class="parametername">type</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td><span class="parametername">openGenericType</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Extensions_TypeExtensions_IsAPrimitiveType_System_Type_.md&amp;value=---%0Auid%3A%20Bifrost.Extensions.TypeExtensions.IsAPrimitiveType(System.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Extensions/TypeExtensions.cs/#L255">View Source</a>
+              </span>
+              <a id="Bifrost_Extensions_TypeExtensions_IsAPrimitiveType_" data-uid="Bifrost.Extensions.TypeExtensions.IsAPrimitiveType*"></a>
+              <h4 id="Bifrost_Extensions_TypeExtensions_IsAPrimitiveType_System_Type_" data-uid="Bifrost.Extensions.TypeExtensions.IsAPrimitiveType(System.Type)">IsAPrimitiveType(Type)</h4>
+              <div class="markdown level1 summary"><p>Check if a type is a &quot;primitve&quot; type.  This is not just dot net primitives but basic types like string, decimal, datetime,
+that are not classified as primitive types.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static bool IsAPrimitiveType(this Type type)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td><span class="parametername">type</span></td>
+                    <td><p>Type to check</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><p>True if a &quot;primitive&quot;</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Extensions_TypeExtensions_IsBoolean_System_Type_.md&amp;value=---%0Auid%3A%20Bifrost.Extensions.TypeExtensions.IsBoolean(System.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Extensions/TypeExtensions.cs/#L110">View Source</a>
+              </span>
+              <a id="Bifrost_Extensions_TypeExtensions_IsBoolean_" data-uid="Bifrost.Extensions.TypeExtensions.IsBoolean*"></a>
+              <h4 id="Bifrost_Extensions_TypeExtensions_IsBoolean_System_Type_" data-uid="Bifrost.Extensions.TypeExtensions.IsBoolean(System.Type)">IsBoolean(Type)</h4>
+              <div class="markdown level1 summary"><p>Check if a type is a Boolean or not</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static bool IsBoolean(this Type type)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td><span class="parametername">type</span></td>
+                    <td><p><span class="xref">System.Type</span> to check</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><p>True if type is a boolean, false if not</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Extensions_TypeExtensions_IsDate_System_Type_.md&amp;value=---%0Auid%3A%20Bifrost.Extensions.TypeExtensions.IsDate(System.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Extensions/TypeExtensions.cs/#L100">View Source</a>
+              </span>
+              <a id="Bifrost_Extensions_TypeExtensions_IsDate_" data-uid="Bifrost.Extensions.TypeExtensions.IsDate*"></a>
+              <h4 id="Bifrost_Extensions_TypeExtensions_IsDate_System_Type_" data-uid="Bifrost.Extensions.TypeExtensions.IsDate(System.Type)">IsDate(Type)</h4>
+              <div class="markdown level1 summary"><p>Check if a type is a Date or not</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static bool IsDate(this Type type)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td><span class="parametername">type</span></td>
+                    <td><p><span class="xref">System.Type</span> to check</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><p>True if type is a date, false if not</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Extensions_TypeExtensions_IsDerivedFromOpenGeneric_System_Type_System_Type_.md&amp;value=---%0Auid%3A%20Bifrost.Extensions.TypeExtensions.IsDerivedFromOpenGeneric(System.Type%2CSystem.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Extensions/TypeExtensions.cs/#L204">View Source</a>
+              </span>
+              <a id="Bifrost_Extensions_TypeExtensions_IsDerivedFromOpenGeneric_" data-uid="Bifrost.Extensions.TypeExtensions.IsDerivedFromOpenGeneric*"></a>
+              <h4 id="Bifrost_Extensions_TypeExtensions_IsDerivedFromOpenGeneric_System_Type_System_Type_" data-uid="Bifrost.Extensions.TypeExtensions.IsDerivedFromOpenGeneric(System.Type,System.Type)">IsDerivedFromOpenGeneric(Type, Type)</h4>
+              <div class="markdown level1 summary"><p>Check if a type derives from an open generic type</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static bool IsDerivedFromOpenGeneric(this Type type, Type openGenericType)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td><span class="parametername">type</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td><span class="parametername">openGenericType</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Extensions_TypeExtensions_IsNullable_System_Type_.md&amp;value=---%0Auid%3A%20Bifrost.Extensions.TypeExtensions.IsNullable(System.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Extensions/TypeExtensions.cs/#L75">View Source</a>
+              </span>
+              <a id="Bifrost_Extensions_TypeExtensions_IsNullable_" data-uid="Bifrost.Extensions.TypeExtensions.IsNullable*"></a>
+              <h4 id="Bifrost_Extensions_TypeExtensions_IsNullable_System_Type_" data-uid="Bifrost.Extensions.TypeExtensions.IsNullable(System.Type)">IsNullable(Type)</h4>
+              <div class="markdown level1 summary"><p>Check if a type is nullable or not</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static bool IsNullable(this Type type)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td><span class="parametername">type</span></td>
+                    <td><p><span class="xref">System.Type</span> to check</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><p>True if type is nullable, false if not</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Extensions_TypeExtensions_IsNumericType_System_Type_.md&amp;value=---%0Auid%3A%20Bifrost.Extensions.TypeExtensions.IsNumericType(System.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Extensions/TypeExtensions.cs/#L89">View Source</a>
+              </span>
+              <a id="Bifrost_Extensions_TypeExtensions_IsNumericType_" data-uid="Bifrost.Extensions.TypeExtensions.IsNumericType*"></a>
+              <h4 id="Bifrost_Extensions_TypeExtensions_IsNumericType_System_Type_" data-uid="Bifrost.Extensions.TypeExtensions.IsNumericType(System.Type)">IsNumericType(Type)</h4>
+              <div class="markdown level1 summary"><p>Check if a type is a number or not</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static bool IsNumericType(this Type type)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td><span class="parametername">type</span></td>
+                    <td><p><span class="xref">System.Type</span> to check</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><p>True if type is numeric, false if not</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Extensions_TypeExtensions.md&amp;value=---%0Auid%3A%20Bifrost.Extensions.TypeExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Extensions/TypeExtensions.cs/#L29" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2008-2017 Dolittle<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

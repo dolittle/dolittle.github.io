@@ -1,0 +1,397 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class ValueRule
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class ValueRule
+   ">
+    <meta name="generator" content="docfx 2.9.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <h1 id="Bifrost_Validation_ValueRule" data-uid="Bifrost.Validation.ValueRule">Class ValueRule
+              </h1>
+              <div class="markdown level0 summary"><p>Represents the basis for a value rule</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">ValueRule</span></div>
+                  <div class="level2"><a class="xref" href="Bifrost.Validation.Rules.Email.html">Email</a></div>
+                  <div class="level2"><a class="xref" href="Bifrost.Validation.Rules.GreaterThan-1.html">GreaterThan&lt;T&gt;</a></div>
+                  <div class="level2"><a class="xref" href="Bifrost.Validation.Rules.GreaterThanOrEqual-1.html">GreaterThanOrEqual&lt;T&gt;</a></div>
+                  <div class="level2"><a class="xref" href="Bifrost.Validation.Rules.LessThan-1.html">LessThan&lt;T&gt;</a></div>
+                  <div class="level2"><a class="xref" href="Bifrost.Validation.Rules.LessThanOrEqual-1.html">LessThanOrEqual&lt;T&gt;</a></div>
+                  <div class="level2"><a class="xref" href="Bifrost.Validation.Rules.MaxLength.html">MaxLength</a></div>
+                  <div class="level2"><a class="xref" href="Bifrost.Validation.Rules.NotNull.html">NotNull</a></div>
+                  <div class="level2"><a class="xref" href="Bifrost.Validation.Rules.Regex.html">Regex</a></div>
+                  <div class="level2"><a class="xref" href="Bifrost.Validation.Rules.Required.html">Required</a></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:Bifrost.Validation</h6>
+              <h6><strong>Assembly</strong>:Bifrost.dll</h6>
+              <h5 id="Bifrost_Validation_ValueRule_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public abstract class ValueRule : IValueRule, IRule</code></pre>
+              </div>
+              <h3 id="constructors">Constructors
+              </h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Validation_ValueRule__ctor_System_Reflection_PropertyInfo_.md&amp;value=---%0Auid%3A%20Bifrost.Validation.ValueRule.%23ctor(System.Reflection.PropertyInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Validation/ValueRule.cs/#L38">View Source</a>
+              </span>
+              <a id="Bifrost_Validation_ValueRule__ctor_" data-uid="Bifrost.Validation.ValueRule.#ctor*"></a>
+              <h4 id="Bifrost_Validation_ValueRule__ctor_System_Reflection_PropertyInfo_" data-uid="Bifrost.Validation.ValueRule.#ctor(System.Reflection.PropertyInfo)">ValueRule(PropertyInfo)</h4>
+              <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="Bifrost.Validation.ValueRule.html">ValueRule</a></p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public ValueRule(PropertyInfo property)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Reflection.PropertyInfo</span></td>
+                    <td><span class="parametername">property</span></td>
+                    <td><p><span class="xref">System.Reflection.PropertyInfo</span> the rule is for</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="fields">Fields
+              </h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Validation_ValueRule_ValueTypeMismatch.md&amp;value=---%0Auid%3A%20Bifrost.Validation.ValueRule.ValueTypeMismatch%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Validation/ValueRule.cs/#L32">View Source</a>
+              </span>
+              <h4 id="Bifrost_Validation_ValueRule_ValueTypeMismatch" data-uid="Bifrost.Validation.ValueRule.ValueTypeMismatch">ValueTypeMismatch</h4>
+              <div class="markdown level1 summary"><p>When a value is of the wrong type, this is the reason given for breaking a rule</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static BrokenRuleReason ValueTypeMismatch</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Bifrost.Rules.BrokenRuleReason.html">BrokenRuleReason</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="properties">Properties
+              </h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Validation_ValueRule_Property.md&amp;value=---%0Auid%3A%20Bifrost.Validation.ValueRule.Property%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Validation/ValueRule.cs/#L44">View Source</a>
+              </span>
+              <a id="Bifrost_Validation_ValueRule_Property_" data-uid="Bifrost.Validation.ValueRule.Property*"></a>
+              <h4 id="Bifrost_Validation_ValueRule_Property" data-uid="Bifrost.Validation.ValueRule.Property">Property</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public PropertyInfo Property { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Reflection.PropertyInfo</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Bifrost.Validation.IValueRule.html#Bifrost_Validation_IValueRule_Property">IValueRule.Property</a></div>
+              <h3 id="methods">Methods
+              </h3>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Validation_ValueRule_Evaluate_Bifrost_Rules_IRuleContext_System_Object_.md&amp;value=---%0Auid%3A%20Bifrost.Validation.ValueRule.Evaluate(Bifrost.Rules.IRuleContext%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Validation/ValueRule.cs/#L56">View Source</a>
+              </span>
+              <a id="Bifrost_Validation_ValueRule_Evaluate_" data-uid="Bifrost.Validation.ValueRule.Evaluate*"></a>
+              <h4 id="Bifrost_Validation_ValueRule_Evaluate_Bifrost_Rules_IRuleContext_System_Object_" data-uid="Bifrost.Validation.ValueRule.Evaluate(Bifrost.Rules.IRuleContext,System.Object)">Evaluate(IRuleContext, Object)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public abstract void Evaluate(IRuleContext context, object instance)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Bifrost.Rules.IRuleContext.html">IRuleContext</a></td>
+                    <td><span class="parametername">context</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><span class="parametername">instance</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Bifrost.Rules.IRule.html#Bifrost_Rules_IRule_Evaluate_Bifrost_Rules_IRuleContext_System_Object_">IRule.Evaluate(IRuleContext, Object)</a></div>
+              <span class="small pull-right mobile-hide">
+                <span class="divider">|</span>
+                <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Validation_ValueRule_FailIfValueTypeMismatch__1_Bifrost_Rules_IRuleContext_System_Object_.md&amp;value=---%0Auid%3A%20Bifrost.Validation.ValueRule.FailIfValueTypeMismatch%60%601(Bifrost.Rules.IRuleContext%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+              </span>
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Validation/ValueRule.cs/#L46">View Source</a>
+              </span>
+              <a id="Bifrost_Validation_ValueRule_FailIfValueTypeMismatch_" data-uid="Bifrost.Validation.ValueRule.FailIfValueTypeMismatch*"></a>
+              <h4 id="Bifrost_Validation_ValueRule_FailIfValueTypeMismatch__1_Bifrost_Rules_IRuleContext_System_Object_" data-uid="Bifrost.Validation.ValueRule.FailIfValueTypeMismatch``1(Bifrost.Rules.IRuleContext,System.Object)">FailIfValueTypeMismatch&lt;TDesired&gt;(IRuleContext, Object)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">protected bool FailIfValueTypeMismatch&lt;TDesired&gt;(IRuleContext context, object value)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Bifrost.Rules.IRuleContext.html">IRuleContext</a></td>
+                    <td><span class="parametername">context</span></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><span class="parametername">value</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="parametername">TDesired</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="extensionmethods">Extension Methods</h3>
+              <div>
+                  <a class="xref" href="Bifrost.Concepts.ConceptExtensions.html#Bifrost_Concepts_ConceptExtensions_IsConcept_System_Object_">ConceptExtensions.IsConcept(Object)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Concepts.ConceptExtensions.html#Bifrost_Concepts_ConceptExtensions_GetConceptValue_System_Object_">ConceptExtensions.GetConceptValue(Object)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Dynamic.DynamicExtensions.html#Bifrost_Dynamic_DynamicExtensions_AsExpandoObject_System_Object_">DynamicExtensions.AsExpandoObject(Object)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Extensions.MethodCalls.html#Bifrost_Extensions_MethodCalls_CallGenericMethod__5___1_System_Linq_Expressions_Expression_System_Func___1_System_Func___2___3___4___0______2___3___4_System_Type___">MethodCalls.CallGenericMethod&lt;TOut, T, T1, T2, T3&gt;(T, Expression&lt;Func&lt;T, Func&lt;T1, T2, T3, TOut&gt;&gt;&gt;, T1, T2, T3, Type[])</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Extensions.MethodCalls.html#Bifrost_Extensions_MethodCalls_CallGenericMethod__4___1_System_Linq_Expressions_Expression_System_Func___1_System_Func___2___3___0______2___3_System_Type___">MethodCalls.CallGenericMethod&lt;TOut, T, T1, T2&gt;(T, Expression&lt;Func&lt;T, Func&lt;T1, T2, TOut&gt;&gt;&gt;, T1, T2, Type[])</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Extensions.MethodCalls.html#Bifrost_Extensions_MethodCalls_CallGenericMethod__3___1_System_Linq_Expressions_Expression_System_Func___1_System_Func___2___0______2_System_Type___">MethodCalls.CallGenericMethod&lt;TOut, T, T1&gt;(T, Expression&lt;Func&lt;T, Func&lt;T1, TOut&gt;&gt;&gt;, T1, Type[])</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Extensions.MethodCalls.html#Bifrost_Extensions_MethodCalls_CallGenericMethod__2___1_System_Linq_Expressions_Expression_System_Func___1_System_Func___0____System_Type___">MethodCalls.CallGenericMethod&lt;TOut, T&gt;(T, Expression&lt;Func&lt;T, Func&lt;TOut&gt;&gt;&gt;, Type[])</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Extensions.MethodCalls.html#Bifrost_Extensions_MethodCalls_Generics__1___0_">MethodCalls.Generics&lt;T&gt;(T)</a>
+              </div>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dolittle/Bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Validation_ValueRule.md&amp;value=---%0Auid%3A%20Bifrost.Validation.ValueRule%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Validation/ValueRule.cs/#L27" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2008-2017 Dolittle<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
