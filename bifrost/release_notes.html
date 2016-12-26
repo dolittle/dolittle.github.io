@@ -1,0 +1,343 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Version 1.0.0.31 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Version 1.0.0.31 ">
+    <meta name="generator" content="docfx 2.9.3.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="version-10031">Version 1.0.0.31</h1>
+              
+<ul>
+<li>LocalPath used for assemblies during loading from the URI (#662) - from PR #663</li>
+</ul>
+<h1 id="version-10030">Version 1.0.0.30</h1>
+<ul>
+<li>Fixed type discovery performance, both for startup and runtime (#657)</li>
+</ul>
+<h1 id="version-10028--10029">Version 1.0.0.28 &amp; 1.0.0.29</h1>
+<ul>
+<li>Adding in support for assemblies without a location during assembly discovery</li>
+</ul>
+<h1 id="version-10027">Version 1.0.0.27</h1>
+<ul>
+<li>areAllParametersSet() on query now supports observables (#655)</li>
+<li>Fixed NuGet package reference for FluentValidation to the signed version (#654)</li>
+<li>Added a package for the MVC project support (PS: this is MVC3, so good old)</li>
+</ul>
+<h1 id="version-10026">Version 1.0.0.26</h1>
+<ul>
+<li>Removing IExecutionEnvironment - introducing ICanProvideAssemblies and rewriting how things work with assemblies. Fixes #650.</li>
+</ul>
+<h1 id="version-10024--10025">Version 1.0.0.24 &amp; 1.0.0.25</h1>
+<ul>
+<li>Making it possible to override IExecutionEnvironment at startup - as a temporary solution till we get to #650 &amp; #651</li>
+</ul>
+<h1 id="version-10022--10023">Version 1.0.0.22 &amp; 1.0.0.23</h1>
+<ul>
+<li>Improved weak delegates for Messenger</li>
+<li>Change to WeakDelegate for the CommandFor pipeline</li>
+<li>Ignoring dynamic assemblies for type discovery and assembly loading</li>
+<li>Started work on support for EntityFramework</li>
+<li>Making Proxy generation a part of core as it is needed for more than just clients</li>
+<li>Upgraded NHibernate support to the latest and greatest (#640)</li>
+<li>Fixing how assemblies are loaded and making configuration use the same mechanism. It is now possible to specify assemblies in a fluent way + a new interface that can be implemented for specifying assemblies to include or ignore in discovery mechanisms (ICanSpecifyAssemblies)</li>
+<li>JavaScript dependency resolver now only resolves dependency instances when needed (#646)</li>
+<li>Upgaded to .NET 4.5.1 for all projects</li>
+</ul>
+<h1 id="version-10021">Version 1.0.0.21</h1>
+<ul>
+<li>Interface that you can implement to get notified when configuration is done - IWantToKnowWhenConfigurationIsDone (#598)</li>
+<li>ICommandFor callbacks are called per instance (#626)</li>
+<li>Explicit registration of IMessenger -&gt; Messenger removed - marked with singleton</li>
+<li>Making designtime work properly without errors in Visual Studio for the ViewModel markup extension</li>
+<li>Making messenger use WeakReference (#601)</li>
+</ul>
+<h1 id="version-10019--10020">Version 1.0.0.19 &amp; 1.0.0.20</h1>
+<p>Due to some strange behavior of the NuGet servers yielding error messages claiming errors in the Package metadata and also that versions where missing. We ended up releasing a couple of versions thinking our packages were corrupt. Therefor, these versions are exactly the same as 1.0.0.18.</p>
+<h1 id="version-10018">Version 1.0.0.18</h1>
+<ul>
+<li>Added process callbacks for ICommandFor&lt;&gt; (#614)</li>
+<li>Configuring messenger for desktop when configuring for desktop (Configure.Frontend.Desktop()) - as a singleton (#617)</li>
+</ul>
+<h2 id="process-callbacks-614">Process Callbacks (#614)</h2>
+<pre><code>public class ViewModel
+{
+    public ViewModel(ICommandFor&lt;MyCommand&gt; commandFor)
+    {
+        commandFor.Succeeded((cmd, result) =&gt; {
+            // Things to do when successful
+        });
+
+        commandFor.Failed((cmd, result) =&gt; {
+            // Things to do when failed
+        });
+
+        commandFor.Handled((cmd, result) =&gt; {
+            // Things to do when handled
+        });
+    }
+}
+</code></pre><h1 id="version-10017">Version 1.0.0.17</h1>
+<ul>
+<li>FromMethod extension in WPF/XAML client can now take an IValueConverter to use for converting parameters (#616)</li>
+</ul>
+<h2 id="parameterconverter-616">ParameterConverter (#616)</h2>
+<pre><code>&lt;Button Command=&quot;{interaction:FromMethod NameOfMethod, CanExecuteWhen=NameOfMethodOrProperty, ParameterConverter={StaticResource AValueConverter}}&quot;/&gt;
+</code></pre><h1 id="version-10016">Version 1.0.0.16</h1>
+<ul>
+<li>FromMethod extension in WPF/XAML client now supports CanExecute (#612)</li>
+<li>ICommandFor&lt;&gt; can now be generated from a concrete instance of a command (#611)</li>
+<li>Fix for assembly filtering to filter assemblies delay loaded after initial initialization (#613)</li>
+</ul>
+<h2 id="canexecute-for-frommethod">CanExecute for FromMethod</h2>
+<p>In the Interaction namespace of Bifrost when using the client, you&#39;ll find a markup extension called FromMethod. This extension now supports the capability of taking </p>
+<pre><code>&lt;Button Command=&quot;{interaction:FromMethod NameOfMethod, CanExecuteWhen=NameOfMethodOrProperty}&quot;/&gt;
+</code></pre><p>The <em>CanExecuteWhen</em> property of the extension is optional and can take either a method or a property. If it is a method, the method can be a method without any parameters or with one parameter and the command parameter will then be passed in. The return type needs to be of type <em>bool</em>, same goes for if it is a property. If the declaring type implements <em>INotifyPropertyChanged</em> and you&#39;re specifying a property - it will trigger a <em>CanExecuteChanged</em> event for the returning command when the property changed so it can be evaluated by the WPF infrastructure again. </p>
+<h1 id="version-10015">Version 1.0.0.15</h1>
+<ul>
+<li>Configure startup now uses same AssemblyProvider as the rest of the system</li>
+</ul>
+<h1 id="version-10014">Version 1.0.0.14</h1>
+<ul>
+<li>ICommandFor&lt;&gt; support for client in place with full proxy generation of the frontend concerns. Fully bindable in XAML.</li>
+</ul>
+<h1 id="version-10013">Version 1.0.0.13</h1>
+<ul>
+<li>AssemblyFiltering for startup in place. For now accessible from the DiscoverAndConfigure() method on the configure object</li>
+</ul>
+<h2 id="usage">Usage</h2>
+<p>For instance, lets say you have a WPF application, the way you would use this is would be in your App.xaml.cs file:</p>
+<pre><code>using Bifrost.Configuration;
+using Bifrost.Configuration.Assemblies;
+
+namespace YourApp
+{
+    public partial class App : Application
+    {
+        static App()
+        {
+            Configure.DiscoverAndConfigure(a=&gt;
+                a.IncludeAll()
+                    .ExceptAssembliesStartingWith(&quot;System&quot;,&quot;Microsoft&quot;));
+        }
+    }
+}
+</code></pre><p>In the future there will be other mechanisms as well which would apply better for Web scenarios where one does not call DiscoverAndConfigure manually. Also, the sample above with &quot;System&quot; and &quot;Microsoft&quot; will eventually be something Bifrost itself will filter, this is linked to the future mechanism coming.</p>
+<h1 id="version-10012">Version 1.0.0.12</h1>
+<ul>
+<li>XAML Visual Tree extensions</li>
+<li>Adding better check for wether or not an assembly is a .NET assembly during location instead of relying on BadImageException</li>
+<li>Temporarily disabling Windows Phone version of Client - will return in a future release</li>
+<li>DocumentDB strategies for collection storage - default implementation puts all entity types in same collection called entities. Query support for getting correct entities when asking for a specific type.</li>
+<li>Added FromMethod MarkupExtension for XAML clients for pointing directly to a method on your ViewModel for the Command property of things like Button. </li>
+<li>Enabling strong name signing - for same reason this was not enabled</li>
+<li>Introducing a ViewModel MarkupExtension for XAML clients that takes the type of ViewModel and it will use the container to instantiate it. Used for the DataContext property typically.</li>
+<li>Started work on a better way to filter assemblies you don&#39;t want to discover types for. Early days.</li>
+<li>Putting in place DesktopConfiguration for the WPF client</li>
+<li>Changing one of the overloads for IOC containers for Bind when binding to a Func. It now takes the type being bound to. </li>
+</ul>
+<h1 id="version-10011">Version 1.0.0.11</h1>
+<ul>
+<li>Support for derived query types (#538)</li>
+<li>Required rule more robust</li>
+<li>Fixed generation of Queryable extensions for .Skip and .Take (#540)</li>
+<li>Started work on DocumentDB implementation - EventStore is up and running (#531)</li>
+<li>Started work on new validation and business rules engine based on a new underlying rule engine</li>
+<li>FluentValidation moved into its own components - Bifrost.FluentValidation - available as its own NuGet package</li>
+<li>Improving the naive file system based EventStore and EntityContexts</li>
+<li>Improved QuickStart to showcase more features - this still need to be worked on a lot to actually cover all features.</li>
+<li>Started work on query validation support (#382)</li>
+<li>ICanResolvePrinicpal implementation automatically discovered (#549)</li>
+<li>Added ViewModelService for XAML based clients</li>
+<li>Support for SimpleInjector (#568 - pull request)</li>
+<li>Handling of missing properties for mapping in JavaScript fixed (#585 - pull request)</li>
+<li>Improving XML comments in general</li>
+<li>Added MethodInfoConverter to JSON component</li>
+<li>Started work on mapping support for C# - needed for DocumentDB support, amongst others</li>
+<li>Heavy work on the new control, binding and object model for JavaScript</li>
+<li>Improved isObject() check when checking &quot;undefined&quot; for JavaScript</li>
+<li>Code quality work with the help of NDepend</li>
+<li>Updated 3rd party references<ul>
+<li>Newtonsoft Json - 6.0.8</li>
+<li>Ninject - 3.2.2.0</li>
+<li>SignalR - 2.2.0</li>
+</ul>
+</li>
+</ul>
+<h1 id="version-10010">Version 1.0.0.10</h1>
+<ul>
+<li>Making everything compile against .net 4.5</li>
+<li>Updated 3rd party references<ul>
+<li>Newtonsoft Json - 6.0.5</li>
+<li>Ninject - 3.2.0.0</li>
+<li>RavenDB - 2.5.2916</li>
+<li>MongoDB - 1.9.2</li>
+<li>SignalR - 2.1.2</li>
+<li>Unity - 3.5.1404.0</li>
+<li>AutoFac - 3.5.2</li>
+</ul>
+</li>
+<li>Exposing StructureMap IOC support as Nuget package</li>
+<li>Exposing Unity IOC support as Nuget package</li>
+<li>Exposing AutoFac IOC support as Nuget package</li>
+<li>Exposint Windsor IOC support as Nuget package</li>
+<li>Retiring dedicated SignalR component - merged into the Web component. Consequence is SignalR is now front and center of everything moving forward.</li>
+<li>Introducing a simple JSON File based EventStore implementation - mostly for demo purposes</li>
+<li>Introducing a simple JSON File based EntityContext implementation - mostly for demo purposes</li>
+<li>Cleaning up QuickStart</li>
+<li>Easier and more convenient way to import types (#534)</li>
+<li>Fixing bugs related to client mapping of objects (#524, #522)</li>
+<li>Fixed deserialization of Concepts based on Guids (#513)</li>
+<li>Fixing IE issues with mapping and type recognition. IE does not hold a property called name for the constructor property. Regex to the rescue.</li>
+<li>Started work on the new rule engine. First implementation targets queries and validation of these. This is the first step in moving away from FluentValidation.</li>
+<li>Fixing a lot of &quot;system&quot; properties to be prefixed with an underscore - avoiding naming conflicts</li>
+<li>Rules namespace holding a specification implementation is now called Specifications both in C# and JavaScript</li>
+<li>BundleTables routes from System.Web.Optimization are now recognized and will be ignored for the SPA HTTP request handling</li>
+</ul>
+<h2 id="more-convenient-way-to-import-instances-of-types---534">More convenient way to import instances of types - #534</h2>
+<p>In Bifrost we have something called ITypeImporter and ITypeDiscoverer. The importer imports the types as instances, that means the implementation uses the IOC container to resolve an instance when calling the .Import<em>&lt;&gt;() methods. The discoverer is responsible for just discovering the types when calling the Find</em>&lt;&gt;() methods and has nothing to do with instances. With this release, we&#39;re introducing something that makes this whole thing more explicit, clearer and easier to use. There is now an interface called IInstancesOf&lt;&gt; that you can take a dependency on. The interface inherits IEnumerable&lt;&gt; and as a consequence the implementation InstancesOf&lt;&gt; will do the instantiation when its enumerated. The way you can use this is:</p>
+<pre><code>using Bifrost.Execution;
+
+namespace MyNamespace
+{
+    public class MySystem
+    {
+        public MySystem(IInstancesOf&lt;SomeAbsractOrInterfaceType&gt; instances)
+        {
+            // The enumerator will now instantiate through the IOC container
+            // giving you an instance with correct lifecycle
+            foreach( var instance in instances ) 
+            {
+            }
+        }
+    }
+}
+</code></pre><h2 id="signalr-support">SignalR support</h2>
+<p>We are now generating Bifrost proxies for hubs - these are placed in the namespace corresponding to the namespace maps set up for the application. Once you have created a hub like so:</p>
+<pre><code>using Microsoft.AspNet.SignalR;
+
+namespace Web.BoudedContext.Module
+{
+    public class MyHub : Hub
+    {
+        public int DoSomething(int someInteger, string someString)
+        {
+            return 42;
+        }
+    }
+}
+</code></pre><p>From your JavaScript - for instance a ViewModel, you can now do this:</p>
+<pre><code>Bifrost.namespace(&quot;Web.BoundedContext.Module&quot;, {
+    myFeature: Bifrost.views.ViewModel.extend(function(myHub) {
+
+        myHub.server.doSomething(43,&quot;fourty three&quot;)
+                .continueWith(function(result) {
+            // Result should be 42...
+        });
+    });
+});
+</code></pre><p>The &quot;myHub&quot; dependency will automatically be injected by convention. All hubs are placed in the closest matching namespace. If none is found, there is a global namespace called hubs that will hold it. The last dependency resolver in the chain will be the one that recognizes the global namespace and it will always be found.</p>
+<p>With this you don&#39;t have to think about starting the SignalR Hub connection like one would have to do with a bare SignalR. Bifrost manages this on the first hub being used.</p>
+<p>You might notice that instead of what might be expected when working with SignalR for results coming back from calls to the server:</p>
+<pre><code>.done(function() {}) 
+</code></pre><p>We are using the Bifrost promise instead. This is because we want consistency with Bifrost, not with SignalRs proxies. In fact, we are not using the SignalR proxies at all, but our own proxy generation engine as we use for the generation of proxies for Commands, Queries, ReadModels, Security, Validation and more.</p>
+<p>If you want to set up client funtions that you want for the particular Hub instances, you can do this by doing the following:</p>
+<pre><code>myHub.client(function(client) {
+    client.doSomething = function(someString, someNumber) {
+        // Do things in the client called from the server
+    };
+});
+</code></pre><p>This will subscribe to any method calls from the server corresponding to the name of the function. The above code can be called anytime, there is no ordering to think of as with vanilla SignalR were you have to do this prior to starting the Hub connection. </p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dolittle/Bifrost/blob/HEAD/release_notes.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2008-2017 Dolittle<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+  </body>
+</html>
