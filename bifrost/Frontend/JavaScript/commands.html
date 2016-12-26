@@ -76,24 +76,126 @@ to be valid and able to execute.</p>
 <h2 id="proxy-generation">Proxy generation</h2>
 <p>For C# developers, there are automatically generated proxies of commands, security and validation related to the command.
 These can be taken as dependencies on constructors of types. Read more about <a href="../dependencyInjection.md">dependency injection</a> in Bifrost.</p>
-<h2 id="properties">Properties</h2>
-<h3 id="setting-initial-values">Setting initial values</h3>
-<h3 id="populating-from-external-source">Populating from external source</h3>
-<h2 id="states">States</h2>
-<p>There are a few properties on a command that can be used programatically and also be bound directly in the HTML.
-The state of the properties change as they respond to changes from the user or other parts of the system.</p>
-<h3 id="authorization">Authorization</h3>
-<p>On the client, metadata from the server is brought in telling if a command is authorized for the user 
-that is logged in. This </p>
-<h3 id="isready--isreadytoexecute--haschanges">isReady &amp; isReadyToExecute &amp; hasChanges</h3>
-<h3 id="isvalid">isValid</h3>
-<h3 id="execution">Execution</h3>
-<p>If a command is not allowed be executed due to validation</p>
+<p>Commands can be created manually in the client code if one wants to. It is not required to go through proxy generation. 
+Please read more in the </p>
+<h2 id="authorization">Authorization</h2>
+<p>On the client, metadata from the server is brought in telling if a command is authorized for the user
+that is authenticated. The authorization is applied on the server side using security descriptors.</p>
+<h3 id="relevant-properties">Relevant properties</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Observable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>isAuthorized</td>
+<td>Boolean</td>
+<td>X</td>
+<td>Returns true if command is authorized, false if not</td>
+</tr>
+</tbody>
+</table>
+<h2 id="validation">Validation</h2>
+<p>As with authorization, commands can hold metadata from validators, but it will only hold for those rules that has a client side implementation of it.</p>
+<h3 id="relevant-properties-1">Relevant properties</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Observable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>isValid</td>
+<td>Boolean</td>
+<td>X</td>
+<td>Returns true if command is valid, false if not</td>
+</tr>
+<tr>
+<td>validtionMessages</td>
+<td>string[]</td>
+<td>X</td>
+<td>Contains an array of all validation messages for validators that have failed</td>
+</tr>
+</tbody>
+</table>
+<h2 id="properties-populating-and-tracking-changes">Properties, populating and tracking changes</h2>
+<p>The properties on a command is also part of the proxy generation. </p>
+<p>By default all properties on a command once generated through the proxy generation will hold a default value.
+In many cases you want to relate a command to data coming from an existing <a href="../readModel.md">ReadModel</a> or other source.
+During initialization of a <a href="../viewModels.md">ViewModel</a> you would typically connect the command with an external source
+for automatic population the command with an initial state.</p>
+<p>This initial population of state allows for tracking any changes the user does and can be very useful for the user interface.
+You will also find that this information is propagated into the <a href="../regions.md">region</a> in which the command is being used and also
+then available to any parent region up the chain.</p>
+<h3 id="relevant-methods">Relevant Methods</h3>
+<h3 id="relevant-properties-2">Relevant properties</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Observable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hasChanges</td>
+<td>Boolean</td>
+<td>X</td>
+<td>Returns true if command has changes, false if not</td>
+</tr>
+<tr>
+<td>isReady</td>
+<td>Boolean</td>
+<td>X</td>
+<td>Returns true if command has its properties ready, false if not</td>
+</tr>
+<tr>
+<td>isReadyToExecute</td>
+<td>Boolean</td>
+<td>X</td>
+<td>Returns true if command is ready to execute, false if not</td>
+</tr>
+</tbody>
+</table>
+<h2 id="execution">Execution</h2>
+<p>If any of the previously described conditions are not met, the command is not allowed to execute. 
+Code and UI can access this information and use it to reflect this to user for instance.</p>
+<h3 id="relevant-properties-3">Relevant properties</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Observable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>canExecute</td>
+<td>Boolean</td>
+<td>X</td>
+<td>Returns true if command can execute, false if not</td>
+</tr>
+</tbody>
+</table>
 <h2 id="callbacks">Callbacks</h2>
 <h3 id="beforeexecute">beforeExecute</h3>
 <h3 id="failed">failed</h3>
 <h3 id="succeeded">succeeded</h3>
 <h3 id="completed">completed</h3>
+<h2 id="advanced">Advanced</h2>
 
             </article>
           </div>
