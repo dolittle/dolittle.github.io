@@ -81,8 +81,18 @@ software that is hard to maintain. According <a href="https://en.wikipedia.org/w
 related to a typical system arise in the maintenance phase. This means that we should aim towards building our systems
 in a way that makes the maintenance phase as easy as possible.</p>
 <p>The goal of Bifrost is to help make this better. By focusing on well established software patterns and practices,
-and sticking to them without compromise, we believe this is possible. Bifrost embraces a set of practices described 
+and sticking to them without compromise, we believe this is possible. Bifrost embraces a set of practices described
 in this article and tries to adhere to them fully.</p>
+<h2 id="decoupling--microservices">Decoupling &amp; Microservices</h2>
+<p>At the heart of Bifrost sits the notion of decoupling. Making small focused lego pieces that can be assembled together
+in any way one wants to. This is at the core of what is referred to as <a href="https://en.wikipedia.org/wiki/Microservices">Microservices</a>.
+The ability to break up the software into smaller more digestable components that makes our software in fact much easier
+to understand and maintain. When writing software in a decoupled manner, one gets the opportunity of composing it back
+together however one sees fit. You could compose it back in one application running inside a single process, or you could
+spread it across a cluster. It really is a deployment choice once the software is giving you this freedom.
+When it is broken up you get the benefit of scaling each individual piece on its own, rather than scaling the monolith
+equally across a number of machines. This gives a higher density, better resource utilization and ultimately better cost
+control.</p>
 <h2 id="solid">SOLID</h2>
 <h3 id="single-responsibility-principle">Single Responsibility Principle</h3>
 <h3 id="open--closed-principle">Open / Closed Principle</h3>
@@ -91,8 +101,25 @@ in this article and tries to adhere to them fully.</p>
 <h3 id="dependency-inversion-principle">Dependency Inversion Principle</h3>
 <h2 id="seperation-of-concerns">Seperation of Concerns</h2>
 <h2 id="cross-cutting-concerns">Cross Cutting Concerns</h2>
-<h2 id="convention-over-configuration">Convention over Configuration</h2>
+<h2 id="conventions-over-configuration">Conventions over Configuration</h2>
+<p>For a team to deliver consistency in the codebase, one should aim for a recipe that makes it easy to the right thing and
+hard to the wrong thing. Having conventions to govern the recipe forces the team to deliver in one way. Bifrost is highly
+focused around the concept of conventions in place for things, rather than having to configure thing. The conventions instead
+are configurable. Since things are discovered and one does not need to configure everything, we adhere more easier to the
+Open / Closed principle as mentioned earlier. Meaning that we don&#39;t have to open up code to get new things in place, it will
+be discovered by how the conventions are and configured.</p>
+<p>The simplest example of a convention in play in Bifrost is during initialization, Bifrost will configure whatever <a href="https://en.wikipedia.org/wiki/Inversion_of_control">IOC container</a>
+you have hooked with conventions. One default convention plays a part here saying that an interface named <code>IFoo</code>will be bound to <code>Foo</code>
+as long as they both sit in the same namespace. You&#39;ll see this throughout Bifrost internally as well, for instance <code>ICommandCoordinator</code> is 
+bound to <code>CommandCoordinator</code>.</p>
+<p>Other good examples of conventions in Bifrost is in the Web frontend where one can specify a particular <em>View</em> to be loaded and it will
+automatically look for a <em>ViewModel</em> with the same name but instead of <em>.html</em> as extension, it looks for <em>.js</em>.</p>
+<p>The conventions at play are described throughout the documentation when it is relevant.</p>
 <h3 id="discovery">Discovery</h3>
+<p>In order for all the conventions described above to work, Bifrost is heavily relying on different types of discovering mechanisms.
+For the C# code the discovery is all about types. It relies on being able to discover concrete types, but also implementations of interfaces.
+Through this it can find the things it needs. You can read more about the type discovery mechanism <a href="../Backend/type_discovery.html">here</a>.</p>
+<h2 id="automated-testing">Automated testing</h2>
 <h2 id="cqrs">CQRS</h2>
 <h2 id="model-view-view-model">Model View View Model</h2>
 <p>MVVM is a variation of <a href="https://en.wikipedia.org/wiki/Martin_Fowler">Martin Fowler&#39;s</a> <a href="http://martinfowler.com/eaaDev/PresentationModel.html">Presentation Model</a>.
@@ -127,8 +154,8 @@ Read more about the JavaScript support <a href="../Frontend/JavaScript">here</a>
 <p>With the artifacts found in Bifrost and more separation in place with CQRS, the diagram looks slightly different</p>
 <p><img src="images/mvvm_bifrost.png" alt="MVVM Architectural Diagram - Bifrost artifacts"></p>
 <p>You can read more details about the MVVM pattern <a href="https://en.wikipedia.org/wiki/Model–view–viewmodel">here</a>.</p>
-<h2 id="automated-testing">Automated testing</h2>
 <h2 id="full-pipeline">Full Pipeline</h2>
+<p>Below is the full pipeline of Bifrost when utilizing all its capabilities.</p>
 <p><img src="images/full_pipeline.png" alt="Bifrost Pipeline"></p>
 
             </article>
