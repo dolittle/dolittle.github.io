@@ -418,7 +418,7 @@ you want to process as a parameter. You can have multiple of these Process() met
 system responding differently to the event coming through. For instance, you could have one
 subscriber that would deal with the data change that the event causes and another dealing with
 sending an email or similiar, and they would be separated out in different files blissfully 
-unaware of the other subscribers existense. </p>
+unaware of the other subscribers existense.</p>
 <pre><code>using Bifrost.Events;
 using Bifrost.Read;
 using Events.HumanResources.Employees;
@@ -454,7 +454,7 @@ All one needs to do then is to implement the IQueryFor&lt;&gt; generic interface
 the query. The reasoning behind this model is to move the concerns of the client away
 from the server, so typically paging and similar things is not something you have to
 concern yourself about - Bifrost will amend this information to the IQueryable&lt;&gt; that you
-return. </p>
+return.</p>
 <p>In the Read project inside the Employees folder, add a class called AllEmployees and
 make it look like below:</p>
 <pre><code>using Bifrost.Read;
@@ -470,9 +470,9 @@ namespace Read.HumanResources.Employees
             _repository = repository;
         }
 
-        public IQueryable&lt;Employee&gt; Query 
+        public IQueryable&lt;Employee&gt; Query
         {
-            get 
+            get
             {
                 return _repository.Query;
             }
@@ -485,7 +485,7 @@ namespace Read.HumanResources.Employees
 <p>Remember the ViewModel that we put in, not very exciting - in fact, nothing happening in it at all. 
 With everything in place now we can basically start taking dependencies into the viewmodel and use data-binding
 to hook it all up in the view.</p>
-<p>Lets modify the viewmodel to look like this: </p>
+<p>Lets modify the viewmodel to look like this:</p>
 <pre><code>Bifrost.namespace(&quot;Features.Employees&quot;, {
     register: Bifrost.Type.extend(function(registerEmployee, allEmployees) {
         var self = this;
