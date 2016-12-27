@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>About Execution Context </title>
+    <title>About Principals </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="About Execution Context ">
+    <meta name="title" content="About Principals ">
     <meta name="generator" content="docfx 2.9.3.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -65,97 +65,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="execution-context">Execution Context</h1>
+              <h1 id="principals">Principals</h1>
               
-<p>During execution sometimes one needs information that are cross cutting the application.
-Such as who is the currently logged in user, current culture, what is the current tenant and other custom meta
-data you want is relative to the environment.
-In Bifrost this is formalized through something called <code>IExecutionContext</code>.</p>
-<h2 id="taking-it-as-a-dependency">Taking it as a dependency</h2>
-<p>To get the current execution context, you can either take a dependency directly to an interface
-called IExecutionContext.</p>
-<pre><code>using Bifrost.Execution;
 
-public class MySystem
-{
-    public MySystem(IExecutionContext executionContext)
-    {
-        // Put your code here
-    }
-}
-</code></pre><h2 id="executioncontextmanager">ExecutionContextManager</h2>
-<p>If the type taking the dependency has a lifecycle of transient or per web request lifecycle, this is fine.
-With a singleton lifecycle, this is not very useful at all, as you would get the execution context
-that is valid at the first creation time. Any changes after that would not be reflected.
-If you have a singleton, you can take a dependency to something called IExecutionContextManager</p>
-<pre><code>using Bifrost.Execution;
-
-public class MySystem
-{
-    public MySystem(IExecutionContextManager executionContextManager)
-    {
-         var current = executionContextManager.Current;
-
-         // Put your code here
-    }
-}
-</code></pre><p>On the execution context you will find the following properties:</p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Principal</td>
-<td>IPrincipal</td>
-</tr>
-<tr>
-<td>Culture</td>
-<td>CultureInfo</td>
-</tr>
-<tr>
-<td>System</td>
-<td>string</td>
-</tr>
-<tr>
-<td>Tenant</td>
-<td>ITenant</td>
-</tr>
-<tr>
-<td>Details</td>
-<td>dynamic</td>
-</tr>
-</tbody>
-</table>
-<h3 id="principal">Principal</h3>
-<p>The principal is populated by whatever resolver is configured for the system to resolve it.
-You can read more about principal and how the resolvers work <a href="principals.html">here</a>.</p>
-<h3 id="culture">Culture</h3>
-<p>Culture is the culture that is currently set on the thread.</p>
-<h3 id="system">System</h3>
-<p>System represents a string that just gives a name of your application - the currently running system.
-It exists as a property on the configure object of Bifrost, also called System. During configuration
-you simply set that property.</p>
-<h3 id="tenant">Tenant</h3>
-<p>Tenant is resolved by the tenancy system. You can read more about this <a href="tenants.html">here</a>.</p>
-<h3 id="details">Details</h3>
-<p>The last property is a dynamic property called Details - it can only be populated by placing a class
-implementing ICanPopulateExecutionContextDetails anywhere, in fact you can have multiple.
-Bifrot will discover all your implementations and call the <code>Populate()</code> method whenever the
-execution context needs to be populated.</p>
-<pre><code>using Bifrost.Execution;
-
-public class MyPopulator : ICanPopulateExecutionContextDetails
-{
-    public Populate(IExecutionContext executionContext, dynamic details)
-    {
-        details.SomeMetaData = &quot;Hello world&quot;;
-    }
-}
-</code></pre>
             </article>
           </div>
           
@@ -164,7 +76,7 @@ public class MyPopulator : ICanPopulateExecutionContextDetails
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/dolittle/Bifrost/blob/HEAD/Documentation/Articles/executioncontext.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/dolittle/Bifrost/blob/HEAD/Documentation/Articles/principals.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
