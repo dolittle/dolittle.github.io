@@ -130,29 +130,29 @@ just sets up Bifrost for you to start working with it.</p>
 Inside your web project, add a folder called Features and inside it add another folder called Employees. 
 Now we&#39;re going to add the view for the registration. Add an HTML file called register.html inside the
 Employees folder. We&#39;re going to add some HTML within the body tag in the newly created file.</p>
-<pre><code>&lt;fieldset&gt;
-    &lt;strong&gt;First Name&lt;/strong&gt;
-    &lt;input type=&quot;text&quot; /&gt;
-    &lt;br /&gt;
+<pre><code class="lang-html">    &lt;fieldset&gt;
+        &lt;strong&gt;First Name&lt;/strong&gt;
+        &lt;input type=&quot;text&quot; /&gt;
+        &lt;br /&gt;
 
-    &lt;strong&gt;Last Name&lt;/strong&gt;
-    &lt;input type=&quot;text&quot; /&gt;
-    &lt;br /&gt;
+        &lt;strong&gt;Last Name&lt;/strong&gt;
+        &lt;input type=&quot;text&quot; /&gt;
+        &lt;br /&gt;
 
-    &lt;strong&gt;Social Security Number&lt;/strong&gt;
-    &lt;input type=&quot;text&quot; /&gt;
-    &lt;br /&gt;
+        &lt;strong&gt;Social Security Number&lt;/strong&gt;
+        &lt;input type=&quot;text&quot; /&gt;
+        &lt;br /&gt;
 
-    &lt;button&gt;Register&lt;/button&gt;
-&lt;/fieldset&gt;
+        &lt;button&gt;Register&lt;/button&gt;
+    &lt;/fieldset&gt;
 </code></pre><p>Now we&#39;re going to add a viewmodel that will be associated with your feature.</p>
-<pre><code>Bifrost.namespace(&quot;Features.Employees&quot;, {
-    register: Bifrost.Type.extend(function() {
-    })
-});
+<pre><code class="lang-js">    Bifrost.namespace(&quot;Features.Employees&quot;, {
+        register: Bifrost.Type.extend(function() {
+        })
+    });
 </code></pre><p>In the index.html file sitting at the root of your Web project, go and add the following within the body 
 tag:</p>
-<pre><code>&lt;div data-view=&quot;Employees/register&quot;&gt;&lt;/div&gt;
+<pre><code class="lang-html">    &lt;div data-view=&quot;Employees/register&quot;&gt;&lt;/div&gt;
 </code></pre><p>Running your application with index.html as your startup page now should show the registration page you created.
 For now we&#39;re going to leave it at that. We will revisit this when we have the necessary bits ready in the
 C# code.</p>
@@ -192,18 +192,18 @@ employees that we are going to register, a natural key that represent a person i
 assigned at birth.</p>
 <p>Inside the Concept project create a folder called Persons. 
 Add a new class inside the new folder called SocialSecurityNumber.</p>
-<pre><code>using Bifrost.Concepts;
+<pre><code class="lang-cs">    using Bifrost.Concepts;
 
-namespace Concepts.Persons
-{
-    public class SocialSecurityNumber : ConceptAs&lt;string&gt;
+    namespace Concepts.Persons
     {
-        public static implicit operator SocialSecurityNumber(string socialSecurityNumber)
+        public class SocialSecurityNumber : ConceptAs&lt;string&gt;
         {
-            return new SocialSecurityNumber { Value = socialSecurityNumber };
+            public static implicit operator SocialSecurityNumber(string socialSecurityNumber)
+            {
+                return new SocialSecurityNumber { Value = socialSecurityNumber };
+            }
         }
     }
-}
 </code></pre><p>The concept can now be used and be capable of going back and forth from primitives, something you&#39;ll see
 be handy when we get to applying events. We only need to implement the implicit operator for going from
 the underlying type; string, to the concept itself. The other implicit operator sits at the base-class.</p>
@@ -217,18 +217,18 @@ one representing the actual behavior that you want to happen in the system but b
 the deriviatives of the users intentions. It is very important to recognize a command to be something
 you want to happen in the system, so we model it so.</p>
 <p>For our tutorial we will not be all too creative, we will simply be adding a RegisterEmployee command.</p>
-<pre><code>using Bifrost.Commands;
-using Concepts.Persons;
+<pre><code class="lang-cs">    using Bifrost.Commands;
+    using Concepts.Persons;
 
-namespace Domain.HumanResources.Employees
-{
-    public class RegisterEmployee : Command
+    namespace Domain.HumanResources.Employees
     {
-        public SocialSecurityNumber SocialSecurityNumber { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public class RegisterEmployee : Command
+        {
+            public SocialSecurityNumber SocialSecurityNumber { get; set; }
+            public string FirstName { get; set; }
+            public string LastName { get; set; }
+        }
     }
-}
 </code></pre><h3 id="input-validation">Input validation</h3>
 <p>Performing a behavior in a system needs to be validated that it is correct before we can apply it.
 Validation is divided into two steps; Input and Business. Input being typically connected with
@@ -236,26 +236,26 @@ properties and consumed on a client. Bifrost generates metadata that can be used
 clientside validators.</p>
 <p>Lets start by adding an Input validator for our command. Add a file next to the command called
 RegisterEmployeeInputValidator and make it look like below:</p>
-<pre><code>using Bifrost.Validation;
-using FluentValidation;
+<pre><code class="lang-cs">    using Bifrost.Validation;
+    using FluentValidation;
 
-namespace Domain.HumanResources.Employees
-{
-    public class RegisterEmployeeInputValidator :
-                     CommandInputValidator&lt;RegisterEmployee&gt;
+    namespace Domain.HumanResources.Employees
     {
-        public RegisterEmployeeInputValidator()
+        public class RegisterEmployeeInputValidator :
+                         CommandInputValidator&lt;RegisterEmployee&gt;
         {
-            RuleFor(c=&gt;c.FirstName)
-                .NotEmpty()
-                    .WithMessage(&quot;You have to specify the first name&quot;);
+            public RegisterEmployeeInputValidator()
+            {
+                RuleFor(c=&gt;c.FirstName)
+                    .NotEmpty()
+                        .WithMessage(&quot;You have to specify the first name&quot;);
 
-            RuleFor(c=&gt;c.LastName)
-                .NotEmpty()
-                    .WithMessage(&quot;You have to specify the last name&quot;);
+                RuleFor(c=&gt;c.LastName)
+                    .NotEmpty()
+                        .WithMessage(&quot;You have to specify the last name&quot;);
+            }
         }
     }
-}
 </code></pre><h3 id="business-validation">Business validation</h3>
 <p>Business validation is the next step after basic input validation has been executed. 
 You would normally use business validation to perform more complex scenarios and things
@@ -266,16 +266,16 @@ convenient in this.</p>
 resources like the database or similar to get to their validation.</p>
 <p>For now, business validation is not something we will be performing at this stage. But
 the way you would write one is very similar to that of an input validator:</p>
-<pre><code>using Bifrost.Validation;
-using FluentValidation;
+<pre><code class="lang-cs">    using Bifrost.Validation;
+    using FluentValidation;
 
-namespace Domain.HumanResources.Employees
-{
-    public class RegisterEmployeeBusinessValidator :
-                     CommandBusinessValidator&lt;RegisterEmployee&gt;
+    namespace Domain.HumanResources.Employees
     {
+        public class RegisterEmployeeBusinessValidator :
+                         CommandBusinessValidator&lt;RegisterEmployee&gt;
+        {
+        }
     }
-}
 </code></pre><h3 id="security">Security</h3>
 <p>Normally we would at this stage be looking at security and Bifrost has a very similar
 approach as with validation to how to setup security. We will not be doing this in this
@@ -291,20 +291,20 @@ This because of serialization, persistence and in general avoid potential proble
 versioning of types and such. So only primitives for this particular part.</p>
 <p>Recreate the bounded context and module structure in the Events project and add the 
 EmployeeRegistered class into the Employees module and make it look like this:</p>
-<pre><code>using System;
-using Bifrost.Events;
+<pre><code class="lang-cs">    using System;
+    using Bifrost.Events;
 
-namespace Events.HumanResources.Employees
-{
-    public class EmployeeRegistered : Event
+    namespace Events.HumanResources.Employees
     {
-        public EmployeeRegistered(Guid eventSourceId) : base(eventSourceId) {}
+        public class EmployeeRegistered : Event
+        {
+            public EmployeeRegistered(Guid eventSourceId) : base(eventSourceId) {}
 
-        public string SocialSecurityNumber { get; set; }
-        public string FirstName { get; set; )
-        public string LastName { get; set; }
+            public string SocialSecurityNumber { get; set; }
+            public string FirstName { get; set; )
+            public string LastName { get; set; }
+        }
     }
-}
 </code></pre><h3 id="aggregate-root">Aggregate Root</h3>
 <p>Once we have our event we need something to apply it, this is were we create an aggregate, a
 transactional boundary that can apply the event. These aggregates do not expose any public
@@ -317,30 +317,30 @@ from more traditional ways of modelling a domain were a transaction is just what
 change you are doing.</p>
 <p>Going back in the Domain project in the HumanResources and Employees folder, add a class 
 called Employee, it should look like below:</p>
-<pre><code>using System;
-using Bifrost.Domain;
-using Events.HumanResources.Employee;
+<pre><code class="lang-cs">    using System;
+    using Bifrost.Domain;
+    using Events.HumanResources.Employee;
 
-namespace Domain.HumanResources.Employees
-{
-    public class Employee : AggregateRoot
+    namespace Domain.HumanResources.Employees
     {
-        public Employee(Guid id) : base(id) {}
-
-        public void Register(
-                        SocialSecurityNumber socialSecurityNumber,
-                        string firstName,
-                        string lastName)
+        public class Employee : AggregateRoot
         {
-            Apply(new EmployeeRegistered(Id)
+            public Employee(Guid id) : base(id) {}
+
+            public void Register(
+                            SocialSecurityNumber socialSecurityNumber,
+                            string firstName,
+                            string lastName)
             {
-                SocialSecurityNumber = socialSecurityNumber,
-                FirstName = firstName,
-                LastName = lastName
-            }):
+                Apply(new EmployeeRegistered(Id)
+                {
+                    SocialSecurityNumber = socialSecurityNumber,
+                    FirstName = firstName,
+                    LastName = lastName
+                }):
+            }
         }
     }
-}
 </code></pre><h3 id="command-handler">Command Handler</h3>
 <p>All we&#39;ve done now is introduce a command, some validation, an event and an aggregate that 
 can apply the event. But we haven&#39;t added any code that can handle the command. 
@@ -351,30 +351,30 @@ convention public methods called Handle() that takes the specific command you wa
 in as a parameter. There can only be one handle method in the system per command.</p>
 <p>In the domain project, lets add a class called CommandHandlers next to the command and the
 validators and the aggregate. Make it look like below:</p>
-<pre><code>using Bifrost.Commands;
-using Bifrost.Domain;
+<pre><code class="lang-cs">    using Bifrost.Commands;
+    using Bifrost.Domain;
 
-namespace Domain.HumanResources.Employees
-{
-    public class CommandHandlers : IHandleCommands
+    namespace Domain.HumanResources.Employees
     {
-        IAggregateRootRepository&lt;Employee&gt; _repository;
-
-        public CommandHandlers(IAggregateRootRepository&lt;Employee&gt; repository)
+        public class CommandHandlers : IHandleCommands
         {
-            _repository = repository;
-        }
+            IAggregateRootRepository&lt;Employee&gt; _repository;
 
-        public void Handle(RegisterEmployee command)
-        {
-            var employee = _repository.Get(Guid.NewGuid());
-            employee.Register(
-                command.SocialSecurityNumber,
-                command.FirstName,
-                command.LastName);
+            public CommandHandlers(IAggregateRootRepository&lt;Employee&gt; repository)
+            {
+                _repository = repository;
+            }
+
+            public void Handle(RegisterEmployee command)
+            {
+                var employee = _repository.Get(Guid.NewGuid());
+                employee.Register(
+                    command.SocialSecurityNumber,
+                    command.FirstName,
+                    command.LastName);
+            }
         }
     }
-}
 </code></pre><h3 id="commandcoordinator">CommandCoordinator</h3>
 <p>In Bifrost sits an entry point for commands, this is the place that all commands go through.
 Using the entire stack of Bifrost, you don&#39;t necessarily see this system.
@@ -395,19 +395,19 @@ this. Lets start with the end result, the data what we will have. In Bifrost we 
 as a readmodel, and we have a marker interface called IReadModel. </p>
 <p>Lets go into the Read project and recreate the bounded context and the module structure; 
 HumanResources.Employees. Add a class called Employee and make it look like below:</p>
-<pre><code>using System;
-using Bifrost.Read;
+<pre><code class="lang-cs">    using System;
+    using Bifrost.Read;
 
-namespace Read.HumanResources.Employees
-{
-    public class Employee : IReadModel
+    namespace Read.HumanResources.Employees
     {
-        public Guid Id { get; set; }
-        public SocialSecurityNumber    SocialSecurityNumber { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
+        public class Employee : IReadModel
+        {
+            public Guid Id { get; set; }
+            public SocialSecurityNumber    SocialSecurityNumber { get; set; }
+            public string FirstName { get; set; }
+            public string LastName { get; set; }
+        }
     }
-}
 </code></pre><h3 id="event-processor">Event processor</h3>
 <p>With the readmodel in place, we can finally start processing the event and actually insert
 the data we generate from it into our datasource. We call these processors EventSubscribers
@@ -419,33 +419,33 @@ system responding differently to the event coming through. For instance, you cou
 subscriber that would deal with the data change that the event causes and another dealing with
 sending an email or similiar, and they would be separated out in different files blissfully 
 unaware of the other subscribers existense.</p>
-<pre><code>using Bifrost.Events;
-using Bifrost.Read;
-using Events.HumanResources.Employees;
+<pre><code class="lang-cs">    using Bifrost.Events;
+    using Bifrost.Read;
+    using Events.HumanResources.Employees;
 
-namespace Read.HumanResources.Employees
-{
-    public class EventSubscribers : IProcessEvents
+    namespace Read.HumanResources.Employees
     {
-        IReadModelRepositoryFor&lt;Employee&gt; _repository;
-
-        public EventSubscribers(IReadModelRepositoryFor&lt;Employee&gt; repository)
+        public class EventSubscribers : IProcessEvents
         {
-            _repository = repository;
-        }
+            IReadModelRepositoryFor&lt;Employee&gt; _repository;
 
-        public void Process(EmployeeRegistered @event)
-        {
-            _repository.Insert(new Employee
+            public EventSubscribers(IReadModelRepositoryFor&lt;Employee&gt; repository)
             {
-                Id = @event.EventSourceId,
-                SocialSecurityNumber = @event.SocialSecurityNumber,
-                FirstName = @event.FirstName,
-                LastName = @event.LastName
-            });
+                _repository = repository;
+            }
+
+            public void Process(EmployeeRegistered @event)
+            {
+                _repository.Insert(new Employee
+                {
+                    Id = @event.EventSourceId,
+                    SocialSecurityNumber = @event.SocialSecurityNumber,
+                    FirstName = @event.FirstName,
+                    LastName = @event.LastName
+                });
+            }
         }
     }
-}
 </code></pre><h3 id="query">Query</h3>
 <p>In order to get the data out, Bifrost comes with a formalization of querying that we
 will be using. The formalization involves creating a class representing the different
@@ -457,28 +457,28 @@ concern yourself about - Bifrost will amend this information to the IQueryable&l
 return.</p>
 <p>In the Read project inside the Employees folder, add a class called AllEmployees and
 make it look like below:</p>
-<pre><code>using Bifrost.Read;
+<pre><code class="lang-cs">    using Bifrost.Read;
 
-namespace Read.HumanResources.Employees
-{
-    public class AllEmployees : IQueryFor&lt;Employee&gt;
+    namespace Read.HumanResources.Employees
     {
-        IReadModelRepositoryFor&lt;Employee&gt; _repository:
-
-        public AllEmployees(IReadModelRepositoryFor&lt;Employee&gt; repository)
+        public class AllEmployees : IQueryFor&lt;Employee&gt;
         {
-            _repository = repository;
-        }
+            IReadModelRepositoryFor&lt;Employee&gt; _repository:
 
-        public IQueryable&lt;Employee&gt; Query
-        {
-            get
+            public AllEmployees(IReadModelRepositoryFor&lt;Employee&gt; repository)
             {
-                return _repository.Query;
+                _repository = repository;
+            }
+
+            public IQueryable&lt;Employee&gt; Query
+            {
+                get
+                {
+                    return _repository.Query;
+                }
             }
         }
     }
-}
 </code></pre><h2 id="going-back-up-into-the-frontend">Going back up into the frontend</h2>
 <p>With all the artifacts we now in C#, Bifrost produces a set of proxies at runtime that the JavaScript can take advantage of.</p>
 <h3 id="viewmodel">ViewModel</h3>
@@ -486,13 +486,13 @@ namespace Read.HumanResources.Employees
 With everything in place now we can basically start taking dependencies into the viewmodel and use data-binding
 to hook it all up in the view.</p>
 <p>Lets modify the viewmodel to look like this:</p>
-<pre><code>Bifrost.namespace(&quot;Features.Employees&quot;, {
-    register: Bifrost.Type.extend(function(registerEmployee, allEmployees) {
-        var self = this;
-        this.register = registerEmployee;
-        this.employees = allEmployees.all();
-    })
-});
+<pre><code class="lang-js">    Bifrost.namespace(&quot;Features.Employees&quot;, {
+        register: Bifrost.Type.extend(function(registerEmployee, allEmployees) {
+            var self = this;
+            this.register = registerEmployee;
+            this.employees = allEmployees.all();
+        })
+    });
 </code></pre><p>Basically what we`ve done now is to take a dependency on the command we created and the query we created.
 Bifrost generates a proxy for these and you can just use them directly like above. Inside Bifrost there sits
 an IOC (Inversion of Control) container that resolves dependencies in different ways, one being well known
@@ -500,24 +500,24 @@ commands and queries coming from proxies.</p>
 <h3 id="view">View</h3>
 <p>Now that we have that we can go ahead and modify the view to be take advantage of the command and the query.
 Going into the view file, we need to make it look like this:</p>
-<pre><code>&lt;fieldset&gt;
-    &lt;strong&gt;First Name&lt;/strong&gt;
-    &lt;input type=&quot;text&quot; data-bind=&quot;value: register.firstName&quot; /&gt;
-    &lt;span data-bind=&quot;validationMessageFor: register.firstName&quot;&gt;&lt;/span&gt;
-    &lt;br /&gt;
+<pre><code class="lang-html">    &lt;fieldset&gt;
+        &lt;strong&gt;First Name&lt;/strong&gt;
+        &lt;input type=&quot;text&quot; data-bind=&quot;value: register.firstName&quot; /&gt;
+        &lt;span data-bind=&quot;validationMessageFor: register.firstName&quot;&gt;&lt;/span&gt;
+        &lt;br /&gt;
 
-    &lt;strong&gt;Last Name&lt;/strong&gt;
-    &lt;input type=&quot;text&quot; data-bind=&quot;value: register.lastName&quot; /&gt;
-    &lt;span data-bind=&quot;validationMessageFor: register.lastName&quot;&gt;&lt;/span&gt;
-    &lt;br /&gt;
+        &lt;strong&gt;Last Name&lt;/strong&gt;
+        &lt;input type=&quot;text&quot; data-bind=&quot;value: register.lastName&quot; /&gt;
+        &lt;span data-bind=&quot;validationMessageFor: register.lastName&quot;&gt;&lt;/span&gt;
+        &lt;br /&gt;
 
-    &lt;strong&gt;Social Security Number&lt;/strong&gt;
-    &lt;input type=&quot;text&quot; data-bind=&quot;value: register.socialSecurityNumber&quot; /&gt;
-    &lt;span data-bind=&quot;validationMessageFor: register.socialSecurityNumber&quot;&gt;&lt;/span&gt;
-    &lt;br /&gt;
+        &lt;strong&gt;Social Security Number&lt;/strong&gt;
+        &lt;input type=&quot;text&quot; data-bind=&quot;value: register.socialSecurityNumber&quot; /&gt;
+        &lt;span data-bind=&quot;validationMessageFor: register.socialSecurityNumber&quot;&gt;&lt;/span&gt;
+        &lt;br /&gt;
 
-    &lt;button data-bind=&quot;command: register&quot;&gt;Register&lt;/button&gt;
-&lt;/fieldset&gt;
+        &lt;button data-bind=&quot;command: register&quot;&gt;Register&lt;/button&gt;
+    &lt;/fieldset&gt;
 </code></pre><p>What the above alteration has done is to add binding of the values on the commands into the inputs.
 In addition we add validation messages using a binding handler that comes with Bifrost called 
 &quot;validationMessageFor&quot; which points to the same values as its input is bound to. 
@@ -530,22 +530,22 @@ the error messages will still propagate into the client.</p>
 <h3 id="showing-the-consequence-data">Showing the consequence; data</h3>
 <p>Now that we are firing off commands, we want to be able to actually show the data this produced.
 In our view we just add the following below the fieldset.</p>
-<pre><code>&lt;table&gt;
-    &lt;thead&gt;
-        &lt;tr&gt;
-            &lt;th&gt;Social Security Number&lt;/th&gt;
-            &lt;th&gt;First Name&lt;/th&gt;
-            &lt;th&gt;Last Name&lt;/th&gt;
-        &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody data-bind=&quot;foreach: employees&quot;&gt;
-        &lt;tr&gt;
-            &lt;td data-bind=&quot;text: socialSecurityNumber&quot;&gt;&lt;/td&gt;
-            &lt;td data-bind=&quot;text: firstName&quot;&gt;&lt;/td&gt;
-            &lt;td data-bind=&quot;text: lastName&quot;&gt;&lt;/td&gt;
-        &lt;/tr&gt;
-    &lt;/tbody&gt;
-&lt;/table&gt;
+<pre><code class="lang-html">    &lt;table&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;Social Security Number&lt;/th&gt;
+                &lt;th&gt;First Name&lt;/th&gt;
+                &lt;th&gt;Last Name&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody data-bind=&quot;foreach: employees&quot;&gt;
+            &lt;tr&gt;
+                &lt;td data-bind=&quot;text: socialSecurityNumber&quot;&gt;&lt;/td&gt;
+                &lt;td data-bind=&quot;text: firstName&quot;&gt;&lt;/td&gt;
+                &lt;td data-bind=&quot;text: lastName&quot;&gt;&lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
 </code></pre><p>This should now be showing the result.</p>
 
             </article>
