@@ -94,9 +94,42 @@ in this article and tries to adhere to them fully.</p>
 <h2 id="convention-over-configuration">Convention over Configuration</h2>
 <h3 id="discovery">Discovery</h3>
 <h2 id="cqrs">CQRS</h2>
-<p><img src="images/full_pipeline.png" alt=""></p>
 <h2 id="model-view-view-model">Model View View Model</h2>
+<p>MVVM is a variation of <a href="https://en.wikipedia.org/wiki/Martin_Fowler">Martin Fowler&#39;s</a> <a href="http://martinfowler.com/eaaDev/PresentationModel.html">Presentation Model</a>.
+Its the most commonly used pattern in XAML based platforms such as WPF, Silverlight, UWP, Xamarin and more.</p>
+<h3 id="model">Model</h3>
+<p>The model refers to state being used typically originating from a server component such as a database.
+It is often referred to as the domain model. In the context of Bifrost, this would typically be the <a href="read_model.md">ReadModel</a>.</p>
+<h3 id="view">View</h3>
+<p>The view represents the structure and layout on the screen. It observes the ViewModel.</p>
+<h3 id="viewmodel">ViewModel</h3>
+<p>The ViewModel holds the state; the model and also exposes behaviors that the view can utilize.
+In XAML the behaviors is represented by a <a href="https://msdn.microsoft.com/en-us/library/system.windows.input.icommand(v=vs.110).aspx">command</a>,
+something that wraps the behavior and provides a point for execution but also the ability to check wether or not
+it can execute. This proves very handy when you want to validate things and not be able to execute unless one is valid or is authorized.
+Bifrost has the concept of commands, these are slightly different however. In fact, commands in Bifrost is a part of the domain.
+It is the thing that describes the users intent. You can read more about them <a href="../Backend/Commands/introduction.html">here</a>.
+In the Bifrost JavaScript frontend however, the type of properties found with the XAML platforms
+can also be found here. Read more about the frontend commands <a href="../Frontend/JavaScript/commands.html">here</a>.</p>
+<h3 id="binding">Binding</h3>
+<p>Part of connecting the View with the ViewModel and enabling it to observe it is the concept of binding.
+Binding sits between the View and the ViewModel and can with some implementations even understand when values change
+and automatically react to the change. In XAML, this is accomplished through implementing interfaces like <a href="https://msdn.microsoft.com/en-us/library/system.componentmodel.inotifypropertychanged(v=vs.110).aspx">INotifyPropertyChanged</a>
+and <a href="https://msdn.microsoft.com/en-us/library/system.collections.specialized.inotifycollectionchanged(v=vs.110).aspx">INotifyCollectionChanged</a>
+for collections.</p>
+<p>Bifrost have full client support for both XAML based clients and also for JavaScript / Web based.
+For XAML and what is supported, read more in detail <a href="../Frontend/XAML">here</a>.
+For the JavaScript support, Bifrost has been built on top of <a href="http://knockoutjs.com">Knockout</a> that provides <code>obervable()</code> and <code>observableArray()</code>.
+Read more about the JavaScript support <a href="../Frontend/JavaScript">here</a>.</p>
+<h3 id="figures">Figures</h3>
+<p>A traditional MVVM would look something like this:</p>
+<p><img src="images/mvvm.png" alt="MVVM Architectural Diagram"></p>
+<p>With the artifacts found in Bifrost and more separation in place with CQRS, the diagram looks slightly different</p>
+<p><img src="images/mvvm_bifrost.png" alt="MVVM Architectural Diagram - Bifrost artifacts"></p>
+<p>You can read more details about the MVVM pattern <a href="https://en.wikipedia.org/wiki/Model–view–viewmodel">here</a>.</p>
 <h2 id="automated-testing">Automated testing</h2>
+<h2 id="full-pipeline">Full Pipeline</h2>
+<p><img src="images/full_pipeline.png" alt="Bifrost Pipeline"></p>
 
             </article>
           </div>
