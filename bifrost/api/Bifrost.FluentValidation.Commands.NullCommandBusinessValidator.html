@@ -112,10 +112,22 @@
                   <span class="xref">FluentValidation.AbstractValidator&lt;Bifrost.Commands.ICommand&gt;.FluentValidation.IValidator.Validate(System.Object)</span>
                 </div>
                 <div>
+                  <span class="xref">FluentValidation.AbstractValidator&lt;Bifrost.Commands.ICommand&gt;.FluentValidation.IValidator.ValidateAsync(System.Object, System.Threading.CancellationToken)</span>
+                </div>
+                <div>
                   <span class="xref">FluentValidation.AbstractValidator&lt;Bifrost.Commands.ICommand&gt;.FluentValidation.IValidator.Validate(FluentValidation.ValidationContext)</span>
                 </div>
                 <div>
+                  <span class="xref">FluentValidation.AbstractValidator&lt;Bifrost.Commands.ICommand&gt;.FluentValidation.IValidator.ValidateAsync(FluentValidation.ValidationContext, System.Threading.CancellationToken)</span>
+                </div>
+                <div>
+                  <span class="xref">FluentValidation.AbstractValidator&lt;Bifrost.Commands.ICommand&gt;.ValidateAsync(Bifrost.Commands.ICommand, System.Threading.CancellationToken)</span>
+                </div>
+                <div>
                   <span class="xref">FluentValidation.AbstractValidator&lt;Bifrost.Commands.ICommand&gt;.Validate(FluentValidation.ValidationContext&lt;Bifrost.Commands.ICommand&gt;)</span>
+                </div>
+                <div>
+                  <span class="xref">FluentValidation.AbstractValidator&lt;Bifrost.Commands.ICommand&gt;.ValidateAsync(FluentValidation.ValidationContext&lt;Bifrost.Commands.ICommand&gt;, System.Threading.CancellationToken)</span>
                 </div>
                 <div>
                   <span class="xref">FluentValidation.AbstractValidator&lt;Bifrost.Commands.ICommand&gt;.AddRule(FluentValidation.IValidationRule)</span>
@@ -130,10 +142,19 @@
                   <span class="xref">FluentValidation.AbstractValidator&lt;Bifrost.Commands.ICommand&gt;.RuleFor&lt;TProperty&gt;(System.Linq.Expressions.Expression&lt;System.Func&lt;Bifrost.Commands.ICommand, TProperty&gt;&gt;)</span>
                 </div>
                 <div>
+                  <span class="xref">FluentValidation.AbstractValidator&lt;Bifrost.Commands.ICommand&gt;.RuleForEach&lt;TProperty&gt;(System.Linq.Expressions.Expression&lt;System.Func&lt;Bifrost.Commands.ICommand, System.Collections.Generic.IEnumerable&lt;TProperty&gt;&gt;&gt;)</span>
+                </div>
+                <div>
                   <span class="xref">FluentValidation.AbstractValidator&lt;Bifrost.Commands.ICommand&gt;.Custom(System.Func&lt;Bifrost.Commands.ICommand, FluentValidation.Results.ValidationFailure&gt;)</span>
                 </div>
                 <div>
                   <span class="xref">FluentValidation.AbstractValidator&lt;Bifrost.Commands.ICommand&gt;.Custom(System.Func&lt;Bifrost.Commands.ICommand, FluentValidation.ValidationContext&lt;Bifrost.Commands.ICommand&gt;, FluentValidation.Results.ValidationFailure&gt;)</span>
+                </div>
+                <div>
+                  <span class="xref">FluentValidation.AbstractValidator&lt;Bifrost.Commands.ICommand&gt;.CustomAsync(System.Func&lt;Bifrost.Commands.ICommand, System.Threading.Tasks.Task&lt;FluentValidation.Results.ValidationFailure&gt;&gt;)</span>
+                </div>
+                <div>
+                  <span class="xref">FluentValidation.AbstractValidator&lt;Bifrost.Commands.ICommand&gt;.CustomAsync(System.Func&lt;Bifrost.Commands.ICommand, FluentValidation.ValidationContext&lt;Bifrost.Commands.ICommand&gt;, System.Threading.CancellationToken, System.Threading.Tasks.Task&lt;FluentValidation.Results.ValidationFailure&gt;&gt;)</span>
                 </div>
                 <div>
                   <span class="xref">FluentValidation.AbstractValidator&lt;Bifrost.Commands.ICommand&gt;.RuleSet(System.String, System.Action)</span>
@@ -143,6 +164,15 @@
                 </div>
                 <div>
                   <span class="xref">FluentValidation.AbstractValidator&lt;Bifrost.Commands.ICommand&gt;.Unless(System.Func&lt;Bifrost.Commands.ICommand, System.Boolean&gt;, System.Action)</span>
+                </div>
+                <div>
+                  <span class="xref">FluentValidation.AbstractValidator&lt;Bifrost.Commands.ICommand&gt;.WhenAsync(System.Func&lt;Bifrost.Commands.ICommand, System.Threading.Tasks.Task&lt;System.Boolean&gt;&gt;, System.Action)</span>
+                </div>
+                <div>
+                  <span class="xref">FluentValidation.AbstractValidator&lt;Bifrost.Commands.ICommand&gt;.UnlessAsync(System.Func&lt;Bifrost.Commands.ICommand, System.Threading.Tasks.Task&lt;System.Boolean&gt;&gt;, System.Action)</span>
+                </div>
+                <div>
+                  <span class="xref">FluentValidation.AbstractValidator&lt;Bifrost.Commands.ICommand&gt;.Include(FluentValidation.IValidator&lt;Bifrost.Commands.ICommand&gt;)</span>
                 </div>
                 <div>
                   <span class="xref">FluentValidation.AbstractValidator&lt;Bifrost.Commands.ICommand&gt;.GetEnumerator()</span>
@@ -179,7 +209,7 @@
               <h6><strong>Assembly</strong>:Bifrost.FluentValidation.dll</h6>
               <h5 id="Bifrost_FluentValidation_Commands_NullCommandBusinessValidator_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class NullCommandBusinessValidator : CommandBusinessValidator&lt;ICommand&gt;, IValidator&lt;ICommand&gt;, IValidateBusinessRules&lt;ICommand&gt;, ICanValidate&lt;ICommand&gt;, ICommandBusinessValidator, ICanValidate, IValidator, IEnumerable&lt;IValidationRule&gt;, IEnumerable</code></pre>
+                <pre><code class="lang-csharp hljs">public class NullCommandBusinessValidator : CommandBusinessValidator&lt;ICommand&gt;, IValidator&lt;ICommand&gt;, IEnumerable&lt;IValidationRule&gt;, IEnumerable, IValidateBusinessRules&lt;ICommand&gt;, ICanValidate&lt;ICommand&gt;, ICommandBusinessValidator, ICanValidate, IValidator</code></pre>
               </div>
               <h5 id="Bifrost_FluentValidation_Commands_NullCommandBusinessValidator_remarks"><strong>Remarks</strong></h5>
               <div class="markdown level0 remarks"><p>Always returns an empty validation result collection.</p>

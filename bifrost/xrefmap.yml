@@ -8676,12 +8676,6 @@ references:
   commentId: M:Bifrost.Events.DuplicateInEventMigrationHierarchyException.#ctor
   fullName: Bifrost.Events.DuplicateInEventMigrationHierarchyException.DuplicateInEventMigrationHierarchyException()
   nameWithType: DuplicateInEventMigrationHierarchyException.DuplicateInEventMigrationHierarchyException()
-- uid: Bifrost.Events.DuplicateInEventMigrationHierarchyException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  name: DuplicateInEventMigrationHierarchyException(SerializationInfo, StreamingContext)
-  href: api/Bifrost.Events.DuplicateInEventMigrationHierarchyException.html#Bifrost_Events_DuplicateInEventMigrationHierarchyException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
-  commentId: M:Bifrost.Events.DuplicateInEventMigrationHierarchyException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  fullName: Bifrost.Events.DuplicateInEventMigrationHierarchyException.DuplicateInEventMigrationHierarchyException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
-  nameWithType: DuplicateInEventMigrationHierarchyException.DuplicateInEventMigrationHierarchyException(SerializationInfo, StreamingContext)
 - uid: Bifrost.Events.DuplicateInEventMigrationHierarchyException.#ctor(System.String)
   name: DuplicateInEventMigrationHierarchyException(String)
   href: api/Bifrost.Events.DuplicateInEventMigrationHierarchyException.html#Bifrost_Events_DuplicateInEventMigrationHierarchyException__ctor_System_String_
@@ -10654,12 +10648,6 @@ references:
   commentId: M:Bifrost.Events.InvalidFastForwardException.#ctor
   fullName: Bifrost.Events.InvalidFastForwardException.InvalidFastForwardException()
   nameWithType: InvalidFastForwardException.InvalidFastForwardException()
-- uid: Bifrost.Events.InvalidFastForwardException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  name: InvalidFastForwardException(SerializationInfo, StreamingContext)
-  href: api/Bifrost.Events.InvalidFastForwardException.html#Bifrost_Events_InvalidFastForwardException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
-  commentId: M:Bifrost.Events.InvalidFastForwardException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  fullName: Bifrost.Events.InvalidFastForwardException.InvalidFastForwardException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
-  nameWithType: InvalidFastForwardException.InvalidFastForwardException(SerializationInfo, StreamingContext)
 - uid: Bifrost.Events.InvalidFastForwardException.#ctor(System.String)
   name: InvalidFastForwardException(String)
   href: api/Bifrost.Events.InvalidFastForwardException.html#Bifrost_Events_InvalidFastForwardException__ctor_System_String_
@@ -10690,12 +10678,6 @@ references:
   commentId: M:Bifrost.Events.InvalidMigrationTypeException.#ctor
   fullName: Bifrost.Events.InvalidMigrationTypeException.InvalidMigrationTypeException()
   nameWithType: InvalidMigrationTypeException.InvalidMigrationTypeException()
-- uid: Bifrost.Events.InvalidMigrationTypeException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  name: InvalidMigrationTypeException(SerializationInfo, StreamingContext)
-  href: api/Bifrost.Events.InvalidMigrationTypeException.html#Bifrost_Events_InvalidMigrationTypeException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
-  commentId: M:Bifrost.Events.InvalidMigrationTypeException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  fullName: Bifrost.Events.InvalidMigrationTypeException.InvalidMigrationTypeException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
-  nameWithType: InvalidMigrationTypeException.InvalidMigrationTypeException(SerializationInfo, StreamingContext)
 - uid: Bifrost.Events.InvalidMigrationTypeException.#ctor(System.String)
   name: InvalidMigrationTypeException(String)
   href: api/Bifrost.Events.InvalidMigrationTypeException.html#Bifrost_Events_InvalidMigrationTypeException__ctor_System_String_
@@ -10891,12 +10873,6 @@ references:
   commentId: M:Bifrost.Events.MigrationLevelOutOfRangeException.#ctor
   fullName: Bifrost.Events.MigrationLevelOutOfRangeException.MigrationLevelOutOfRangeException()
   nameWithType: MigrationLevelOutOfRangeException.MigrationLevelOutOfRangeException()
-- uid: Bifrost.Events.MigrationLevelOutOfRangeException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  name: MigrationLevelOutOfRangeException(SerializationInfo, StreamingContext)
-  href: api/Bifrost.Events.MigrationLevelOutOfRangeException.html#Bifrost_Events_MigrationLevelOutOfRangeException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
-  commentId: M:Bifrost.Events.MigrationLevelOutOfRangeException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  fullName: Bifrost.Events.MigrationLevelOutOfRangeException.MigrationLevelOutOfRangeException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
-  nameWithType: MigrationLevelOutOfRangeException.MigrationLevelOutOfRangeException(SerializationInfo, StreamingContext)
 - uid: Bifrost.Events.MigrationLevelOutOfRangeException.#ctor(System.String)
   name: MigrationLevelOutOfRangeException(String)
   href: api/Bifrost.Events.MigrationLevelOutOfRangeException.html#Bifrost_Events_MigrationLevelOutOfRangeException__ctor_System_String_
@@ -10927,12 +10903,6 @@ references:
   commentId: M:Bifrost.Events.NotAMigratedEventTypeException.#ctor
   fullName: Bifrost.Events.NotAMigratedEventTypeException.NotAMigratedEventTypeException()
   nameWithType: NotAMigratedEventTypeException.NotAMigratedEventTypeException()
-- uid: Bifrost.Events.NotAMigratedEventTypeException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  name: NotAMigratedEventTypeException(SerializationInfo, StreamingContext)
-  href: api/Bifrost.Events.NotAMigratedEventTypeException.html#Bifrost_Events_NotAMigratedEventTypeException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
-  commentId: M:Bifrost.Events.NotAMigratedEventTypeException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  fullName: Bifrost.Events.NotAMigratedEventTypeException.NotAMigratedEventTypeException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
-  nameWithType: NotAMigratedEventTypeException.NotAMigratedEventTypeException(SerializationInfo, StreamingContext)
 - uid: Bifrost.Events.NotAMigratedEventTypeException.#ctor(System.String)
   name: NotAMigratedEventTypeException(String)
   href: api/Bifrost.Events.NotAMigratedEventTypeException.html#Bifrost_Events_NotAMigratedEventTypeException__ctor_System_String_
@@ -11185,12 +11155,6 @@ references:
   commentId: M:Bifrost.Events.UnregisteredEventException.#ctor
   fullName: Bifrost.Events.UnregisteredEventException.UnregisteredEventException()
   nameWithType: UnregisteredEventException.UnregisteredEventException()
-- uid: Bifrost.Events.UnregisteredEventException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  name: UnregisteredEventException(SerializationInfo, StreamingContext)
-  href: api/Bifrost.Events.UnregisteredEventException.html#Bifrost_Events_UnregisteredEventException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
-  commentId: M:Bifrost.Events.UnregisteredEventException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  fullName: Bifrost.Events.UnregisteredEventException.UnregisteredEventException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
-  nameWithType: UnregisteredEventException.UnregisteredEventException(SerializationInfo, StreamingContext)
 - uid: Bifrost.Events.UnregisteredEventException.#ctor(System.String)
   name: UnregisteredEventException(String)
   href: api/Bifrost.Events.UnregisteredEventException.html#Bifrost_Events_UnregisteredEventException__ctor_System_String_
@@ -11215,54 +11179,6 @@ references:
   commentId: N:Bifrost.Execution
   fullName: Bifrost.Execution
   nameWithType: Bifrost.Execution
-- uid: Bifrost.Execution.AppDomainAssemblyProvider
-  name: AppDomainAssemblyProvider
-  href: api/Bifrost.Execution.AppDomainAssemblyProvider.html
-  commentId: T:Bifrost.Execution.AppDomainAssemblyProvider
-  fullName: Bifrost.Execution.AppDomainAssemblyProvider
-  nameWithType: AppDomainAssemblyProvider
-- uid: Bifrost.Execution.AppDomainAssemblyProvider.#ctor
-  name: AppDomainAssemblyProvider()
-  href: api/Bifrost.Execution.AppDomainAssemblyProvider.html#Bifrost_Execution_AppDomainAssemblyProvider__ctor
-  commentId: M:Bifrost.Execution.AppDomainAssemblyProvider.#ctor
-  fullName: Bifrost.Execution.AppDomainAssemblyProvider.AppDomainAssemblyProvider()
-  nameWithType: AppDomainAssemblyProvider.AppDomainAssemblyProvider()
-- uid: Bifrost.Execution.AppDomainAssemblyProvider.#ctor*
-  name: AppDomainAssemblyProvider
-  href: api/Bifrost.Execution.AppDomainAssemblyProvider.html#Bifrost_Execution_AppDomainAssemblyProvider__ctor_
-  commentId: Overload:Bifrost.Execution.AppDomainAssemblyProvider.#ctor
-  fullName: Bifrost.Execution.AppDomainAssemblyProvider.AppDomainAssemblyProvider
-  nameWithType: AppDomainAssemblyProvider.AppDomainAssemblyProvider
-- uid: Bifrost.Execution.AppDomainAssemblyProvider.AssemblyAdded
-  name: AssemblyAdded
-  href: api/Bifrost.Execution.AppDomainAssemblyProvider.html#Bifrost_Execution_AppDomainAssemblyProvider_AssemblyAdded
-  commentId: E:Bifrost.Execution.AppDomainAssemblyProvider.AssemblyAdded
-  fullName: Bifrost.Execution.AppDomainAssemblyProvider.AssemblyAdded
-  nameWithType: AppDomainAssemblyProvider.AssemblyAdded
-- uid: Bifrost.Execution.AppDomainAssemblyProvider.AvailableAssemblies
-  name: AvailableAssemblies
-  href: api/Bifrost.Execution.AppDomainAssemblyProvider.html#Bifrost_Execution_AppDomainAssemblyProvider_AvailableAssemblies
-  commentId: P:Bifrost.Execution.AppDomainAssemblyProvider.AvailableAssemblies
-  fullName: Bifrost.Execution.AppDomainAssemblyProvider.AvailableAssemblies
-  nameWithType: AppDomainAssemblyProvider.AvailableAssemblies
-- uid: Bifrost.Execution.AppDomainAssemblyProvider.AvailableAssemblies*
-  name: AvailableAssemblies
-  href: api/Bifrost.Execution.AppDomainAssemblyProvider.html#Bifrost_Execution_AppDomainAssemblyProvider_AvailableAssemblies_
-  commentId: Overload:Bifrost.Execution.AppDomainAssemblyProvider.AvailableAssemblies
-  fullName: Bifrost.Execution.AppDomainAssemblyProvider.AvailableAssemblies
-  nameWithType: AppDomainAssemblyProvider.AvailableAssemblies
-- uid: Bifrost.Execution.AppDomainAssemblyProvider.Get(Bifrost.Execution.AssemblyInfo)
-  name: Get(AssemblyInfo)
-  href: api/Bifrost.Execution.AppDomainAssemblyProvider.html#Bifrost_Execution_AppDomainAssemblyProvider_Get_Bifrost_Execution_AssemblyInfo_
-  commentId: M:Bifrost.Execution.AppDomainAssemblyProvider.Get(Bifrost.Execution.AssemblyInfo)
-  fullName: Bifrost.Execution.AppDomainAssemblyProvider.Get(Bifrost.Execution.AssemblyInfo)
-  nameWithType: AppDomainAssemblyProvider.Get(AssemblyInfo)
-- uid: Bifrost.Execution.AppDomainAssemblyProvider.Get*
-  name: Get
-  href: api/Bifrost.Execution.AppDomainAssemblyProvider.html#Bifrost_Execution_AppDomainAssemblyProvider_Get_
-  commentId: Overload:Bifrost.Execution.AppDomainAssemblyProvider.Get
-  fullName: Bifrost.Execution.AppDomainAssemblyProvider.Get
-  nameWithType: AppDomainAssemblyProvider.Get
 - uid: Bifrost.Execution.Assemblies
   name: Assemblies
   href: api/Bifrost.Execution.Assemblies.html
@@ -11329,24 +11245,24 @@ references:
   commentId: T:Bifrost.Execution.AssemblyComparer
   fullName: Bifrost.Execution.AssemblyComparer
   nameWithType: AssemblyComparer
-- uid: Bifrost.Execution.AssemblyComparer.Equals(System.Runtime.InteropServices._Assembly,System.Runtime.InteropServices._Assembly)
-  name: Equals(_Assembly, _Assembly)
-  href: api/Bifrost.Execution.AssemblyComparer.html#Bifrost_Execution_AssemblyComparer_Equals_System_Runtime_InteropServices__Assembly_System_Runtime_InteropServices__Assembly_
-  commentId: M:Bifrost.Execution.AssemblyComparer.Equals(System.Runtime.InteropServices._Assembly,System.Runtime.InteropServices._Assembly)
-  fullName: Bifrost.Execution.AssemblyComparer.Equals(System.Runtime.InteropServices._Assembly, System.Runtime.InteropServices._Assembly)
-  nameWithType: AssemblyComparer.Equals(_Assembly, _Assembly)
+- uid: Bifrost.Execution.AssemblyComparer.Equals(System.Reflection.Assembly,System.Reflection.Assembly)
+  name: Equals(Assembly, Assembly)
+  href: api/Bifrost.Execution.AssemblyComparer.html#Bifrost_Execution_AssemblyComparer_Equals_System_Reflection_Assembly_System_Reflection_Assembly_
+  commentId: M:Bifrost.Execution.AssemblyComparer.Equals(System.Reflection.Assembly,System.Reflection.Assembly)
+  fullName: Bifrost.Execution.AssemblyComparer.Equals(System.Reflection.Assembly, System.Reflection.Assembly)
+  nameWithType: AssemblyComparer.Equals(Assembly, Assembly)
 - uid: Bifrost.Execution.AssemblyComparer.Equals*
   name: Equals
   href: api/Bifrost.Execution.AssemblyComparer.html#Bifrost_Execution_AssemblyComparer_Equals_
   commentId: Overload:Bifrost.Execution.AssemblyComparer.Equals
   fullName: Bifrost.Execution.AssemblyComparer.Equals
   nameWithType: AssemblyComparer.Equals
-- uid: Bifrost.Execution.AssemblyComparer.GetHashCode(System.Runtime.InteropServices._Assembly)
-  name: GetHashCode(_Assembly)
-  href: api/Bifrost.Execution.AssemblyComparer.html#Bifrost_Execution_AssemblyComparer_GetHashCode_System_Runtime_InteropServices__Assembly_
-  commentId: M:Bifrost.Execution.AssemblyComparer.GetHashCode(System.Runtime.InteropServices._Assembly)
-  fullName: Bifrost.Execution.AssemblyComparer.GetHashCode(System.Runtime.InteropServices._Assembly)
-  nameWithType: AssemblyComparer.GetHashCode(_Assembly)
+- uid: Bifrost.Execution.AssemblyComparer.GetHashCode(System.Reflection.Assembly)
+  name: GetHashCode(Assembly)
+  href: api/Bifrost.Execution.AssemblyComparer.html#Bifrost_Execution_AssemblyComparer_GetHashCode_System_Reflection_Assembly_
+  commentId: M:Bifrost.Execution.AssemblyComparer.GetHashCode(System.Reflection.Assembly)
+  fullName: Bifrost.Execution.AssemblyComparer.GetHashCode(System.Reflection.Assembly)
+  nameWithType: AssemblyComparer.GetHashCode(Assembly)
 - uid: Bifrost.Execution.AssemblyComparer.GetHashCode*
   name: GetHashCode
   href: api/Bifrost.Execution.AssemblyComparer.html#Bifrost_Execution_AssemblyComparer_GetHashCode_
@@ -11488,12 +11404,12 @@ references:
   commentId: Overload:Bifrost.Execution.AssemblySpecifiers.#ctor
   fullName: Bifrost.Execution.AssemblySpecifiers.AssemblySpecifiers
   nameWithType: AssemblySpecifiers.AssemblySpecifiers
-- uid: Bifrost.Execution.AssemblySpecifiers.SpecifyUsingSpecifiersFrom(System.Runtime.InteropServices._Assembly)
-  name: SpecifyUsingSpecifiersFrom(_Assembly)
-  href: api/Bifrost.Execution.AssemblySpecifiers.html#Bifrost_Execution_AssemblySpecifiers_SpecifyUsingSpecifiersFrom_System_Runtime_InteropServices__Assembly_
-  commentId: M:Bifrost.Execution.AssemblySpecifiers.SpecifyUsingSpecifiersFrom(System.Runtime.InteropServices._Assembly)
-  fullName: Bifrost.Execution.AssemblySpecifiers.SpecifyUsingSpecifiersFrom(System.Runtime.InteropServices._Assembly)
-  nameWithType: AssemblySpecifiers.SpecifyUsingSpecifiersFrom(_Assembly)
+- uid: Bifrost.Execution.AssemblySpecifiers.SpecifyUsingSpecifiersFrom(System.Reflection.Assembly)
+  name: SpecifyUsingSpecifiersFrom(Assembly)
+  href: api/Bifrost.Execution.AssemblySpecifiers.html#Bifrost_Execution_AssemblySpecifiers_SpecifyUsingSpecifiersFrom_System_Reflection_Assembly_
+  commentId: M:Bifrost.Execution.AssemblySpecifiers.SpecifyUsingSpecifiersFrom(System.Reflection.Assembly)
+  fullName: Bifrost.Execution.AssemblySpecifiers.SpecifyUsingSpecifiersFrom(System.Reflection.Assembly)
+  nameWithType: AssemblySpecifiers.SpecifyUsingSpecifiersFrom(Assembly)
 - uid: Bifrost.Execution.AssemblySpecifiers.SpecifyUsingSpecifiersFrom*
   name: SpecifyUsingSpecifiersFrom
   href: api/Bifrost.Execution.AssemblySpecifiers.html#Bifrost_Execution_AssemblySpecifiers_SpecifyUsingSpecifiersFrom_
@@ -11518,12 +11434,12 @@ references:
   commentId: Overload:Bifrost.Execution.AssemblyUtility.IsAssembly
   fullName: Bifrost.Execution.AssemblyUtility.IsAssembly
   nameWithType: AssemblyUtility.IsAssembly
-- uid: Bifrost.Execution.AssemblyUtility.IsAssemblyDynamic(System.Runtime.InteropServices._Assembly)
-  name: IsAssemblyDynamic(_Assembly)
-  href: api/Bifrost.Execution.AssemblyUtility.html#Bifrost_Execution_AssemblyUtility_IsAssemblyDynamic_System_Runtime_InteropServices__Assembly_
-  commentId: M:Bifrost.Execution.AssemblyUtility.IsAssemblyDynamic(System.Runtime.InteropServices._Assembly)
-  fullName: Bifrost.Execution.AssemblyUtility.IsAssemblyDynamic(System.Runtime.InteropServices._Assembly)
-  nameWithType: AssemblyUtility.IsAssemblyDynamic(_Assembly)
+- uid: Bifrost.Execution.AssemblyUtility.IsAssemblyDynamic(System.Reflection.Assembly)
+  name: IsAssemblyDynamic(Assembly)
+  href: api/Bifrost.Execution.AssemblyUtility.html#Bifrost_Execution_AssemblyUtility_IsAssemblyDynamic_System_Reflection_Assembly_
+  commentId: M:Bifrost.Execution.AssemblyUtility.IsAssemblyDynamic(System.Reflection.Assembly)
+  fullName: Bifrost.Execution.AssemblyUtility.IsAssemblyDynamic(System.Reflection.Assembly)
+  nameWithType: AssemblyUtility.IsAssemblyDynamic(Assembly)
 - uid: Bifrost.Execution.AssemblyUtility.IsAssemblyDynamic*
   name: IsAssemblyDynamic
   href: api/Bifrost.Execution.AssemblyUtility.html#Bifrost_Execution_AssemblyUtility_IsAssemblyDynamic_
@@ -12292,12 +12208,12 @@ references:
   commentId: T:Bifrost.Execution.IAssemblySpecifiers
   fullName: Bifrost.Execution.IAssemblySpecifiers
   nameWithType: IAssemblySpecifiers
-- uid: Bifrost.Execution.IAssemblySpecifiers.SpecifyUsingSpecifiersFrom(System.Runtime.InteropServices._Assembly)
-  name: SpecifyUsingSpecifiersFrom(_Assembly)
-  href: api/Bifrost.Execution.IAssemblySpecifiers.html#Bifrost_Execution_IAssemblySpecifiers_SpecifyUsingSpecifiersFrom_System_Runtime_InteropServices__Assembly_
-  commentId: M:Bifrost.Execution.IAssemblySpecifiers.SpecifyUsingSpecifiersFrom(System.Runtime.InteropServices._Assembly)
-  fullName: Bifrost.Execution.IAssemblySpecifiers.SpecifyUsingSpecifiersFrom(System.Runtime.InteropServices._Assembly)
-  nameWithType: IAssemblySpecifiers.SpecifyUsingSpecifiersFrom(_Assembly)
+- uid: Bifrost.Execution.IAssemblySpecifiers.SpecifyUsingSpecifiersFrom(System.Reflection.Assembly)
+  name: SpecifyUsingSpecifiersFrom(Assembly)
+  href: api/Bifrost.Execution.IAssemblySpecifiers.html#Bifrost_Execution_IAssemblySpecifiers_SpecifyUsingSpecifiersFrom_System_Reflection_Assembly_
+  commentId: M:Bifrost.Execution.IAssemblySpecifiers.SpecifyUsingSpecifiersFrom(System.Reflection.Assembly)
+  fullName: Bifrost.Execution.IAssemblySpecifiers.SpecifyUsingSpecifiersFrom(System.Reflection.Assembly)
+  nameWithType: IAssemblySpecifiers.SpecifyUsingSpecifiersFrom(Assembly)
 - uid: Bifrost.Execution.IAssemblySpecifiers.SpecifyUsingSpecifiersFrom*
   name: SpecifyUsingSpecifiersFrom
   href: api/Bifrost.Execution.IAssemblySpecifiers.html#Bifrost_Execution_IAssemblySpecifiers_SpecifyUsingSpecifiersFrom_
@@ -12322,12 +12238,12 @@ references:
   commentId: Overload:Bifrost.Execution.IAssemblyUtility.IsAssembly
   fullName: Bifrost.Execution.IAssemblyUtility.IsAssembly
   nameWithType: IAssemblyUtility.IsAssembly
-- uid: Bifrost.Execution.IAssemblyUtility.IsAssemblyDynamic(System.Runtime.InteropServices._Assembly)
-  name: IsAssemblyDynamic(_Assembly)
-  href: api/Bifrost.Execution.IAssemblyUtility.html#Bifrost_Execution_IAssemblyUtility_IsAssemblyDynamic_System_Runtime_InteropServices__Assembly_
-  commentId: M:Bifrost.Execution.IAssemblyUtility.IsAssemblyDynamic(System.Runtime.InteropServices._Assembly)
-  fullName: Bifrost.Execution.IAssemblyUtility.IsAssemblyDynamic(System.Runtime.InteropServices._Assembly)
-  nameWithType: IAssemblyUtility.IsAssemblyDynamic(_Assembly)
+- uid: Bifrost.Execution.IAssemblyUtility.IsAssemblyDynamic(System.Reflection.Assembly)
+  name: IsAssemblyDynamic(Assembly)
+  href: api/Bifrost.Execution.IAssemblyUtility.html#Bifrost_Execution_IAssemblyUtility_IsAssemblyDynamic_System_Reflection_Assembly_
+  commentId: M:Bifrost.Execution.IAssemblyUtility.IsAssemblyDynamic(System.Reflection.Assembly)
+  fullName: Bifrost.Execution.IAssemblyUtility.IsAssemblyDynamic(System.Reflection.Assembly)
+  nameWithType: IAssemblyUtility.IsAssemblyDynamic(Assembly)
 - uid: Bifrost.Execution.IAssemblyUtility.IsAssemblyDynamic*
   name: IsAssemblyDynamic
   href: api/Bifrost.Execution.IAssemblyUtility.html#Bifrost_Execution_IAssemblyUtility_IsAssemblyDynamic_
@@ -19958,12 +19874,6 @@ references:
   commentId: M:Bifrost.Sagas.Exceptions.InvalidSagaStateTransitionException.#ctor
   fullName: Bifrost.Sagas.Exceptions.InvalidSagaStateTransitionException.InvalidSagaStateTransitionException()
   nameWithType: InvalidSagaStateTransitionException.InvalidSagaStateTransitionException()
-- uid: Bifrost.Sagas.Exceptions.InvalidSagaStateTransitionException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  name: InvalidSagaStateTransitionException(SerializationInfo, StreamingContext)
-  href: api/Bifrost.Sagas.Exceptions.InvalidSagaStateTransitionException.html#Bifrost_Sagas_Exceptions_InvalidSagaStateTransitionException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
-  commentId: M:Bifrost.Sagas.Exceptions.InvalidSagaStateTransitionException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  fullName: Bifrost.Sagas.Exceptions.InvalidSagaStateTransitionException.InvalidSagaStateTransitionException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
-  nameWithType: InvalidSagaStateTransitionException.InvalidSagaStateTransitionException(SerializationInfo, StreamingContext)
 - uid: Bifrost.Sagas.Exceptions.InvalidSagaStateTransitionException.#ctor(System.String)
   name: InvalidSagaStateTransitionException(String)
   href: api/Bifrost.Sagas.Exceptions.InvalidSagaStateTransitionException.html#Bifrost_Sagas_Exceptions_InvalidSagaStateTransitionException__ctor_System_String_
@@ -19994,12 +19904,6 @@ references:
   commentId: M:Bifrost.Sagas.Exceptions.UnknownSagaStateException.#ctor
   fullName: Bifrost.Sagas.Exceptions.UnknownSagaStateException.UnknownSagaStateException()
   nameWithType: UnknownSagaStateException.UnknownSagaStateException()
-- uid: Bifrost.Sagas.Exceptions.UnknownSagaStateException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  name: UnknownSagaStateException(SerializationInfo, StreamingContext)
-  href: api/Bifrost.Sagas.Exceptions.UnknownSagaStateException.html#Bifrost_Sagas_Exceptions_UnknownSagaStateException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_
-  commentId: M:Bifrost.Sagas.Exceptions.UnknownSagaStateException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)
-  fullName: Bifrost.Sagas.Exceptions.UnknownSagaStateException.UnknownSagaStateException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)
-  nameWithType: UnknownSagaStateException.UnknownSagaStateException(SerializationInfo, StreamingContext)
 - uid: Bifrost.Sagas.Exceptions.UnknownSagaStateException.#ctor(System.String)
   name: UnknownSagaStateException(String)
   href: api/Bifrost.Sagas.Exceptions.UnknownSagaStateException.html#Bifrost_Sagas_Exceptions_UnknownSagaStateException__ctor_System_String_
@@ -26207,6 +26111,57 @@ references:
   commentId: F:Bifrost.Validation.Rules.Required.ValueNotSpecified
   fullName: Bifrost.Validation.Rules.Required.ValueNotSpecified
   nameWithType: Required.ValueNotSpecified
+- uid: Bifrost.Validation.ValidationResult
+  name: ValidationResult
+  href: api/Bifrost.Validation.ValidationResult.html
+  commentId: T:Bifrost.Validation.ValidationResult
+  fullName: Bifrost.Validation.ValidationResult
+  nameWithType: ValidationResult
+- uid: Bifrost.Validation.ValidationResult.#ctor(System.String)
+  name: ValidationResult(String)
+  href: api/Bifrost.Validation.ValidationResult.html#Bifrost_Validation_ValidationResult__ctor_System_String_
+  commentId: M:Bifrost.Validation.ValidationResult.#ctor(System.String)
+  fullName: Bifrost.Validation.ValidationResult.ValidationResult(System.String)
+  nameWithType: ValidationResult.ValidationResult(String)
+- uid: Bifrost.Validation.ValidationResult.#ctor(System.String,System.Collections.Generic.IEnumerable{System.String})
+  name: ValidationResult(String, IEnumerable<String>)
+  href: api/Bifrost.Validation.ValidationResult.html#Bifrost_Validation_ValidationResult__ctor_System_String_System_Collections_Generic_IEnumerable_System_String__
+  commentId: M:Bifrost.Validation.ValidationResult.#ctor(System.String,System.Collections.Generic.IEnumerable{System.String})
+  name.vb: ValidationResult(String, IEnumerable(Of String))
+  fullName: Bifrost.Validation.ValidationResult.ValidationResult(System.String, System.Collections.Generic.IEnumerable<System.String>)
+  fullName.vb: Bifrost.Validation.ValidationResult.ValidationResult(System.String, System.Collections.Generic.IEnumerable(Of System.String))
+  nameWithType: ValidationResult.ValidationResult(String, IEnumerable<String>)
+  nameWithType.vb: ValidationResult(String, IEnumerable(Of String))
+- uid: Bifrost.Validation.ValidationResult.#ctor*
+  name: ValidationResult
+  href: api/Bifrost.Validation.ValidationResult.html#Bifrost_Validation_ValidationResult__ctor_
+  commentId: Overload:Bifrost.Validation.ValidationResult.#ctor
+  fullName: Bifrost.Validation.ValidationResult.ValidationResult
+  nameWithType: ValidationResult.ValidationResult
+- uid: Bifrost.Validation.ValidationResult.ErrorMessage
+  name: ErrorMessage
+  href: api/Bifrost.Validation.ValidationResult.html#Bifrost_Validation_ValidationResult_ErrorMessage
+  commentId: P:Bifrost.Validation.ValidationResult.ErrorMessage
+  fullName: Bifrost.Validation.ValidationResult.ErrorMessage
+  nameWithType: ValidationResult.ErrorMessage
+- uid: Bifrost.Validation.ValidationResult.ErrorMessage*
+  name: ErrorMessage
+  href: api/Bifrost.Validation.ValidationResult.html#Bifrost_Validation_ValidationResult_ErrorMessage_
+  commentId: Overload:Bifrost.Validation.ValidationResult.ErrorMessage
+  fullName: Bifrost.Validation.ValidationResult.ErrorMessage
+  nameWithType: ValidationResult.ErrorMessage
+- uid: Bifrost.Validation.ValidationResult.MemberNames
+  name: MemberNames
+  href: api/Bifrost.Validation.ValidationResult.html#Bifrost_Validation_ValidationResult_MemberNames
+  commentId: P:Bifrost.Validation.ValidationResult.MemberNames
+  fullName: Bifrost.Validation.ValidationResult.MemberNames
+  nameWithType: ValidationResult.MemberNames
+- uid: Bifrost.Validation.ValidationResult.MemberNames*
+  name: MemberNames
+  href: api/Bifrost.Validation.ValidationResult.html#Bifrost_Validation_ValidationResult_MemberNames_
+  commentId: Overload:Bifrost.Validation.ValidationResult.MemberNames
+  fullName: Bifrost.Validation.ValidationResult.MemberNames
+  nameWithType: ValidationResult.MemberNames
 - uid: Bifrost.Validation.ValidationRules
   name: ValidationRules
   href: api/Bifrost.Validation.ValidationRules.html
