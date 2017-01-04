@@ -21413,36 +21413,6 @@ references:
   commentId: T:Bifrost.Sagas.SagaNotInChapterException
   fullName: Bifrost.Sagas.SagaNotInChapterException
   nameWithType: SagaNotInChapterException
-- uid: Bifrost.Sagas.SagaSerializationOptions
-  name: SagaSerializationOptions
-  href: api/Bifrost.Sagas.SagaSerializationOptions.html
-  commentId: T:Bifrost.Sagas.SagaSerializationOptions
-  fullName: Bifrost.Sagas.SagaSerializationOptions
-  nameWithType: SagaSerializationOptions
-- uid: Bifrost.Sagas.SagaSerializationOptions.#ctor
-  name: SagaSerializationOptions()
-  href: api/Bifrost.Sagas.SagaSerializationOptions.html#Bifrost_Sagas_SagaSerializationOptions__ctor
-  commentId: M:Bifrost.Sagas.SagaSerializationOptions.#ctor
-  fullName: Bifrost.Sagas.SagaSerializationOptions.SagaSerializationOptions()
-  nameWithType: SagaSerializationOptions.SagaSerializationOptions()
-- uid: Bifrost.Sagas.SagaSerializationOptions.#ctor*
-  name: SagaSerializationOptions
-  href: api/Bifrost.Sagas.SagaSerializationOptions.html#Bifrost_Sagas_SagaSerializationOptions__ctor_
-  commentId: Overload:Bifrost.Sagas.SagaSerializationOptions.#ctor
-  fullName: Bifrost.Sagas.SagaSerializationOptions.SagaSerializationOptions
-  nameWithType: SagaSerializationOptions.SagaSerializationOptions
-- uid: Bifrost.Sagas.SagaSerializationOptions.ShouldSerializeProperty(System.Type,System.String)
-  name: ShouldSerializeProperty(Type, String)
-  href: api/Bifrost.Sagas.SagaSerializationOptions.html#Bifrost_Sagas_SagaSerializationOptions_ShouldSerializeProperty_System_Type_System_String_
-  commentId: M:Bifrost.Sagas.SagaSerializationOptions.ShouldSerializeProperty(System.Type,System.String)
-  fullName: Bifrost.Sagas.SagaSerializationOptions.ShouldSerializeProperty(System.Type, System.String)
-  nameWithType: SagaSerializationOptions.ShouldSerializeProperty(Type, String)
-- uid: Bifrost.Sagas.SagaSerializationOptions.ShouldSerializeProperty*
-  name: ShouldSerializeProperty
-  href: api/Bifrost.Sagas.SagaSerializationOptions.html#Bifrost_Sagas_SagaSerializationOptions_ShouldSerializeProperty_
-  commentId: Overload:Bifrost.Sagas.SagaSerializationOptions.ShouldSerializeProperty
-  fullName: Bifrost.Sagas.SagaSerializationOptions.ShouldSerializeProperty
-  nameWithType: SagaSerializationOptions.ShouldSerializeProperty
 - uid: Bifrost.Sagas.SagaState
   name: SagaState
   href: api/Bifrost.Sagas.SagaState.html
@@ -23276,54 +23246,24 @@ references:
   commentId: N:Bifrost.Serialization
   fullName: Bifrost.Serialization
   nameWithType: Bifrost.Serialization
-- uid: Bifrost.Serialization.ISerializationOptions
-  name: ISerializationOptions
-  href: api/Bifrost.Serialization.ISerializationOptions.html
-  commentId: T:Bifrost.Serialization.ISerializationOptions
-  fullName: Bifrost.Serialization.ISerializationOptions
-  nameWithType: ISerializationOptions
-- uid: Bifrost.Serialization.ISerializationOptions.Flags
-  name: Flags
-  href: api/Bifrost.Serialization.ISerializationOptions.html#Bifrost_Serialization_ISerializationOptions_Flags
-  commentId: P:Bifrost.Serialization.ISerializationOptions.Flags
-  fullName: Bifrost.Serialization.ISerializationOptions.Flags
-  nameWithType: ISerializationOptions.Flags
-- uid: Bifrost.Serialization.ISerializationOptions.Flags*
-  name: Flags
-  href: api/Bifrost.Serialization.ISerializationOptions.html#Bifrost_Serialization_ISerializationOptions_Flags_
-  commentId: Overload:Bifrost.Serialization.ISerializationOptions.Flags
-  fullName: Bifrost.Serialization.ISerializationOptions.Flags
-  nameWithType: ISerializationOptions.Flags
-- uid: Bifrost.Serialization.ISerializationOptions.ShouldSerializeProperty(System.Type,System.String)
-  name: ShouldSerializeProperty(Type, String)
-  href: api/Bifrost.Serialization.ISerializationOptions.html#Bifrost_Serialization_ISerializationOptions_ShouldSerializeProperty_System_Type_System_String_
-  commentId: M:Bifrost.Serialization.ISerializationOptions.ShouldSerializeProperty(System.Type,System.String)
-  fullName: Bifrost.Serialization.ISerializationOptions.ShouldSerializeProperty(System.Type, System.String)
-  nameWithType: ISerializationOptions.ShouldSerializeProperty(Type, String)
-- uid: Bifrost.Serialization.ISerializationOptions.ShouldSerializeProperty*
-  name: ShouldSerializeProperty
-  href: api/Bifrost.Serialization.ISerializationOptions.html#Bifrost_Serialization_ISerializationOptions_ShouldSerializeProperty_
-  commentId: Overload:Bifrost.Serialization.ISerializationOptions.ShouldSerializeProperty
-  fullName: Bifrost.Serialization.ISerializationOptions.ShouldSerializeProperty
-  nameWithType: ISerializationOptions.ShouldSerializeProperty
 - uid: Bifrost.Serialization.ISerializer
   name: ISerializer
   href: api/Bifrost.Serialization.ISerializer.html
   commentId: T:Bifrost.Serialization.ISerializer
   fullName: Bifrost.Serialization.ISerializer
   nameWithType: ISerializer
-- uid: Bifrost.Serialization.ISerializer.FromJson(System.Object,System.String,Bifrost.Serialization.ISerializationOptions)
-  name: FromJson(Object, String, ISerializationOptions)
-  href: api/Bifrost.Serialization.ISerializer.html#Bifrost_Serialization_ISerializer_FromJson_System_Object_System_String_Bifrost_Serialization_ISerializationOptions_
-  commentId: M:Bifrost.Serialization.ISerializer.FromJson(System.Object,System.String,Bifrost.Serialization.ISerializationOptions)
-  fullName: Bifrost.Serialization.ISerializer.FromJson(System.Object, System.String, Bifrost.Serialization.ISerializationOptions)
-  nameWithType: ISerializer.FromJson(Object, String, ISerializationOptions)
-- uid: Bifrost.Serialization.ISerializer.FromJson(System.Type,System.String,Bifrost.Serialization.ISerializationOptions)
-  name: FromJson(Type, String, ISerializationOptions)
-  href: api/Bifrost.Serialization.ISerializer.html#Bifrost_Serialization_ISerializer_FromJson_System_Type_System_String_Bifrost_Serialization_ISerializationOptions_
-  commentId: M:Bifrost.Serialization.ISerializer.FromJson(System.Type,System.String,Bifrost.Serialization.ISerializationOptions)
-  fullName: Bifrost.Serialization.ISerializer.FromJson(System.Type, System.String, Bifrost.Serialization.ISerializationOptions)
-  nameWithType: ISerializer.FromJson(Type, String, ISerializationOptions)
+- uid: Bifrost.Serialization.ISerializer.FromJson(System.Object,System.String,Bifrost.Serialization.SerializationOptions)
+  name: FromJson(Object, String, SerializationOptions)
+  href: api/Bifrost.Serialization.ISerializer.html#Bifrost_Serialization_ISerializer_FromJson_System_Object_System_String_Bifrost_Serialization_SerializationOptions_
+  commentId: M:Bifrost.Serialization.ISerializer.FromJson(System.Object,System.String,Bifrost.Serialization.SerializationOptions)
+  fullName: Bifrost.Serialization.ISerializer.FromJson(System.Object, System.String, Bifrost.Serialization.SerializationOptions)
+  nameWithType: ISerializer.FromJson(Object, String, SerializationOptions)
+- uid: Bifrost.Serialization.ISerializer.FromJson(System.Type,System.String,Bifrost.Serialization.SerializationOptions)
+  name: FromJson(Type, String, SerializationOptions)
+  href: api/Bifrost.Serialization.ISerializer.html#Bifrost_Serialization_ISerializer_FromJson_System_Type_System_String_Bifrost_Serialization_SerializationOptions_
+  commentId: M:Bifrost.Serialization.ISerializer.FromJson(System.Type,System.String,Bifrost.Serialization.SerializationOptions)
+  fullName: Bifrost.Serialization.ISerializer.FromJson(System.Type, System.String, Bifrost.Serialization.SerializationOptions)
+  nameWithType: ISerializer.FromJson(Type, String, SerializationOptions)
 - uid: Bifrost.Serialization.ISerializer.FromJson*
   name: FromJson<T>
   href: api/Bifrost.Serialization.ISerializer.html#Bifrost_Serialization_ISerializer_FromJson_
@@ -23333,15 +23273,15 @@ references:
   fullName.vb: Bifrost.Serialization.ISerializer.FromJson(Of T)
   nameWithType: ISerializer.FromJson<T>
   nameWithType.vb: ISerializer.FromJson(Of T)
-- uid: Bifrost.Serialization.ISerializer.FromJson``1(System.String,Bifrost.Serialization.ISerializationOptions)
-  name: FromJson<T>(String, ISerializationOptions)
-  href: api/Bifrost.Serialization.ISerializer.html#Bifrost_Serialization_ISerializer_FromJson__1_System_String_Bifrost_Serialization_ISerializationOptions_
-  commentId: M:Bifrost.Serialization.ISerializer.FromJson``1(System.String,Bifrost.Serialization.ISerializationOptions)
-  name.vb: FromJson(Of T)(String, ISerializationOptions)
-  fullName: Bifrost.Serialization.ISerializer.FromJson<T>(System.String, Bifrost.Serialization.ISerializationOptions)
-  fullName.vb: Bifrost.Serialization.ISerializer.FromJson(Of T)(System.String, Bifrost.Serialization.ISerializationOptions)
-  nameWithType: ISerializer.FromJson<T>(String, ISerializationOptions)
-  nameWithType.vb: FromJson(Of T)(String, ISerializationOptions)
+- uid: Bifrost.Serialization.ISerializer.FromJson``1(System.String,Bifrost.Serialization.SerializationOptions)
+  name: FromJson<T>(String, SerializationOptions)
+  href: api/Bifrost.Serialization.ISerializer.html#Bifrost_Serialization_ISerializer_FromJson__1_System_String_Bifrost_Serialization_SerializationOptions_
+  commentId: M:Bifrost.Serialization.ISerializer.FromJson``1(System.String,Bifrost.Serialization.SerializationOptions)
+  name.vb: FromJson(Of T)(String, SerializationOptions)
+  fullName: Bifrost.Serialization.ISerializer.FromJson<T>(System.String, Bifrost.Serialization.SerializationOptions)
+  fullName.vb: Bifrost.Serialization.ISerializer.FromJson(Of T)(System.String, Bifrost.Serialization.SerializationOptions)
+  nameWithType: ISerializer.FromJson<T>(String, SerializationOptions)
+  nameWithType.vb: FromJson(Of T)(String, SerializationOptions)
 - uid: Bifrost.Serialization.ISerializer.GetKeyValuesFromJson(System.String)
   name: GetKeyValuesFromJson(String)
   href: api/Bifrost.Serialization.ISerializer.html#Bifrost_Serialization_ISerializer_GetKeyValuesFromJson_System_String_
@@ -23354,24 +23294,24 @@ references:
   commentId: Overload:Bifrost.Serialization.ISerializer.GetKeyValuesFromJson
   fullName: Bifrost.Serialization.ISerializer.GetKeyValuesFromJson
   nameWithType: ISerializer.GetKeyValuesFromJson
-- uid: Bifrost.Serialization.ISerializer.ToJson(System.Object,Bifrost.Serialization.ISerializationOptions)
-  name: ToJson(Object, ISerializationOptions)
-  href: api/Bifrost.Serialization.ISerializer.html#Bifrost_Serialization_ISerializer_ToJson_System_Object_Bifrost_Serialization_ISerializationOptions_
-  commentId: M:Bifrost.Serialization.ISerializer.ToJson(System.Object,Bifrost.Serialization.ISerializationOptions)
-  fullName: Bifrost.Serialization.ISerializer.ToJson(System.Object, Bifrost.Serialization.ISerializationOptions)
-  nameWithType: ISerializer.ToJson(Object, ISerializationOptions)
+- uid: Bifrost.Serialization.ISerializer.ToJson(System.Object,Bifrost.Serialization.SerializationOptions)
+  name: ToJson(Object, SerializationOptions)
+  href: api/Bifrost.Serialization.ISerializer.html#Bifrost_Serialization_ISerializer_ToJson_System_Object_Bifrost_Serialization_SerializationOptions_
+  commentId: M:Bifrost.Serialization.ISerializer.ToJson(System.Object,Bifrost.Serialization.SerializationOptions)
+  fullName: Bifrost.Serialization.ISerializer.ToJson(System.Object, Bifrost.Serialization.SerializationOptions)
+  nameWithType: ISerializer.ToJson(Object, SerializationOptions)
 - uid: Bifrost.Serialization.ISerializer.ToJson*
   name: ToJson
   href: api/Bifrost.Serialization.ISerializer.html#Bifrost_Serialization_ISerializer_ToJson_
   commentId: Overload:Bifrost.Serialization.ISerializer.ToJson
   fullName: Bifrost.Serialization.ISerializer.ToJson
   nameWithType: ISerializer.ToJson
-- uid: Bifrost.Serialization.ISerializer.ToJsonStream(System.Object,Bifrost.Serialization.ISerializationOptions)
-  name: ToJsonStream(Object, ISerializationOptions)
-  href: api/Bifrost.Serialization.ISerializer.html#Bifrost_Serialization_ISerializer_ToJsonStream_System_Object_Bifrost_Serialization_ISerializationOptions_
-  commentId: M:Bifrost.Serialization.ISerializer.ToJsonStream(System.Object,Bifrost.Serialization.ISerializationOptions)
-  fullName: Bifrost.Serialization.ISerializer.ToJsonStream(System.Object, Bifrost.Serialization.ISerializationOptions)
-  nameWithType: ISerializer.ToJsonStream(Object, ISerializationOptions)
+- uid: Bifrost.Serialization.ISerializer.ToJsonStream(System.Object,Bifrost.Serialization.SerializationOptions)
+  name: ToJsonStream(Object, SerializationOptions)
+  href: api/Bifrost.Serialization.ISerializer.html#Bifrost_Serialization_ISerializer_ToJsonStream_System_Object_Bifrost_Serialization_SerializationOptions_
+  commentId: M:Bifrost.Serialization.ISerializer.ToJsonStream(System.Object,Bifrost.Serialization.SerializationOptions)
+  fullName: Bifrost.Serialization.ISerializer.ToJsonStream(System.Object, Bifrost.Serialization.SerializationOptions)
+  nameWithType: ISerializer.ToJsonStream(Object, SerializationOptions)
 - uid: Bifrost.Serialization.ISerializer.ToJsonStream*
   name: ToJsonStream
   href: api/Bifrost.Serialization.ISerializer.html#Bifrost_Serialization_ISerializer_ToJsonStream_
@@ -23384,54 +23324,6 @@ references:
   commentId: T:Bifrost.Serialization.SerializationOptions
   fullName: Bifrost.Serialization.SerializationOptions
   nameWithType: SerializationOptions
-- uid: Bifrost.Serialization.SerializationOptions.#ctor(Bifrost.Serialization.SerializationOptionsFlags)
-  name: SerializationOptions(SerializationOptionsFlags)
-  href: api/Bifrost.Serialization.SerializationOptions.html#Bifrost_Serialization_SerializationOptions__ctor_Bifrost_Serialization_SerializationOptionsFlags_
-  commentId: M:Bifrost.Serialization.SerializationOptions.#ctor(Bifrost.Serialization.SerializationOptionsFlags)
-  fullName: Bifrost.Serialization.SerializationOptions.SerializationOptions(Bifrost.Serialization.SerializationOptionsFlags)
-  nameWithType: SerializationOptions.SerializationOptions(SerializationOptionsFlags)
-- uid: Bifrost.Serialization.SerializationOptions.#ctor*
-  name: SerializationOptions
-  href: api/Bifrost.Serialization.SerializationOptions.html#Bifrost_Serialization_SerializationOptions__ctor_
-  commentId: Overload:Bifrost.Serialization.SerializationOptions.#ctor
-  fullName: Bifrost.Serialization.SerializationOptions.SerializationOptions
-  nameWithType: SerializationOptions.SerializationOptions
-- uid: Bifrost.Serialization.SerializationOptions.CamelCase
-  name: CamelCase
-  href: api/Bifrost.Serialization.SerializationOptions.html#Bifrost_Serialization_SerializationOptions_CamelCase
-  commentId: P:Bifrost.Serialization.SerializationOptions.CamelCase
-  fullName: Bifrost.Serialization.SerializationOptions.CamelCase
-  nameWithType: SerializationOptions.CamelCase
-- uid: Bifrost.Serialization.SerializationOptions.CamelCase*
-  name: CamelCase
-  href: api/Bifrost.Serialization.SerializationOptions.html#Bifrost_Serialization_SerializationOptions_CamelCase_
-  commentId: Overload:Bifrost.Serialization.SerializationOptions.CamelCase
-  fullName: Bifrost.Serialization.SerializationOptions.CamelCase
-  nameWithType: SerializationOptions.CamelCase
-- uid: Bifrost.Serialization.SerializationOptions.Default
-  name: Default
-  href: api/Bifrost.Serialization.SerializationOptions.html#Bifrost_Serialization_SerializationOptions_Default
-  commentId: P:Bifrost.Serialization.SerializationOptions.Default
-  fullName: Bifrost.Serialization.SerializationOptions.Default
-  nameWithType: SerializationOptions.Default
-- uid: Bifrost.Serialization.SerializationOptions.Default*
-  name: Default
-  href: api/Bifrost.Serialization.SerializationOptions.html#Bifrost_Serialization_SerializationOptions_Default_
-  commentId: Overload:Bifrost.Serialization.SerializationOptions.Default
-  fullName: Bifrost.Serialization.SerializationOptions.Default
-  nameWithType: SerializationOptions.Default
-- uid: Bifrost.Serialization.SerializationOptions.Flags
-  name: Flags
-  href: api/Bifrost.Serialization.SerializationOptions.html#Bifrost_Serialization_SerializationOptions_Flags
-  commentId: P:Bifrost.Serialization.SerializationOptions.Flags
-  fullName: Bifrost.Serialization.SerializationOptions.Flags
-  nameWithType: SerializationOptions.Flags
-- uid: Bifrost.Serialization.SerializationOptions.Flags*
-  name: Flags
-  href: api/Bifrost.Serialization.SerializationOptions.html#Bifrost_Serialization_SerializationOptions_Flags_
-  commentId: Overload:Bifrost.Serialization.SerializationOptions.Flags
-  fullName: Bifrost.Serialization.SerializationOptions.Flags
-  nameWithType: SerializationOptions.Flags
 - uid: Bifrost.Serialization.SerializationOptions.IncludeTypeNames
   name: IncludeTypeNames
   href: api/Bifrost.Serialization.SerializationOptions.html#Bifrost_Serialization_SerializationOptions_IncludeTypeNames
@@ -23444,42 +23336,24 @@ references:
   commentId: Overload:Bifrost.Serialization.SerializationOptions.IncludeTypeNames
   fullName: Bifrost.Serialization.SerializationOptions.IncludeTypeNames
   nameWithType: SerializationOptions.IncludeTypeNames
-- uid: Bifrost.Serialization.SerializationOptions.ShouldSerializeProperty(System.Type,System.String)
-  name: ShouldSerializeProperty(Type, String)
-  href: api/Bifrost.Serialization.SerializationOptions.html#Bifrost_Serialization_SerializationOptions_ShouldSerializeProperty_System_Type_System_String_
-  commentId: M:Bifrost.Serialization.SerializationOptions.ShouldSerializeProperty(System.Type,System.String)
-  fullName: Bifrost.Serialization.SerializationOptions.ShouldSerializeProperty(System.Type, System.String)
-  nameWithType: SerializationOptions.ShouldSerializeProperty(Type, String)
-- uid: Bifrost.Serialization.SerializationOptions.ShouldSerializeProperty*
+- uid: Bifrost.Serialization.SerializationOptions.ShouldSerializeProperty
   name: ShouldSerializeProperty
-  href: api/Bifrost.Serialization.SerializationOptions.html#Bifrost_Serialization_SerializationOptions_ShouldSerializeProperty_
-  commentId: Overload:Bifrost.Serialization.SerializationOptions.ShouldSerializeProperty
+  href: api/Bifrost.Serialization.SerializationOptions.html#Bifrost_Serialization_SerializationOptions_ShouldSerializeProperty
+  commentId: F:Bifrost.Serialization.SerializationOptions.ShouldSerializeProperty
   fullName: Bifrost.Serialization.SerializationOptions.ShouldSerializeProperty
   nameWithType: SerializationOptions.ShouldSerializeProperty
-- uid: Bifrost.Serialization.SerializationOptionsFlags
-  name: SerializationOptionsFlags
-  href: api/Bifrost.Serialization.SerializationOptionsFlags.html
-  commentId: T:Bifrost.Serialization.SerializationOptionsFlags
-  fullName: Bifrost.Serialization.SerializationOptionsFlags
-  nameWithType: SerializationOptionsFlags
-- uid: Bifrost.Serialization.SerializationOptionsFlags.IncludeTypeNames
-  name: IncludeTypeNames
-  href: api/Bifrost.Serialization.SerializationOptionsFlags.html#Bifrost_Serialization_SerializationOptionsFlags_IncludeTypeNames
-  commentId: F:Bifrost.Serialization.SerializationOptionsFlags.IncludeTypeNames
-  fullName: Bifrost.Serialization.SerializationOptionsFlags.IncludeTypeNames
-  nameWithType: SerializationOptionsFlags.IncludeTypeNames
-- uid: Bifrost.Serialization.SerializationOptionsFlags.None
-  name: None
-  href: api/Bifrost.Serialization.SerializationOptionsFlags.html#Bifrost_Serialization_SerializationOptionsFlags_None
-  commentId: F:Bifrost.Serialization.SerializationOptionsFlags.None
-  fullName: Bifrost.Serialization.SerializationOptionsFlags.None
-  nameWithType: SerializationOptionsFlags.None
-- uid: Bifrost.Serialization.SerializationOptionsFlags.UseCamelCase
+- uid: Bifrost.Serialization.SerializationOptions.UseCamelCase
   name: UseCamelCase
-  href: api/Bifrost.Serialization.SerializationOptionsFlags.html#Bifrost_Serialization_SerializationOptionsFlags_UseCamelCase
-  commentId: F:Bifrost.Serialization.SerializationOptionsFlags.UseCamelCase
-  fullName: Bifrost.Serialization.SerializationOptionsFlags.UseCamelCase
-  nameWithType: SerializationOptionsFlags.UseCamelCase
+  href: api/Bifrost.Serialization.SerializationOptions.html#Bifrost_Serialization_SerializationOptions_UseCamelCase
+  commentId: P:Bifrost.Serialization.SerializationOptions.UseCamelCase
+  fullName: Bifrost.Serialization.SerializationOptions.UseCamelCase
+  nameWithType: SerializationOptions.UseCamelCase
+- uid: Bifrost.Serialization.SerializationOptions.UseCamelCase*
+  name: UseCamelCase
+  href: api/Bifrost.Serialization.SerializationOptions.html#Bifrost_Serialization_SerializationOptions_UseCamelCase_
+  commentId: Overload:Bifrost.Serialization.SerializationOptions.UseCamelCase
+  fullName: Bifrost.Serialization.SerializationOptions.UseCamelCase
+  nameWithType: SerializationOptions.UseCamelCase
 - uid: Bifrost.Services
   name: Bifrost.Services
   href: api/Bifrost.Services.html
