@@ -71,14 +71,15 @@
               
               <h1 id="Bifrost_Read_IReadModelOf_1" data-uid="Bifrost.Read.IReadModelOf`1">Interface IReadModelOf&lt;T&gt;
               </h1>
-              <div class="markdown level0 summary"><p>Defines a way of retrieving a single <a class="xref" href="Bifrost.Read.IReadModel.html">IReadModel</a>.</p>
+              <div class="markdown level0 summary"><p>Defines a way of retrieving single <a class="xref" href="Bifrost.Read.IReadModel.html">IReadModel</a></p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <h6><strong>Namespace</strong>:Bifrost.Read</h6>
               <h6><strong>Assembly</strong>:Bifrost.dll</h6>
               <h5 id="Bifrost_Read_IReadModelOf_1_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public interface IReadModelOf&lt;T&gt; : IConvention where T : IReadModel</code></pre>
+                <pre><code class="lang-csharp hljs">public interface IReadModelOf&lt;T&gt;
+    where T : IReadModel</code></pre>
               </div>
               <h5 class="typeParameters">Type Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -91,15 +92,10 @@
                 <tbody>
                   <tr>
                     <td><span class="parametername">T</span></td>
-                    <td>Type of <a class="xref" href="Bifrost.Read.IReadModel.html">IReadModel</a> it retrieves.</td>
+                    <td>Type of <a class="xref" href="Bifrost.Read.IReadModel.html">IReadModel</a> it retrieves</td>
                   </tr>
                 </tbody>
               </table>
-              <h5 id="Bifrost_Read_IReadModelOf_1_remarks"><strong>Remarks</strong></h5>
-              <div class="markdown level0 remarks"><p>Types inheriting from this interface will be automatically registered and invoked when a read model of
-type <span class="typeparamref">T</span> is retrieved.
-In most cases it is possible to use the provided <a class="xref" href="Bifrost.Read.ReadModelOf-1.html">ReadModelOf&lt;T&gt;</a> by implementing a <a class="xref" href="Bifrost.Read.IReadModelRepositoryFor-1.html">IReadModelRepositoryFor&lt;T&gt;</a>.</p>
-</div>
               <h3 id="methods">Methods
               </h3>
               <span class="small pull-right mobile-hide">
@@ -107,7 +103,7 @@ In most cases it is possible to use the provided <a class="xref" href="Bifrost.R
                 <a href="https://github.com/dolittle/bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Read_IReadModelOf_1_InstanceMatching_System_Linq_Expressions_Expression_System_Func__0_System_Boolean_____.md&amp;value=---%0Auid%3A%20Bifrost.Read.IReadModelOf%601.InstanceMatching(System.Linq.Expressions.Expression%7BSystem.Func%7B%600%2CSystem.Boolean%7D%7D%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/dolittle/Bifrost/blob/HEAD/Source/Bifrost/Read/IReadModelOf.cs/#L41">View Source</a>
+                <a href="https://github.com/dolittle/Bifrost/blob/HEAD/Source/Bifrost/Read/IReadModelOf.cs/#L21">View Source</a>
               </span>
               <a id="Bifrost_Read_IReadModelOf_1_InstanceMatching_" data-uid="Bifrost.Read.IReadModelOf`1.InstanceMatching*"></a>
               <h4 id="Bifrost_Read_IReadModelOf_1_InstanceMatching_System_Linq_Expressions_Expression_System_Func__0_System_Boolean_____" data-uid="Bifrost.Read.IReadModelOf`1.InstanceMatching(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}}[])">InstanceMatching(Expression&lt;Func&lt;T, Boolean&gt;&gt;[])</h4>
@@ -131,7 +127,7 @@ In most cases it is possible to use the provided <a class="xref" href="Bifrost.R
                   <tr>
                     <td><span class="xref">System.Linq.Expressions.Expression</span>&lt;<span class="xref">System.Func</span>&lt;T, <span class="xref">System.Boolean</span>&gt;&gt;[]</td>
                     <td><span class="parametername">propertyExpressions</span></td>
-                    <td><p>Property filter expressions to use.</p>
+                    <td><p>Property filter expressions to use</p>
 </td>
                   </tr>
                 </tbody>
@@ -147,7 +143,7 @@ In most cases it is possible to use the provided <a class="xref" href="Bifrost.R
                 <tbody>
                   <tr>
                     <td><span class="xref">T</span></td>
-                    <td><p>An instance or default/null of the <a class="xref" href="Bifrost.Read.IReadModel.html">IReadModel</a>, throws an exception if there is not a unique match.</p>
+                    <td><p>An instance or default / null of the <a class="xref" href="Bifrost.Read.IReadModel.html">IReadModel</a>, throws an exception if there is not a unique match</p>
 </td>
                   </tr>
                 </tbody>
@@ -188,7 +184,7 @@ In most cases it is possible to use the provided <a class="xref" href="Bifrost.R
                     <a href="https://github.com/dolittle/bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Read_IReadModelOf_1.md&amp;value=---%0Auid%3A%20Bifrost.Read.IReadModelOf%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/dolittle/Bifrost/blob/HEAD/Source/Bifrost/Read/IReadModelOf.cs/#L34" class="contribution-link">View Source</a>
+                    <a href="https://github.com/dolittle/Bifrost/blob/HEAD/Source/Bifrost/Read/IReadModelOf.cs/#L14" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
