@@ -71,15 +71,19 @@
               
               <h1 id="Bifrost_Mapping_IMappingTarget" data-uid="Bifrost.Mapping.IMappingTarget">Interface IMappingTarget
               </h1>
-              <div class="markdown level0 summary"><p>Defines a mapping target - more specifically you should look at <see cref="!:IMappingTargetFor"></see></p>
+              <div class="markdown level0 summary"><p>Defines a mapping target - more specifically you should look at <a class="xref" href="Bifrost.Mapping.IMappingTargetFor-1.html">IMappingTargetFor&lt;T&gt;</a>.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <h6><strong>Namespace</strong>:Bifrost.Mapping</h6>
               <h6><strong>Assembly</strong>:Bifrost.dll</h6>
               <h5 id="Bifrost_Mapping_IMappingTarget_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public interface IMappingTarget</code></pre>
+                <pre><code class="lang-csharp hljs">public interface IMappingTarget : IConvention</code></pre>
               </div>
+              <h5 id="Bifrost_Mapping_IMappingTarget_remarks"><strong>Remarks</strong></h5>
+              <div class="markdown level0 remarks"><p>Types inheriting from this interface will be automatically registered.
+You most likely want to subclass <a class="xref" href="Bifrost.Mapping.MappingTargetFor-1.html">MappingTargetFor&lt;T&gt;</a>.</p>
+</div>
               <h3 id="properties">Properties
               </h3>
               <span class="small pull-right mobile-hide">
@@ -87,7 +91,7 @@
                 <a href="https://github.com/dolittle/bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Mapping_IMappingTarget_TargetType.md&amp;value=---%0Auid%3A%20Bifrost.Mapping.IMappingTarget.TargetType%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/dolittle/Bifrost/blob/HEAD/Source/Bifrost/Mapping/IMappingTarget.cs/#L32">View Source</a>
+                <a href="https://github.com/dolittle/Bifrost/blob/HEAD/Source/Bifrost/Mapping/IMappingTarget.cs/#L37">View Source</a>
               </span>
               <a id="Bifrost_Mapping_IMappingTarget_TargetType_" data-uid="Bifrost.Mapping.IMappingTarget.TargetType*"></a>
               <h4 id="Bifrost_Mapping_IMappingTarget_TargetType" data-uid="Bifrost.Mapping.IMappingTarget.TargetType">TargetType</h4>
@@ -120,7 +124,7 @@
                 <a href="https://github.com/dolittle/bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Mapping_IMappingTarget_SetValue_System_Object_System_Reflection_MemberInfo_System_Object_.md&amp;value=---%0Auid%3A%20Bifrost.Mapping.IMappingTarget.SetValue(System.Object%2CSystem.Reflection.MemberInfo%2CSystem.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/dolittle/Bifrost/blob/HEAD/Source/Bifrost/Mapping/IMappingTarget.cs/#L40">View Source</a>
+                <a href="https://github.com/dolittle/Bifrost/blob/HEAD/Source/Bifrost/Mapping/IMappingTarget.cs/#L45">View Source</a>
               </span>
               <a id="Bifrost_Mapping_IMappingTarget_SetValue_" data-uid="Bifrost.Mapping.IMappingTarget.SetValue*"></a>
               <h4 id="Bifrost_Mapping_IMappingTarget_SetValue_System_Object_System_Reflection_MemberInfo_System_Object_" data-uid="Bifrost.Mapping.IMappingTarget.SetValue(System.Object,System.Reflection.MemberInfo,System.Object)">SetValue(Object, MemberInfo, Object)</h4>
@@ -197,7 +201,7 @@
                     <a href="https://github.com/dolittle/bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Mapping_IMappingTarget.md&amp;value=---%0Auid%3A%20Bifrost.Mapping.IMappingTarget%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/dolittle/Bifrost/blob/HEAD/Source/Bifrost/Mapping/IMappingTarget.cs/#L27" class="contribution-link">View Source</a>
+                    <a href="https://github.com/dolittle/Bifrost/blob/HEAD/Source/Bifrost/Mapping/IMappingTarget.cs/#L32" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

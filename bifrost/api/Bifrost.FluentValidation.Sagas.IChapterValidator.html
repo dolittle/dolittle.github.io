@@ -71,15 +71,19 @@
               
               <h1 id="Bifrost_FluentValidation_Sagas_IChapterValidator" data-uid="Bifrost.FluentValidation.Sagas.IChapterValidator">Interface IChapterValidator
               </h1>
-              <div class="markdown level0 summary"><p>Marker interface for a Saga <a href="IChapter">Chapter</a> validator</p>
+              <div class="markdown level0 summary"><p>Marker interface for a Saga <a href="IChapter">Chapter</a> validator.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <h6><strong>Namespace</strong>:Bifrost.FluentValidation.Sagas</h6>
               <h6><strong>Assembly</strong>:Bifrost.FluentValidation.dll</h6>
               <h5 id="Bifrost_FluentValidation_Sagas_IChapterValidator_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public interface IChapterValidator</code></pre>
+                <pre><code class="lang-csharp hljs">public interface IChapterValidator : IConvention</code></pre>
               </div>
+              <h5 id="Bifrost_FluentValidation_Sagas_IChapterValidator_remarks"><strong>Remarks</strong></h5>
+              <div class="markdown level0 remarks"><p>Types inheriting from this interface and also <a class="xref" href="Bifrost.Validation.ICanValidate-1.html">ICanValidate&lt;T&gt;</a> will be automatically registered.
+You most likely want to subclass <a class="xref" href="Bifrost.FluentValidation.Sagas.ChapterValidator-1.html">ChapterValidator&lt;T&gt;</a>.</p>
+</div>
               <h3 id="extensionmethods">Extension Methods</h3>
               <div>
                   <a class="xref" href="Bifrost.Concepts.ConceptExtensions.html#Bifrost_Concepts_ConceptExtensions_IsConcept_System_Object_">ConceptExtensions.IsConcept(Object)</a>
@@ -116,7 +120,7 @@
                     <a href="https://github.com/dolittle/bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_FluentValidation_Sagas_IChapterValidator.md&amp;value=---%0Auid%3A%20Bifrost.FluentValidation.Sagas.IChapterValidator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/dolittle/Bifrost/blob/HEAD/Source/Bifrost.FluentValidation/Sagas/IChapterValidator.cs/#L27" class="contribution-link">View Source</a>
+                    <a href="https://github.com/dolittle/Bifrost/blob/HEAD/Source/Bifrost.FluentValidation/Sagas/IChapterValidator.cs/#L31" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

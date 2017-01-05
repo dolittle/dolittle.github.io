@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class ResourceConvention
+    <title>Class ComposedCommandRuleBuilder&lt;TProperty&gt;
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class ResourceConvention
+    <meta name="title" content="Class ComposedCommandRuleBuilder&lt;TProperty&gt;
    ">
     <meta name="generator" content="docfx 2.9.3.0">
     
@@ -69,25 +69,18 @@
             <article class="content wrap" id="_content">
               
               
-              <h1 id="Bifrost_Content_Resources_ResourceConvention" data-uid="Bifrost.Content.Resources.ResourceConvention">Class ResourceConvention
+              <h1 id="Bifrost_FluentValidation_Commands_ComposedCommandRuleBuilder_1" data-uid="Bifrost.FluentValidation.Commands.ComposedCommandRuleBuilder`1">Class ComposedCommandRuleBuilder&lt;TProperty&gt;
               </h1>
-              <div class="markdown level0 summary"><p>Represents a <a class="xref" href="Bifrost.Execution.IBindingConvention.html">IBindingConvention</a> that resolves anything implementing <a class="xref" href="Bifrost.Content.Resources.IHaveResources.html">IHaveResources</a></p>
+              <div class="markdown level0 summary"><p>Represents an implementation of <a class="xref" href="Bifrost.FluentValidation.Commands.IComposedCommandRuleBuilder.html">IComposedCommandRuleBuilder</a>.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <div class="inheritance">
                 <h5>Inheritance</h5>
                   <div class="level0"><span class="xref">System.Object</span></div>
-                  <div class="level1"><a class="xref" href="Bifrost.Execution.BaseConvention.html">BaseConvention</a></div>
-                  <div class="level2"><span class="xref">ResourceConvention</span></div>
+                  <div class="level1"><span class="xref">ComposedCommandRuleBuilder&lt;TProperty&gt;</span></div>
               </div>
               <div class="inheritedMembers">
                 <h5>Inherited Members</h5>
-                <div>
-                  <a class="xref" href="Bifrost.Execution.BaseConvention.html#Bifrost_Execution_BaseConvention_DefaultScope">BaseConvention.DefaultScope</a>
-                </div>
-                <div>
-                  <a class="xref" href="Bifrost.Execution.BaseConvention.html#Bifrost_Execution_BaseConvention_GetScopeForTarget_System_Type_">BaseConvention.GetScopeForTarget(Type)</a>
-                </div>
                 <div>
                   <span class="xref">System.Object.ToString()</span>
                 </div>
@@ -110,46 +103,44 @@
                   <span class="xref">System.Object.MemberwiseClone()</span>
                 </div>
               </div>
-              <h6><strong>Namespace</strong>:Bifrost.Content.Resources</h6>
-              <h6><strong>Assembly</strong>:Bifrost.Content.dll</h6>
-              <h5 id="Bifrost_Content_Resources_ResourceConvention_syntax">Syntax</h5>
+              <h6><strong>Namespace</strong>:Bifrost.FluentValidation.Commands</h6>
+              <h6><strong>Assembly</strong>:Bifrost.FluentValidation.dll</h6>
+              <h5 id="Bifrost_FluentValidation_Commands_ComposedCommandRuleBuilder_1_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class ResourceConvention : BaseConvention, IBindingConvention, IConvention</code></pre>
+                <pre><code class="lang-csharp hljs">public class ComposedCommandRuleBuilder&lt;TProperty&gt; : IComposedCommandRuleBuilder</code></pre>
               </div>
-              <h3 id="constructors">Constructors
-              </h3>
-              <span class="small pull-right mobile-hide">
-                <span class="divider">|</span>
-                <a href="https://github.com/dolittle/bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Content_Resources_ResourceConvention__ctor.md&amp;value=---%0Auid%3A%20Bifrost.Content.Resources.ResourceConvention.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-              </span>
-              <span class="small pull-right mobile-hide">
-                <a href="https://github.com/dolittle/Bifrost/blob/HEAD/Source/Bifrost.Content/Resources/ResourceConvention.cs/#L37">View Source</a>
-              </span>
-              <a id="Bifrost_Content_Resources_ResourceConvention__ctor_" data-uid="Bifrost.Content.Resources.ResourceConvention.#ctor*"></a>
-              <h4 id="Bifrost_Content_Resources_ResourceConvention__ctor" data-uid="Bifrost.Content.Resources.ResourceConvention.#ctor">ResourceConvention()</h4>
-              <div class="markdown level1 summary"><p>Initializes a new instance of <a class="xref" href="Bifrost.Content.Resources.ResourceConvention.html">ResourceConvention</a></p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public ResourceConvention()</code></pre>
-              </div>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="parametername">TProperty</span></td>
+                    <td>The type of property to discover validators of.</td>
+                  </tr>
+                </tbody>
+              </table>
               <h3 id="methods">Methods
               </h3>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/dolittle/bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Content_Resources_ResourceConvention_CanResolve_Bifrost_Execution_IContainer_System_Type_.md&amp;value=---%0Auid%3A%20Bifrost.Content.Resources.ResourceConvention.CanResolve(Bifrost.Execution.IContainer%2CSystem.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/dolittle/bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_FluentValidation_Commands_ComposedCommandRuleBuilder_1_AddTo__1_FluentValidation_AbstractValidator___0__System_Collections_Generic_IEnumerable_FluentValidation_IValidator__.md&amp;value=---%0Auid%3A%20Bifrost.FluentValidation.Commands.ComposedCommandRuleBuilder%601.AddTo%60%601(FluentValidation.AbstractValidator%7B%60%600%7D%2CSystem.Collections.Generic.IEnumerable%7BFluentValidation.IValidator%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/dolittle/Bifrost/blob/HEAD/Source/Bifrost.Content/Resources/ResourceConvention.cs/#L43">View Source</a>
+                <a href="https://github.com/dolittle/Bifrost/blob/HEAD/Source/Bifrost.FluentValidation/Commands/ComposedCommandRuleBuilder.cs/#L22">View Source</a>
               </span>
-              <a id="Bifrost_Content_Resources_ResourceConvention_CanResolve_" data-uid="Bifrost.Content.Resources.ResourceConvention.CanResolve*"></a>
-              <h4 id="Bifrost_Content_Resources_ResourceConvention_CanResolve_Bifrost_Execution_IContainer_System_Type_" data-uid="Bifrost.Content.Resources.ResourceConvention.CanResolve(Bifrost.Execution.IContainer,System.Type)">CanResolve(IContainer, Type)</h4>
-              <div class="markdown level1 summary"></div>
+              <a id="Bifrost_FluentValidation_Commands_ComposedCommandRuleBuilder_1_AddTo_" data-uid="Bifrost.FluentValidation.Commands.ComposedCommandRuleBuilder`1.AddTo*"></a>
+              <h4 id="Bifrost_FluentValidation_Commands_ComposedCommandRuleBuilder_1_AddTo__1_FluentValidation_AbstractValidator___0__System_Collections_Generic_IEnumerable_FluentValidation_IValidator__" data-uid="Bifrost.FluentValidation.Commands.ComposedCommandRuleBuilder`1.AddTo``1(FluentValidation.AbstractValidator{``0},System.Collections.Generic.IEnumerable{FluentValidation.IValidator})">AddTo&lt;TCommand&gt;(AbstractValidator&lt;TCommand&gt;, IEnumerable&lt;IValidator&gt;)</h4>
+              <div class="markdown level1 summary"><p>Builds composed validators from <span class="paramref">childValidators</span> and adds them to <span class="paramref">validator</span>.</p>
+</div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override bool CanResolve(IContainer container, Type service)</code></pre>
+                <pre><code class="lang-csharp hljs">public void AddTo&lt;TCommand&gt;(AbstractValidator&lt;TCommand&gt; validator, IEnumerable&lt;IValidator&gt; childValidators)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -162,73 +153,34 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Bifrost.Execution.IContainer.html">IContainer</a></td>
-                    <td><span class="parametername">container</span></td>
+                    <td><span class="xref">FluentValidation.AbstractValidator</span>&lt;TCommand&gt;</td>
+                    <td><span class="parametername">validator</span></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Type</span></td>
-                    <td><span class="parametername">service</span></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Boolean</span></td>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">FluentValidation.IValidator</span>&gt;</td>
+                    <td><span class="parametername">childValidators</span></td>
                     <td></td>
                   </tr>
                 </tbody>
               </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Bifrost.Execution.BaseConvention.html#Bifrost_Execution_BaseConvention_CanResolve_Bifrost_Execution_IContainer_System_Type_">BaseConvention.CanResolve(IContainer, Type)</a></div>
-              <span class="small pull-right mobile-hide">
-                <span class="divider">|</span>
-                <a href="https://github.com/dolittle/bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Content_Resources_ResourceConvention_Resolve_Bifrost_Execution_IContainer_System_Type_.md&amp;value=---%0Auid%3A%20Bifrost.Content.Resources.ResourceConvention.Resolve(Bifrost.Execution.IContainer%2CSystem.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-              </span>
-              <span class="small pull-right mobile-hide">
-                <a href="https://github.com/dolittle/Bifrost/blob/HEAD/Source/Bifrost.Content/Resources/ResourceConvention.cs/#L50">View Source</a>
-              </span>
-              <a id="Bifrost_Content_Resources_ResourceConvention_Resolve_" data-uid="Bifrost.Content.Resources.ResourceConvention.Resolve*"></a>
-              <h4 id="Bifrost_Content_Resources_ResourceConvention_Resolve_Bifrost_Execution_IContainer_System_Type_" data-uid="Bifrost.Content.Resources.ResourceConvention.Resolve(Bifrost.Execution.IContainer,System.Type)">Resolve(IContainer, Type)</h4>
-              <div class="markdown level1 summary"></div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public override void Resolve(IContainer container, Type service)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
+              <h5 class="typeParameters">Type Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
                 <thead>
                   <tr>
-                    <th>Type</th>
                     <th>Name</th>
                     <th>Description</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="Bifrost.Execution.IContainer.html">IContainer</a></td>
-                    <td><span class="parametername">container</span></td>
-                    <td></td>
-                  </tr>
-                  <tr>
-                    <td><span class="xref">System.Type</span></td>
-                    <td><span class="parametername">service</span></td>
-                    <td></td>
+                    <td><span class="parametername">TCommand</span></td>
+                    <td>The type of command to build validators of.</td>
                   </tr>
                 </tbody>
               </table>
-              <h5 class="overrides">Overrides</h5>
-              <div><a class="xref" href="Bifrost.Execution.BaseConvention.html#Bifrost_Execution_BaseConvention_Resolve_Bifrost_Execution_IContainer_System_Type_">BaseConvention.Resolve(IContainer, Type)</a></div>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Bifrost.FluentValidation.Commands.IComposedCommandRuleBuilder.html#Bifrost_FluentValidation_Commands_IComposedCommandRuleBuilder_AddTo__1_FluentValidation_AbstractValidator___0__System_Collections_Generic_IEnumerable_FluentValidation_IValidator__">IComposedCommandRuleBuilder.AddTo&lt;TCommand&gt;(AbstractValidator&lt;TCommand&gt;, IEnumerable&lt;IValidator&gt;)</a></div>
               <h3 id="extensionmethods">Extension Methods</h3>
               <div>
                   <a class="xref" href="Bifrost.Concepts.ConceptExtensions.html#Bifrost_Concepts_ConceptExtensions_IsConcept_System_Object_">ConceptExtensions.IsConcept(Object)</a>
@@ -262,10 +214,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/dolittle/bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Content_Resources_ResourceConvention.md&amp;value=---%0Auid%3A%20Bifrost.Content.Resources.ResourceConvention%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/dolittle/bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_FluentValidation_Commands_ComposedCommandRuleBuilder_1.md&amp;value=---%0Auid%3A%20Bifrost.FluentValidation.Commands.ComposedCommandRuleBuilder%601%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/dolittle/Bifrost/blob/HEAD/Source/Bifrost.Content/Resources/ResourceConvention.cs/#L30" class="contribution-link">View Source</a>
+                    <a href="https://github.com/dolittle/Bifrost/blob/HEAD/Source/Bifrost.FluentValidation/Commands/ComposedCommandRuleBuilder.cs/#L14" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
