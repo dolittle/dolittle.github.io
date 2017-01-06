@@ -11179,6 +11179,54 @@ references:
   commentId: N:Bifrost.Execution
   fullName: Bifrost.Execution
   nameWithType: Bifrost.Execution
+- uid: Bifrost.Execution.AppDomainAssemblyProvider
+  name: AppDomainAssemblyProvider
+  href: api/Bifrost.Execution.AppDomainAssemblyProvider.html
+  commentId: T:Bifrost.Execution.AppDomainAssemblyProvider
+  fullName: Bifrost.Execution.AppDomainAssemblyProvider
+  nameWithType: AppDomainAssemblyProvider
+- uid: Bifrost.Execution.AppDomainAssemblyProvider.#ctor
+  name: AppDomainAssemblyProvider()
+  href: api/Bifrost.Execution.AppDomainAssemblyProvider.html#Bifrost_Execution_AppDomainAssemblyProvider__ctor
+  commentId: M:Bifrost.Execution.AppDomainAssemblyProvider.#ctor
+  fullName: Bifrost.Execution.AppDomainAssemblyProvider.AppDomainAssemblyProvider()
+  nameWithType: AppDomainAssemblyProvider.AppDomainAssemblyProvider()
+- uid: Bifrost.Execution.AppDomainAssemblyProvider.#ctor*
+  name: AppDomainAssemblyProvider
+  href: api/Bifrost.Execution.AppDomainAssemblyProvider.html#Bifrost_Execution_AppDomainAssemblyProvider__ctor_
+  commentId: Overload:Bifrost.Execution.AppDomainAssemblyProvider.#ctor
+  fullName: Bifrost.Execution.AppDomainAssemblyProvider.AppDomainAssemblyProvider
+  nameWithType: AppDomainAssemblyProvider.AppDomainAssemblyProvider
+- uid: Bifrost.Execution.AppDomainAssemblyProvider.AssemblyAdded
+  name: AssemblyAdded
+  href: api/Bifrost.Execution.AppDomainAssemblyProvider.html#Bifrost_Execution_AppDomainAssemblyProvider_AssemblyAdded
+  commentId: E:Bifrost.Execution.AppDomainAssemblyProvider.AssemblyAdded
+  fullName: Bifrost.Execution.AppDomainAssemblyProvider.AssemblyAdded
+  nameWithType: AppDomainAssemblyProvider.AssemblyAdded
+- uid: Bifrost.Execution.AppDomainAssemblyProvider.AvailableAssemblies
+  name: AvailableAssemblies
+  href: api/Bifrost.Execution.AppDomainAssemblyProvider.html#Bifrost_Execution_AppDomainAssemblyProvider_AvailableAssemblies
+  commentId: P:Bifrost.Execution.AppDomainAssemblyProvider.AvailableAssemblies
+  fullName: Bifrost.Execution.AppDomainAssemblyProvider.AvailableAssemblies
+  nameWithType: AppDomainAssemblyProvider.AvailableAssemblies
+- uid: Bifrost.Execution.AppDomainAssemblyProvider.AvailableAssemblies*
+  name: AvailableAssemblies
+  href: api/Bifrost.Execution.AppDomainAssemblyProvider.html#Bifrost_Execution_AppDomainAssemblyProvider_AvailableAssemblies_
+  commentId: Overload:Bifrost.Execution.AppDomainAssemblyProvider.AvailableAssemblies
+  fullName: Bifrost.Execution.AppDomainAssemblyProvider.AvailableAssemblies
+  nameWithType: AppDomainAssemblyProvider.AvailableAssemblies
+- uid: Bifrost.Execution.AppDomainAssemblyProvider.Get(Bifrost.Execution.AssemblyInfo)
+  name: Get(AssemblyInfo)
+  href: api/Bifrost.Execution.AppDomainAssemblyProvider.html#Bifrost_Execution_AppDomainAssemblyProvider_Get_Bifrost_Execution_AssemblyInfo_
+  commentId: M:Bifrost.Execution.AppDomainAssemblyProvider.Get(Bifrost.Execution.AssemblyInfo)
+  fullName: Bifrost.Execution.AppDomainAssemblyProvider.Get(Bifrost.Execution.AssemblyInfo)
+  nameWithType: AppDomainAssemblyProvider.Get(AssemblyInfo)
+- uid: Bifrost.Execution.AppDomainAssemblyProvider.Get*
+  name: Get
+  href: api/Bifrost.Execution.AppDomainAssemblyProvider.html#Bifrost_Execution_AppDomainAssemblyProvider_Get_
+  commentId: Overload:Bifrost.Execution.AppDomainAssemblyProvider.Get
+  fullName: Bifrost.Execution.AppDomainAssemblyProvider.Get
+  nameWithType: AppDomainAssemblyProvider.Get
 - uid: Bifrost.Execution.Assemblies
   name: Assemblies
   href: api/Bifrost.Execution.Assemblies.html
