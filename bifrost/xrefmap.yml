@@ -7884,13 +7884,13 @@ references:
   fullName.vb: Bifrost.Entities.Files.EntityContext(Of T)
   nameWithType: EntityContext<T>
   nameWithType.vb: EntityContext(Of T)
-- uid: Bifrost.Entities.Files.EntityContext`1.#ctor(Bifrost.Entities.Files.EntityContextConnection,Bifrost.Serialization.ISerializer,Bifrost.Mapping.IMapper)
-  name: EntityContext(EntityContextConnection, ISerializer, IMapper)
-  href: api/Bifrost.Entities.Files.EntityContext-1.html#Bifrost_Entities_Files_EntityContext_1__ctor_Bifrost_Entities_Files_EntityContextConnection_Bifrost_Serialization_ISerializer_Bifrost_Mapping_IMapper_
-  commentId: M:Bifrost.Entities.Files.EntityContext`1.#ctor(Bifrost.Entities.Files.EntityContextConnection,Bifrost.Serialization.ISerializer,Bifrost.Mapping.IMapper)
-  fullName: Bifrost.Entities.Files.EntityContext<T>.EntityContext(Bifrost.Entities.Files.EntityContextConnection, Bifrost.Serialization.ISerializer, Bifrost.Mapping.IMapper)
-  fullName.vb: Bifrost.Entities.Files.EntityContext(Of T).EntityContext(Bifrost.Entities.Files.EntityContextConnection, Bifrost.Serialization.ISerializer, Bifrost.Mapping.IMapper)
-  nameWithType: EntityContext<T>.EntityContext(EntityContextConnection, ISerializer, IMapper)
+- uid: Bifrost.Entities.Files.EntityContext`1.#ctor(Bifrost.Entities.Files.EntityContextConnection,Bifrost.Serialization.ISerializer)
+  name: EntityContext(EntityContextConnection, ISerializer)
+  href: api/Bifrost.Entities.Files.EntityContext-1.html#Bifrost_Entities_Files_EntityContext_1__ctor_Bifrost_Entities_Files_EntityContextConnection_Bifrost_Serialization_ISerializer_
+  commentId: M:Bifrost.Entities.Files.EntityContext`1.#ctor(Bifrost.Entities.Files.EntityContextConnection,Bifrost.Serialization.ISerializer)
+  fullName: Bifrost.Entities.Files.EntityContext<T>.EntityContext(Bifrost.Entities.Files.EntityContextConnection, Bifrost.Serialization.ISerializer)
+  fullName.vb: Bifrost.Entities.Files.EntityContext(Of T).EntityContext(Bifrost.Entities.Files.EntityContextConnection, Bifrost.Serialization.ISerializer)
+  nameWithType: EntityContext<T>.EntityContext(EntityContextConnection, ISerializer)
 - uid: Bifrost.Entities.Files.EntityContext`1.#ctor*
   name: EntityContext
   href: api/Bifrost.Entities.Files.EntityContext-1.html#Bifrost_Entities_Files_EntityContext_1__ctor_
