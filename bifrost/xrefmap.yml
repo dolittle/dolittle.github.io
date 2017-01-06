@@ -6207,18 +6207,6 @@ references:
   commentId: Overload:Bifrost.Content.Resources.ResourceResolver.Resolve
   fullName: Bifrost.Content.Resources.ResourceResolver.Resolve
   nameWithType: ResourceResolver.Resolve
-- uid: Bifrost.Conventions
-  name: Bifrost.Conventions
-  href: api/Bifrost.Conventions.html
-  commentId: N:Bifrost.Conventions
-  fullName: Bifrost.Conventions
-  nameWithType: Bifrost.Conventions
-- uid: Bifrost.Conventions.IConvention
-  name: IConvention
-  href: api/Bifrost.Conventions.IConvention.html
-  commentId: T:Bifrost.Conventions.IConvention
-  fullName: Bifrost.Conventions.IConvention
-  nameWithType: IConvention
 - uid: Bifrost.Diagnostics
   name: Bifrost.Diagnostics
   href: api/Bifrost.Diagnostics.html
@@ -14934,33 +14922,6 @@ references:
   commentId: Overload:Bifrost.FluentValidation.Commands.ComposedCommandInputValidator`1.ValidateFor
   fullName: Bifrost.FluentValidation.Commands.ComposedCommandInputValidator.ValidateFor
   nameWithType: ComposedCommandInputValidator.ValidateFor
-- uid: Bifrost.FluentValidation.Commands.ComposedCommandRuleBuilder`1
-  name: ComposedCommandRuleBuilder<TProperty>
-  href: api/Bifrost.FluentValidation.Commands.ComposedCommandRuleBuilder-1.html
-  commentId: T:Bifrost.FluentValidation.Commands.ComposedCommandRuleBuilder`1
-  name.vb: ComposedCommandRuleBuilder(Of TProperty)
-  fullName: Bifrost.FluentValidation.Commands.ComposedCommandRuleBuilder<TProperty>
-  fullName.vb: Bifrost.FluentValidation.Commands.ComposedCommandRuleBuilder(Of TProperty)
-  nameWithType: ComposedCommandRuleBuilder<TProperty>
-  nameWithType.vb: ComposedCommandRuleBuilder(Of TProperty)
-- uid: Bifrost.FluentValidation.Commands.ComposedCommandRuleBuilder`1.AddTo*
-  name: AddTo<TCommand>
-  href: api/Bifrost.FluentValidation.Commands.ComposedCommandRuleBuilder-1.html#Bifrost_FluentValidation_Commands_ComposedCommandRuleBuilder_1_AddTo_
-  commentId: Overload:Bifrost.FluentValidation.Commands.ComposedCommandRuleBuilder`1.AddTo
-  name.vb: AddTo(Of TCommand)
-  fullName: Bifrost.FluentValidation.Commands.ComposedCommandRuleBuilder.AddTo<TCommand>
-  fullName.vb: Bifrost.FluentValidation.Commands.ComposedCommandRuleBuilder.AddTo(Of TCommand)
-  nameWithType: ComposedCommandRuleBuilder.AddTo<TCommand>
-  nameWithType.vb: ComposedCommandRuleBuilder.AddTo(Of TCommand)
-- uid: Bifrost.FluentValidation.Commands.ComposedCommandRuleBuilder`1.AddTo``1(FluentValidation.AbstractValidator{``0},System.Collections.Generic.IEnumerable{FluentValidation.IValidator})
-  name: AddTo<TCommand>(AbstractValidator<TCommand>, IEnumerable<IValidator>)
-  href: api/Bifrost.FluentValidation.Commands.ComposedCommandRuleBuilder-1.html#Bifrost_FluentValidation_Commands_ComposedCommandRuleBuilder_1_AddTo__1_FluentValidation_AbstractValidator___0__System_Collections_Generic_IEnumerable_FluentValidation_IValidator__
-  commentId: M:Bifrost.FluentValidation.Commands.ComposedCommandRuleBuilder`1.AddTo``1(FluentValidation.AbstractValidator{``0},System.Collections.Generic.IEnumerable{FluentValidation.IValidator})
-  name.vb: AddTo(Of TCommand)(AbstractValidator(Of TCommand), IEnumerable(Of IValidator))
-  fullName: Bifrost.FluentValidation.Commands.ComposedCommandRuleBuilder<TProperty>.AddTo<TCommand>(FluentValidation.AbstractValidator<TCommand>, System.Collections.Generic.IEnumerable<FluentValidation.IValidator>)
-  fullName.vb: Bifrost.FluentValidation.Commands.ComposedCommandRuleBuilder(Of TProperty).AddTo(Of TCommand)(FluentValidation.AbstractValidator(Of TCommand), System.Collections.Generic.IEnumerable(Of FluentValidation.IValidator))
-  nameWithType: ComposedCommandRuleBuilder<TProperty>.AddTo<TCommand>(AbstractValidator<TCommand>, IEnumerable<IValidator>)
-  nameWithType.vb: AddTo(Of TCommand)(AbstractValidator(Of TCommand), IEnumerable(Of IValidator))
 - uid: Bifrost.FluentValidation.Commands.ICommandBusinessValidator
   name: ICommandBusinessValidator
   href: api/Bifrost.FluentValidation.Commands.ICommandBusinessValidator.html
@@ -15015,30 +14976,6 @@ references:
   commentId: Overload:Bifrost.FluentValidation.Commands.ICommandValidatorProvider.GetInputValidatorFor
   fullName: Bifrost.FluentValidation.Commands.ICommandValidatorProvider.GetInputValidatorFor
   nameWithType: ICommandValidatorProvider.GetInputValidatorFor
-- uid: Bifrost.FluentValidation.Commands.IComposedCommandRuleBuilder
-  name: IComposedCommandRuleBuilder
-  href: api/Bifrost.FluentValidation.Commands.IComposedCommandRuleBuilder.html
-  commentId: T:Bifrost.FluentValidation.Commands.IComposedCommandRuleBuilder
-  fullName: Bifrost.FluentValidation.Commands.IComposedCommandRuleBuilder
-  nameWithType: IComposedCommandRuleBuilder
-- uid: Bifrost.FluentValidation.Commands.IComposedCommandRuleBuilder.AddTo*
-  name: AddTo<TCommand>
-  href: api/Bifrost.FluentValidation.Commands.IComposedCommandRuleBuilder.html#Bifrost_FluentValidation_Commands_IComposedCommandRuleBuilder_AddTo_
-  commentId: Overload:Bifrost.FluentValidation.Commands.IComposedCommandRuleBuilder.AddTo
-  name.vb: AddTo(Of TCommand)
-  fullName: Bifrost.FluentValidation.Commands.IComposedCommandRuleBuilder.AddTo<TCommand>
-  fullName.vb: Bifrost.FluentValidation.Commands.IComposedCommandRuleBuilder.AddTo(Of TCommand)
-  nameWithType: IComposedCommandRuleBuilder.AddTo<TCommand>
-  nameWithType.vb: IComposedCommandRuleBuilder.AddTo(Of TCommand)
-- uid: Bifrost.FluentValidation.Commands.IComposedCommandRuleBuilder.AddTo``1(FluentValidation.AbstractValidator{``0},System.Collections.Generic.IEnumerable{FluentValidation.IValidator})
-  name: AddTo<TCommand>(AbstractValidator<TCommand>, IEnumerable<IValidator>)
-  href: api/Bifrost.FluentValidation.Commands.IComposedCommandRuleBuilder.html#Bifrost_FluentValidation_Commands_IComposedCommandRuleBuilder_AddTo__1_FluentValidation_AbstractValidator___0__System_Collections_Generic_IEnumerable_FluentValidation_IValidator__
-  commentId: M:Bifrost.FluentValidation.Commands.IComposedCommandRuleBuilder.AddTo``1(FluentValidation.AbstractValidator{``0},System.Collections.Generic.IEnumerable{FluentValidation.IValidator})
-  name.vb: AddTo(Of TCommand)(AbstractValidator(Of TCommand), IEnumerable(Of IValidator))
-  fullName: Bifrost.FluentValidation.Commands.IComposedCommandRuleBuilder.AddTo<TCommand>(FluentValidation.AbstractValidator<TCommand>, System.Collections.Generic.IEnumerable<FluentValidation.IValidator>)
-  fullName.vb: Bifrost.FluentValidation.Commands.IComposedCommandRuleBuilder.AddTo(Of TCommand)(FluentValidation.AbstractValidator(Of TCommand), System.Collections.Generic.IEnumerable(Of FluentValidation.IValidator))
-  nameWithType: IComposedCommandRuleBuilder.AddTo<TCommand>(AbstractValidator<TCommand>, IEnumerable<IValidator>)
-  nameWithType.vb: AddTo(Of TCommand)(AbstractValidator(Of TCommand), IEnumerable(Of IValidator))
 - uid: Bifrost.FluentValidation.Commands.NullCommandBusinessValidator
   name: NullCommandBusinessValidator
   href: api/Bifrost.FluentValidation.Commands.NullCommandBusinessValidator.html
@@ -15320,23 +15257,23 @@ references:
   fullName: Bifrost.FluentValidation.FluentValidationRuleExtensions
   nameWithType: FluentValidationRuleExtensions
 - uid: Bifrost.FluentValidation.FluentValidationRuleExtensions.DynamicValidationRule*
-  name: DynamicValidationRule<T, TProperty>
+  name: DynamicValidationRule<T>
   href: api/Bifrost.FluentValidation.FluentValidationRuleExtensions.html#Bifrost_FluentValidation_FluentValidationRuleExtensions_DynamicValidationRule_
   commentId: Overload:Bifrost.FluentValidation.FluentValidationRuleExtensions.DynamicValidationRule
-  name.vb: DynamicValidationRule(Of T, TProperty)
-  fullName: Bifrost.FluentValidation.FluentValidationRuleExtensions.DynamicValidationRule<T, TProperty>
-  fullName.vb: Bifrost.FluentValidation.FluentValidationRuleExtensions.DynamicValidationRule(Of T, TProperty)
-  nameWithType: FluentValidationRuleExtensions.DynamicValidationRule<T, TProperty>
-  nameWithType.vb: FluentValidationRuleExtensions.DynamicValidationRule(Of T, TProperty)
-- uid: Bifrost.FluentValidation.FluentValidationRuleExtensions.DynamicValidationRule``2(FluentValidation.IRuleBuilder{``0,``1},FluentValidation.IValidator,System.String)
-  name: DynamicValidationRule<T, TProperty>(IRuleBuilder<T, TProperty>, IValidator, String)
-  href: api/Bifrost.FluentValidation.FluentValidationRuleExtensions.html#Bifrost_FluentValidation_FluentValidationRuleExtensions_DynamicValidationRule__2_FluentValidation_IRuleBuilder___0___1__FluentValidation_IValidator_System_String_
-  commentId: M:Bifrost.FluentValidation.FluentValidationRuleExtensions.DynamicValidationRule``2(FluentValidation.IRuleBuilder{``0,``1},FluentValidation.IValidator,System.String)
-  name.vb: DynamicValidationRule(Of T, TProperty)(IRuleBuilder(Of T, TProperty), IValidator, String)
-  fullName: Bifrost.FluentValidation.FluentValidationRuleExtensions.DynamicValidationRule<T, TProperty>(FluentValidation.IRuleBuilder<T, TProperty>, FluentValidation.IValidator, System.String)
-  fullName.vb: Bifrost.FluentValidation.FluentValidationRuleExtensions.DynamicValidationRule(Of T, TProperty)(FluentValidation.IRuleBuilder(Of T, TProperty), FluentValidation.IValidator, System.String)
-  nameWithType: FluentValidationRuleExtensions.DynamicValidationRule<T, TProperty>(IRuleBuilder<T, TProperty>, IValidator, String)
-  nameWithType.vb: DynamicValidationRule(Of T, TProperty)(IRuleBuilder(Of T, TProperty), IValidator, String)
+  name.vb: DynamicValidationRule(Of T)
+  fullName: Bifrost.FluentValidation.FluentValidationRuleExtensions.DynamicValidationRule<T>
+  fullName.vb: Bifrost.FluentValidation.FluentValidationRuleExtensions.DynamicValidationRule(Of T)
+  nameWithType: FluentValidationRuleExtensions.DynamicValidationRule<T>
+  nameWithType.vb: FluentValidationRuleExtensions.DynamicValidationRule(Of T)
+- uid: Bifrost.FluentValidation.FluentValidationRuleExtensions.DynamicValidationRule``1(FluentValidation.IRuleBuilder{``0,Bifrost.Validation.IAmValidatable},FluentValidation.IValidator,System.String)
+  name: DynamicValidationRule<T>(IRuleBuilder<T, IAmValidatable>, IValidator, String)
+  href: api/Bifrost.FluentValidation.FluentValidationRuleExtensions.html#Bifrost_FluentValidation_FluentValidationRuleExtensions_DynamicValidationRule__1_FluentValidation_IRuleBuilder___0_Bifrost_Validation_IAmValidatable__FluentValidation_IValidator_System_String_
+  commentId: M:Bifrost.FluentValidation.FluentValidationRuleExtensions.DynamicValidationRule``1(FluentValidation.IRuleBuilder{``0,Bifrost.Validation.IAmValidatable},FluentValidation.IValidator,System.String)
+  name.vb: DynamicValidationRule(Of T)(IRuleBuilder(Of T, IAmValidatable), IValidator, String)
+  fullName: Bifrost.FluentValidation.FluentValidationRuleExtensions.DynamicValidationRule<T>(FluentValidation.IRuleBuilder<T, Bifrost.Validation.IAmValidatable>, FluentValidation.IValidator, System.String)
+  fullName.vb: Bifrost.FluentValidation.FluentValidationRuleExtensions.DynamicValidationRule(Of T)(FluentValidation.IRuleBuilder(Of T, Bifrost.Validation.IAmValidatable), FluentValidation.IValidator, System.String)
+  nameWithType: FluentValidationRuleExtensions.DynamicValidationRule<T>(IRuleBuilder<T, IAmValidatable>, IValidator, String)
+  nameWithType.vb: DynamicValidationRule(Of T)(IRuleBuilder(Of T, IAmValidatable), IValidator, String)
 - uid: Bifrost.FluentValidation.ICanValidateExtensions
   name: ICanValidateExtensions
   href: api/Bifrost.FluentValidation.ICanValidateExtensions.html
@@ -17921,6 +17858,15 @@ references:
   fullName.vb: Bifrost.Read.FetchingSecurityManager.Authorize(Of T)
   nameWithType: FetchingSecurityManager.Authorize<T>
   nameWithType.vb: FetchingSecurityManager.Authorize(Of T)
+- uid: Bifrost.Read.FetchingSecurityManager.Authorize``1(Bifrost.Read.IQueryFor{``0})
+  name: Authorize<T>(IQueryFor<T>)
+  href: api/Bifrost.Read.FetchingSecurityManager.html#Bifrost_Read_FetchingSecurityManager_Authorize__1_Bifrost_Read_IQueryFor___0__
+  commentId: M:Bifrost.Read.FetchingSecurityManager.Authorize``1(Bifrost.Read.IQueryFor{``0})
+  name.vb: Authorize(Of T)(IQueryFor(Of T))
+  fullName: Bifrost.Read.FetchingSecurityManager.Authorize<T>(Bifrost.Read.IQueryFor<T>)
+  fullName.vb: Bifrost.Read.FetchingSecurityManager.Authorize(Of T)(Bifrost.Read.IQueryFor(Of T))
+  nameWithType: FetchingSecurityManager.Authorize<T>(IQueryFor<T>)
+  nameWithType.vb: Authorize(Of T)(IQueryFor(Of T))
 - uid: Bifrost.Read.FetchingSecurityManager.Authorize``1(Bifrost.Read.IReadModelOf{``0})
   name: Authorize<T>(IReadModelOf<T>)
   href: api/Bifrost.Read.FetchingSecurityManager.html#Bifrost_Read_FetchingSecurityManager_Authorize__1_Bifrost_Read_IReadModelOf___0__
@@ -17990,6 +17936,15 @@ references:
   fullName.vb: Bifrost.Read.IFetchingSecurityManager.Authorize(Of T)
   nameWithType: IFetchingSecurityManager.Authorize<T>
   nameWithType.vb: IFetchingSecurityManager.Authorize(Of T)
+- uid: Bifrost.Read.IFetchingSecurityManager.Authorize``1(Bifrost.Read.IQueryFor{``0})
+  name: Authorize<T>(IQueryFor<T>)
+  href: api/Bifrost.Read.IFetchingSecurityManager.html#Bifrost_Read_IFetchingSecurityManager_Authorize__1_Bifrost_Read_IQueryFor___0__
+  commentId: M:Bifrost.Read.IFetchingSecurityManager.Authorize``1(Bifrost.Read.IQueryFor{``0})
+  name.vb: Authorize(Of T)(IQueryFor(Of T))
+  fullName: Bifrost.Read.IFetchingSecurityManager.Authorize<T>(Bifrost.Read.IQueryFor<T>)
+  fullName.vb: Bifrost.Read.IFetchingSecurityManager.Authorize(Of T)(Bifrost.Read.IQueryFor(Of T))
+  nameWithType: IFetchingSecurityManager.Authorize<T>(IQueryFor<T>)
+  nameWithType.vb: Authorize(Of T)(IQueryFor(Of T))
 - uid: Bifrost.Read.IFetchingSecurityManager.Authorize``1(Bifrost.Read.IReadModelOf{``0})
   name: Authorize<T>(IReadModelOf<T>)
   href: api/Bifrost.Read.IFetchingSecurityManager.html#Bifrost_Read_IFetchingSecurityManager_Authorize__1_Bifrost_Read_IReadModelOf___0__
@@ -27649,6 +27604,18 @@ references:
   commentId: T:Bifrost.Web.Assets.AssetManagerRouteHandler
   fullName: Bifrost.Web.Assets.AssetManagerRouteHandler
   nameWithType: AssetManagerRouteHandler
+- uid: Bifrost.Web.Assets.AssetManagerRouteHandler.#ctor(System.String)
+  name: AssetManagerRouteHandler(String)
+  href: api/Bifrost.Web.Assets.AssetManagerRouteHandler.html#Bifrost_Web_Assets_AssetManagerRouteHandler__ctor_System_String_
+  commentId: M:Bifrost.Web.Assets.AssetManagerRouteHandler.#ctor(System.String)
+  fullName: Bifrost.Web.Assets.AssetManagerRouteHandler.AssetManagerRouteHandler(System.String)
+  nameWithType: AssetManagerRouteHandler.AssetManagerRouteHandler(String)
+- uid: Bifrost.Web.Assets.AssetManagerRouteHandler.#ctor*
+  name: AssetManagerRouteHandler
+  href: api/Bifrost.Web.Assets.AssetManagerRouteHandler.html#Bifrost_Web_Assets_AssetManagerRouteHandler__ctor_
+  commentId: Overload:Bifrost.Web.Assets.AssetManagerRouteHandler.#ctor
+  fullName: Bifrost.Web.Assets.AssetManagerRouteHandler.AssetManagerRouteHandler
+  nameWithType: AssetManagerRouteHandler.AssetManagerRouteHandler
 - uid: Bifrost.Web.Assets.AssetManagerRouteHandler.GetHttpHandler(System.Web.Routing.RequestContext)
   name: GetHttpHandler(RequestContext)
   href: api/Bifrost.Web.Assets.AssetManagerRouteHandler.html#Bifrost_Web_Assets_AssetManagerRouteHandler_GetHttpHandler_System_Web_Routing_RequestContext_
@@ -27667,6 +27634,18 @@ references:
   commentId: T:Bifrost.Web.Assets.AssetManagerRouteHttpHandler
   fullName: Bifrost.Web.Assets.AssetManagerRouteHttpHandler
   nameWithType: AssetManagerRouteHttpHandler
+- uid: Bifrost.Web.Assets.AssetManagerRouteHttpHandler.#ctor(System.String)
+  name: AssetManagerRouteHttpHandler(String)
+  href: api/Bifrost.Web.Assets.AssetManagerRouteHttpHandler.html#Bifrost_Web_Assets_AssetManagerRouteHttpHandler__ctor_System_String_
+  commentId: M:Bifrost.Web.Assets.AssetManagerRouteHttpHandler.#ctor(System.String)
+  fullName: Bifrost.Web.Assets.AssetManagerRouteHttpHandler.AssetManagerRouteHttpHandler(System.String)
+  nameWithType: AssetManagerRouteHttpHandler.AssetManagerRouteHttpHandler(String)
+- uid: Bifrost.Web.Assets.AssetManagerRouteHttpHandler.#ctor*
+  name: AssetManagerRouteHttpHandler
+  href: api/Bifrost.Web.Assets.AssetManagerRouteHttpHandler.html#Bifrost_Web_Assets_AssetManagerRouteHttpHandler__ctor_
+  commentId: Overload:Bifrost.Web.Assets.AssetManagerRouteHttpHandler.#ctor
+  fullName: Bifrost.Web.Assets.AssetManagerRouteHttpHandler.AssetManagerRouteHttpHandler
+  nameWithType: AssetManagerRouteHttpHandler.AssetManagerRouteHttpHandler
 - uid: Bifrost.Web.Assets.AssetManagerRouteHttpHandler.IsReusable
   name: IsReusable
   href: api/Bifrost.Web.Assets.AssetManagerRouteHttpHandler.html#Bifrost_Web_Assets_AssetManagerRouteHttpHandler_IsReusable
@@ -28057,12 +28036,12 @@ references:
   commentId: T:Bifrost.Web.Commands.CommandSecurityProxies
   fullName: Bifrost.Web.Commands.CommandSecurityProxies
   nameWithType: CommandSecurityProxies
-- uid: Bifrost.Web.Commands.CommandSecurityProxies.#ctor(Bifrost.Execution.ITypeDiscoverer,Bifrost.CodeGeneration.ICodeGenerator,Bifrost.Commands.ICommandSecurityManager,Bifrost.Web.Configuration.WebConfiguration)
-  name: CommandSecurityProxies(ITypeDiscoverer, ICodeGenerator, ICommandSecurityManager, WebConfiguration)
-  href: api/Bifrost.Web.Commands.CommandSecurityProxies.html#Bifrost_Web_Commands_CommandSecurityProxies__ctor_Bifrost_Execution_ITypeDiscoverer_Bifrost_CodeGeneration_ICodeGenerator_Bifrost_Commands_ICommandSecurityManager_Bifrost_Web_Configuration_WebConfiguration_
-  commentId: M:Bifrost.Web.Commands.CommandSecurityProxies.#ctor(Bifrost.Execution.ITypeDiscoverer,Bifrost.CodeGeneration.ICodeGenerator,Bifrost.Commands.ICommandSecurityManager,Bifrost.Web.Configuration.WebConfiguration)
-  fullName: Bifrost.Web.Commands.CommandSecurityProxies.CommandSecurityProxies(Bifrost.Execution.ITypeDiscoverer, Bifrost.CodeGeneration.ICodeGenerator, Bifrost.Commands.ICommandSecurityManager, Bifrost.Web.Configuration.WebConfiguration)
-  nameWithType: CommandSecurityProxies.CommandSecurityProxies(ITypeDiscoverer, ICodeGenerator, ICommandSecurityManager, WebConfiguration)
+- uid: Bifrost.Web.Commands.CommandSecurityProxies.#ctor(Bifrost.Execution.ITypeDiscoverer,Bifrost.Execution.ITypeImporter,Bifrost.CodeGeneration.ICodeGenerator,Bifrost.Commands.ICommandSecurityManager,Bifrost.Execution.IContainer,Bifrost.Web.Configuration.WebConfiguration)
+  name: CommandSecurityProxies(ITypeDiscoverer, ITypeImporter, ICodeGenerator, ICommandSecurityManager, IContainer, WebConfiguration)
+  href: api/Bifrost.Web.Commands.CommandSecurityProxies.html#Bifrost_Web_Commands_CommandSecurityProxies__ctor_Bifrost_Execution_ITypeDiscoverer_Bifrost_Execution_ITypeImporter_Bifrost_CodeGeneration_ICodeGenerator_Bifrost_Commands_ICommandSecurityManager_Bifrost_Execution_IContainer_Bifrost_Web_Configuration_WebConfiguration_
+  commentId: M:Bifrost.Web.Commands.CommandSecurityProxies.#ctor(Bifrost.Execution.ITypeDiscoverer,Bifrost.Execution.ITypeImporter,Bifrost.CodeGeneration.ICodeGenerator,Bifrost.Commands.ICommandSecurityManager,Bifrost.Execution.IContainer,Bifrost.Web.Configuration.WebConfiguration)
+  fullName: Bifrost.Web.Commands.CommandSecurityProxies.CommandSecurityProxies(Bifrost.Execution.ITypeDiscoverer, Bifrost.Execution.ITypeImporter, Bifrost.CodeGeneration.ICodeGenerator, Bifrost.Commands.ICommandSecurityManager, Bifrost.Execution.IContainer, Bifrost.Web.Configuration.WebConfiguration)
+  nameWithType: CommandSecurityProxies.CommandSecurityProxies(ITypeDiscoverer, ITypeImporter, ICodeGenerator, ICommandSecurityManager, IContainer, WebConfiguration)
 - uid: Bifrost.Web.Commands.CommandSecurityProxies.#ctor*
   name: CommandSecurityProxies
   href: api/Bifrost.Web.Commands.CommandSecurityProxies.html#Bifrost_Web_Commands_CommandSecurityProxies__ctor_
@@ -29149,12 +29128,12 @@ references:
   commentId: T:Bifrost.Web.Proxies.GeneratedProxies
   fullName: Bifrost.Web.Proxies.GeneratedProxies
   nameWithType: GeneratedProxies
-- uid: Bifrost.Web.Proxies.GeneratedProxies.#ctor(Bifrost.Web.Commands.CommandProxies,Bifrost.Web.Read.QueryProxies,Bifrost.Web.Read.ReadModelProxies,Bifrost.Web.Services.ServiceProxies,Bifrost.Web.Configuration.NamespaceConfigurationProxies,Bifrost.Web.Hubs.HubProxies,Bifrost.Execution.ITypeDiscoverer,Bifrost.Execution.IContainer)
-  name: GeneratedProxies(CommandProxies, QueryProxies, ReadModelProxies, ServiceProxies, NamespaceConfigurationProxies, HubProxies, ITypeDiscoverer, IContainer)
-  href: api/Bifrost.Web.Proxies.GeneratedProxies.html#Bifrost_Web_Proxies_GeneratedProxies__ctor_Bifrost_Web_Commands_CommandProxies_Bifrost_Web_Read_QueryProxies_Bifrost_Web_Read_ReadModelProxies_Bifrost_Web_Services_ServiceProxies_Bifrost_Web_Configuration_NamespaceConfigurationProxies_Bifrost_Web_Hubs_HubProxies_Bifrost_Execution_ITypeDiscoverer_Bifrost_Execution_IContainer_
-  commentId: M:Bifrost.Web.Proxies.GeneratedProxies.#ctor(Bifrost.Web.Commands.CommandProxies,Bifrost.Web.Read.QueryProxies,Bifrost.Web.Read.ReadModelProxies,Bifrost.Web.Services.ServiceProxies,Bifrost.Web.Configuration.NamespaceConfigurationProxies,Bifrost.Web.Hubs.HubProxies,Bifrost.Execution.ITypeDiscoverer,Bifrost.Execution.IContainer)
-  fullName: Bifrost.Web.Proxies.GeneratedProxies.GeneratedProxies(Bifrost.Web.Commands.CommandProxies, Bifrost.Web.Read.QueryProxies, Bifrost.Web.Read.ReadModelProxies, Bifrost.Web.Services.ServiceProxies, Bifrost.Web.Configuration.NamespaceConfigurationProxies, Bifrost.Web.Hubs.HubProxies, Bifrost.Execution.ITypeDiscoverer, Bifrost.Execution.IContainer)
-  nameWithType: GeneratedProxies.GeneratedProxies(CommandProxies, QueryProxies, ReadModelProxies, ServiceProxies, NamespaceConfigurationProxies, HubProxies, ITypeDiscoverer, IContainer)
+- uid: Bifrost.Web.Proxies.GeneratedProxies.#ctor(Bifrost.Web.Commands.CommandProxies,Bifrost.Web.Commands.CommandSecurityProxies,Bifrost.Web.Read.QueryProxies,Bifrost.Web.Read.ReadModelProxies,Bifrost.Web.Services.ServiceProxies,Bifrost.Web.Configuration.NamespaceConfigurationProxies,Bifrost.Web.Hubs.HubProxies,Bifrost.Execution.ITypeDiscoverer,Bifrost.Execution.IContainer)
+  name: GeneratedProxies(CommandProxies, CommandSecurityProxies, QueryProxies, ReadModelProxies, ServiceProxies, NamespaceConfigurationProxies, HubProxies, ITypeDiscoverer, IContainer)
+  href: api/Bifrost.Web.Proxies.GeneratedProxies.html#Bifrost_Web_Proxies_GeneratedProxies__ctor_Bifrost_Web_Commands_CommandProxies_Bifrost_Web_Commands_CommandSecurityProxies_Bifrost_Web_Read_QueryProxies_Bifrost_Web_Read_ReadModelProxies_Bifrost_Web_Services_ServiceProxies_Bifrost_Web_Configuration_NamespaceConfigurationProxies_Bifrost_Web_Hubs_HubProxies_Bifrost_Execution_ITypeDiscoverer_Bifrost_Execution_IContainer_
+  commentId: M:Bifrost.Web.Proxies.GeneratedProxies.#ctor(Bifrost.Web.Commands.CommandProxies,Bifrost.Web.Commands.CommandSecurityProxies,Bifrost.Web.Read.QueryProxies,Bifrost.Web.Read.ReadModelProxies,Bifrost.Web.Services.ServiceProxies,Bifrost.Web.Configuration.NamespaceConfigurationProxies,Bifrost.Web.Hubs.HubProxies,Bifrost.Execution.ITypeDiscoverer,Bifrost.Execution.IContainer)
+  fullName: Bifrost.Web.Proxies.GeneratedProxies.GeneratedProxies(Bifrost.Web.Commands.CommandProxies, Bifrost.Web.Commands.CommandSecurityProxies, Bifrost.Web.Read.QueryProxies, Bifrost.Web.Read.ReadModelProxies, Bifrost.Web.Services.ServiceProxies, Bifrost.Web.Configuration.NamespaceConfigurationProxies, Bifrost.Web.Hubs.HubProxies, Bifrost.Execution.ITypeDiscoverer, Bifrost.Execution.IContainer)
+  nameWithType: GeneratedProxies.GeneratedProxies(CommandProxies, CommandSecurityProxies, QueryProxies, ReadModelProxies, ServiceProxies, NamespaceConfigurationProxies, HubProxies, ITypeDiscoverer, IContainer)
 - uid: Bifrost.Web.Proxies.GeneratedProxies.#ctor*
   name: GeneratedProxies
   href: api/Bifrost.Web.Proxies.GeneratedProxies.html#Bifrost_Web_Proxies_GeneratedProxies__ctor_
@@ -29245,6 +29224,18 @@ references:
   commentId: T:Bifrost.Web.Proxies.ProxyRouteHttpHandler
   fullName: Bifrost.Web.Proxies.ProxyRouteHttpHandler
   nameWithType: ProxyRouteHttpHandler
+- uid: Bifrost.Web.Proxies.ProxyRouteHttpHandler.#ctor
+  name: ProxyRouteHttpHandler()
+  href: api/Bifrost.Web.Proxies.ProxyRouteHttpHandler.html#Bifrost_Web_Proxies_ProxyRouteHttpHandler__ctor
+  commentId: M:Bifrost.Web.Proxies.ProxyRouteHttpHandler.#ctor
+  fullName: Bifrost.Web.Proxies.ProxyRouteHttpHandler.ProxyRouteHttpHandler()
+  nameWithType: ProxyRouteHttpHandler.ProxyRouteHttpHandler()
+- uid: Bifrost.Web.Proxies.ProxyRouteHttpHandler.#ctor*
+  name: ProxyRouteHttpHandler
+  href: api/Bifrost.Web.Proxies.ProxyRouteHttpHandler.html#Bifrost_Web_Proxies_ProxyRouteHttpHandler__ctor_
+  commentId: Overload:Bifrost.Web.Proxies.ProxyRouteHttpHandler.#ctor
+  fullName: Bifrost.Web.Proxies.ProxyRouteHttpHandler.ProxyRouteHttpHandler
+  nameWithType: ProxyRouteHttpHandler.ProxyRouteHttpHandler
 - uid: Bifrost.Web.Proxies.ProxyRouteHttpHandler.IsReusable
   name: IsReusable
   href: api/Bifrost.Web.Proxies.ProxyRouteHttpHandler.html#Bifrost_Web_Proxies_ProxyRouteHttpHandler_IsReusable
@@ -29719,6 +29710,18 @@ references:
   commentId: T:Bifrost.Web.Security.SecurityRouteHttpHandler
   fullName: Bifrost.Web.Security.SecurityRouteHttpHandler
   nameWithType: SecurityRouteHttpHandler
+- uid: Bifrost.Web.Security.SecurityRouteHttpHandler.#ctor
+  name: SecurityRouteHttpHandler()
+  href: api/Bifrost.Web.Security.SecurityRouteHttpHandler.html#Bifrost_Web_Security_SecurityRouteHttpHandler__ctor
+  commentId: M:Bifrost.Web.Security.SecurityRouteHttpHandler.#ctor
+  fullName: Bifrost.Web.Security.SecurityRouteHttpHandler.SecurityRouteHttpHandler()
+  nameWithType: SecurityRouteHttpHandler.SecurityRouteHttpHandler()
+- uid: Bifrost.Web.Security.SecurityRouteHttpHandler.#ctor*
+  name: SecurityRouteHttpHandler
+  href: api/Bifrost.Web.Security.SecurityRouteHttpHandler.html#Bifrost_Web_Security_SecurityRouteHttpHandler__ctor_
+  commentId: Overload:Bifrost.Web.Security.SecurityRouteHttpHandler.#ctor
+  fullName: Bifrost.Web.Security.SecurityRouteHttpHandler.SecurityRouteHttpHandler
+  nameWithType: SecurityRouteHttpHandler.SecurityRouteHttpHandler
 - uid: Bifrost.Web.Security.SecurityRouteHttpHandler.IsReusable
   name: IsReusable
   href: api/Bifrost.Web.Security.SecurityRouteHttpHandler.html#Bifrost_Web_Security_SecurityRouteHttpHandler_IsReusable
