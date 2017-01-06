@@ -71,15 +71,20 @@
               
               <h1 id="Bifrost_Read_IReadModel" data-uid="Bifrost.Read.IReadModel">Interface IReadModel
               </h1>
-              <div class="markdown level0 summary"><p>Represents the marker interface for a read model</p>
+              <div class="markdown level0 summary"><p>Represents the marker interface for a read model.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <h6><strong>Namespace</strong>:Bifrost.Read</h6>
               <h6><strong>Assembly</strong>:Bifrost.dll</h6>
               <h5 id="Bifrost_Read_IReadModel_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public interface IReadModel</code></pre>
+                <pre><code class="lang-csharp hljs">public interface IReadModel : IConvention</code></pre>
               </div>
+              <h5 id="Bifrost_Read_IReadModel_remarks"><strong>Remarks</strong></h5>
+              <div class="markdown level0 remarks"><p>Types inheriting from this interface will be picked up proxy generation and the read model service.
+It will also be deserialized, passed to <a class="xref" href="Bifrost.Read.ICanFilterReadModels.html">ICanFilterReadModels</a>
+and dispatched to the correct instance of <a class="xref" href="Bifrost.Read.IReadModelOf-1.html">IReadModelOf&lt;T&gt;</a>.</p>
+</div>
               <h3 id="extensionmethods">Extension Methods</h3>
               <div>
                   <a class="xref" href="Bifrost.Concepts.ConceptExtensions.html#Bifrost_Concepts_ConceptExtensions_IsConcept_System_Object_">ConceptExtensions.IsConcept(Object)</a>
@@ -116,7 +121,7 @@
                     <a href="https://github.com/dolittle/bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Read_IReadModel.md&amp;value=---%0Auid%3A%20Bifrost.Read.IReadModel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/dolittle/Bifrost/blob/HEAD/Source/Bifrost/Read/IReadModel.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/dolittle/Bifrost/blob/HEAD/Source/Bifrost/Read/IReadModel.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -78,13 +78,15 @@
               <h6><strong>Assembly</strong>:Bifrost.dll</h6>
               <h5 id="Bifrost_Execution_ICanSpecifyAssemblies_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public interface ICanSpecifyAssemblies</code></pre>
+                <pre><code class="lang-csharp hljs">public interface ICanSpecifyAssemblies : IConvention</code></pre>
               </div>
               <h5 id="Bifrost_Execution_ICanSpecifyAssemblies_remarks"><strong>Remarks</strong></h5>
               <div class="markdown level0 remarks"><p>Typically used by implementations of <a class="xref" href="Bifrost.Execution.IAssemblies.html">IAssemblies</a> to 
 get the correct assemblies located for things like implementations of
 <a class="xref" href="Bifrost.Execution.ITypeDiscoverer.html">ITypeDiscoverer</a> which relies on knowing about assemblies
-to be able to discover types.</p>
+to be able to discover types.
+An application can implement any number of these conventions.
+Implementing classes must have a default constructor.</p>
 </div>
               <h3 id="methods">Methods
               </h3>
@@ -93,7 +95,7 @@ to be able to discover types.</p>
                 <a href="https://github.com/dolittle/bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Execution_ICanSpecifyAssemblies_Specify_Bifrost_Configuration_Assemblies_IAssemblyRuleBuilder_.md&amp;value=---%0Auid%3A%20Bifrost.Execution.ICanSpecifyAssemblies.Specify(Bifrost.Configuration.Assemblies.IAssemblyRuleBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/dolittle/Bifrost/blob/HEAD/Source/Bifrost/Execution/ICanSpecifyAssemblies.cs/#L24">View Source</a>
+                <a href="https://github.com/dolittle/Bifrost/blob/HEAD/Source/Bifrost/Execution/ICanSpecifyAssemblies.cs/#L27">View Source</a>
               </span>
               <a id="Bifrost_Execution_ICanSpecifyAssemblies_Specify_" data-uid="Bifrost.Execution.ICanSpecifyAssemblies.Specify*"></a>
               <h4 id="Bifrost_Execution_ICanSpecifyAssemblies_Specify_Bifrost_Configuration_Assemblies_IAssemblyRuleBuilder_" data-uid="Bifrost.Execution.ICanSpecifyAssemblies.Specify(Bifrost.Configuration.Assemblies.IAssemblyRuleBuilder)">Specify(IAssemblyRuleBuilder)</h4>
@@ -158,7 +160,7 @@ to be able to discover types.</p>
                     <a href="https://github.com/dolittle/bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Execution_ICanSpecifyAssemblies.md&amp;value=---%0Auid%3A%20Bifrost.Execution.ICanSpecifyAssemblies%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/dolittle/Bifrost/blob/HEAD/Source/Bifrost/Execution/ICanSpecifyAssemblies.cs/#L18" class="contribution-link">View Source</a>
+                    <a href="https://github.com/dolittle/Bifrost/blob/HEAD/Source/Bifrost/Execution/ICanSpecifyAssemblies.cs/#L21" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

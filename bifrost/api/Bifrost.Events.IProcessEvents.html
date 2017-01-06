@@ -71,15 +71,19 @@
               
               <h1 id="Bifrost_Events_IProcessEvents" data-uid="Bifrost.Events.IProcessEvents">Interface IProcessEvents
               </h1>
-              <div class="markdown level0 summary"><p>Defines an event subscriber</p>
+              <div class="markdown level0 summary"><p>Defines an event subscriber.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <h6><strong>Namespace</strong>:Bifrost.Events</h6>
               <h6><strong>Assembly</strong>:Bifrost.dll</h6>
               <h5 id="Bifrost_Events_IProcessEvents_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public interface IProcessEvents</code></pre>
+                <pre><code class="lang-csharp hljs">public interface IProcessEvents : IConvention</code></pre>
               </div>
+              <h5 id="Bifrost_Events_IProcessEvents_remarks"><strong>Remarks</strong></h5>
+              <div class="markdown level0 remarks"><p>An implementation must then implement a Process method that takes the
+specific <a class="xref" href="Bifrost.Events.IEvent.html">IEvent</a> you want to be processed.</p>
+</div>
               <h3 id="extensionmethods">Extension Methods</h3>
               <div>
                   <a class="xref" href="Bifrost.Concepts.ConceptExtensions.html#Bifrost_Concepts_ConceptExtensions_IsConcept_System_Object_">ConceptExtensions.IsConcept(Object)</a>
@@ -116,7 +120,7 @@
                     <a href="https://github.com/dolittle/bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Events_IProcessEvents.md&amp;value=---%0Auid%3A%20Bifrost.Events.IProcessEvents%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/dolittle/Bifrost/blob/HEAD/Source/Bifrost/Events/IProcessEvents.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/dolittle/Bifrost/blob/HEAD/Source/Bifrost/Events/IProcessEvents.cs/#L16" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
