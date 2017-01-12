@@ -68,12 +68,13 @@
               <h1 id="versioning">Versioning</h1>
               
 <p>Bifrost follows the <a href="https://semver.org">Semantic Versioning</a> versioning scheme.</p>
+<p>Deviation from the standard; due to filesystem limitations, the <strong>+</strong> for build numbers is a <strong>-</strong>.</p>
 <p>During building between major versions the versioning pattern is as follows:</p>
-<p><code>&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;+&lt;build&gt;</code></p>
+<p><code>&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;-&lt;build&gt;</code></p>
 <p>When approaching end of development for a specific version; alpha version - the pattern is as follows:</p>
-<p><code>&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;-alpha+&lt;build&gt;</code></p>
+<p><code>&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;-alpha-&lt;build&gt;</code></p>
 <p>For beta releases, the pattern is as follows.</p>
-<p><code>&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;-beta+&lt;build&gt;</code></p>
+<p><code>&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;-beta-&lt;build&gt;</code></p>
 <p>When a major, minor or patch is released, the pattern is as follows.</p>
 <p><code>&lt;major&gt;.&lt;minor&gt;.&lt;patch&gt;</code></p>
 <p>When a minor version is released, the patch will be 0.

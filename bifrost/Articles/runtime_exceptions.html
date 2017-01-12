@@ -77,7 +77,7 @@ deal with the recovery of an exception. Exceptions <strong>MUST</strong> be cons
 for wether or not its provided. First of all, be explicit about what your dependencies are. A method should have overloads
 without the parameters that are optional. For implementations that are optional, provide a <em>NullImplementation</em> as the
 default instead. A good example of this is inside Bifrost you have the option of using an
-<a href="../../api/Bifrost.Events.IEventStore.md">IEventStore</a> which then has a default <a href="../../api/Bifrost.Events.NullEventStore.md">NullEventStore</a>
+<a href="../../api/Bifrost.Events.IEventStore.html">IEventStore</a> which then has a default <a href="../../api/Bifrost.Events.NullEventStore.html">NullEventStore</a>
 implementation set as default during configuration. This makes program flow better and no need for dealing with exceptions
 such as the <a href="https://msdn.microsoft.com/en-us/library/system.nullreferenceexception(v=vs.110).aspx">NullReferenceException</a></p>
 
