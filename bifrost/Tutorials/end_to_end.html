@@ -120,8 +120,8 @@ for all kinds of combinations of IOC containers, database choices and so forth, 
 we will be very specific and use a set of extensions to Bifrost that we have neatly packed into a
 Nuget package called Bifrost.Defaults.</p>
 <p>So select the Web project and do:</p>
-<pre><code class="lang-PowerShell">    PM&gt; Install-Package Bifrost.Defaults
-</code></pre><p>What this does is setup Bifrost with Ninject as IOC Container, RavenDB embedded and SignalR.
+<pre><code class="lang-PowerShell">    PM&gt; Install-Package Bifrost.Default
+</code></pre><p>What this does is setup Bifrost with Ninject as IOC Container, Newtonsoft JSON, FluentValidation and SignalR.
 It also configures Bifrost to treat this as a single page application and adds an HTML file that
 just sets up Bifrost for you to start working with it.</p>
 <h3 id="frontend">Frontend</h3>
@@ -146,13 +146,12 @@ Employees folder. We&#39;re going to add some HTML within the body tag in the ne
         &lt;button&gt;Register&lt;/button&gt;
     &lt;/fieldset&gt;
 </code></pre><p>Now we&#39;re going to add a viewmodel that will be associated with your feature.</p>
-<pre><code class="lang-js">    Bifrost.namespace(&quot;Features.Employees&quot;, {
+<pre><code class="lang-js">    Bifrost.namespace(&quot;HumanResources.Employees&quot;, {
         register: Bifrost.Type.extend(function() {
         })
     });
-</code></pre><p>In the index.html file sitting at the root of your Web project, go and add the following within the body 
-tag:</p>
-<pre><code class="lang-html">    &lt;div data-view=&quot;Employees/register&quot;&gt;&lt;/div&gt;
+</code></pre><p>In the index.html file sitting at the root of your Web project, go and add the following within the body tag:</p>
+<pre><code class="lang-html">    &lt;div data-view=&quot;HumanResources/Employees/register&quot;&gt;&lt;/div&gt;
 </code></pre><p>Running your application with index.html as your startup page now should show the registration page you created.
 For now we&#39;re going to leave it at that. We will revisit this when we have the necessary bits ready in the
 C# code.</p>
@@ -192,7 +191,7 @@ employees that we are going to register, a natural key that represent a person i
 assigned at birth.</p>
 <p>Inside the Concept project create a folder called Persons.
 Add a new class inside the new folder called SocialSecurityNumber.</p>
-<pre><code class="lang-cs">    using Bifrost.Concepts;
+<pre><code class="lang-csharp">    using Bifrost.Concepts;
 
     namespace Concepts.Persons
     {
@@ -217,7 +216,7 @@ one representing the actual behavior that you want to happen in the system but b
 the deriviatives of the users intentions. It is very important to recognize a command to be something
 you want to happen in the system, so we model it so.</p>
 <p>For our tutorial we will not be all too creative, we will simply be adding a RegisterEmployee command.</p>
-<pre><code class="lang-cs">    using Bifrost.Commands;
+<pre><code class="lang-csharp">    using Bifrost.Commands;
     using Concepts.Persons;
 
     namespace Domain.HumanResources.Employees
@@ -236,7 +235,7 @@ properties and consumed on a client. Bifrost generates metadata that can be used
 clientside validators.</p>
 <p>Lets start by adding an Input validator for our command. Add a file next to the command called
 RegisterEmployeeInputValidator and make it look like below:</p>
-<pre><code class="lang-cs">    using Bifrost.Validation;
+<pre><code class="lang-csharp">    using Bifrost.Validation;
     using FluentValidation;
 
     namespace Domain.HumanResources.Employees
@@ -266,7 +265,7 @@ convenient in this.</p>
 resources like the database or similar to get to their validation.</p>
 <p>For now, business validation is not something we will be performing at this stage. But
 the way you would write one is very similar to that of an input validator:</p>
-<pre><code class="lang-cs">    using Bifrost.Validation;
+<pre><code class="lang-csharp">    using Bifrost.Validation;
     using FluentValidation;
 
     namespace Domain.HumanResources.Employees
@@ -291,7 +290,7 @@ This because of serialization, persistence and in general avoid potential proble
 versioning of types and such. So only primitives for this particular part.</p>
 <p>Recreate the bounded context and module structure in the Events project and add the
 EmployeeRegistered class into the Employees module and make it look like this:</p>
-<pre><code class="lang-cs">    using System;
+<pre><code class="lang-csharp">    using System;
     using Bifrost.Events;
 
     namespace Events.HumanResources.Employees
@@ -311,21 +310,23 @@ transactional boundary that can apply the event. These aggregates do not expose 
 state, only public behaviors - or methods as we call them in C#. They can hold internal state
 and have their state be populated from the events they self have generated over time by
 implementing a private On() method that takes in the event it wants to respond to.</p>
-<p>The aggregate should be modelled as a transaction, any invariants that are related to each
+<p>The aggregate should be modelled as the entities that goes together, any invariants that are related to each
 other and goes together as a transaction should be kept together. This is very different
 from more traditional ways of modelling a domain were a transaction is just whatever
 change you are doing.</p>
+<p>It also represents the actual business process, rather than the noun. This makes it a lot more
+clear from a domain perspective.</p>
 <p>Going back in the Domain project in the HumanResources and Employees folder, add a class
-called Employee, it should look like below:</p>
-<pre><code class="lang-cs">    using System;
+called Registration, it should look like below:</p>
+<pre><code class="lang-csharp">    using System;
     using Bifrost.Domain;
     using Events.HumanResources.Employee;
 
     namespace Domain.HumanResources.Employees
     {
-        public class Employee : AggregateRoot
+        public class Registration : AggregateRoot
         {
-            public Employee(Guid id) : base(id) {}
+            public Registration(Guid id) : base(id) {}
 
             public void Register(
                             SocialSecurityNumber socialSecurityNumber,
@@ -341,7 +342,8 @@ called Employee, it should look like below:</p>
             }
         }
     }
-</code></pre><h3 id="command-handler">Command Handler</h3>
+</code></pre><p>As you can see, we&#39;re modelling the process of registration, rather than putting in the noun <strong>Employee</strong> here.</p>
+<h3 id="command-handler">Command Handler</h3>
 <p>All we&#39;ve done now is introduce a command, some validation, an event and an aggregate that
 can apply the event. But we haven&#39;t added any code that can handle the command.
 CommandHandlers are responsible for taking a command and performing the necessary actions
@@ -351,7 +353,7 @@ convention public methods called Handle() that takes the specific command you wa
 in as a parameter. There can only be one handle method in the system per command.</p>
 <p>In the domain project, lets add a class called CommandHandlers next to the command and the
 validators and the aggregate. Make it look like below:</p>
-<pre><code class="lang-cs">    using Bifrost.Commands;
+<pre><code class="lang-csharp">    using Bifrost.Commands;
     using Bifrost.Domain;
 
     namespace Domain.HumanResources.Employees
@@ -376,7 +378,7 @@ validators and the aggregate. Make it look like below:</p>
         }
     }
 </code></pre><h3 id="commandcoordinator">CommandCoordinator</h3>
-<p>In Bifrost sits an entry point for commands, this is the place that all commands go through.
+<p>In Bifrost there is entry point for commands, this is the place that all commands go through.
 Using the entire stack of Bifrost, you don&#39;t necessarily see this system.
 The CommandCoordinator is responsible for coordinating the pipeline of a command, the unit of
 work in which a command lives in. The unit of work is called CommandContext and is unique
@@ -392,10 +394,10 @@ asynchronously processed.</p>
 <h3 id="readmodel">ReadModel</h3>
 <p>Now that we&#39;ve taken care of business and applied events, we must look at the consequences of
 this. Lets start with the end result, the data what we will have. In Bifrost we refer to this
-as a readmodel, and we have a marker interface called <code>IReadModel</code>.</p>
+as a readmodel, and we have a marker interface called <a href="../api/Bifrost.Read.IReadModel.html">IReadModel</a>.</p>
 <p>Lets go into the Read project and recreate the bounded context and the module structure;
 HumanResources.Employees. Add a class called Employee and make it look like below:</p>
-<pre><code class="lang-cs">    using System;
+<pre><code class="lang-csharp">    using System;
     using Bifrost.Read;
 
     namespace Read.HumanResources.Employees
@@ -403,7 +405,7 @@ HumanResources.Employees. Add a class called Employee and make it look like belo
         public class Employee : IReadModel
         {
             public Guid Id { get; set; }
-            public SocialSecurityNumber    SocialSecurityNumber { get; set; }
+            public SocialSecurityNumber SocialSecurityNumber { get; set; }
             public string FirstName { get; set; }
             public string LastName { get; set; }
         }
@@ -419,7 +421,7 @@ system responding differently to the event coming through. For instance, you cou
 subscriber that would deal with the data change that the event causes and another dealing with
 sending an email or similiar, and they would be separated out in different files blissfully
 unaware of the other subscribers existense.</p>
-<pre><code class="lang-cs">    using Bifrost.Events;
+<pre><code class="lang-csharp">    using Bifrost.Events;
     using Bifrost.Read;
     using Events.HumanResources.Employees;
 
@@ -457,7 +459,7 @@ concern yourself about - Bifrost will amend this information to the IQueryable&l
 return.</p>
 <p>In the Read project inside the Employees folder, add a class called AllEmployees and
 make it look like below:</p>
-<pre><code class="lang-cs">    using Bifrost.Read;
+<pre><code class="lang-csharp">    using Bifrost.Read;
 
     namespace Read.HumanResources.Employees
     {
@@ -486,7 +488,7 @@ make it look like below:</p>
 With everything in place now we can basically start taking dependencies into the viewmodel and use data-binding
 to hook it all up in the view.</p>
 <p>Lets modify the viewmodel to look like this:</p>
-<pre><code class="lang-js">    Bifrost.namespace(&quot;Features.Employees&quot;, {
+<pre><code class="lang-js">    Bifrost.namespace(&quot;HumanResources.Employees&quot;, {
         register: Bifrost.Type.extend(function(registerEmployee, allEmployees) {
             var self = this;
             this.register = registerEmployee;
@@ -518,7 +520,9 @@ Going into the view file, we need to make it look like this:</p>
 
         &lt;button data-bind=&quot;command: register&quot;&gt;Register&lt;/button&gt;
     &lt;/fieldset&gt;
-</code></pre><p>What the above alteration has done is to add binding of the values on the commands into the inputs.
+</code></pre><p>You might notice that naming is slightly different from the client JavaScript code to the C# code,
+varying on casing. Bifrost adhers to what is expected in the different spaces, read more <a href="conventions.md">here</a>.</p>
+<p>What the above alteration has done is to add binding of the values on the commands into the inputs.
 In addition we add validation messages using a binding handler that comes with Bifrost called
 &quot;validationMessageFor&quot; which points to the same values as its input is bound to.
 The button gets bound up using another binding handler from Bifrost; command, and is bound
