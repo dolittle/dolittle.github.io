@@ -272,7 +272,7 @@ namespace YourApp
 <li>Rules namespace holding a specification implementation is now called Specifications both in C# and JavaScript</li>
 <li>BundleTables routes from System.Web.Optimization are now recognized and will be ignored for the SPA HTTP request handling</li>
 </ul>
-<h2 id="more-convenient-way-to-import-instances-of-types---534httpsgithubcomdolittlebifrostissues534">More convenient way to import instances of types - <a href="https://github.com/dolittle/Bifrost/issues/534">#534</a></h2>
+<h3 id="more-convenient-way-to-import-instances-of-types---534httpsgithubcomdolittlebifrostissues534">More convenient way to import instances of types - <a href="https://github.com/dolittle/Bifrost/issues/534">#534</a></h3>
 <p>In Bifrost we have something called ITypeImporter and ITypeDiscoverer. The importer imports the types as instances, that means the implementation uses the IOC container to resolve an instance when calling the .Import<em>&lt;&gt;() methods. The discoverer is responsible for just discovering the types when calling the Find</em>&lt;&gt;() methods and has nothing to do with instances. With this release, we&#39;re introducing something that makes this whole thing more explicit, clearer and easier to use. There is now an interface called IInstancesOf&lt;&gt; that you can take a dependency on. The interface inherits IEnumerable&lt;&gt; and as a consequence the implementation InstancesOf&lt;&gt; will do the instantiation when its enumerated. The way you can use this is:</p>
 <pre><code class="lang-csharp">using Bifrost.Execution;
 
