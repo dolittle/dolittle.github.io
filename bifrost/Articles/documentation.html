@@ -83,6 +83,13 @@ A tutorial can also be found <a href="https://msdn.microsoft.com/en-us/library/a
 Markdown can be written using the simplest of editors (Pico, Nano, Notepad), but there are editors out there that gives
 great value and guides you through giving you feedback on errors. Editors like <a href="http://code.visualstudio.com/">Visual Studio Code</a>
 and <a href="http://sublimetext.com">Sublime Text</a> comes highly recommended.</p>
+<h3 id="highlighting---notes">Highlighting - notes</h3>
+<p>Sometimes you need to highlight something with a note. You <strong>MUST</strong> use the following type:</p>
+<pre><code class="lang-markdown">&gt; [!Note]
+&gt; Notes can have [links](https://github.com/dolittle/bifrost) and **formatting**
+</code></pre><p>this results in:</p>
+<div class="NOTE"><h5>Note</h5><p>Notes can have <a href="https://github.com/dolittle/bifrost">links</a> and <strong>formatting</strong></p>
+</div>
 <h3 id="metadata">Metadata</h3>
 <p>All files <strong>MUST</strong> have a metadata header at the top of the file following the following format:</p>
 <pre><code class="lang-text">---
@@ -91,7 +98,9 @@ description: Learn about how to contribute to documentation
 keywords: Contributing
 author: einari (your GitHub accountname)
 ---
-</code></pre><h2 id="file-names">File names</h2>
+</code></pre><p>Some of this metadata gets put into the generated HTML file and some of it is used for indexing and
+other purposes and for future expansion.</p>
+<h2 id="file-names">File names</h2>
 <p>All files should be lower cased. In case of multiple words and concepts that would be in codefiles <strong>CamelCase</strong> you <strong>MUST</strong> seperate
 with underscore <strong>_</strong> instead. For instance: <a href="chsarp_coding_styles.md"><em>csharp_coding_styles.md</em></a>.</p>
 <h2 id="docfx">DocFX</h2>
