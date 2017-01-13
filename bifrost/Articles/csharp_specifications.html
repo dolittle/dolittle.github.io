@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>CSharp Specifications </title>
+    <title>About C# Specifications </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="CSharp Specifications ">
+    <meta name="title" content="About C# Specifications ">
     <meta name="generator" content="docfx 2.9.3.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -67,8 +67,12 @@
             <article class="content wrap" id="_content" data-uid="">
               <h1 id="csharp-specifications">CSharp Specifications</h1>
               
+<p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”,
+“RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in
+<a href="https://tools.ietf.org/html/rfc2119">RFC 2119</a>.</p>
 <p>All the C# code has been specified by using <a href="http://github.com/machine/machine.specifications">Machine Specifications</a> with an adapted style.
 Since we&#39;re using this for specifying units as well, we have a certain structure to reflect this. The structure is reflected in the folder structure and naming of files.</p>
+<h2 id="folder-structure">Folder structure</h2>
 <p>The basic folder structure we have is:</p>
 <pre><code>(project to specify).Specs
     (namespace)
@@ -83,7 +87,7 @@ Since we&#39;re using this for specifying units as well, we have a certain struc
             given
                 a_command_context_for_a_simple_command_with_one_tracked_object.cs
             when_committing.cs
-</code></pre><p>The implementation can then look like this :</p>
+</code></pre><p>The implementation <strong>SHOULD</strong> then look something like this :</p>
 <pre><code class="lang-csharp">    public class when_committing : given.a_command_context_for_a_simple_command_with_one_tracked_object_with_one_uncommitted_event
     {
         static UncommittedEventStream   event_stream;
@@ -96,7 +100,7 @@ Since we&#39;re using this for specifying units as well, we have a certain struc
         It should_call_save_with_the_event_in_event_stream = () =&gt; event_stream.ShouldContainOnly(uncommitted_event);
         It should_commit_aggregated_root = () =&gt; aggregated_root.CommitCalled.ShouldBeTrue();
     }
-</code></pre><p>The specifications should read out very clearly in plain English, which makes the code look very different from what we do for our units. For instance we use underscore (_) as space in type names, variable names and the specification delegates. We also want to keep things as one-liners, so your Establish, Because and It statements should preferably be on one line. There are some cases were this does not make any sense, when you need to verify more complex scenarios. This also means that an It statement should be one assert. 
+</code></pre><p>The specifications should read out very clearly in plain English, which makes the code look very different from what we do for our units. For instance we use underscore (_) as space in type names, variable names and the specification delegates. We also want to keep things as one-liners, so your Establish, Because and It statements should preferably be on one line. There are some cases were this does not make any sense, when you need to verify more complex scenarios. This also means that an It statement should be one assert.
 <a href="http://code.google.com/p/moq/">Moq</a> is used for for handling mocking / faking of objects.</p>
 
             </article>
