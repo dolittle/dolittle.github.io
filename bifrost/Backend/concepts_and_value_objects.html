@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>About Concepts and Value Objects </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="About Concepts and Value Objects ">
+    <meta name="generator" content="docfx 2.9.3.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="background">Background</h1>
+              
+<p>Objects which have identity, fall into two distinct categories.  <em>Entities</em> and <em>Value Objects</em></p>
+<h2 id="entities">Entities</h2>
+<p><em>Entities</em> have a unique key, usually a single value but in some cases a composite of multiple values, that 
+identifies the instance of the entity.  When comparing two instances </p>
+<p>An entity will have the same identifier throughout the lifetime of the 
+system, even though it may be represented by different classes and objects throughout its lifetime.  For example, 
+an order in an ecommerce system may at different times be <em>PlacedOrder</em>, <em>PickingList</em>, <em>ShippedOrder</em>, 
+<em>DelinquentOrder</em> and so on, but it will always be identified by the same <em>OrderId</em>.  In other words, it is the 
+value of the key that determines the identity of the entity, not the particular class that currently represents it 
+or the current state of that entity.</p>
+<h2 id="value-objects">Value Objects</h2>
+<p><em>Value Objects</em> do not have any key that identifies them.  A <em>Value Object</em> is identified by the properties that
+comprise it.  It follows that two instances of a value object, that have identical properties, are considered equal.
+Examples of value objects could be telephone numbers, a co-ordinate, an address, etc..  It should be pointed out 
+that the distinction between entity and value object can be domain specific.  What is a value object in one domain, 
+might be an entity in another domain.</p>
+<h1 id="primitive-obsession">Primitive Obsession</h1>
+<p>The term <em>primitive obsession</em> is used to describe the tendency to use language primitives (strings, integers, 
+doubles, etc.) to represent concepts in the domain, rather than fully-fledged types.  While ultimately all concepts 
+must be expressed in the primitive types available in the language, it leads to a less expressive, less correct 
+domain model when primitives are used to represent domain concepts.  For example, a telephone number might be represented
+as a <em>string</em>.  However, there is logic associated with a telephone number and aspects of it that are not necessarily captured
+by a string.  We may be interested in area codes, international dialling codes, extensions, country specific formatting rules, and 
+so on.  Replacing a primitive with a type allows us to capture that while not all strings are telephone numbers, all telephone
+numbers can be expressed as strings.</p>
+<h1 id="value-objects-in-bifrost">Value Objects in Bifrost</h1>
+<p>Value object <strong>MUST</strong> be treated as immutable after creation and initial population.  Bifrost does not enforce immutability, primarily as 
+a concession to serialization and testing concerns.  However, it is imperative that you do not alter any properties of a value object.
+Instead, you should always create and return a new instance.  Altering the properties of a Value Object will change the results of equality 
+comparisons and the result of <em>GetHashCode()</em>.</p>
+<p>Bifrost provides two different artifacts to support the creation of objects with value-identity semantics.</p>
+<h1 id="conceptast">ConceptAs<t></t></h1>
+<p><em>ConceptAs<t></t></em> is intended as a direct replacement for where you would use a single primitive to represent a concept in the domain.  As well as
+implementing equality checks, and producing hash codes, <em>ConceptAs<t></t></em> allows an (almost) seamless transformation between the underlying primitive
+and the domain concept.  This proves to be very useful at the boundaries of your application, where you may be receiving primitives.  It can also aid 
+in serialization and integration with other systems. <em>ConceptAs<t></t></em> implements an implicit casting between the ConceptAs<t> and the primitive T.<p>
+<p>A typical implementation of a ConceptAs might be</p>
+<pre><code class="lang-C#">public class TelephoneNumber : ConceptAs&lt;string&gt;
+{
+    public static implicit operator TelephoneNumber(string value)
+    {
+        return new TelephoneNumber { Value = value };
+    }
+}
+</code></pre><p>While the underlying ConceptAs<t> class can handle the implicit conversion to a string, it is not possible to implement the conversion to the 
+specific type (i.e. TelephoneNumber) in a generic manner in the base class.<p>
+<p>It is <strong>not recommended</strong> to enforce <em>correctness</em> of a ConceptAs<t> by throwing an exception if there is an attempt to create an instance in an invalid
+state.  It is the preferred strategy in Bifrost to capture invalid state through the mechanism of <a href="./validation">input validation</a>. This allows a more
+graceful and information handling of the invalid state.<p>
+<div class="NOTE"><h5>Note</h5><p>Use of ConceptAs<t> can lead to loss of type inference in e.g. lambda functions.  It can also require a little more work on the part of the developer
+when serializing.  We do not consider this too heavy a price to pay given the explicitness and expressiveness it brings to your domain.<p>
+</t></div>
+<h1 id="valuet">Value<t></t></h1>
+<p><em>Value<t></t></em> provides basic value-object semantics by handling equality and production of hash codes.  When a class T inherits from
+Value<t>, then equality and hash code will depend on the values of all public properties.  In contrast to <em>ConceptAs<t></t></em>, <em>Value<t></t></em> is intended
+to group properties that belong together into a domain concept.  For example, a <code>Money : Value&lt;Money&gt;</code> might combine a monetary amount with a currency.
+A <code>Point : Value&lt;Point&gt;</code> might have properties for the X, Y and Z axis.<p>
+<p>It is <em>recommended</em> and <em>encouraged</em> to use ConceptAs<t> as properties within Value<t>.  It is <em>discouraged</em> but <em>not prohibited</em> from using <em>Value<t></t></em> 
+with a single property.<p>
+<div class="NOTE"><h5>Note</h5><p>Value objects within Bifrost consider the <em>System Type</em> to be integral to their identity.  While it is permissible to inherit from a Value<t> 
+or ConceptAs<t> that you have created, a type of the base class and a type of subclass <strong>WILL NOT</strong> be considered equal, even if they have 
+all properties identical.  A value object can only be equal to itself or another object of the same type.<p>
+</t></t></div>
+</t></t></t></t></t></t>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dolittle/bifrost/blob/master/Documentation/Backend/concepts_and_value_objects.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright &#169; 2008-2017 Dolittle
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
