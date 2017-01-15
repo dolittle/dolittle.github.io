@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title> </title>
+    <title>About regions </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content=" ">
+    <meta name="title" content="About regions ">
     <meta name="generator" content="docfx 2.9.3.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -67,8 +67,130 @@
             <article class="content wrap" id="_content" data-uid="">
               <h1 id="regions">Regions</h1>
               
+<p>Regions are at the center of the visual composition of the application.
+A region is a logical grouping of a <a href="views.html">view</a> and a <a href="view_models.html">view model</a>.
+All regions are implicitly created during compositions, Bifrost manages creation and
+lifecycle of them.</p>
+<h2 id="hierarchy">Hierarchy</h2>
+<p>A region can have child regions. The region will be aware of any of the child
+regions properties and respond to their changes recursively. This allows for checking
+things like validation without having knowledge about the concrete different regions.
+<a href="commands.html">Commands</a></p>
 <h2 id="inheritance">Inheritance</h2>
+<p>Regions are hierarchical by nature since a view can basically choose to include one or
+more other views. Each of these views being referred to gets a region associated with it.
+A view model is optional, but will by convention automatically be loaded and instantiated
+and associated into the region.</p>
+<p>Each region has a relationship to the parent region, not only through the parent property,
+but also through inheritance. Regions inherit the parent region, making it possible to
+access properties one wants to share at a higher level.</p>
 <h2 id="region-descriptors">Region Descriptors</h2>
+<p>Expanding a region with properties or functionality is done through what is known as a
+region descriptor. This makes it possible to separate out this into its own concept.</p>
+<pre><code class="lang-javascript">Bifrost.namespace(&quot;BoundedContext.Feature&quot;, {
+    RegionDescriptor: Bifrost.views.RegionDescriptor.extend(function() {
+        this.describe = function(region) {
+            region.aCommonProperty = &quot;Something&quot;;
+        }
+    })
+});
+</code></pre><h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Observable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>view</td>
+<td>View</td>
+<td>X</td>
+<td>Holds the actual view for the region</td>
+</tr>
+<tr>
+<td>children</td>
+<td>Region[]</td>
+<td>X</td>
+<td>Array of child regions</td>
+</tr>
+<tr>
+<td>parent</td>
+<td>Region</td>
+<td>X</td>
+<td>Parent region</td>
+</tr>
+<tr>
+<td>isValid</td>
+<td>Boolean</td>
+<td>X</td>
+<td>Returns validation related to any commands in the hierarchy</td>
+</tr>
+<tr>
+<td>validationMessages</td>
+<td>String[]</td>
+<td>X</td>
+<td>Array of any validation messages</td>
+</tr>
+<tr>
+<td>canCommandsExwecute</td>
+<td>Boolean</td>
+<td>X</td>
+<td>Returns wether or not all the commands are capable of executing</td>
+</tr>
+<tr>
+<td>areCommandsAuthorized</td>
+<td>Boolean</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>commandsHaveChanges</td>
+<td>Boolean</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>areCommandsReadyToExecute</td>
+<td>Boolean</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>hasChanges</td>
+<td>Boolean</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>isExecuting</td>
+<td>Boolean</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>isComposing</td>
+<td>Boolean</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>isLoading</td>
+<td>Boolean</td>
+<td>X</td>
+<td></td>
+</tr>
+<tr>
+<td>isBusy</td>
+<td>Boolean</td>
+<td>X</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
             </article>
           </div>
