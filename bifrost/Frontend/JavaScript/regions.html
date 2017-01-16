@@ -71,11 +71,14 @@
 A region is a logical grouping of a <a href="views.html">view</a> and a <a href="view_models.html">view model</a>.
 All regions are implicitly created during compositions, Bifrost manages creation and
 lifecycle of them.</p>
+<p><img src="images/region_overview.png" alt="Region Overview"></p>
 <h2 id="hierarchy">Hierarchy</h2>
 <p>A region can have child regions. The region will be aware of any of the child
 regions properties and respond to their changes recursively. This allows for checking
 things like validation without having knowledge about the concrete different regions.
-<a href="commands.html">Commands</a></p>
+The region will aggregate information about what is going on in the region or any of
+sub regions. Later in this article you&#39;ll see an overview of properties you can use
+from the region.</p>
 <h2 id="inheritance">Inheritance</h2>
 <p>Regions are hierarchical by nature since a view can basically choose to include one or
 more other views. Each of these views being referred to gets a region associated with it.
@@ -94,7 +97,11 @@ region descriptor. This makes it possible to separate out this into its own conc
         }
     })
 });
-</code></pre><h2 id="properties">Properties</h2>
+</code></pre><h2 id="operations">Operations</h2>
+<p>Bifrost has the concept of <a href="Interaction/operations.html">operations</a>. Basically an encapsulation
+of work that the user wants performed. The operations are aggregated into the region they belong
+to and when not executed represents a possible change.</p>
+<h2 id="properties">Properties</h2>
 <table>
 <thead>
 <tr>
@@ -139,55 +146,55 @@ region descriptor. This makes it possible to separate out this into its own conc
 <td>canCommandsExwecute</td>
 <td>Boolean</td>
 <td>X</td>
-<td>Returns wether or not all the commands are capable of executing</td>
+<td>Returns wether or not all the commands in the region or any sub region are capable of executing</td>
 </tr>
 <tr>
 <td>areCommandsAuthorized</td>
 <td>Boolean</td>
 <td>X</td>
-<td></td>
+<td>Returns wether or not all the commands in the region or any sub region are authorized</td>
 </tr>
 <tr>
 <td>commandsHaveChanges</td>
 <td>Boolean</td>
 <td>X</td>
-<td></td>
+<td>Returns wether or not any of the commands in the region or any sub region are authorized</td>
 </tr>
 <tr>
 <td>areCommandsReadyToExecute</td>
 <td>Boolean</td>
 <td>X</td>
-<td></td>
+<td>Returns wether or not all the commands in the region or any sub region are ready to execute</td>
 </tr>
 <tr>
 <td>hasChanges</td>
 <td>Boolean</td>
 <td>X</td>
-<td></td>
+<td>Returns wether or not there are any commands with changes or any operations scheduled in the region or any sub region</td>
 </tr>
 <tr>
 <td>isExecuting</td>
 <td>Boolean</td>
 <td>X</td>
-<td></td>
+<td>Returns wether or not there are any commands in the region or any sub region executing</td>
 </tr>
 <tr>
 <td>isComposing</td>
 <td>Boolean</td>
 <td>X</td>
-<td></td>
+<td>Returns wether or not composition tasks in the region or any sub region is being performed</td>
 </tr>
 <tr>
 <td>isLoading</td>
 <td>Boolean</td>
 <td>X</td>
-<td></td>
+<td>Returns wether or not there is a loading task running in the region or any sub region</td>
 </tr>
 <tr>
 <td>isBusy</td>
 <td>Boolean</td>
 <td>X</td>
-<td></td>
+<td>An aggregate of isLoading, isComposing and isExecuting</td>
 </tr>
 </tbody>
 </table>
