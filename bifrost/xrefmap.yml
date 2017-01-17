@@ -9156,15 +9156,6 @@ references:
   commentId: M:Bifrost.Events.EventSource.Apply(Bifrost.Events.IEvent)
   fullName: Bifrost.Events.EventSource.Apply(Bifrost.Events.IEvent)
   nameWithType: EventSource.Apply(IEvent)
-- uid: Bifrost.Events.EventSource.Apply(System.Linq.Expressions.Expression{System.Action})
-  name: Apply(Expression<Action>)
-  href: api/Bifrost.Events.EventSource.html#Bifrost_Events_EventSource_Apply_System_Linq_Expressions_Expression_System_Action__
-  commentId: M:Bifrost.Events.EventSource.Apply(System.Linq.Expressions.Expression{System.Action})
-  name.vb: Apply(Expression(Of Action))
-  fullName: Bifrost.Events.EventSource.Apply(System.Linq.Expressions.Expression<System.Action>)
-  fullName.vb: Bifrost.Events.EventSource.Apply(System.Linq.Expressions.Expression(Of System.Action))
-  nameWithType: EventSource.Apply(Expression<Action>)
-  nameWithType.vb: Apply(Expression(Of Action))
 - uid: Bifrost.Events.EventSource.Apply*
   name: Apply
   href: api/Bifrost.Events.EventSource.html#Bifrost_Events_EventSource_Apply_
@@ -10333,15 +10324,6 @@ references:
   commentId: M:Bifrost.Events.IEventSource.Apply(Bifrost.Events.IEvent)
   fullName: Bifrost.Events.IEventSource.Apply(Bifrost.Events.IEvent)
   nameWithType: IEventSource.Apply(IEvent)
-- uid: Bifrost.Events.IEventSource.Apply(System.Linq.Expressions.Expression{System.Action})
-  name: Apply(Expression<Action>)
-  href: api/Bifrost.Events.IEventSource.html#Bifrost_Events_IEventSource_Apply_System_Linq_Expressions_Expression_System_Action__
-  commentId: M:Bifrost.Events.IEventSource.Apply(System.Linq.Expressions.Expression{System.Action})
-  name.vb: Apply(Expression(Of Action))
-  fullName: Bifrost.Events.IEventSource.Apply(System.Linq.Expressions.Expression<System.Action>)
-  fullName.vb: Bifrost.Events.IEventSource.Apply(System.Linq.Expressions.Expression(Of System.Action))
-  nameWithType: IEventSource.Apply(Expression<Action>)
-  nameWithType.vb: Apply(Expression(Of Action))
 - uid: Bifrost.Events.IEventSource.Apply*
   name: Apply
   href: api/Bifrost.Events.IEventSource.html#Bifrost_Events_IEventSource_Apply_
@@ -10750,117 +10732,6 @@ references:
   commentId: Overload:Bifrost.Events.IUncommittedEventStreamCoordinator.Commit
   fullName: Bifrost.Events.IUncommittedEventStreamCoordinator.Commit
   nameWithType: IUncommittedEventStreamCoordinator.Commit
-- uid: Bifrost.Events.MethodEvent
-  name: MethodEvent
-  href: api/Bifrost.Events.MethodEvent.html
-  commentId: T:Bifrost.Events.MethodEvent
-  fullName: Bifrost.Events.MethodEvent
-  nameWithType: MethodEvent
-- uid: Bifrost.Events.MethodEvent.#ctor(System.Guid,System.Reflection.MethodInfo)
-  name: MethodEvent(Guid, MethodInfo)
-  href: api/Bifrost.Events.MethodEvent.html#Bifrost_Events_MethodEvent__ctor_System_Guid_System_Reflection_MethodInfo_
-  commentId: M:Bifrost.Events.MethodEvent.#ctor(System.Guid,System.Reflection.MethodInfo)
-  fullName: Bifrost.Events.MethodEvent.MethodEvent(System.Guid, System.Reflection.MethodInfo)
-  nameWithType: MethodEvent.MethodEvent(Guid, MethodInfo)
-- uid: Bifrost.Events.MethodEvent.#ctor*
-  name: MethodEvent
-  href: api/Bifrost.Events.MethodEvent.html#Bifrost_Events_MethodEvent__ctor_
-  commentId: Overload:Bifrost.Events.MethodEvent.#ctor
-  fullName: Bifrost.Events.MethodEvent.MethodEvent
-  nameWithType: MethodEvent.MethodEvent
-- uid: Bifrost.Events.MethodEvent.Arguments
-  name: Arguments
-  href: api/Bifrost.Events.MethodEvent.html#Bifrost_Events_MethodEvent_Arguments
-  commentId: P:Bifrost.Events.MethodEvent.Arguments
-  fullName: Bifrost.Events.MethodEvent.Arguments
-  nameWithType: MethodEvent.Arguments
-- uid: Bifrost.Events.MethodEvent.Arguments*
-  name: Arguments
-  href: api/Bifrost.Events.MethodEvent.html#Bifrost_Events_MethodEvent_Arguments_
-  commentId: Overload:Bifrost.Events.MethodEvent.Arguments
-  fullName: Bifrost.Events.MethodEvent.Arguments
-  nameWithType: MethodEvent.Arguments
-- uid: Bifrost.Events.MethodEventArguments
-  name: MethodEventArguments
-  href: api/Bifrost.Events.MethodEventArguments.html
-  commentId: T:Bifrost.Events.MethodEventArguments
-  fullName: Bifrost.Events.MethodEventArguments
-  nameWithType: MethodEventArguments
-- uid: Bifrost.Events.MethodEventArguments.GetArgumentValues
-  name: GetArgumentValues()
-  href: api/Bifrost.Events.MethodEventArguments.html#Bifrost_Events_MethodEventArguments_GetArgumentValues
-  commentId: M:Bifrost.Events.MethodEventArguments.GetArgumentValues
-  fullName: Bifrost.Events.MethodEventArguments.GetArgumentValues()
-  nameWithType: MethodEventArguments.GetArgumentValues()
-- uid: Bifrost.Events.MethodEventArguments.GetArgumentValues*
-  name: GetArgumentValues
-  href: api/Bifrost.Events.MethodEventArguments.html#Bifrost_Events_MethodEventArguments_GetArgumentValues_
-  commentId: Overload:Bifrost.Events.MethodEventArguments.GetArgumentValues
-  fullName: Bifrost.Events.MethodEventArguments.GetArgumentValues
-  nameWithType: MethodEventArguments.GetArgumentValues
-- uid: Bifrost.Events.MethodEventArguments.Item(System.String)
-  name: Item[String]
-  href: api/Bifrost.Events.MethodEventArguments.html#Bifrost_Events_MethodEventArguments_Item_System_String_
-  commentId: P:Bifrost.Events.MethodEventArguments.Item(System.String)
-  name.vb: Item(String)
-  fullName: Bifrost.Events.MethodEventArguments.Item[System.String]
-  fullName.vb: Bifrost.Events.MethodEventArguments.Item(System.String)
-  nameWithType: MethodEventArguments.Item[String]
-  nameWithType.vb: Item(String)
-- uid: Bifrost.Events.MethodEventArguments.Item*
-  name: Item
-  href: api/Bifrost.Events.MethodEventArguments.html#Bifrost_Events_MethodEventArguments_Item_
-  commentId: Overload:Bifrost.Events.MethodEventArguments.Item
-  fullName: Bifrost.Events.MethodEventArguments.Item
-  nameWithType: MethodEventArguments.Item
-- uid: Bifrost.Events.MethodEventArguments.TryGetMember(System.Dynamic.GetMemberBinder,System.Object@)
-  name: TryGetMember(GetMemberBinder, out Object)
-  href: api/Bifrost.Events.MethodEventArguments.html#Bifrost_Events_MethodEventArguments_TryGetMember_System_Dynamic_GetMemberBinder_System_Object__
-  commentId: M:Bifrost.Events.MethodEventArguments.TryGetMember(System.Dynamic.GetMemberBinder,System.Object@)
-  name.vb: TryGetMember(GetMemberBinder, ByRef Object)
-  fullName: Bifrost.Events.MethodEventArguments.TryGetMember(System.Dynamic.GetMemberBinder, out System.Object)
-  fullName.vb: Bifrost.Events.MethodEventArguments.TryGetMember(System.Dynamic.GetMemberBinder, ByRef System.Object)
-  nameWithType: MethodEventArguments.TryGetMember(GetMemberBinder, out Object)
-  nameWithType.vb: TryGetMember(GetMemberBinder, ByRef Object)
-- uid: Bifrost.Events.MethodEventArguments.TryGetMember*
-  name: TryGetMember
-  href: api/Bifrost.Events.MethodEventArguments.html#Bifrost_Events_MethodEventArguments_TryGetMember_
-  commentId: Overload:Bifrost.Events.MethodEventArguments.TryGetMember
-  fullName: Bifrost.Events.MethodEventArguments.TryGetMember
-  nameWithType: MethodEventArguments.TryGetMember
-- uid: Bifrost.Events.MethodEventArguments.TrySetMember(System.Dynamic.SetMemberBinder,System.Object)
-  name: TrySetMember(SetMemberBinder, Object)
-  href: api/Bifrost.Events.MethodEventArguments.html#Bifrost_Events_MethodEventArguments_TrySetMember_System_Dynamic_SetMemberBinder_System_Object_
-  commentId: M:Bifrost.Events.MethodEventArguments.TrySetMember(System.Dynamic.SetMemberBinder,System.Object)
-  fullName: Bifrost.Events.MethodEventArguments.TrySetMember(System.Dynamic.SetMemberBinder, System.Object)
-  nameWithType: MethodEventArguments.TrySetMember(SetMemberBinder, Object)
-- uid: Bifrost.Events.MethodEventArguments.TrySetMember*
-  name: TrySetMember
-  href: api/Bifrost.Events.MethodEventArguments.html#Bifrost_Events_MethodEventArguments_TrySetMember_
-  commentId: Overload:Bifrost.Events.MethodEventArguments.TrySetMember
-  fullName: Bifrost.Events.MethodEventArguments.TrySetMember
-  nameWithType: MethodEventArguments.TrySetMember
-- uid: Bifrost.Events.MethodEventFactory
-  name: MethodEventFactory
-  href: api/Bifrost.Events.MethodEventFactory.html
-  commentId: T:Bifrost.Events.MethodEventFactory
-  fullName: Bifrost.Events.MethodEventFactory
-  nameWithType: MethodEventFactory
-- uid: Bifrost.Events.MethodEventFactory.CreateMethodEventFromExpression(System.Guid,System.Linq.Expressions.Expression{System.Action})
-  name: CreateMethodEventFromExpression(Guid, Expression<Action>)
-  href: api/Bifrost.Events.MethodEventFactory.html#Bifrost_Events_MethodEventFactory_CreateMethodEventFromExpression_System_Guid_System_Linq_Expressions_Expression_System_Action__
-  commentId: M:Bifrost.Events.MethodEventFactory.CreateMethodEventFromExpression(System.Guid,System.Linq.Expressions.Expression{System.Action})
-  name.vb: CreateMethodEventFromExpression(Guid, Expression(Of Action))
-  fullName: Bifrost.Events.MethodEventFactory.CreateMethodEventFromExpression(System.Guid, System.Linq.Expressions.Expression<System.Action>)
-  fullName.vb: Bifrost.Events.MethodEventFactory.CreateMethodEventFromExpression(System.Guid, System.Linq.Expressions.Expression(Of System.Action))
-  nameWithType: MethodEventFactory.CreateMethodEventFromExpression(Guid, Expression<Action>)
-  nameWithType.vb: CreateMethodEventFromExpression(Guid, Expression(Of Action))
-- uid: Bifrost.Events.MethodEventFactory.CreateMethodEventFromExpression*
-  name: CreateMethodEventFromExpression
-  href: api/Bifrost.Events.MethodEventFactory.html#Bifrost_Events_MethodEventFactory_CreateMethodEventFromExpression_
-  commentId: Overload:Bifrost.Events.MethodEventFactory.CreateMethodEventFromExpression
-  fullName: Bifrost.Events.MethodEventFactory.CreateMethodEventFromExpression
-  nameWithType: MethodEventFactory.CreateMethodEventFromExpression
 - uid: Bifrost.Events.MigrationLevelOutOfRangeException
   name: MigrationLevelOutOfRangeException
   href: api/Bifrost.Events.MigrationLevelOutOfRangeException.html
