@@ -89,6 +89,9 @@ In most situations, you&#39;d typically want to just grab the debug-symbols, ste
 <li><a href="http://www.symbolsource.org">SymbolSource.org</a></li>
 <li><a href="http://www.symbolsource.org/">SymbolSource.org - Configuring Visual Studio</a></li>
 </ul>
+<h2 id="source--pdb-in-the-packages">Source + PDB in the packages</h2>
+<p>All NuGet packages also include a <code>src/</code> folder and the PDB files. We build all packages in release mode, but use the <code>dotnet</code> CLI option of generating
+PDB files in addition. For some tooling, like <a href="https://www.jetbrains.com/resharper/">ReSharper</a>, it should then use this directly.</p>
 <h2 id="get-the-source-code">Get the source code</h2>
 <p>If you may want to get a bit more involved, and actually head over to the <a href="http://github.com/dolittle/Bifrost">Bifrost GitHub repository</a>
 to get a given version of the code. The differnt versions are marked with tags, which should allow you to navigate between releases.</p>
