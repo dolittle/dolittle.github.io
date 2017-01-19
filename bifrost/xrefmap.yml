@@ -27523,6 +27523,18 @@ references:
   commentId: T:Bifrost.Web.Assets.AssetManagerRouteHandler
   fullName: Bifrost.Web.Assets.AssetManagerRouteHandler
   nameWithType: AssetManagerRouteHandler
+- uid: Bifrost.Web.Assets.AssetManagerRouteHandler.#ctor(System.String)
+  name: AssetManagerRouteHandler(String)
+  href: api/Bifrost.Web.Assets.AssetManagerRouteHandler.html#Bifrost_Web_Assets_AssetManagerRouteHandler__ctor_System_String_
+  commentId: M:Bifrost.Web.Assets.AssetManagerRouteHandler.#ctor(System.String)
+  fullName: Bifrost.Web.Assets.AssetManagerRouteHandler.AssetManagerRouteHandler(System.String)
+  nameWithType: AssetManagerRouteHandler.AssetManagerRouteHandler(String)
+- uid: Bifrost.Web.Assets.AssetManagerRouteHandler.#ctor*
+  name: AssetManagerRouteHandler
+  href: api/Bifrost.Web.Assets.AssetManagerRouteHandler.html#Bifrost_Web_Assets_AssetManagerRouteHandler__ctor_
+  commentId: Overload:Bifrost.Web.Assets.AssetManagerRouteHandler.#ctor
+  fullName: Bifrost.Web.Assets.AssetManagerRouteHandler.AssetManagerRouteHandler
+  nameWithType: AssetManagerRouteHandler.AssetManagerRouteHandler
 - uid: Bifrost.Web.Assets.AssetManagerRouteHandler.GetHttpHandler(System.Web.Routing.RequestContext)
   name: GetHttpHandler(RequestContext)
   href: api/Bifrost.Web.Assets.AssetManagerRouteHandler.html#Bifrost_Web_Assets_AssetManagerRouteHandler_GetHttpHandler_System_Web_Routing_RequestContext_
@@ -27541,6 +27553,18 @@ references:
   commentId: T:Bifrost.Web.Assets.AssetManagerRouteHttpHandler
   fullName: Bifrost.Web.Assets.AssetManagerRouteHttpHandler
   nameWithType: AssetManagerRouteHttpHandler
+- uid: Bifrost.Web.Assets.AssetManagerRouteHttpHandler.#ctor(System.String)
+  name: AssetManagerRouteHttpHandler(String)
+  href: api/Bifrost.Web.Assets.AssetManagerRouteHttpHandler.html#Bifrost_Web_Assets_AssetManagerRouteHttpHandler__ctor_System_String_
+  commentId: M:Bifrost.Web.Assets.AssetManagerRouteHttpHandler.#ctor(System.String)
+  fullName: Bifrost.Web.Assets.AssetManagerRouteHttpHandler.AssetManagerRouteHttpHandler(System.String)
+  nameWithType: AssetManagerRouteHttpHandler.AssetManagerRouteHttpHandler(String)
+- uid: Bifrost.Web.Assets.AssetManagerRouteHttpHandler.#ctor*
+  name: AssetManagerRouteHttpHandler
+  href: api/Bifrost.Web.Assets.AssetManagerRouteHttpHandler.html#Bifrost_Web_Assets_AssetManagerRouteHttpHandler__ctor_
+  commentId: Overload:Bifrost.Web.Assets.AssetManagerRouteHttpHandler.#ctor
+  fullName: Bifrost.Web.Assets.AssetManagerRouteHttpHandler.AssetManagerRouteHttpHandler
+  nameWithType: AssetManagerRouteHttpHandler.AssetManagerRouteHttpHandler
 - uid: Bifrost.Web.Assets.AssetManagerRouteHttpHandler.IsReusable
   name: IsReusable
   href: api/Bifrost.Web.Assets.AssetManagerRouteHttpHandler.html#Bifrost_Web_Assets_AssetManagerRouteHttpHandler_IsReusable
@@ -29023,12 +29047,12 @@ references:
   commentId: T:Bifrost.Web.Proxies.GeneratedProxies
   fullName: Bifrost.Web.Proxies.GeneratedProxies
   nameWithType: GeneratedProxies
-- uid: Bifrost.Web.Proxies.GeneratedProxies.#ctor(Bifrost.Web.Commands.CommandProxies,Bifrost.Web.Read.QueryProxies,Bifrost.Web.Read.ReadModelProxies,Bifrost.Web.Services.ServiceProxies,Bifrost.Web.Configuration.NamespaceConfigurationProxies,Bifrost.Web.Hubs.HubProxies,Bifrost.Execution.ITypeDiscoverer,Bifrost.Execution.IContainer)
-  name: GeneratedProxies(CommandProxies, QueryProxies, ReadModelProxies, ServiceProxies, NamespaceConfigurationProxies, HubProxies, ITypeDiscoverer, IContainer)
-  href: api/Bifrost.Web.Proxies.GeneratedProxies.html#Bifrost_Web_Proxies_GeneratedProxies__ctor_Bifrost_Web_Commands_CommandProxies_Bifrost_Web_Read_QueryProxies_Bifrost_Web_Read_ReadModelProxies_Bifrost_Web_Services_ServiceProxies_Bifrost_Web_Configuration_NamespaceConfigurationProxies_Bifrost_Web_Hubs_HubProxies_Bifrost_Execution_ITypeDiscoverer_Bifrost_Execution_IContainer_
-  commentId: M:Bifrost.Web.Proxies.GeneratedProxies.#ctor(Bifrost.Web.Commands.CommandProxies,Bifrost.Web.Read.QueryProxies,Bifrost.Web.Read.ReadModelProxies,Bifrost.Web.Services.ServiceProxies,Bifrost.Web.Configuration.NamespaceConfigurationProxies,Bifrost.Web.Hubs.HubProxies,Bifrost.Execution.ITypeDiscoverer,Bifrost.Execution.IContainer)
-  fullName: Bifrost.Web.Proxies.GeneratedProxies.GeneratedProxies(Bifrost.Web.Commands.CommandProxies, Bifrost.Web.Read.QueryProxies, Bifrost.Web.Read.ReadModelProxies, Bifrost.Web.Services.ServiceProxies, Bifrost.Web.Configuration.NamespaceConfigurationProxies, Bifrost.Web.Hubs.HubProxies, Bifrost.Execution.ITypeDiscoverer, Bifrost.Execution.IContainer)
-  nameWithType: GeneratedProxies.GeneratedProxies(CommandProxies, QueryProxies, ReadModelProxies, ServiceProxies, NamespaceConfigurationProxies, HubProxies, ITypeDiscoverer, IContainer)
+- uid: Bifrost.Web.Proxies.GeneratedProxies.#ctor(Bifrost.Web.Commands.CommandProxies,Bifrost.Web.Commands.CommandSecurityProxies,Bifrost.Web.Read.QueryProxies,Bifrost.Web.Read.ReadModelProxies,Bifrost.Web.Services.ServiceProxies,Bifrost.Web.Configuration.NamespaceConfigurationProxies,Bifrost.Web.Hubs.HubProxies,Bifrost.Execution.ITypeDiscoverer,Bifrost.Execution.IContainer)
+  name: GeneratedProxies(CommandProxies, CommandSecurityProxies, QueryProxies, ReadModelProxies, ServiceProxies, NamespaceConfigurationProxies, HubProxies, ITypeDiscoverer, IContainer)
+  href: api/Bifrost.Web.Proxies.GeneratedProxies.html#Bifrost_Web_Proxies_GeneratedProxies__ctor_Bifrost_Web_Commands_CommandProxies_Bifrost_Web_Commands_CommandSecurityProxies_Bifrost_Web_Read_QueryProxies_Bifrost_Web_Read_ReadModelProxies_Bifrost_Web_Services_ServiceProxies_Bifrost_Web_Configuration_NamespaceConfigurationProxies_Bifrost_Web_Hubs_HubProxies_Bifrost_Execution_ITypeDiscoverer_Bifrost_Execution_IContainer_
+  commentId: M:Bifrost.Web.Proxies.GeneratedProxies.#ctor(Bifrost.Web.Commands.CommandProxies,Bifrost.Web.Commands.CommandSecurityProxies,Bifrost.Web.Read.QueryProxies,Bifrost.Web.Read.ReadModelProxies,Bifrost.Web.Services.ServiceProxies,Bifrost.Web.Configuration.NamespaceConfigurationProxies,Bifrost.Web.Hubs.HubProxies,Bifrost.Execution.ITypeDiscoverer,Bifrost.Execution.IContainer)
+  fullName: Bifrost.Web.Proxies.GeneratedProxies.GeneratedProxies(Bifrost.Web.Commands.CommandProxies, Bifrost.Web.Commands.CommandSecurityProxies, Bifrost.Web.Read.QueryProxies, Bifrost.Web.Read.ReadModelProxies, Bifrost.Web.Services.ServiceProxies, Bifrost.Web.Configuration.NamespaceConfigurationProxies, Bifrost.Web.Hubs.HubProxies, Bifrost.Execution.ITypeDiscoverer, Bifrost.Execution.IContainer)
+  nameWithType: GeneratedProxies.GeneratedProxies(CommandProxies, CommandSecurityProxies, QueryProxies, ReadModelProxies, ServiceProxies, NamespaceConfigurationProxies, HubProxies, ITypeDiscoverer, IContainer)
 - uid: Bifrost.Web.Proxies.GeneratedProxies.#ctor*
   name: GeneratedProxies
   href: api/Bifrost.Web.Proxies.GeneratedProxies.html#Bifrost_Web_Proxies_GeneratedProxies__ctor_
@@ -29119,6 +29143,18 @@ references:
   commentId: T:Bifrost.Web.Proxies.ProxyRouteHttpHandler
   fullName: Bifrost.Web.Proxies.ProxyRouteHttpHandler
   nameWithType: ProxyRouteHttpHandler
+- uid: Bifrost.Web.Proxies.ProxyRouteHttpHandler.#ctor
+  name: ProxyRouteHttpHandler()
+  href: api/Bifrost.Web.Proxies.ProxyRouteHttpHandler.html#Bifrost_Web_Proxies_ProxyRouteHttpHandler__ctor
+  commentId: M:Bifrost.Web.Proxies.ProxyRouteHttpHandler.#ctor
+  fullName: Bifrost.Web.Proxies.ProxyRouteHttpHandler.ProxyRouteHttpHandler()
+  nameWithType: ProxyRouteHttpHandler.ProxyRouteHttpHandler()
+- uid: Bifrost.Web.Proxies.ProxyRouteHttpHandler.#ctor*
+  name: ProxyRouteHttpHandler
+  href: api/Bifrost.Web.Proxies.ProxyRouteHttpHandler.html#Bifrost_Web_Proxies_ProxyRouteHttpHandler__ctor_
+  commentId: Overload:Bifrost.Web.Proxies.ProxyRouteHttpHandler.#ctor
+  fullName: Bifrost.Web.Proxies.ProxyRouteHttpHandler.ProxyRouteHttpHandler
+  nameWithType: ProxyRouteHttpHandler.ProxyRouteHttpHandler
 - uid: Bifrost.Web.Proxies.ProxyRouteHttpHandler.IsReusable
   name: IsReusable
   href: api/Bifrost.Web.Proxies.ProxyRouteHttpHandler.html#Bifrost_Web_Proxies_ProxyRouteHttpHandler_IsReusable
@@ -29593,6 +29629,18 @@ references:
   commentId: T:Bifrost.Web.Security.SecurityRouteHttpHandler
   fullName: Bifrost.Web.Security.SecurityRouteHttpHandler
   nameWithType: SecurityRouteHttpHandler
+- uid: Bifrost.Web.Security.SecurityRouteHttpHandler.#ctor
+  name: SecurityRouteHttpHandler()
+  href: api/Bifrost.Web.Security.SecurityRouteHttpHandler.html#Bifrost_Web_Security_SecurityRouteHttpHandler__ctor
+  commentId: M:Bifrost.Web.Security.SecurityRouteHttpHandler.#ctor
+  fullName: Bifrost.Web.Security.SecurityRouteHttpHandler.SecurityRouteHttpHandler()
+  nameWithType: SecurityRouteHttpHandler.SecurityRouteHttpHandler()
+- uid: Bifrost.Web.Security.SecurityRouteHttpHandler.#ctor*
+  name: SecurityRouteHttpHandler
+  href: api/Bifrost.Web.Security.SecurityRouteHttpHandler.html#Bifrost_Web_Security_SecurityRouteHttpHandler__ctor_
+  commentId: Overload:Bifrost.Web.Security.SecurityRouteHttpHandler.#ctor
+  fullName: Bifrost.Web.Security.SecurityRouteHttpHandler.SecurityRouteHttpHandler
+  nameWithType: SecurityRouteHttpHandler.SecurityRouteHttpHandler
 - uid: Bifrost.Web.Security.SecurityRouteHttpHandler.IsReusable
   name: IsReusable
   href: api/Bifrost.Web.Security.SecurityRouteHttpHandler.html#Bifrost_Web_Security_SecurityRouteHttpHandler_IsReusable
