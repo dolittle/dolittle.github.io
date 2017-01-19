@@ -107,7 +107,7 @@
               <h6><strong>Assembly</strong>:Bifrost.dll</h6>
               <h5 id="Bifrost_Events_EventSubscriber_1_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class EventSubscriber&lt;T&gt; : IProcessEvents where T : IHaveId, new ()</code></pre>
+                <pre><code class="lang-csharp hljs">public class EventSubscriber&lt;T&gt; : IProcessEvents, IConvention where T : IHaveId, new ()</code></pre>
               </div>
               <h5 class="typeParameters">Type Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">

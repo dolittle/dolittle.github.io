@@ -71,15 +71,19 @@
               
               <h1 id="Bifrost_Security_ICanResolvePrincipal" data-uid="Bifrost.Security.ICanResolvePrincipal">Interface ICanResolvePrincipal
               </h1>
-              <div class="markdown level0 summary"><p>Defines a resolver for <span class="xref">System.Security.Principal.IIdentity</span></p>
+              <div class="markdown level0 summary"><p>Defines a resolver for <span class="xref">System.Security.Principal.IPrincipal</span>.</p>
 </div>
               <div class="markdown level0 conceptual"></div>
               <h6><strong>Namespace</strong>:Bifrost.Security</h6>
               <h6><strong>Assembly</strong>:Bifrost.dll</h6>
               <h5 id="Bifrost_Security_ICanResolvePrincipal_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public interface ICanResolvePrincipal</code></pre>
+                <pre><code class="lang-csharp hljs">public interface ICanResolvePrincipal : IConvention</code></pre>
               </div>
+              <h5 id="Bifrost_Security_ICanResolvePrincipal_remarks"><strong>Remarks</strong></h5>
+              <div class="markdown level0 remarks"><p>An application may implement this convention once. If it is not implemented,
+the <a class="xref" href="Bifrost.Security.DefaultPrincipalResolver.html">DefaultPrincipalResolver</a> is used.</p>
+</div>
               <h3 id="methods">Methods
               </h3>
               <span class="small pull-right mobile-hide">
@@ -87,11 +91,11 @@
                 <a href="https://github.com/dolittle/bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Security_ICanResolvePrincipal_Resolve.md&amp;value=---%0Auid%3A%20Bifrost.Security.ICanResolvePrincipal.Resolve%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Security/ICanResolvePrincipal.cs/#L18">View Source</a>
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Security/ICanResolvePrincipal.cs/#L23">View Source</a>
               </span>
               <a id="Bifrost_Security_ICanResolvePrincipal_Resolve_" data-uid="Bifrost.Security.ICanResolvePrincipal.Resolve*"></a>
               <h4 id="Bifrost_Security_ICanResolvePrincipal_Resolve" data-uid="Bifrost.Security.ICanResolvePrincipal.Resolve">Resolve()</h4>
-              <div class="markdown level1 summary"><p>Resolve current <span class="xref">System.Security.Principal.IPrincipal</span></p>
+              <div class="markdown level1 summary"><p>Method that is called to resolve current <span class="xref">System.Security.Principal.IPrincipal</span>.</p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -109,7 +113,7 @@
                 <tbody>
                   <tr>
                     <td><span class="xref">System.Security.Principal.IPrincipal</span></td>
-                    <td><p>The resolved <span class="xref">System.Security.Principal.IPrincipal</span></p>
+                    <td><p>The resolved <span class="xref">System.Security.Principal.IPrincipal</span>.</p>
 </td>
                   </tr>
                 </tbody>
@@ -150,7 +154,7 @@
                     <a href="https://github.com/dolittle/bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Security_ICanResolvePrincipal.md&amp;value=---%0Auid%3A%20Bifrost.Security.ICanResolvePrincipal%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Security/ICanResolvePrincipal.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Security/ICanResolvePrincipal.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
