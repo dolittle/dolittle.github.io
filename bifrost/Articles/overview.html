@@ -130,10 +130,12 @@ lazy load it so that only the root gets loaded and not its children. The simple 
 models for the different bounded contexts and use the power of the ORM to actually map to the database for the needs one
 has.</p>
 <p>The core principal is to keep the different parts of your system apart and not take any dependency on any other contexts.</p>
-<h3 id="context-map">Context map</h3>
+<p>All the details about a bounded context should be available in a context map. The context map provides then a highlevel
+overview of the bounded context and its artifacts.</p>
+<h3 id="bounded-context-mediator">Bounded Context Mediator</h3>
 <p>At times bounded contexts needs a certain awareness of other contexts. This is often related to data and things that
-the certain context does not own, but needs a relationship to. A context map can then provide a bridge between the
-contexts. This is something that is modelled directly.</p>
+the certain context does not own, but needs a relationship to. A bounded context mediator can then provide a bridge between the
+contexts. This is something that is modelled directly. </p>
 <div class="NOTE"><h5>Note</h5><p>As of December 2016, Bifrost does not have a mechanism for this.
 It is under investigation in Issue <a href="https://github.com/dolittle/Bifrost/issues/684">#684</a></p>
 </div>
@@ -251,7 +253,7 @@ needed to be written in relation to what is being read and used. The performance
 Most line-of-business applications tend to read a lot more than they write. <a href="https://en.wikipedia.org/wiki/Command–query_separation#Command_Query_Responsibility_Segregation">CQRS</a>
 talks about totally segregating the read from the write and treat them uniquely.
 One finds <a href="../Backend/Events/event_sourcing.html">event sourcing</a> often associated with CQRS, something that Bifrost has embraced and helps
-bridge the two sides and stay completely decoupled.</p>
+bridge the two sides and stay completely decoupled. It is an optional part of Bifrost but hightly recommended together with an <a href="../Backend/Events/event_store.html">event store</a>.</p>
 <p><img src="images/cqrs.png" alt="Simple CQRS Diagram"></p>
 <h2 id="model-view-view-model">Model View View Model</h2>
 <p>MVVM is a variation of <a href="https://en.wikipedia.org/wiki/Martin_Fowler">Martin Fowler&#39;s</a> <a href="http://martinfowler.com/eaaDev/PresentationModel.html">Presentation Model</a>.
