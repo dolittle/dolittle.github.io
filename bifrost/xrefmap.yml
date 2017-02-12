@@ -2236,12 +2236,12 @@ references:
   commentId: T:Bifrost.Commands.CommandCoordinator
   fullName: Bifrost.Commands.CommandCoordinator
   nameWithType: CommandCoordinator
-- uid: Bifrost.Commands.CommandCoordinator.#ctor(Bifrost.Commands.ICommandHandlerManager,Bifrost.Commands.ICommandContextManager,Bifrost.Commands.ICommandSecurityManager,Bifrost.Commands.ICommandValidators,Bifrost.Globalization.ILocalizer)
-  name: CommandCoordinator(ICommandHandlerManager, ICommandContextManager, ICommandSecurityManager, ICommandValidators, ILocalizer)
-  href: api/Bifrost.Commands.CommandCoordinator.html#Bifrost_Commands_CommandCoordinator__ctor_Bifrost_Commands_ICommandHandlerManager_Bifrost_Commands_ICommandContextManager_Bifrost_Commands_ICommandSecurityManager_Bifrost_Commands_ICommandValidators_Bifrost_Globalization_ILocalizer_
-  commentId: M:Bifrost.Commands.CommandCoordinator.#ctor(Bifrost.Commands.ICommandHandlerManager,Bifrost.Commands.ICommandContextManager,Bifrost.Commands.ICommandSecurityManager,Bifrost.Commands.ICommandValidators,Bifrost.Globalization.ILocalizer)
-  fullName: Bifrost.Commands.CommandCoordinator.CommandCoordinator(Bifrost.Commands.ICommandHandlerManager, Bifrost.Commands.ICommandContextManager, Bifrost.Commands.ICommandSecurityManager, Bifrost.Commands.ICommandValidators, Bifrost.Globalization.ILocalizer)
-  nameWithType: CommandCoordinator.CommandCoordinator(ICommandHandlerManager, ICommandContextManager, ICommandSecurityManager, ICommandValidators, ILocalizer)
+- uid: Bifrost.Commands.CommandCoordinator.#ctor(Bifrost.Commands.ICommandHandlerManager,Bifrost.Commands.ICommandContextManager,Bifrost.Commands.ICommandSecurityManager,Bifrost.Commands.ICommandValidators,Bifrost.Globalization.ILocalizer,Bifrost.Exceptions.IExceptionPublisher)
+  name: CommandCoordinator(ICommandHandlerManager, ICommandContextManager, ICommandSecurityManager, ICommandValidators, ILocalizer, IExceptionPublisher)
+  href: api/Bifrost.Commands.CommandCoordinator.html#Bifrost_Commands_CommandCoordinator__ctor_Bifrost_Commands_ICommandHandlerManager_Bifrost_Commands_ICommandContextManager_Bifrost_Commands_ICommandSecurityManager_Bifrost_Commands_ICommandValidators_Bifrost_Globalization_ILocalizer_Bifrost_Exceptions_IExceptionPublisher_
+  commentId: M:Bifrost.Commands.CommandCoordinator.#ctor(Bifrost.Commands.ICommandHandlerManager,Bifrost.Commands.ICommandContextManager,Bifrost.Commands.ICommandSecurityManager,Bifrost.Commands.ICommandValidators,Bifrost.Globalization.ILocalizer,Bifrost.Exceptions.IExceptionPublisher)
+  fullName: Bifrost.Commands.CommandCoordinator.CommandCoordinator(Bifrost.Commands.ICommandHandlerManager, Bifrost.Commands.ICommandContextManager, Bifrost.Commands.ICommandSecurityManager, Bifrost.Commands.ICommandValidators, Bifrost.Globalization.ILocalizer, Bifrost.Exceptions.IExceptionPublisher)
+  nameWithType: CommandCoordinator.CommandCoordinator(ICommandHandlerManager, ICommandContextManager, ICommandSecurityManager, ICommandValidators, ILocalizer, IExceptionPublisher)
 - uid: Bifrost.Commands.CommandCoordinator.#ctor*
   name: CommandCoordinator
   href: api/Bifrost.Commands.CommandCoordinator.html#Bifrost_Commands_CommandCoordinator__ctor_
@@ -11056,6 +11056,81 @@ references:
   commentId: Overload:Bifrost.Events.UnregisteredEventException.#ctor
   fullName: Bifrost.Events.UnregisteredEventException.UnregisteredEventException
   nameWithType: UnregisteredEventException.UnregisteredEventException
+- uid: Bifrost.Exceptions
+  name: Bifrost.Exceptions
+  href: api/Bifrost.Exceptions.html
+  commentId: N:Bifrost.Exceptions
+  fullName: Bifrost.Exceptions
+  nameWithType: Bifrost.Exceptions
+- uid: Bifrost.Exceptions.ExceptionPublisher
+  name: ExceptionPublisher
+  href: api/Bifrost.Exceptions.ExceptionPublisher.html
+  commentId: T:Bifrost.Exceptions.ExceptionPublisher
+  fullName: Bifrost.Exceptions.ExceptionPublisher
+  nameWithType: ExceptionPublisher
+- uid: Bifrost.Exceptions.ExceptionPublisher.#ctor(Bifrost.Execution.IInstancesOf{Bifrost.Exceptions.IExceptionSubscriber})
+  name: ExceptionPublisher(IInstancesOf<IExceptionSubscriber>)
+  href: api/Bifrost.Exceptions.ExceptionPublisher.html#Bifrost_Exceptions_ExceptionPublisher__ctor_Bifrost_Execution_IInstancesOf_Bifrost_Exceptions_IExceptionSubscriber__
+  commentId: M:Bifrost.Exceptions.ExceptionPublisher.#ctor(Bifrost.Execution.IInstancesOf{Bifrost.Exceptions.IExceptionSubscriber})
+  name.vb: ExceptionPublisher(IInstancesOf(Of IExceptionSubscriber))
+  fullName: Bifrost.Exceptions.ExceptionPublisher.ExceptionPublisher(Bifrost.Execution.IInstancesOf<Bifrost.Exceptions.IExceptionSubscriber>)
+  fullName.vb: Bifrost.Exceptions.ExceptionPublisher.ExceptionPublisher(Bifrost.Execution.IInstancesOf(Of Bifrost.Exceptions.IExceptionSubscriber))
+  nameWithType: ExceptionPublisher.ExceptionPublisher(IInstancesOf<IExceptionSubscriber>)
+  nameWithType.vb: ExceptionPublisher(IInstancesOf(Of IExceptionSubscriber))
+- uid: Bifrost.Exceptions.ExceptionPublisher.#ctor*
+  name: ExceptionPublisher
+  href: api/Bifrost.Exceptions.ExceptionPublisher.html#Bifrost_Exceptions_ExceptionPublisher__ctor_
+  commentId: Overload:Bifrost.Exceptions.ExceptionPublisher.#ctor
+  fullName: Bifrost.Exceptions.ExceptionPublisher.ExceptionPublisher
+  nameWithType: ExceptionPublisher.ExceptionPublisher
+- uid: Bifrost.Exceptions.ExceptionPublisher.Publish(System.Exception)
+  name: Publish(Exception)
+  href: api/Bifrost.Exceptions.ExceptionPublisher.html#Bifrost_Exceptions_ExceptionPublisher_Publish_System_Exception_
+  commentId: M:Bifrost.Exceptions.ExceptionPublisher.Publish(System.Exception)
+  fullName: Bifrost.Exceptions.ExceptionPublisher.Publish(System.Exception)
+  nameWithType: ExceptionPublisher.Publish(Exception)
+- uid: Bifrost.Exceptions.ExceptionPublisher.Publish*
+  name: Publish
+  href: api/Bifrost.Exceptions.ExceptionPublisher.html#Bifrost_Exceptions_ExceptionPublisher_Publish_
+  commentId: Overload:Bifrost.Exceptions.ExceptionPublisher.Publish
+  fullName: Bifrost.Exceptions.ExceptionPublisher.Publish
+  nameWithType: ExceptionPublisher.Publish
+- uid: Bifrost.Exceptions.IExceptionPublisher
+  name: IExceptionPublisher
+  href: api/Bifrost.Exceptions.IExceptionPublisher.html
+  commentId: T:Bifrost.Exceptions.IExceptionPublisher
+  fullName: Bifrost.Exceptions.IExceptionPublisher
+  nameWithType: IExceptionPublisher
+- uid: Bifrost.Exceptions.IExceptionPublisher.Publish(System.Exception)
+  name: Publish(Exception)
+  href: api/Bifrost.Exceptions.IExceptionPublisher.html#Bifrost_Exceptions_IExceptionPublisher_Publish_System_Exception_
+  commentId: M:Bifrost.Exceptions.IExceptionPublisher.Publish(System.Exception)
+  fullName: Bifrost.Exceptions.IExceptionPublisher.Publish(System.Exception)
+  nameWithType: IExceptionPublisher.Publish(Exception)
+- uid: Bifrost.Exceptions.IExceptionPublisher.Publish*
+  name: Publish
+  href: api/Bifrost.Exceptions.IExceptionPublisher.html#Bifrost_Exceptions_IExceptionPublisher_Publish_
+  commentId: Overload:Bifrost.Exceptions.IExceptionPublisher.Publish
+  fullName: Bifrost.Exceptions.IExceptionPublisher.Publish
+  nameWithType: IExceptionPublisher.Publish
+- uid: Bifrost.Exceptions.IExceptionSubscriber
+  name: IExceptionSubscriber
+  href: api/Bifrost.Exceptions.IExceptionSubscriber.html
+  commentId: T:Bifrost.Exceptions.IExceptionSubscriber
+  fullName: Bifrost.Exceptions.IExceptionSubscriber
+  nameWithType: IExceptionSubscriber
+- uid: Bifrost.Exceptions.IExceptionSubscriber.Handle(System.Exception)
+  name: Handle(Exception)
+  href: api/Bifrost.Exceptions.IExceptionSubscriber.html#Bifrost_Exceptions_IExceptionSubscriber_Handle_System_Exception_
+  commentId: M:Bifrost.Exceptions.IExceptionSubscriber.Handle(System.Exception)
+  fullName: Bifrost.Exceptions.IExceptionSubscriber.Handle(System.Exception)
+  nameWithType: IExceptionSubscriber.Handle(Exception)
+- uid: Bifrost.Exceptions.IExceptionSubscriber.Handle*
+  name: Handle
+  href: api/Bifrost.Exceptions.IExceptionSubscriber.html#Bifrost_Exceptions_IExceptionSubscriber_Handle_
+  commentId: Overload:Bifrost.Exceptions.IExceptionSubscriber.Handle
+  fullName: Bifrost.Exceptions.IExceptionSubscriber.Handle
+  nameWithType: IExceptionSubscriber.Handle
 - uid: Bifrost.Execution
   name: Bifrost.Execution
   href: api/Bifrost.Execution.html
@@ -18238,12 +18313,12 @@ references:
   commentId: T:Bifrost.Read.QueryCoordinator
   fullName: Bifrost.Read.QueryCoordinator
   nameWithType: QueryCoordinator
-- uid: Bifrost.Read.QueryCoordinator.#ctor(Bifrost.Execution.ITypeDiscoverer,Bifrost.Execution.IContainer,Bifrost.Read.IFetchingSecurityManager,Bifrost.Read.Validation.IQueryValidator,Bifrost.Read.IReadModelFilters)
-  name: QueryCoordinator(ITypeDiscoverer, IContainer, IFetchingSecurityManager, IQueryValidator, IReadModelFilters)
-  href: api/Bifrost.Read.QueryCoordinator.html#Bifrost_Read_QueryCoordinator__ctor_Bifrost_Execution_ITypeDiscoverer_Bifrost_Execution_IContainer_Bifrost_Read_IFetchingSecurityManager_Bifrost_Read_Validation_IQueryValidator_Bifrost_Read_IReadModelFilters_
-  commentId: M:Bifrost.Read.QueryCoordinator.#ctor(Bifrost.Execution.ITypeDiscoverer,Bifrost.Execution.IContainer,Bifrost.Read.IFetchingSecurityManager,Bifrost.Read.Validation.IQueryValidator,Bifrost.Read.IReadModelFilters)
-  fullName: Bifrost.Read.QueryCoordinator.QueryCoordinator(Bifrost.Execution.ITypeDiscoverer, Bifrost.Execution.IContainer, Bifrost.Read.IFetchingSecurityManager, Bifrost.Read.Validation.IQueryValidator, Bifrost.Read.IReadModelFilters)
-  nameWithType: QueryCoordinator.QueryCoordinator(ITypeDiscoverer, IContainer, IFetchingSecurityManager, IQueryValidator, IReadModelFilters)
+- uid: Bifrost.Read.QueryCoordinator.#ctor(Bifrost.Execution.ITypeDiscoverer,Bifrost.Execution.IContainer,Bifrost.Read.IFetchingSecurityManager,Bifrost.Read.Validation.IQueryValidator,Bifrost.Read.IReadModelFilters,Bifrost.Exceptions.IExceptionPublisher)
+  name: QueryCoordinator(ITypeDiscoverer, IContainer, IFetchingSecurityManager, IQueryValidator, IReadModelFilters, IExceptionPublisher)
+  href: api/Bifrost.Read.QueryCoordinator.html#Bifrost_Read_QueryCoordinator__ctor_Bifrost_Execution_ITypeDiscoverer_Bifrost_Execution_IContainer_Bifrost_Read_IFetchingSecurityManager_Bifrost_Read_Validation_IQueryValidator_Bifrost_Read_IReadModelFilters_Bifrost_Exceptions_IExceptionPublisher_
+  commentId: M:Bifrost.Read.QueryCoordinator.#ctor(Bifrost.Execution.ITypeDiscoverer,Bifrost.Execution.IContainer,Bifrost.Read.IFetchingSecurityManager,Bifrost.Read.Validation.IQueryValidator,Bifrost.Read.IReadModelFilters,Bifrost.Exceptions.IExceptionPublisher)
+  fullName: Bifrost.Read.QueryCoordinator.QueryCoordinator(Bifrost.Execution.ITypeDiscoverer, Bifrost.Execution.IContainer, Bifrost.Read.IFetchingSecurityManager, Bifrost.Read.Validation.IQueryValidator, Bifrost.Read.IReadModelFilters, Bifrost.Exceptions.IExceptionPublisher)
+  nameWithType: QueryCoordinator.QueryCoordinator(ITypeDiscoverer, IContainer, IFetchingSecurityManager, IQueryValidator, IReadModelFilters, IExceptionPublisher)
 - uid: Bifrost.Read.QueryCoordinator.#ctor*
   name: QueryCoordinator
   href: api/Bifrost.Read.QueryCoordinator.html#Bifrost_Read_QueryCoordinator__ctor_
@@ -21299,12 +21374,12 @@ references:
   commentId: T:Bifrost.Sagas.SagaNarrator
   fullName: Bifrost.Sagas.SagaNarrator
   nameWithType: SagaNarrator
-- uid: Bifrost.Sagas.SagaNarrator.#ctor(Bifrost.Sagas.ISagaLibrarian,Bifrost.Execution.IContainer,Bifrost.Sagas.IChapterValidationService,Bifrost.Events.IEventStore)
-  name: SagaNarrator(ISagaLibrarian, IContainer, IChapterValidationService, IEventStore)
-  href: api/Bifrost.Sagas.SagaNarrator.html#Bifrost_Sagas_SagaNarrator__ctor_Bifrost_Sagas_ISagaLibrarian_Bifrost_Execution_IContainer_Bifrost_Sagas_IChapterValidationService_Bifrost_Events_IEventStore_
-  commentId: M:Bifrost.Sagas.SagaNarrator.#ctor(Bifrost.Sagas.ISagaLibrarian,Bifrost.Execution.IContainer,Bifrost.Sagas.IChapterValidationService,Bifrost.Events.IEventStore)
-  fullName: Bifrost.Sagas.SagaNarrator.SagaNarrator(Bifrost.Sagas.ISagaLibrarian, Bifrost.Execution.IContainer, Bifrost.Sagas.IChapterValidationService, Bifrost.Events.IEventStore)
-  nameWithType: SagaNarrator.SagaNarrator(ISagaLibrarian, IContainer, IChapterValidationService, IEventStore)
+- uid: Bifrost.Sagas.SagaNarrator.#ctor(Bifrost.Sagas.ISagaLibrarian,Bifrost.Execution.IContainer,Bifrost.Sagas.IChapterValidationService,Bifrost.Events.IEventStore,Bifrost.Exceptions.IExceptionPublisher)
+  name: SagaNarrator(ISagaLibrarian, IContainer, IChapterValidationService, IEventStore, IExceptionPublisher)
+  href: api/Bifrost.Sagas.SagaNarrator.html#Bifrost_Sagas_SagaNarrator__ctor_Bifrost_Sagas_ISagaLibrarian_Bifrost_Execution_IContainer_Bifrost_Sagas_IChapterValidationService_Bifrost_Events_IEventStore_Bifrost_Exceptions_IExceptionPublisher_
+  commentId: M:Bifrost.Sagas.SagaNarrator.#ctor(Bifrost.Sagas.ISagaLibrarian,Bifrost.Execution.IContainer,Bifrost.Sagas.IChapterValidationService,Bifrost.Events.IEventStore,Bifrost.Exceptions.IExceptionPublisher)
+  fullName: Bifrost.Sagas.SagaNarrator.SagaNarrator(Bifrost.Sagas.ISagaLibrarian, Bifrost.Execution.IContainer, Bifrost.Sagas.IChapterValidationService, Bifrost.Events.IEventStore, Bifrost.Exceptions.IExceptionPublisher)
+  nameWithType: SagaNarrator.SagaNarrator(ISagaLibrarian, IContainer, IChapterValidationService, IEventStore, IExceptionPublisher)
 - uid: Bifrost.Sagas.SagaNarrator.#ctor*
   name: SagaNarrator
   href: api/Bifrost.Sagas.SagaNarrator.html#Bifrost_Sagas_SagaNarrator__ctor_
@@ -30152,12 +30227,12 @@ references:
   commentId: M:Bifrost.Web.Services.RestServiceRouteHttpHandler.#ctor(System.Type,System.String)
   fullName: Bifrost.Web.Services.RestServiceRouteHttpHandler.RestServiceRouteHttpHandler(System.Type, System.String)
   nameWithType: RestServiceRouteHttpHandler.RestServiceRouteHttpHandler(Type, String)
-- uid: Bifrost.Web.Services.RestServiceRouteHttpHandler.#ctor(System.Type,System.String,Bifrost.Web.Services.IRequestParamsFactory,Bifrost.Web.Services.IRestServiceMethodInvoker,Bifrost.Execution.IContainer,Bifrost.Security.ISecurityManager)
-  name: RestServiceRouteHttpHandler(Type, String, IRequestParamsFactory, IRestServiceMethodInvoker, IContainer, ISecurityManager)
-  href: api/Bifrost.Web.Services.RestServiceRouteHttpHandler.html#Bifrost_Web_Services_RestServiceRouteHttpHandler__ctor_System_Type_System_String_Bifrost_Web_Services_IRequestParamsFactory_Bifrost_Web_Services_IRestServiceMethodInvoker_Bifrost_Execution_IContainer_Bifrost_Security_ISecurityManager_
-  commentId: M:Bifrost.Web.Services.RestServiceRouteHttpHandler.#ctor(System.Type,System.String,Bifrost.Web.Services.IRequestParamsFactory,Bifrost.Web.Services.IRestServiceMethodInvoker,Bifrost.Execution.IContainer,Bifrost.Security.ISecurityManager)
-  fullName: Bifrost.Web.Services.RestServiceRouteHttpHandler.RestServiceRouteHttpHandler(System.Type, System.String, Bifrost.Web.Services.IRequestParamsFactory, Bifrost.Web.Services.IRestServiceMethodInvoker, Bifrost.Execution.IContainer, Bifrost.Security.ISecurityManager)
-  nameWithType: RestServiceRouteHttpHandler.RestServiceRouteHttpHandler(Type, String, IRequestParamsFactory, IRestServiceMethodInvoker, IContainer, ISecurityManager)
+- uid: Bifrost.Web.Services.RestServiceRouteHttpHandler.#ctor(System.Type,System.String,Bifrost.Web.Services.IRequestParamsFactory,Bifrost.Web.Services.IRestServiceMethodInvoker,Bifrost.Execution.IContainer,Bifrost.Security.ISecurityManager,Bifrost.Exceptions.IExceptionPublisher)
+  name: RestServiceRouteHttpHandler(Type, String, IRequestParamsFactory, IRestServiceMethodInvoker, IContainer, ISecurityManager, IExceptionPublisher)
+  href: api/Bifrost.Web.Services.RestServiceRouteHttpHandler.html#Bifrost_Web_Services_RestServiceRouteHttpHandler__ctor_System_Type_System_String_Bifrost_Web_Services_IRequestParamsFactory_Bifrost_Web_Services_IRestServiceMethodInvoker_Bifrost_Execution_IContainer_Bifrost_Security_ISecurityManager_Bifrost_Exceptions_IExceptionPublisher_
+  commentId: M:Bifrost.Web.Services.RestServiceRouteHttpHandler.#ctor(System.Type,System.String,Bifrost.Web.Services.IRequestParamsFactory,Bifrost.Web.Services.IRestServiceMethodInvoker,Bifrost.Execution.IContainer,Bifrost.Security.ISecurityManager,Bifrost.Exceptions.IExceptionPublisher)
+  fullName: Bifrost.Web.Services.RestServiceRouteHttpHandler.RestServiceRouteHttpHandler(System.Type, System.String, Bifrost.Web.Services.IRequestParamsFactory, Bifrost.Web.Services.IRestServiceMethodInvoker, Bifrost.Execution.IContainer, Bifrost.Security.ISecurityManager, Bifrost.Exceptions.IExceptionPublisher)
+  nameWithType: RestServiceRouteHttpHandler.RestServiceRouteHttpHandler(Type, String, IRequestParamsFactory, IRestServiceMethodInvoker, IContainer, ISecurityManager, IExceptionPublisher)
 - uid: Bifrost.Web.Services.RestServiceRouteHttpHandler.#ctor*
   name: RestServiceRouteHttpHandler
   href: api/Bifrost.Web.Services.RestServiceRouteHttpHandler.html#Bifrost_Web_Services_RestServiceRouteHttpHandler__ctor_
