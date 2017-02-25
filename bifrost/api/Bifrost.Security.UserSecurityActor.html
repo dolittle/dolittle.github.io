@@ -120,26 +120,43 @@
               <h6><strong>Assembly</strong>:Bifrost.dll</h6>
               <h5 id="Bifrost_Security_UserSecurityActor_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class UserSecurityActor : SecurityActor, ISecurityActor</code></pre>
+                <pre><code class="lang-csharp hljs">public class UserSecurityActor : SecurityActor, ISecurityActor, IUserSecurityActor</code></pre>
               </div>
               <h3 id="constructors">Constructors
               </h3>
               <span class="small pull-right mobile-hide">
                 <span class="divider">|</span>
-                <a href="https://github.com/dolittle/bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Security_UserSecurityActor__ctor.md&amp;value=---%0Auid%3A%20Bifrost.Security.UserSecurityActor.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+                <a href="https://github.com/dolittle/bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Security_UserSecurityActor__ctor_Bifrost_Security_ICanResolvePrincipal_.md&amp;value=---%0Auid%3A%20Bifrost.Security.UserSecurityActor.%23ctor(Bifrost.Security.ICanResolvePrincipal)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Security/UserSecurityActor.cs/#L22">View Source</a>
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Security/UserSecurityActor.cs/#L23">View Source</a>
               </span>
               <a id="Bifrost_Security_UserSecurityActor__ctor_" data-uid="Bifrost.Security.UserSecurityActor.#ctor*"></a>
-              <h4 id="Bifrost_Security_UserSecurityActor__ctor" data-uid="Bifrost.Security.UserSecurityActor.#ctor">UserSecurityActor()</h4>
+              <h4 id="Bifrost_Security_UserSecurityActor__ctor_Bifrost_Security_ICanResolvePrincipal_" data-uid="Bifrost.Security.UserSecurityActor.#ctor(Bifrost.Security.ICanResolvePrincipal)">UserSecurityActor(ICanResolvePrincipal)</h4>
               <div class="markdown level1 summary"><p>Instantiates an instance of <a class="xref" href="Bifrost.Security.UserSecurityActor.html">UserSecurityActor</a></p>
 </div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public UserSecurityActor()</code></pre>
+                <pre><code class="lang-csharp hljs">public UserSecurityActor(ICanResolvePrincipal resolvePrincipal)</code></pre>
               </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="Bifrost.Security.ICanResolvePrincipal.html">ICanResolvePrincipal</a></td>
+                    <td><span class="parametername">resolvePrincipal</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
               <h3 id="fields">Fields
               </h3>
               <span class="small pull-right mobile-hide">
@@ -147,7 +164,7 @@
                 <a href="https://github.com/dolittle/bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Security_UserSecurityActor_USER.md&amp;value=---%0Auid%3A%20Bifrost.Security.UserSecurityActor.USER%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Security/UserSecurityActor.cs/#L17">View Source</a>
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Security/UserSecurityActor.cs/#L18">View Source</a>
               </span>
               <h4 id="Bifrost_Security_UserSecurityActor_USER" data-uid="Bifrost.Security.UserSecurityActor.USER">USER</h4>
               <div class="markdown level1 summary"><p>Description of the <a class="xref" href="Bifrost.Security.UserSecurityActor.html">UserSecurityActor</a></p>
@@ -179,7 +196,7 @@
                 <a href="https://github.com/dolittle/bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Security_UserSecurityActor_IsInRole_System_String_.md&amp;value=---%0Auid%3A%20Bifrost.Security.UserSecurityActor.IsInRole(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
               </span>
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Security/UserSecurityActor.cs/#L30">View Source</a>
+                <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Security/UserSecurityActor.cs/#L33">View Source</a>
               </span>
               <a id="Bifrost_Security_UserSecurityActor_IsInRole_" data-uid="Bifrost.Security.UserSecurityActor.IsInRole*"></a>
               <h4 id="Bifrost_Security_UserSecurityActor_IsInRole_System_String_" data-uid="Bifrost.Security.UserSecurityActor.IsInRole(System.String)">IsInRole(String)</h4>
@@ -224,12 +241,20 @@
                   </tr>
                 </tbody>
               </table>
+              <h5 class="implements">Implements</h5>
+                  <div><a class="xref" href="Bifrost.Security.IUserSecurityActor.html#Bifrost_Security_IUserSecurityActor_IsInRole_System_String_">IUserSecurityActor.IsInRole(String)</a></div>
               <h3 id="extensionmethods">Extension Methods</h3>
               <div>
                   <a class="xref" href="Bifrost.Concepts.ConceptExtensions.html#Bifrost_Concepts_ConceptExtensions_IsConcept_System_Object_">ConceptExtensions.IsConcept(Object)</a>
               </div>
               <div>
                   <a class="xref" href="Bifrost.Concepts.ConceptExtensions.html#Bifrost_Concepts_ConceptExtensions_GetConceptValue_System_Object_">ConceptExtensions.GetConceptValue(Object)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Security.UserSecurityActorExtensions.html#Bifrost_Security_UserSecurityActorExtensions_MustBeInRole_Bifrost_Security_UserSecurityActor_System_String_">UserSecurityActorExtensions.MustBeInRole(UserSecurityActor, String)</a>
+              </div>
+              <div>
+                  <a class="xref" href="Bifrost.Security.UserSecurityActorExtensions.html#Bifrost_Security_UserSecurityActorExtensions_MustBeInRoles_Bifrost_Security_UserSecurityActor_System_String___">UserSecurityActorExtensions.MustBeInRoles(UserSecurityActor, String[])</a>
               </div>
               <div>
                   <a class="xref" href="Bifrost.Dynamic.DynamicExtensions.html#Bifrost_Dynamic_DynamicExtensions_AsExpandoObject_System_Object_">DynamicExtensions.AsExpandoObject(Object)</a>
@@ -249,12 +274,6 @@
               <div>
                   <a class="xref" href="Bifrost.Extensions.MethodCalls.html#Bifrost_Extensions_MethodCalls_Generics__1___0_">MethodCalls.Generics&lt;T&gt;(T)</a>
               </div>
-              <div>
-                  <a class="xref" href="Bifrost.Security.UserSecurityActorExtensions.html#Bifrost_Security_UserSecurityActorExtensions_MustBeInRole_Bifrost_Security_UserSecurityActor_System_String_">UserSecurityActorExtensions.MustBeInRole(UserSecurityActor, String)</a>
-              </div>
-              <div>
-                  <a class="xref" href="Bifrost.Security.UserSecurityActorExtensions.html#Bifrost_Security_UserSecurityActorExtensions_MustBeInRoles_Bifrost_Security_UserSecurityActor_System_String___">UserSecurityActorExtensions.MustBeInRoles(UserSecurityActor, String[])</a>
-              </div>
             </article>
           </div>
           
@@ -266,7 +285,7 @@
                     <a href="https://github.com/dolittle/bifrost/new/master/Source/Documentation/apispec/new?filename=Bifrost_Security_UserSecurityActor.md&amp;value=---%0Auid%3A%20Bifrost.Security.UserSecurityActor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Security/UserSecurityActor.cs/#L12" class="contribution-link">View Source</a>
+                    <a href="https://github.com/dolittle/Bifrost/blob/master/Source/Bifrost/Security/UserSecurityActor.cs/#L11" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

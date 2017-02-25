@@ -15033,18 +15033,24 @@ references:
   fullName.vb: Bifrost.FluentValidation.Commands.IComposedCommandRuleBuilder.AddTo(Of TCommand)(FluentValidation.AbstractValidator(Of TCommand), System.Collections.Generic.IEnumerable(Of FluentValidation.IValidator))
   nameWithType: IComposedCommandRuleBuilder.AddTo<TCommand>(AbstractValidator<TCommand>, IEnumerable<IValidator>)
   nameWithType.vb: AddTo(Of TCommand)(AbstractValidator(Of TCommand), IEnumerable(Of IValidator))
-- uid: Bifrost.FluentValidation.Commands.NullCommandBusinessValidator
-  name: NullCommandBusinessValidator
-  href: api/Bifrost.FluentValidation.Commands.NullCommandBusinessValidator.html
-  commentId: T:Bifrost.FluentValidation.Commands.NullCommandBusinessValidator
-  fullName: Bifrost.FluentValidation.Commands.NullCommandBusinessValidator
-  nameWithType: NullCommandBusinessValidator
-- uid: Bifrost.FluentValidation.Commands.NullCommandInputValidator
-  name: NullCommandInputValidator
-  href: api/Bifrost.FluentValidation.Commands.NullCommandInputValidator.html
-  commentId: T:Bifrost.FluentValidation.Commands.NullCommandInputValidator
-  fullName: Bifrost.FluentValidation.Commands.NullCommandInputValidator
-  nameWithType: NullCommandInputValidator
+- uid: Bifrost.FluentValidation.Commands.NullCommandBusinessValidator`1
+  name: NullCommandBusinessValidator<T>
+  href: api/Bifrost.FluentValidation.Commands.NullCommandBusinessValidator-1.html
+  commentId: T:Bifrost.FluentValidation.Commands.NullCommandBusinessValidator`1
+  name.vb: NullCommandBusinessValidator(Of T)
+  fullName: Bifrost.FluentValidation.Commands.NullCommandBusinessValidator<T>
+  fullName.vb: Bifrost.FluentValidation.Commands.NullCommandBusinessValidator(Of T)
+  nameWithType: NullCommandBusinessValidator<T>
+  nameWithType.vb: NullCommandBusinessValidator(Of T)
+- uid: Bifrost.FluentValidation.Commands.NullCommandInputValidator`1
+  name: NullCommandInputValidator<T>
+  href: api/Bifrost.FluentValidation.Commands.NullCommandInputValidator-1.html
+  commentId: T:Bifrost.FluentValidation.Commands.NullCommandInputValidator`1
+  name.vb: NullCommandInputValidator(Of T)
+  fullName: Bifrost.FluentValidation.Commands.NullCommandInputValidator<T>
+  fullName.vb: Bifrost.FluentValidation.Commands.NullCommandInputValidator(Of T)
+  nameWithType: NullCommandInputValidator<T>
+  nameWithType.vb: NullCommandInputValidator(Of T)
 - uid: Bifrost.FluentValidation.ComposedValidator`1
   name: ComposedValidator<T>
   href: api/Bifrost.FluentValidation.ComposedValidator-1.html
@@ -17804,60 +17810,6 @@ references:
   commentId: Overload:Bifrost.MissingDefaultConstructorException.#ctor
   fullName: Bifrost.MissingDefaultConstructorException.MissingDefaultConstructorException
   nameWithType: MissingDefaultConstructorException.MissingDefaultConstructorException
-- uid: Bifrost.Principal
-  name: Bifrost.Principal
-  href: api/Bifrost.Principal.html
-  commentId: N:Bifrost.Principal
-  fullName: Bifrost.Principal
-  nameWithType: Bifrost.Principal
-- uid: Bifrost.Principal.CurrentPrincipal
-  name: CurrentPrincipal
-  href: api/Bifrost.Principal.CurrentPrincipal.html
-  commentId: T:Bifrost.Principal.CurrentPrincipal
-  fullName: Bifrost.Principal.CurrentPrincipal
-  nameWithType: CurrentPrincipal
-- uid: Bifrost.Principal.CurrentPrincipal.Dispose
-  name: Dispose()
-  href: api/Bifrost.Principal.CurrentPrincipal.html#Bifrost_Principal_CurrentPrincipal_Dispose
-  commentId: M:Bifrost.Principal.CurrentPrincipal.Dispose
-  fullName: Bifrost.Principal.CurrentPrincipal.Dispose()
-  nameWithType: CurrentPrincipal.Dispose()
-- uid: Bifrost.Principal.CurrentPrincipal.Dispose*
-  name: Dispose
-  href: api/Bifrost.Principal.CurrentPrincipal.html#Bifrost_Principal_CurrentPrincipal_Dispose_
-  commentId: Overload:Bifrost.Principal.CurrentPrincipal.Dispose
-  fullName: Bifrost.Principal.CurrentPrincipal.Dispose
-  nameWithType: CurrentPrincipal.Dispose
-- uid: Bifrost.Principal.CurrentPrincipal.Get
-  name: Get()
-  href: api/Bifrost.Principal.CurrentPrincipal.html#Bifrost_Principal_CurrentPrincipal_Get
-  commentId: M:Bifrost.Principal.CurrentPrincipal.Get
-  fullName: Bifrost.Principal.CurrentPrincipal.Get()
-  nameWithType: CurrentPrincipal.Get()
-- uid: Bifrost.Principal.CurrentPrincipal.Get*
-  name: Get
-  href: api/Bifrost.Principal.CurrentPrincipal.html#Bifrost_Principal_CurrentPrincipal_Get_
-  commentId: Overload:Bifrost.Principal.CurrentPrincipal.Get
-  fullName: Bifrost.Principal.CurrentPrincipal.Get
-  nameWithType: CurrentPrincipal.Get
-- uid: Bifrost.Principal.CurrentPrincipal.MinimumTime
-  name: MinimumTime
-  href: api/Bifrost.Principal.CurrentPrincipal.html#Bifrost_Principal_CurrentPrincipal_MinimumTime
-  commentId: F:Bifrost.Principal.CurrentPrincipal.MinimumTime
-  fullName: Bifrost.Principal.CurrentPrincipal.MinimumTime
-  nameWithType: CurrentPrincipal.MinimumTime
-- uid: Bifrost.Principal.CurrentPrincipal.SetPrincipalTo(System.Security.Principal.IPrincipal)
-  name: SetPrincipalTo(IPrincipal)
-  href: api/Bifrost.Principal.CurrentPrincipal.html#Bifrost_Principal_CurrentPrincipal_SetPrincipalTo_System_Security_Principal_IPrincipal_
-  commentId: M:Bifrost.Principal.CurrentPrincipal.SetPrincipalTo(System.Security.Principal.IPrincipal)
-  fullName: Bifrost.Principal.CurrentPrincipal.SetPrincipalTo(System.Security.Principal.IPrincipal)
-  nameWithType: CurrentPrincipal.SetPrincipalTo(IPrincipal)
-- uid: Bifrost.Principal.CurrentPrincipal.SetPrincipalTo*
-  name: SetPrincipalTo
-  href: api/Bifrost.Principal.CurrentPrincipal.html#Bifrost_Principal_CurrentPrincipal_SetPrincipalTo_
-  commentId: Overload:Bifrost.Principal.CurrentPrincipal.SetPrincipalTo
-  fullName: Bifrost.Principal.CurrentPrincipal.SetPrincipalTo
-  nameWithType: CurrentPrincipal.SetPrincipalTo
 - uid: Bifrost.Read
   name: Bifrost.Read
   href: api/Bifrost.Read.html
@@ -22631,6 +22583,24 @@ references:
   commentId: Overload:Bifrost.Security.ISecurityTarget.Securables
   fullName: Bifrost.Security.ISecurityTarget.Securables
   nameWithType: ISecurityTarget.Securables
+- uid: Bifrost.Security.IUserSecurityActor
+  name: IUserSecurityActor
+  href: api/Bifrost.Security.IUserSecurityActor.html
+  commentId: T:Bifrost.Security.IUserSecurityActor
+  fullName: Bifrost.Security.IUserSecurityActor
+  nameWithType: IUserSecurityActor
+- uid: Bifrost.Security.IUserSecurityActor.IsInRole(System.String)
+  name: IsInRole(String)
+  href: api/Bifrost.Security.IUserSecurityActor.html#Bifrost_Security_IUserSecurityActor_IsInRole_System_String_
+  commentId: M:Bifrost.Security.IUserSecurityActor.IsInRole(System.String)
+  fullName: Bifrost.Security.IUserSecurityActor.IsInRole(System.String)
+  nameWithType: IUserSecurityActor.IsInRole(String)
+- uid: Bifrost.Security.IUserSecurityActor.IsInRole*
+  name: IsInRole
+  href: api/Bifrost.Security.IUserSecurityActor.html#Bifrost_Security_IUserSecurityActor_IsInRole_
+  commentId: Overload:Bifrost.Security.IUserSecurityActor.IsInRole
+  fullName: Bifrost.Security.IUserSecurityActor.IsInRole
+  nameWithType: IUserSecurityActor.IsInRole
 - uid: Bifrost.Security.NamespaceSecurable
   name: NamespaceSecurable
   href: api/Bifrost.Security.NamespaceSecurable.html
@@ -22679,12 +22649,12 @@ references:
   commentId: T:Bifrost.Security.RoleRule
   fullName: Bifrost.Security.RoleRule
   nameWithType: RoleRule
-- uid: Bifrost.Security.RoleRule.#ctor(Bifrost.Security.UserSecurityActor,System.String)
-  name: RoleRule(UserSecurityActor, String)
-  href: api/Bifrost.Security.RoleRule.html#Bifrost_Security_RoleRule__ctor_Bifrost_Security_UserSecurityActor_System_String_
-  commentId: M:Bifrost.Security.RoleRule.#ctor(Bifrost.Security.UserSecurityActor,System.String)
-  fullName: Bifrost.Security.RoleRule.RoleRule(Bifrost.Security.UserSecurityActor, System.String)
-  nameWithType: RoleRule.RoleRule(UserSecurityActor, String)
+- uid: Bifrost.Security.RoleRule.#ctor(Bifrost.Security.IUserSecurityActor,System.String)
+  name: RoleRule(IUserSecurityActor, String)
+  href: api/Bifrost.Security.RoleRule.html#Bifrost_Security_RoleRule__ctor_Bifrost_Security_IUserSecurityActor_System_String_
+  commentId: M:Bifrost.Security.RoleRule.#ctor(Bifrost.Security.IUserSecurityActor,System.String)
+  fullName: Bifrost.Security.RoleRule.RoleRule(Bifrost.Security.IUserSecurityActor, System.String)
+  nameWithType: RoleRule.RoleRule(IUserSecurityActor, String)
 - uid: Bifrost.Security.RoleRule.#ctor*
   name: RoleRule
   href: api/Bifrost.Security.RoleRule.html#Bifrost_Security_RoleRule__ctor_
@@ -23246,12 +23216,12 @@ references:
   commentId: T:Bifrost.Security.UserSecurityActor
   fullName: Bifrost.Security.UserSecurityActor
   nameWithType: UserSecurityActor
-- uid: Bifrost.Security.UserSecurityActor.#ctor
-  name: UserSecurityActor()
-  href: api/Bifrost.Security.UserSecurityActor.html#Bifrost_Security_UserSecurityActor__ctor
-  commentId: M:Bifrost.Security.UserSecurityActor.#ctor
-  fullName: Bifrost.Security.UserSecurityActor.UserSecurityActor()
-  nameWithType: UserSecurityActor.UserSecurityActor()
+- uid: Bifrost.Security.UserSecurityActor.#ctor(Bifrost.Security.ICanResolvePrincipal)
+  name: UserSecurityActor(ICanResolvePrincipal)
+  href: api/Bifrost.Security.UserSecurityActor.html#Bifrost_Security_UserSecurityActor__ctor_Bifrost_Security_ICanResolvePrincipal_
+  commentId: M:Bifrost.Security.UserSecurityActor.#ctor(Bifrost.Security.ICanResolvePrincipal)
+  fullName: Bifrost.Security.UserSecurityActor.UserSecurityActor(Bifrost.Security.ICanResolvePrincipal)
+  nameWithType: UserSecurityActor.UserSecurityActor(ICanResolvePrincipal)
 - uid: Bifrost.Security.UserSecurityActor.#ctor*
   name: UserSecurityActor
   href: api/Bifrost.Security.UserSecurityActor.html#Bifrost_Security_UserSecurityActor__ctor_
