@@ -84,7 +84,7 @@ In Bifrost this is formalized through something called <code>IExecutionContext</
 <h2 id="taking-it-as-a-dependency">Taking it as a dependency</h2>
 <p>You can take a dependency directly to the <code>IExecutionContext</code> on the constructor of any types
 resolved by the IOC.</p>
-<pre><code>using Bifrost.Execution;
+<pre><code class="lang-csharp">using Bifrost.Execution;
 
 public class MySystem
 {
@@ -98,15 +98,15 @@ public class MySystem
 With a singleton lifecycle, this is not very useful at all, as you would get the execution context
 that is valid at the first creation time. Any changes after that would not be reflected.
 If you have a singleton, you can take a dependency to something called IExecutionContextManager</p>
-<pre><code>using Bifrost.Execution;
+<pre><code class="lang-csharp">using Bifrost.Execution;
 
 public class MySystem
 {
     public MySystem(IExecutionContextManager executionContextManager)
     {
-         var current = executionContextManager.Current;
+            var current = executionContextManager.Current;
 
-         // Put your code here
+            // Put your code here
     }
 }
 </code></pre><p>On the execution context you will find the following properties:</p>
@@ -156,7 +156,7 @@ you simply set that property.</p>
 implementing ICanPopulateExecutionContextDetails anywhere, in fact you can have multiple.
 Bifrot will discover all your implementations and call the <code>Populate()</code> method whenever the
 execution context needs to be populated.</p>
-<pre><code>using Bifrost.Execution;
+<pre><code class="lang-csharp">using Bifrost.Execution;
 
 public class MyPopulator : ICanPopulateExecutionContextDetails
 {

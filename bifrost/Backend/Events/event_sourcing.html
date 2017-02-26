@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title> </title>
+    <title>Event Sourcing </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content=" ">
+    <meta name="title" content="Event Sourcing ">
     <meta name="generator" content="docfx 2.9.3.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -67,11 +67,35 @@
             <div class="metadata">
                 <span class="contributors-text">Contributors</span>
                 <ul class="contributors">
+                    <li>
+                        <a href="https://github.com/einari">
+                            <img src="https://github.com/einari.png?size=16">
+                        </a>
+                    </li>
                 </ul>
             </div>
             <article class="content wrap" id="_content" data-uid="">
+              <h1 id="event-sourcing">Event Sourcing</h1>
               
-              
+<p>State transitions of a system can be represented as <a href="introduction.html">events</a>.
+The <em>EventSource</em> is responsible for creating these and applying them in the right order.
+From the <em>EventSource</em> the events can then be stored in the right order in an
+<a href="event_store.html">EventStore</a>.</p>
+<h2 id="eventsource">EventSource</h2>
+<p>As the name implies, an <em>EventSource</em> is the source of events. It is the entity
+that generates events. The events are to be considered the soure of truth and the
+<em>EventSource</em> representing this. In an event sourced system, nothing else can
+represent the true state of the system. The <em>EvenSource</em> is responsible for applying
+the state changes.</p>
+<h2 id="aggregateroot">AggregateRoot</h2>
+<p>The <em>AggregateRoot</em> is probably the most common <em>EventSource</em>. It models the things
+that belong together and applies the relevant state changes. In Domain Driven Design,
+you&#39;ll see that the <em>AggregateRoot</em> aggregates the entities that belong together.
+This makes it easier to model business processes. The <em>AggregateRoot</em> is not the noun
+in your system, but representing actual processes. This makes boundaries very much clearer
+and we leave behind technical challenges like concurrency, as we have explicitly modelled
+what goes together and we can only change the relevant state as a consequence.</p>
+
             </article>
           </div>
           
