@@ -8,7 +8,7 @@
     <title>Release Notes </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Release Notes ">
-    <meta name="generator" content="docfx 2.9.3.0">
+    <meta name="generator" content="docfx 2.15.5.0">
     
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/docfx.vendor.css">
@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles/main.css">
     <meta property="docfx:navrel" content="toc.html">
     <meta property="docfx:tocrel" content="toc.html">
+    
     
   </head>
   <body data-spy="scroll" data-target="#affix">
@@ -179,7 +180,6 @@
 </ul>
 <h3 id="parameterconverter-616httpsgithubcomdolittlebifrostissues616">ParameterConverter (<a href="https://github.com/dolittle/Bifrost/issues/616">#616</a>)</h3>
 <pre><code class="lang-xaml">&lt;Button Command=&quot;{interaction:FromMethod NameOfMethod, CanExecuteWhen=NameOfMethodOrProperty, ParameterConverter={StaticResource AValueConverter}}&quot;/&gt;
-`
 </code></pre><h2 id="version-10016">Version 1.0.0.16</h2>
 <ul>
 <li>FromMethod extension in WPF/XAML client now supports CanExecute (<a href="https://github.com/dolittle/Bifrost/issues/612">#612</a>)</li>
@@ -337,7 +337,6 @@ namespace Web.BoudedContext.Module
 <p>With this you don&#39;t have to think about starting the SignalR Hub connection like one would have to do with a bare SignalR. Bifrost manages this on the first hub being used.</p>
 <p>You might notice that instead of what might be expected when working with SignalR for results coming back from calls to the server:</p>
 <pre><code class="lang-js">.done(function() {})
-`
 </code></pre><p>We are using the Bifrost promise instead. This is because we want consistency with Bifrost, not with SignalRs proxies. In fact, we are not using the SignalR proxies at all, but our own proxy generation engine as we use for the generation of proxies for Commands, Queries, ReadModels, Security, Validation and more.</p>
 <p>If you want to set up client funtions that you want for the particular Hub instances, you can do this by doing the following:</p>
 <pre><code class="lang-js">myHub.client(function(client) {

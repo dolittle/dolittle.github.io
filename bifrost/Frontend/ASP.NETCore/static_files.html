@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>About namespacing in JavaScript </title>
+    <title>About Static Files </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="About namespacing in JavaScript ">
+    <meta name="title" content="About Static Files ">
     <meta name="generator" content="docfx 2.15.5.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -76,9 +76,28 @@
                 </ul>
             </div>
             <article class="content wrap" id="_content" data-uid="">
-              <h1 id="namespacing">Namespacing</h1>
+              <h1 id="static-files">Static Files</h1>
               
-
+<div class="NOTE"><h5>Note</h5><p>Upcoming feature will make this system better, so you don&#39;t have to think about this: <a href="https://github.com/dolittle/Bifrost/issues/727">#727</a></p>
+</div>
+<p>When doing development, you&#39;re not bundling the files in your project and Bifrost will load everything dynamically as it needs
+to. When refreshing the browser, content can get cached by the browser and your changes aren&#39;t showing up.
+One way to deal with this is to turn off caching while in debug mode - not release.</p>
+<p>You need to add the following NuGet package: <code>Microsoft.AspNetCore.StaticFiles</code>e.g. through the <code>dotnet cli</code>:</p>
+<pre><code class="lang-cli">dotnet add package Microsoft.AspNetCore.StaticFiles
+</code></pre><p>In your <code>Configure</code> method of your Startup.cs:</p>
+<pre><code class="lang-csharp">public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+{
+    app.UseStaticFiles(new StaticFileOptions()
+    {
+        OnPrepareResponse = context =&gt;
+        {
+            context.Context.Response.Headers.Add(&quot;Cache-Control&quot;, &quot;no-cache, no-store&quot;);
+            context.Context.Response.Headers.Add(&quot;Expires&quot;, &quot;-1&quot;);
+        }
+    });
+}
+</code></pre>
             </article>
           </div>
           
@@ -87,7 +106,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/dolittle/bifrost/blob/master/Documentation/Frontend/JavaScript/namespacing.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/dolittle/bifrost/blob/master/Documentation/Frontend/ASP.NETCore/static_files.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
