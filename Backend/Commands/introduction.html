@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>About Commands </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="About Commands ">
+    <meta name="generator" content="docfx 2.15.5.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <div class="metadata">
+                <span class="contributors-text">Contributors</span>
+                <ul class="contributors">
+                    <li>
+                        <a href="https://github.com/einari">
+                            <img src="https://github.com/einari.png?size=16">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/smithmx">
+                            <img src="https://github.com/smithmx.png?size=16">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="commands">Commands</h1>
+              
+<p>A Command is a typed representation of the user&#39;s intent in performing an action.  As such, it is a simple Data Transfer Object and performs
+no logic or calculations.  It is an instruction to the system to do something.  </p>
+<div class="NOTE"><h5>Note</h5><p>A user does not have to be a person.  Another system can issue commands to our system and is considered a user.</p>
+</div>
+<h2 id="naming">Naming</h2>
+<p>A command <strong>SHOULD</strong> be named in the imperative form.  It <strong>SHOULD</strong> also be named in accordance with the intention of the user
+rather than the anticipated outcome of the command.  For example, <em>UpdateShoppingCart</em> is a poor command name.  It focuses on what will happen,
+rather than why the user wants to perform the action.  <em>AddItemToShoppingCart</em> better captures what the user wants to achieve, when clicking on 
+an &quot;Add to Cart&quot; button.  It is also <strong>recommended</strong> to distinguish between similar actions that have the same main result.  For example, we could
+add further commands, even with identical structures and handling, to distinguish between <em>AddAccessoryToCart</em>, <em>AddRecommendationToCart</em>,
+<em>AddWishlistItemToCart</em> and so on, where these are or could be important distinctions in our domain. </p>
+<h2 id="transaction">Transaction</h2>
+<p>A command is a transaction.  There is no concept of a partially successful command.  You <strong>MUST</strong> structure and handle your commands such that 
+the command succeeds or fails in its entireity.  A transaction here is a domain concept, not a technical one.  When modelling and naming your commands, 
+you should consider the invariants of your domain and the aggregate root that the command will act upon.  </p>
+<h2 id="structure">Structure</h2>
+<p>A command <strong>MUST</strong> include all necessary information to perform the action.  These <strong>should</strong> be in the form of parameters on the command object.<br>You <strong>may</strong> include optional parameters, though it is <strong>recommended</strong> that you create multiple commands that represent the different states associated 
+with the optional parameters.  It is <strong>recommended</strong> that you use <a href="../concepts_and_value_objects.html">Concepts</a> and 
+<a href="../concepts_and_value_objects.html">Value Objects</a> on your commands rather than primitives.  This gives a more expressive command and aids in
+validation.</p>
+<div class="NOTE"><h5>Note</h5><p>For JavaScript, proxy representations can be used for the commands, read more about the mechanism <a href="../../Frontend/JavaScript/proxy_generation.html">here</a>.</p>
+</div>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dolittle/bifrost/blob/master/Documentation/Backend/Commands/introduction.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright &#169; 2008-2017 Dolittle
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

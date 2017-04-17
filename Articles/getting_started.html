@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>About getting started </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="About getting started ">
+    <meta name="generator" content="docfx 2.15.5.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <div class="metadata">
+                <span class="contributors-text">Contributors</span>
+                <ul class="contributors">
+                    <li>
+                        <a href="https://github.com/einari">
+                            <img src="https://github.com/einari.png?size=16">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="getting-started">Getting Started</h1>
+              
+<p>Getting started with Bifrost is very simple.</p>
+<h2 id="visual-studio">Visual Studio</h2>
+<p>The main Visual Studio solution file that is being used and maintained sits inside the
+<code>Source\Solutions</code>folder and is called <code>Bifrost_All.sln</code>.
+It holds all the projects and you should be able to run this directly.
+Minimum requirement is Visual Studio 2015.</p>
+<p>Remember that if you have turned off automatic restore of NuGet packages in Visual Studio.
+You will have to right click the solution in <strong>Solution Explorer</strong> and chose to explicitly
+restore packages.</p>
+<p>To run the QuickStart once you&#39;ve got it compiling is simply setting the <code>Bifrost.QuickStart</code>
+project as the startup project in Visual Studio.</p>
+<h2 id="visual-studio-code">Visual Studio Code</h2>
+<div class="NOTE"><h5>Note</h5><p>Description coming soon. Some of the developers are using Visual Studio Code running with
+.NET Core. It works fine - description will come later.</p>
+</div>
+<h2 id="build-script">Build Script</h2>
+<p>In the root folder of the project sits a F# - FAKE build script, this is the one
+the build servers are using. If you just want it to build everything and run all the
+automated tests, you can pass in the target for doing just that.</p>
+<p>On Windows:</p>
+<pre><code class="lang-text">build.cmd BuildAndSpecs
+</code></pre><p>On Linux / macOS</p>
+<pre><code class="lang-text">./build.sh BuildAndSpecs
+</code></pre><h2 id="running-javascript-specs">Running JavaScript specs</h2>
+<p>The easiest way to run the JavaScript specs is to use Forseti. Open a console / terminal
+and navigate into the <code>./Source</code> folder.</p>
+<p>On Windows, run the following:</p>
+<pre><code class="lang-text">..\Tools\Forseti\Forseti.exe
+</code></pre><p>On Linux / Mac with Mono installed:</p>
+<pre><code class="lang-text">mono ../Tools/Forseti/Forseti.exe
+</code></pre><p>This will run all specs, but also start watching the folders for changes and automatically
+run the affected specs.</p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dolittle/bifrost/blob/master/Documentation/Articles/getting_started.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright &#169; 2008-2017 Dolittle
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

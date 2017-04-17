@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>About contributing </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="About contributing ">
+    <meta name="generator" content="docfx 2.15.5.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <div class="metadata">
+                <span class="contributors-text">Contributors</span>
+                <ul class="contributors">
+                    <li>
+                        <a href="https://github.com/einari">
+                            <img src="https://github.com/einari.png?size=16">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="contributing-to-bifrost">Contributing to Bifrost</h1>
+              
+<p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”,
+“RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in
+<a href="https://tools.ietf.org/html/rfc2119">RFC 2119</a>.</p>
+<p>You can contribute through the <a href="https://github.com/dolittle/Bifrost/issues">issue list</a> or discussing issues in the list.
+If you want to contribute with code, you can submit a pull request with your changes.
+This project has adopted the code of conduct defined by the <a href="http://contributor-covenant.org/">Contributor Covenant</a> to clarify expected behavior in our community.
+For more information see the <a href="http://www.dotnetfoundation.org/code-of-conduct">.NET Foundation Code of Conduct</a>. Read the <a href="../CODE_OF_CONDUCT.md">Code of Conduct</a>.</p>
+<p>If you want to contribute to the documentation, you can do so by either using the &quot;Improve this Doc&quot; link at the top or
+submit a pull request with documentation changes. The documentation sits inside the <code>Documentation</code>folder in the repository.
+All documentation is written using the GitHub flavor of <a href="https://guides.github.com/features/mastering-markdown/">markdown</a>.
+In addition to this, all API documentation comes from the code itself.
+For C# code, one has to provide XML documentation in the code, without it the build will be broken.</p>
+<p>When submitting a pull request, your code will be run on the build server where it will be compiled and automated tests are ran.
+If this fail, your pull request will be marked as failing the build.</p>
+<h2 id="the-vision">The vision</h2>
+<p>There sits a vision behind Bifrost. Its not necessarily a fixed vision. But the primary objectives are to build a platform that is easy
+to use, with high productivity and is easy to maintain. On top of this, the vision has always been and will continue to be to solve
+problems for line-of-business applications. It is not aimed to solve arbitrary problems, even though Bifrost might be solving something
+outside of the primary focus. This does mean that contributions to Bifrost might not be accepted. Its hard to keep it focused, but
+the team behind it will do its best to maintain the focus and not let it diverge from the vision.</p>
+<p>The vision of what needs to be implemented shifts over time as one learns and gains experiences from usage of Bifrost. Plus new
+techniques and technologies emerges and Bifrost will adapt to these when it makes sense as well. These things, combined with a good
+and open dialog with often makes the concrete plans less fixed.</p>
+<h2 id="the-source">The Source</h2>
+<p>Bifrost is hosted on <a href="http://github.com">GitHub</a> <a href="http://github.com/dolittle/bifrost">here</a>, a social hub for software projects.</p>
+<h2 id="contributing-code-and-content">Contributing code and content</h2>
+<div class="NOTE"><h5>Note</h5><p>As of 28th of December 2016:</p>
+</div>
+<p>Bifrost has been submitted for review to .NET Foundation - if it is accepted, you will need to sign a
+<a href="https://cla2.dotnetfoundation.org/">Contributor License Agreement</a> before submitting your pull request.
+If Bifrost is not accepted into the foundation, we will have to create our own CLA and require one to sign it.</p>
+<h2 id="code-review">Code review</h2>
+<p>When submitting a pull request, the code will be reviewed.
+The things that are being looked at is as follows:</p>
+<ul>
+<li>Does it adhere to the vision. Get an idea from <a href="overview.html">here</a></li>
+<li>Naming of types, variables</li>
+<li>Does the code adhere to the patterns, practices and principles Bifrost is built upon (SOLID, SOC ++) - read more <a href="overview.html">here</a></li>
+</ul>
+<h2 id="specifications--tests">Specifications / Tests</h2>
+<p>All code should have automated tests.
+Bifrost uses a branch of <a href="http://en.wikipedia.org/wiki/Behavior-driven_development">Behavior Driven Development</a> referred to
+as <a href="http://specificationbyexample.com">Specification by Example</a>. These are run continuously to make sure we keep the code as
+we specified it to be and we don&#39;t get regressions.</p>
+<p>Every pull request must have specifications that are passing associated with it as described below.</p>
+<p>Read more about how this is done for <a href="csharp_specifications.html">C#</a> and <a href="javascript_specifications.html">JavaScript</a>.</p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dolittle/bifrost/blob/master/Documentation/Articles/contributing.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright &#169; 2008-2017 Dolittle
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

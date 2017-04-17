@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>About regions </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="About regions ">
+    <meta name="generator" content="docfx 2.15.5.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <div class="metadata">
+                <span class="contributors-text">Contributors</span>
+                <ul class="contributors">
+                    <li>
+                        <a href="https://github.com/einari">
+                            <img src="https://github.com/einari.png?size=16">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="regions">Regions</h1>
+              
+<p>Regions are at the center of the visual composition of the application.
+A region is a logical grouping of a <a href="views.html">view</a> and a <a href="view_models.html">view model</a>.
+All regions are implicitly created during compositions, Bifrost manages creation and
+lifecycle of them.</p>
+<p><img src="images/region_overview.png" alt="Region Overview"></p>
+<h2 id="hierarchy">Hierarchy</h2>
+<p>A region can have child regions. The region will be aware of any of the child
+regions properties and respond to their changes recursively. This allows for checking
+things like validation without having knowledge about the concrete different regions.
+The region will aggregate information about what is going on in the region or any of
+sub regions. Later in this article you&#39;ll see an overview of properties you can use
+from the region.</p>
+<h2 id="inheritance">Inheritance</h2>
+<p>Regions are hierarchical by nature since a view can basically choose to include one or
+more other views. Each of these views being referred to gets a region associated with it.
+A view model is optional, but will by convention automatically be loaded and instantiated
+and associated into the region.</p>
+<p>Each region has a relationship to the parent region, not only through the parent property,
+but also through inheritance. Regions inherit the parent region, making it possible to
+access properties one wants to share at a higher level.</p>
+<h2 id="region-descriptors">Region Descriptors</h2>
+<p>Expanding a region with properties or functionality is done through what is known as a
+region descriptor. This makes it possible to separate out this into its own concept.</p>
+<pre><code class="lang-javascript">Bifrost.namespace(&quot;BoundedContext.Feature&quot;, {
+    RegionDescriptor: Bifrost.views.RegionDescriptor.extend(function() {
+        this.describe = function(region) {
+            region.aCommonProperty = &quot;Something&quot;;
+        }
+    })
+});
+</code></pre><h2 id="operations">Operations</h2>
+<p>Bifrost has the concept of <a href="Interaction/operations.html">operations</a>. Basically an encapsulation
+of work that the user wants performed. The operations are aggregated into the region they belong
+to and when not executed represents a possible change.</p>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Observable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>view</td>
+<td>View</td>
+<td>X</td>
+<td>Holds the actual view for the region</td>
+</tr>
+<tr>
+<td>children</td>
+<td>Region[]</td>
+<td>X</td>
+<td>Array of child regions</td>
+</tr>
+<tr>
+<td>parent</td>
+<td>Region</td>
+<td>X</td>
+<td>Parent region</td>
+</tr>
+<tr>
+<td>isValid</td>
+<td>Boolean</td>
+<td>X</td>
+<td>Returns validation related to any commands in the hierarchy</td>
+</tr>
+<tr>
+<td>validationMessages</td>
+<td>String[]</td>
+<td>X</td>
+<td>Array of any validation messages</td>
+</tr>
+<tr>
+<td>canCommandsExwecute</td>
+<td>Boolean</td>
+<td>X</td>
+<td>Returns wether or not all the commands in the region or any sub region are capable of executing</td>
+</tr>
+<tr>
+<td>areCommandsAuthorized</td>
+<td>Boolean</td>
+<td>X</td>
+<td>Returns wether or not all the commands in the region or any sub region are authorized</td>
+</tr>
+<tr>
+<td>commandsHaveChanges</td>
+<td>Boolean</td>
+<td>X</td>
+<td>Returns wether or not any of the commands in the region or any sub region are authorized</td>
+</tr>
+<tr>
+<td>areCommandsReadyToExecute</td>
+<td>Boolean</td>
+<td>X</td>
+<td>Returns wether or not all the commands in the region or any sub region are ready to execute</td>
+</tr>
+<tr>
+<td>hasChanges</td>
+<td>Boolean</td>
+<td>X</td>
+<td>Returns wether or not there are any commands with changes or any operations scheduled in the region or any sub region</td>
+</tr>
+<tr>
+<td>isExecuting</td>
+<td>Boolean</td>
+<td>X</td>
+<td>Returns wether or not there are any commands in the region or any sub region executing</td>
+</tr>
+<tr>
+<td>isComposing</td>
+<td>Boolean</td>
+<td>X</td>
+<td>Returns wether or not composition tasks in the region or any sub region is being performed</td>
+</tr>
+<tr>
+<td>isLoading</td>
+<td>Boolean</td>
+<td>X</td>
+<td>Returns wether or not there is a loading task running, for instance queries loading data in the region or any sub region</td>
+</tr>
+<tr>
+<td>isBusy</td>
+<td>Boolean</td>
+<td>X</td>
+<td>An aggregate of isLoading, isComposing and isExecuting</td>
+</tr>
+</tbody>
+</table>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dolittle/bifrost/blob/master/Documentation/Frontend/JavaScript/regions.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright &#169; 2008-2017 Dolittle
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

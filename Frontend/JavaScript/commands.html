@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>About Commands </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="About Commands ">
+    <meta name="generator" content="docfx 2.15.5.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <div class="metadata">
+                <span class="contributors-text">Contributors</span>
+                <ul class="contributors">
+                    <li>
+                        <a href="https://github.com/einari">
+                            <img src="https://github.com/einari.png?size=16">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="commands">Commands</h1>
+              
+<p>Commands represent the users intent and also the actual transactional boundaries in the system rather than arbitrary technical transactions.
+Rather than modelling data, the command represents the action one wants to perform and the necessary
+parameters for that action to be performed. The parameters are represented as properties on the command.
+One models the commands in such a way that the properties on the command are all required and considered needed in order for the command
+to be valid and able to execute.</p>
+<p>A command can also have authorization and validation rules associated with it.</p>
+<h2 id="proxy-generation">Proxy generation</h2>
+<p>For C# developers, there are automatically generated proxies of commands, security and validation related to the command.
+Read more about the proxy generation features of Bifrost <a href="proxy_generation.html">here</a>.
+These can be taken as dependencies on constructors of types. Read more about <a href="dependency_injection.html">dependency injection</a> in Bifrost.</p>
+<p>Commands can be created manually in the client code if one wants to. It is not required to go through proxy generation.</p>
+<h2 id="authorization">Authorization</h2>
+<p>On the client, metadata from the server is brought in telling if a command is authorized for the user
+that is authenticated. The authorization is applied on the server side using security descriptors.</p>
+<h3 id="relevant-properties">Relevant properties</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Observable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>isAuthorized</td>
+<td>Boolean</td>
+<td>X</td>
+<td>Returns true if command is authorized, false if not</td>
+</tr>
+</tbody>
+</table>
+<h2 id="validation">Validation</h2>
+<p>As with authorization, commands can hold metadata from validators, but it will only hold for those rules that has a client side implementation of it.</p>
+<h3 id="properties">Properties</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Observable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>isValid</td>
+<td>Boolean</td>
+<td>X</td>
+<td>Returns true if command is valid, false if not</td>
+</tr>
+<tr>
+<td>validtionMessages</td>
+<td>string[]</td>
+<td>X</td>
+<td>Contains an array of all validation messages for validators that have failed</td>
+</tr>
+</tbody>
+</table>
+<h2 id="properties-populating-and-tracking-changes">Properties, populating and tracking changes</h2>
+<p>The properties on a command is also part of the proxy generation.</p>
+<p>By default all properties on a command once generated through the proxy generation will hold a default value.
+In many cases you want to relate a command to data coming from an existing <a href="../read_model.md">ReadModel</a> or other source.
+During initialization of a <a href="../view_models.md">ViewModel</a> you would typically connect the command with an external source
+for automatic population the command with an initial state.</p>
+<p>This initial population of state allows for tracking any changes the user does and can be very useful for the user interface.
+You will also find that this information is propagated into the <a href="../regions.md">region</a> in which the command is being used and also
+then available to any parent region up the chain.</p>
+<h3 id="methods">Methods</h3>
+<h3 id="properties-1">properties</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Observable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hasChanges</td>
+<td>Boolean</td>
+<td>X</td>
+<td>Returns true if command has changes, false if not</td>
+</tr>
+<tr>
+<td>isReady</td>
+<td>Boolean</td>
+<td>X</td>
+<td>Returns true if command has its properties ready, false if not</td>
+</tr>
+<tr>
+<td>isReadyToExecute</td>
+<td>Boolean</td>
+<td>X</td>
+<td>Returns true if command is ready to execute, false if not</td>
+</tr>
+</tbody>
+</table>
+<h2 id="execution">Execution</h2>
+<p>If any of the previously described conditions are not met, the command is not allowed to execute.
+Code and UI can access this information and use it to reflect this to user for instance.</p>
+<h3 id="properties-2">properties</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Observable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>canExecute</td>
+<td>Boolean</td>
+<td>X</td>
+<td>Returns true if command can execute, false if not</td>
+</tr>
+</tbody>
+</table>
+<h2 id="callbacks">Callbacks</h2>
+<h3 id="beforeexecute">beforeExecute</h3>
+<h3 id="failed">failed</h3>
+<h3 id="succeeded">succeeded</h3>
+<h3 id="completed">completed</h3>
+<h2 id="advanced">Advanced</h2>
+<h2 id="samples">Samples</h2>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dolittle/bifrost/blob/master/Documentation/Frontend/JavaScript/commands.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright &#169; 2008-2017 Dolittle
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

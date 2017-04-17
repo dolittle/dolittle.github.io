@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>About C# coding styles </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="About C# coding styles ">
+    <meta name="generator" content="docfx 2.15.5.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <div class="metadata">
+                <span class="contributors-text">Contributors</span>
+                <ul class="contributors">
+                    <li>
+                        <a href="https://github.com/einari">
+                            <img src="https://github.com/einari.png?size=16">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="c-coding-styles">C# Coding Styles</h1>
+              
+<p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”,
+“RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in
+<a href="https://tools.ietf.org/html/rfc2119">RFC 2119</a>.</p>
+<p>This is the to be considered the coding standard for Bifrost and is subject to automated
+verification during automated builds and also part of codereviews such as those done for
+pull requests.</p>
+<h2 id="patterns--practices">Patterns &amp; Practices</h2>
+<p>It is assumed that all code written is adhering to the patterns &amp; practices described in the
+<a href="overview.html">overview</a> article.</p>
+<h2 id="compactness">Compactness</h2>
+<p>In general, code should be compact in the sense that any &quot;noise&quot; of language artifacts or similar
+that aren&#39;t really needed <strong>SHALL NOT</strong> be used. This to increase readability, not decrease it.
+Things that are implicit, <strong>SHALL</strong> be left implicit and not turned into explicits.</p>
+<h2 id="keywords">Keywords</h2>
+<h3 id="use-of-var">Use of <code>var</code></h3>
+<p>Types are implicitly provided by the compiler and considered noise during declaration.
+If one feel the need for explicitly declaring variables with their type, it is often a
+symptom of something else being wrong - such as large methods that you can&#39;t get a feel
+for straight away. This is most likely breaking the Single Responsibility Pattern.
+You <strong>MUST</strong> use <code>var</code> and let the compiler infer the type implicitly.</p>
+<h3 id="private-members">Private members</h3>
+<p>In C# the <em>private</em> modifier is not needed as this is the default modifier if nothing is specified.
+Private members <strong>SHALL NOT</strong> have a private modifier.</p>
+<p>Example:</p>
+<pre><code class="lang-csharp">public class SomeClass
+{
+    string _someString;
+}
+</code></pre><h3 id="this">this</h3>
+<p>Explicit use of <em>this</em> <strong>SHALL NOT</strong> be used. With the convention for prefixing private members,
+the differentiation is clear.</p>
+<h2 id="prefixes-and-postfixes">Prefixes and postfixes</h2>
+<p>A very common thing in naming is to include pre/post fixes that describes the technical implementation
+or even the pattern that is being used in the implementation. This does not serve as useful information.
+Examples of this is <code>Manager</code>, <code>Helper</code>, <code>Repository</code>, <code>Controller</code> and more (e.g. <code>EmployeeRepository</code>).
+You <strong>SHOULD NOT</strong> pre or postfix, but rather come up with a name that describes what it is.
+Take <code>EmployeeRepository</code>sample, the postfix <code>Repository</code> is not useful for the consumer;
+a better name would be <code>Employees</code>.</p>
+<h2 id="member-variables">Member variables</h2>
+<p>Member variables <strong>MUST</strong> be prefixed with an underscore.</p>
+<p>Example:</p>
+<pre><code class="lang-csharp">public class SomeClass
+{
+    string _someInstanceMember;
+    static string _someStaticMember;
+}
+</code></pre><h2 id="one-type-per-file">One type per file</h2>
+<p>All files <strong>MUST</strong> contain <em>only</em> one type.</p>
+<h2 id="class-naming">Class naming</h2>
+<p>Naming of classes <strong>SHALL</strong> be unambiguous and by name tell exactly what it is providing.
+Example:</p>
+<pre><code class="lang-csharp">// Coordinates uncommitted event streams
+public class UncommittedEventStreamCoordinator {}
+</code></pre><h2 id="interface-naming">Interface naming</h2>
+<p>Its been a common naming strategy to include <code>I</code>in front of any <code>interface</code>.
+Prefixing with <code>I</code>can have other meaning as well, such as the actual word &quot;I&quot;.
+This can give better naming to interfaces and better meaning to names.</p>
+<p>Examples:</p>
+<pre><code class="lang-csharp">// Implemented by types that can provide configuration
+public interface ICanConfigure {}
+
+// Implemented by a type that can provide a container instance
+public interface ICanCreateContainer
+</code></pre><p>You <strong>SHOULD</strong> try look for this way of naming, as it provides a whole new level
+of meaning to the code.</p>
+<h2 id="private-methods">Private methods</h2>
+<p>Private methods <strong>MUST</strong> be placed at the end of a class.</p>
+<p>Example:</p>
+<pre><code class="lang-csharp">public class SomeClass
+{
+    public void PublicMethod()
+    {
+        PrivateMethod();
+    }
+
+
+    void PrivateMethod()
+    {
+
+    }
+}
+</code></pre><h2 id="exceptions">Exceptions</h2>
+<h3 id="flow">flow</h3>
+<p>Exceptions are to be considered exceptional state. They <strong>MUST NOT</strong> be used to control
+program flow. Exceptional state is typically caused by infrastructure problems or other
+problems causing normal flow to be able to continue.</p>
+<h3 id="types">types</h3>
+<p>You <strong>MUST</strong> create explicit exception types and <strong>NOT</strong> use built in ones.
+The exception type can implement one of the standard ones.</p>
+<p>Example:</p>
+<pre><code class="lang-csharp">public class SomethingIsNull : ArgumentException
+{
+    public SomethingIsNull() : base(&quot;Something was null&quot;) {}
+}
+</code></pre><h3 id="throwing">Throwing</h3>
+<p>If there is a reason to throw an exception, your validation code and actual throwing
+<strong>MUST</strong> be in a separate private method.</p>
+<p>Example:</p>
+<pre><code class="lang-csharp">public class SomeClass
+{
+    public void PublicMethod(string something)
+    {
+        ThrowIfSomethingIsNull(something);
+    }
+
+    void ThrowIfSomethingIsNull(string something)
+    {
+        if( something == null ) throw new SomethingIsNull();
+    }
+}
+</code></pre><h2 id="async--await">Async / Await</h2>
+<p>In C# the <em>async</em> / <em>await</em> keywords should be used with utmost care. It is a thing that
+without really thinking it through can bleed throughout your codebase without necessarily
+a good reason. Alongside <em>async</em> / <em>await</em> comes the <code>Task</code> type that needs to be there.
+The places where threading is necessary, it <em>MUST</em> be dealt with internally to the
+implementation and not bleed throughout its APIs. Bifrost has a very good handle on its
+entrypoints and from these entrypoints, the need for scaling out across multiple threads
+are rarely needed. With the underlying infrastructure being relied on, web requests are
+already threaded. Since we enter the system and returns back as soon possible, we have a
+good grip of when this is needed. Threads can easily get out of hand and actually slow
+down systems.</p>
+<h2 id="exposing-ilist--icollection">Exposing IList / ICollection</h2>
+<p>Public APIs <em>SHALL NOT</em> have mutable types as return types, such as IList, ICollection.
+The responsibility for maintaining state should lie with the owner of it. By exposing the
+ability for changing state outside the owner, you lose control over who can change state
+and side-effects occur that aren&#39;t clear. Instead you should always expose immutable types
+like IEnumerable instead.</p>
+<h2 id="mutability">Mutability</h2>
+<p>One of the biggest cause of side-effects in a system is the ability to mute state and possibly
+state one does not necessarily own. The example is something creates an instance of an object
+and exposes public getters and setters for its properties and inviting anyone to change
+this state. This makes it hard to track which part of the system actually changed the state.
+Be very concious about ownership of instances. Avoid mutability. Most of the time it is
+not needed. Instead, create new objects with the mutation in place.</p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dolittle/bifrost/blob/master/Documentation/Articles/csharp_coding_styles.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright &#169; 2008-2017 Dolittle
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

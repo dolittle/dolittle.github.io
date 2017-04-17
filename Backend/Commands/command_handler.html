@@ -1,0 +1,143 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Handling Commands </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Handling Commands ">
+    <meta name="generator" content="docfx 2.15.5.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <div class="metadata">
+                <span class="contributors-text">Contributors</span>
+                <ul class="contributors">
+                    <li>
+                        <a href="https://github.com/einari">
+                            <img src="https://github.com/einari.png?size=16">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/smithmx">
+                            <img src="https://github.com/smithmx.png?size=16">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="command-handler">Command Handler</h1>
+              
+<h2 id="background">Background</h2>
+<p>A <em>Command Handler</em> handles commands.  The command handler is responsible for executing the appropriate methods on Aggregate Roots and Domain Services to fulfill the intent of the <em>Command</em>.</p>
+<h2 id="requirements">Requirements</h2>
+<p>A <em>Command Handler</em> must implement the <em>IHandleCommands</em> interface.  This is a simple marker interface with no methods to implement.</p>
+<p>To handle a <em>Command</em>, you simply create a method called <em>Handle</em> with a single parameter of the <em>Command</em> you wish to handle.  A <em>Command Handler</em> does not return anything.  It is not permitted to return a value from a <em>Command</em>.  When a <em>Command</em> is executed, you will receive a <em>CommandResult</em>
+which will indicate whether the <em>Command</em> succeeded and, in the case of failure, why the <em>Command</em> failed.  No artifacts that were created or updated as a result of the <em>Command</em> will be present on the <em>CommandResult</em>.</p>
+<pre><code class="lang-csharp">public void Handle(AddRecommendationToCart cmd)
+</code></pre><p>There <strong>MUST</strong> be a single handler for a Command.  Bifrost will throw an exception if there is no handler for a command or if there is more than one handler for a command.  There can only be a single handler for a command as there must be a clear and unambiguous
+indication of the result of the execution of the command.  Multiple command handlers for a single command would require co-ordination of multiple results with associated rollback of successful handlers after unsuccessful ones.  Where you wish multiple things
+to happen on receipt of a Command, you must implement and handle this yourself in your <em>Command Handler</em>.</p>
+<h2 id="responsibilities">Responsibilities</h2>
+<p>The sole responsibility of the <em>Command Handler</em> is to execute the <em>Command</em>.</p>
+<p>A <em>Command Handler</em> should not implement any validation, security checks, or such like.  These should be handled earlier in the command pipeline.  When we invoke a <em>Command Handler</em>, it is with the expectation that the action will succeed.  We should have validated the command,
+should checked business rule conditions, should checked the permissions and therefore the command should succeed.  It is for this reason that within a <em>Command Handler</em>, the only way to indicate that the <em>Command</em> did not succeed is via an Exception.  This is because, due to our previous checks,
+it is truly an exceptional condition for the <em>Command</em> to fail.</p>
+<h2 id="design">Design</h2>
+<p>It is recommended that a <em>CommandHandler</em> should invoke a single method on <em>Aggregate Root</em>.  This is an indication that you have correctly modelled your <em>Aggregate Root</em>, <em>Command</em> and business transaction.  It is sometimes useful to think of a <em>Command</em> as a serialized call on a method on an <em>Aggregate Root</em>.</p>
+<p>As nothing can be returned from a <em>Command Handler</em>, it is recommended against relying on database generated identities or keys. You will not be able to receive the Id generated by the database.  It is recommended to use non-meaningful keys such as Guids on a <em>Command</em> which can be provided by the invoker of the <em>Command</em> and <em>Command Handler</em>.   Where a database generated key is required, it is recommended to include another candidate key that can be provided by the caller.</p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dolittle/bifrost/blob/master/Documentation/Backend/Commands/command_handler.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright &#169; 2008-2017 Dolittle
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
