@@ -100,7 +100,7 @@ public class AllEmployees : IQueryFor&lt;Employee&gt;
 underlying datastore and technique to get to the data. The only rule is that there
 must be a <a href="../../Extending/Read/query_providers.md">query provider</a> for the return type.</p>
 <p>Bifrost has a very simple <a href="read_model_repository.html">repository for read models</a> that
-can be used.</p>
+can be used. You don&#39;t have to use it, as you decide entirely what you use internally - the query sits there as a contract and can also then be changed to accommodate a change in storage strategy.</p>
 <h3 id="arguments">Arguments</h3>
 <p>With queries, sometimes you need to filter based on input. Any public property with
 a getter and a setter is considered an argument for the query.</p>
