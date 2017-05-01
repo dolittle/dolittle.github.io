@@ -87,9 +87,9 @@ The generic type argument should point to a <a href="read_model.html">read model
 This is a marker interface and does not require you implement anything specific.
 Instead it is relying on a convention; its looking for a property called <code>Query</code>.
 This property needs a getter and can effectively return any type. The type that it
-returns is recognized by Bifrost and Bifrost will look for a <a href="query_providers.html">query provider</a>
+returns is recognized by Bifrost and Bifrost will look for a <a href="query_providers.md">query provider</a>
 for the type returned. By default you could be returning an <code>IQueryable&lt;&gt;</code> - something
-Bifrost has a <a href="query_providers.html">query provider</a> for.</p>
+Bifrost has a <a href="query_providers.md">query provider</a> for.</p>
 <pre><code class="lang-csharp">using Bifrost.Read;
 
 public class AllEmployees : IQueryFor&lt;Employee&gt;
