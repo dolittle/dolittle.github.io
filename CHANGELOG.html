@@ -66,6 +66,48 @@
             <article class="content wrap" id="_content" data-uid="">
               <h1 id="release-notes">Release Notes</h1>
               
+<h2 id="version-120">Version 1.2.0</h2>
+<ul>
+<li>Added guidance for issues <a href="https://github.com/dolittle/Bifrost/issues/698">#698</a></li>
+<li>Including PDB files in NuGet Packages <a href="https://github.com/dolittle/Bifrost/issues/744">#744</a></li>
+<li>Migrated remaining NUnit specs to MSpec <a href="https://github.com/dolittle/Bifrost/issues/687">#687</a></li>
+<li>Introduced GitVersion for getting version for builds <a href="https://github.com/dolittle/Bifrost/issues/758">#758</a></li>
+<li>Changed all files from CRLF to LF <a href="https://github.com/dolittle/Bifrost/issues/732">#732</a></li>
+<li>Various changes migrated from ProCoSys fork: [#713(<a href="https://github.com/dolittle/Bifrost/issues/713">https://github.com/dolittle/Bifrost/issues/713</a>)<ul>
+<li>Use activator to create instances of Commands when generating proxies</li>
+<li>Limit initialization of AssetsManager once - JavaScript</li>
+<li>Introduce IConvention as a marker interface for finding things that are governed by conventions</li>
+<li>Composed validators improvement</li>
+<li>Security proxies excluded from the application route</li>
+</ul>
+</li>
+<li>Updated debugging documentation <a href="https://github.com/dolittle/Bifrost/issues/734">#734</a></li>
+<li>Documentation for how you could set up Web.config <a href="https://github.com/dolittle/Bifrost/issues/735">#735</a></li>
+<li>Documentation for editor config <a href="https://github.com/dolittle/Bifrost/issues/731">#731</a></li>
+<li>Added MyGet symbol source <a href="https://github.com/dolittle/Bifrost/issues/737">#737</a></li>
+<li>Cleaned up Tabs to Spaces <a href="https://github.com/dolittle/Bifrost/issues/">#733</a></li>
+<li>Ensure CommandHandlerInvoker is only called once <a href="https://github.com/dolittle/Bifrost/issues/766">#766</a></li>
+<li>Upgraded to release version of FluentValidation <a href="https://github.com/dolittle/Bifrost/issues/775">#775</a></li>
+<li><code>IExceptionSubscriber</code> for catching errors that can be logged or surfaced <a href="https://github.com/dolittle/Bifrost/issues/773">#773</a></li>
+<li>Updated to the latest Mongo DB driver <a href="https://github.com/dolittle/Bifrost/issues/789">#789</a> <a href="https://github.com/dolittle/Bifrost/issues/594">#594</a> <a href="https://github.com/dolittle/Bifrost/issues/779">#779</a></li>
+<li>[Breaking Change] Configuration of events for pipeline <a href="https://github.com/dolittle/Bifrost/issues/787">#787</a></li>
+<li>[Breaking Change] Changed entire pipeline of events and subscriptions <a href="https://github.com/dolittle/Bifrost/issues/596">#596</a> <a href="https://github.com/dolittle/Bifrost/issues/193">#193</a></li>
+<li>[Breaking Change] Move to OWIN and not be coupled to System.Web <a href="https://github.com/dolittle/Bifrost/issues/515">#515</a></li>
+<li>[Breaking Change] Include Application details instead of system <a href="https://github.com/dolittle/Bifrost/issues/799">#799</a></li>
+<li>[Breaking Change] Updated ITenant to use a <code>dynamic</code> instead of <code>WriteOnceExpandoObject</code> <a href="https://github.com/dolittle/Bifrost/issues/797">#797</a></li>
+<li>Fixed so that <code>ICanPopulateTenant</code> implementations actually gets called <a href="https://github.com/dolittle/Bifrost/issues/798">#798</a></li>
+<li>Using ContentRoot as the actual content root for .NET Core Applications <a href="https://github.com/dolittle/Bifrost/issues/800">#800</a></li>
+<li>Provide a workaround for .NET standard of Ninject for default bindings <a href="https://github.com/dolittle/Bifrost/issues/801">#801</a></li>
+<li>[Breaking Change] Improved configuration of Events <a href="https://github.com/dolittle/Bifrost/issues/591">#591</a></li>
+<li>[Breaking Change] Do not expose default lifecycle for containers <a href="https://github.com/dolittle/Bifrost/issues/717">#717</a></li>
+<li>EventStore implementation for Azure Tables <a href="https://github.com/dolittle/Bifrost/issues/771">#771</a></li>
+<li>Simple support for Rabbit MQ <a href="https://github.com/dolittle/Bifrost/issues/741">#741</a></li>
+<li>DocumentDB support moved to Bifrost.Read.DocumentDB <a href="https://github.com/dolittle/Bifrost/issues/812">#812</a></li>
+<li>Introduce logging <a href="https://github.com/dolittle/Bifrost/issues/816">#816</a></li>
+<li>Fixing an exception that occured in Ninject during parallell loading <a href="https://github.com/dolittle/Bifrost/issues/818">#818</a></li>
+<li>Migrate to MSBuild based projects - away from project.json <a href="https://github.com/dolittle/Bifrost/issues/815">#815</a></li>
+<li>[Breaking Change] Systemname not part of configuration anymore <a href="https://github.com/dolittle/Bifrost/issues/814">#814</a></li>
+</ul>
 <h2 id="version-112">Version 1.1.2</h2>
 <ul>
 <li>No changes - just fingertrouble when releasing 1.1.1</li>
