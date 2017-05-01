@@ -1,0 +1,289 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Resources </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Resources ">
+    <meta name="generator" content="docfx 2.15.5.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <div class="metadata">
+                <span class="contributors-text">Contributors</span>
+                <ul class="contributors">
+                    <li>
+                        <a href="https://github.com/einari">
+                            <img src="https://github.com/einari.png?size=16">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="resources">Resources</h1>
+              
+<div class="NOTE"><h5>Note</h5><p>The key words “MUST”, “MUST NOT”, “REQUIRED”, “SHALL”, “SHALL NOT”, “SHOULD”, “SHOULD NOT”,
+“RECOMMENDED”, “MAY”, and “OPTIONAL” in this document are to be interpreted as described in
+<a href="https://tools.ietf.org/html/rfc2119">RFC 2119</a>.</p>
+</div>
+<p>All artifacts one create in an application are identified as application resources.
+These resources are represented by what is called an <strong>Application Resource Identifier</strong>.
+This identifier keeps information about the location of a resource, its logical name and
+what well known type it is.</p>
+<p>The identifiers are used throughout the runtime when using things like <a href="../Commands/introduction.html">Commands</a>, <a href="../Events/event_sourcing.html">EventSources</a> and <a href="../Events/event.html">Events</a>. For instance, when an Event is persisted to the <a href="../Events/event_store.html">store</a>; metadata related to the event is stored with it - such as the <strong>Application Resource Identifier</strong>. The reason for storing this type of information rather than the language specific information, such as the .NET CLR information is that it leaves us with less flexibility in the code for refactoring. Once an event is stored and we need to replay an event from the store, if it sits there with Type information and it has been moved - there is no way to identify it and get back to the actual type.</p>
+<p>In addition to this, it opens up the opportunity for Bifrost to be a runtime hosting other languages as well. By decoupling from language structures and having a common representation of resources, we can then go between different platforms.</p>
+<h2 id="domain-driven">Domain Driven</h2>
+<p>The structure of an <strong>Application Resource Identifier</strong> is focused around your actual domain.</p>
+<div class="NOTE"><h5>Note</h5><p>Read more <a href="../../Articles/overview.html">here</a> about domain driven design in Bifrost.</p>
+</div>
+<p>It all starts with a bounded context and within it you can have one or more modules and with each of these one or more features. Within each feature you can also have a recursive number of sub features. For all of these levels in the hierarchy you can have resources that live. </p>
+<p>Every resource in the system has a specific purpose in the pipeline and often they should also be segregated from other resources. They are therefor identified to belong to a certain <a href="#Well-known-areas">area</a>.</p>
+<p>The structure would look like the following for each of the areas.</p>
+<pre><code>+-- Bounded Context
+|   - Resource
+|   +-- Module
+|   |   - Resource
+|   +---- Feature
+|   |     - Resource
+|   +------ Sub feature
+|   |       - Resource
+</code></pre><h2 id="configuration">Configuration</h2>
+<p>Bifrost relies heavily on conventions and some of these conventions are configurable in how it resolves things. Application Resources is a good example of something that can be configured and in 
+fact needs to have some configuration in order for it to be able to resolve resources back and forth from programming language specific metadata to Bifrost specific metadata.</p>
+<p>In order for Bifrost to be able to take a programming langauge specific type and turn it into a <strong>Application Resource Identifier</strong>, it needs to be able to turn the metadata from the type info into strings and be able to extract the details from it into an identifier. This is configured using a special string expression.</p>
+<div class="NOTE"><h5>Note</h5><p>It is also possible to configure it using the fluent interface. That is not covered by the documentation at this point</p>
+</div>
+<p>The format is based on well known identifiers which it recognizes:</p>
+<ul>
+<li>BoundedContext</li>
+<li>Module</li>
+<li>Feature</li>
+<li>SubFeature</li>
+</ul>
+<p>All these has to be represented as a variable according to the.
+Example:</p>
+<p>&quot;{BoundedContext}.-^{Module}.-^{Feature}.-^{SubFeature}*</p>
+<p>This is telling that the BoundedContext is required, while the rest are optionals and the last SubFeature is recursive and also depends on the existence of a Feature. SubFeatures belong to a Feature.</p>
+<p>One format <em>MUST</em> include a BoundedContext - there can only be one of it.
+One format <em>CAN</em> include Module, and there <em>MUST</em> only be one of it
+One format <em>CAN</em> include Feature, but only if there is a Module before in the string format, and there <em>MUST</em> only be one of it
+One format <em>CAN</em> include multiple SubFeatures, but only if there is a Feature before in the string format</p>
+<p>Configuring this in C# using an <code>ICanConfigure</code>implementation:</p>
+<pre><code class="lang-csharp">public class Configurator : ICanConfigure
+{
+    public void Configure(IConfigure configure)
+    {
+        configure
+            .Application(&quot;ApplicationName&quot;,
+                a =&gt; a.Structure(s =&gt; s
+                    .Domain(&quot;Domain.{BoundedContext}.-{Module}.-{Feature}.^{SubFeature}*&quot;)
+                    .Events(&quot;Events.{BoundedContext}.-{Module}.-{Feature}.^{SubFeature}*&quot;)
+                    .Read(&quot;Read.{BoundedContext}.-{Module}.-{Feature}.^{SubFeature}*&quot;)
+                    .Frontend(&quot;Web.{BoundedContext}.-{Module}.-{Feature}.^{SubFeature}*&quot;)
+            ));
+
+        // Other configuration...
+    }
+}
+</code></pre><p>This configuration basically tells how it can resolve a C# namespace into the location
+of resources. In addition to that, make note of the application name, which is also part of the identifier.</p>
+<div class="NOTE"><h5>Note</h5><p>Notice that the fluent interface has support for the <a href="#Well-known-areas">well known areas</a>.</p>
+</div>
+<p>It is possible to have multiple locations for an area. You just simply add another line with a configuration matching up with your namespace and type information.</p>
+<h2 id="working-with-resources">Working with resources</h2>
+<p>Inside Bifrost you&#39;ll find a set of tools that can help you work with resources. Normally you would not need to do this, as all the resource management is taken care of for you. But if you have a specific need in your application to work directly with it - you have a few options to do so.</p>
+<h3 id="identifying-types">Identifying types</h3>
+<p>If you have a language specific representation of a resource, for instance an Event in C#:</p>
+<pre><code class="lang-csharp">namespace Events.MyBoundedContext
+{
+    public class MyEvent : Event
+    {
+
+    }
+}
+</code></pre><p>You can identify this by taking a dependency on <code>IApplicationResources</code> and use one of the methods to identify it; either by the instance or by its type:</p>
+<pre><code class="lang-csharp">using Bifrost.Applications;
+using Events.MyBoundedContext;
+
+namespace MyApplication
+{
+    public class MySystem 
+    {
+        public MySystem(IApplicationResources applicationResources)
+        {
+            // Identify the resource from a CLR type
+            var identifier = applicationResources.Identify(typeof(MyEvent));
+        }
+    }
+}
+</code></pre><h3 id="converters">Converters</h3>
+<p>The object hierarchy representing a resource is not practical when you want to store or transport the information about the resource. There is a converter that can be used to convert back and forth from simpler string representations:</p>
+<pre><code class="lang-csharp">using Bifrost.Applications;
+using Events.MyBoundedContext;
+
+namespace MyApplication
+{
+    public class MySystem 
+    {
+        public MySystem(
+            IApplicationResources applicationResources,
+            IApplicationResourceIdentifierConverter converter)
+        {
+            var identifier = applicationResources.Identify(typeof(MyEvent));
+
+            // Make a string representation
+            var identifierAsString = converter.AsString(identifier);
+
+            // Get an identifier from a string representation
+            var identifierConvertedBack = converter.FromString(identifierAsString);
+        }
+    }
+}
+</code></pre><h3 id="resolvers">Resolvers</h3>
+<p>When you have an identifier and you want to get to the actual runtime type, you need something that is capable of resolving it. In Bifrost for C# you have something that does just that; <code>IApplicationResourceResolver</code>:</p>
+<pre><code class="lang-csharp">using Bifrost.Applications;
+using Events.MyBoundedContext;
+
+namespace MyApplication
+{
+    public class MySystem 
+    {
+        public MySystem(
+            IApplicationResources applicationResources,
+            IApplicationResourceIdentifierConverter converter,
+            IApplicationResourceResolver resolver)
+        {
+            var identifier = applicationResources.Identify(typeof(MyEvent));
+            var identifierAsString = converter.AsString(identifier);
+
+            var identifierConvertedBack = converter.FromString(identifierAsString);
+
+            // Get the type back
+            var type = resolver.Resolve(identifierConvertedBack);
+        }
+    }
+}
+</code></pre><h2 id="well-known-areas">Well known areas</h2>
+<p>There are areas that Bifrost consider well known and part of every Bifrost application. These are as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Domain</td>
+<td>Holds your commands, input validation rules, business rules, aggregate roots</td>
+</tr>
+<tr>
+<td>Events</td>
+<td>Holds only your Events</td>
+</tr>
+<tr>
+<td>Read</td>
+<td>Holds your readmodels, queries</td>
+</tr>
+<tr>
+<td>Frontend</td>
+<td>Holds everything related to your frontend</td>
+</tr>
+</tbody>
+</table>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dolittle/bifrost/blob/master/Documentation/Backend/Application/resources.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright &#169; 2008-2017 Dolittle
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
