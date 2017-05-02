@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Query Providers </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Query Providers ">
+    <meta name="generator" content="docfx 2.15.5.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <div class="metadata">
+                <span class="contributors-text">Contributors</span>
+                <ul class="contributors">
+                    <li>
+                        <a href="https://github.com/einari">
+                            <img src="https://github.com/einari.png?size=16">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <article class="content wrap" id="_content" data-uid="">
+              <h1 id="query-providers">Query Providers</h1>
+              
+<p>The <code>IQueryFor&lt;&gt;</code>interface that a query implements is just a marker interface.
+Meaning that there is really nothing to implement. Instead of having a fixed interface there is a convention in place. Bifrost will look for a property called Query that has a public getter. From this it looks at the returntype and discovers from types loaded if there is a <code>IQueryProvider</code>implementation for that return type.</p>
+<p>The purpose of the <code>IQueryProvider</code>is to provide the capability to deal with the cross cutting aspects of paging for instance. This is not something we want to build into the queries we create, as it is a frontend concern and something we can provide as metadata from the frontend when performing a query. Out of the box comes support for <code>IQueryable</code> - both generic and non-generic.</p>
+<h2 id="implementing">Implementing</h2>
+<p>Implementing a provider for your return type is fairly straight forward.
+All you need to do is implement the <code>IQueryProviderFor&lt;YourReturnType&gt;</code>.
+The return type is typically the base non-generic type and Bifrost will understand if you return a specific generically typed version of that - as long as it points to the base type.</p>
+<p>The implementation needs then to take care of providing the count of elements and if paging is enabled in the <code>PagingInfo</code>metadata, just do the right thing for the type coming in.</p>
+<p>Below is a very simple implementation of a provider for IQueryable - in fact, pretty much the same that sits inside Bifrost.</p>
+<pre><code class="lang-csharp">public class QueryableProvider : IQueryProviderFor&lt;IQueryable&gt;
+{
+    public QueryProviderResult Execute(IQueryable query, PagingInfo paging)
+    {
+        var result = new QueryProviderResult();
+        result.TotalItems = query.Count();
+        if (paging.Enabled)
+        {
+            var start = paging.Size * paging.Number;
+            query = query.Skip(start).Take(paging.Size);
+        }
+        result.Items = query;
+        return result;
+    }
+}
+</code></pre><h2 id="custom-type">Custom type</h2>
+<p>Lets say you create your own type that represents collections of data:</p>
+<pre><code class="lang-csharp">public interface ICustomQuery
+{
+    // Your functionality
+}
+
+public interface ICustomQueryFor&lt;T&gt; : ICustomQuery
+   where T: IReadModel
+{
+    // Your functionality
+}
+</code></pre><p>The query provider could then be something like this:</p>
+<pre><code class="lang-csharp">public class CustomQueryProvider : IQueryProviderFor&lt;ICustomQuery&gt;
+{
+    public QueryProviderResult Execute(ICustomQuery query, PagingInfo paging)
+    {
+        var result = new QueryProviderResult()
+        result.TotalItems = query. /* provide the total items */
+
+        result.Items = query. /* do my paging thing, if needed */ 
+
+        return result;
+    }
+}
+</code></pre><p>When using it in a query, you simply do:</p>
+<pre><code class="lang-csharp">public class MyReadModel : IReadModel
+{
+}
+
+public class MyQuery : IQueryFor&lt;MyReadModel&gt;
+{
+    public ICustomQueryFor&lt;MyReadModel&gt; Query
+    {
+        get
+        {
+            return /* Get the custom query from somewhere */
+        }
+    }
+}
+</code></pre>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dolittle/bifrost/blob/master/Documentation/Extending/Read/query_providers.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Copyright &#169; 2008-2017 Dolittle
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

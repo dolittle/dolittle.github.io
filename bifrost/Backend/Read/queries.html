@@ -98,7 +98,7 @@ public class AllEmployees : IQueryFor&lt;Employee&gt;
 }
 </code></pre><p>The implementation of the query can be anything you want it to be. Use whatever
 underlying datastore and technique to get to the data. The only rule is that there
-must be a <a href="../../Extending/Read/query_providers.md">query provider</a> for the return type.</p>
+must be a <a href="../../Extending/Read/query_providers.html">query provider</a> for the return type.</p>
 <p>Bifrost has a very simple <a href="read_model_repository.html">repository for read models</a> that
 can be used. You don&#39;t have to use it, as you decide entirely what you use internally - the query sits there as a contract and can also then be changed to accommodate a change in storage strategy.</p>
 <h3 id="arguments">Arguments</h3>
@@ -250,7 +250,7 @@ Read more about proxy generation <a href="../../Frontend/proxy_generation.md">he
 <p><img src="Images/query_pipeline.png" alt="Query Pipeline"></p>
 <h2 id="query-provider---extension-point">Query provider - Extension point</h2>
 <p>Key aspect of the query pipeline is the query provider model, you can extend the behavior for custom return types.
-Read more about it <a href="../../Extending/Read/query_providers.md">here</a>.</p>
+Read more about it <a href="../../Extending/Read/query_providers.html">here</a>.</p>
 
             </article>
           </div>
