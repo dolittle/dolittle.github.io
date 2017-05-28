@@ -80,7 +80,7 @@
               
 <p>Regions are at the center of the visual composition of the application.
 A region is a logical grouping of a <a href="views.html">view</a> and a <a href="view_models.html">view model</a>.
-All regions are implicitly created during compositions, Bifrost manages creation and
+All regions are implicitly created during compositions, doLittle manages creation and
 lifecycle of them.</p>
 <p><img src="images/region_overview.png" alt="Region Overview"></p>
 <h2 id="hierarchy">Hierarchy</h2>
@@ -101,15 +101,15 @@ access properties one wants to share at a higher level.</p>
 <h2 id="region-descriptors">Region Descriptors</h2>
 <p>Expanding a region with properties or functionality is done through what is known as a
 region descriptor. This makes it possible to separate out this into its own concept.</p>
-<pre><code class="lang-javascript">Bifrost.namespace(&quot;BoundedContext.Feature&quot;, {
-    RegionDescriptor: Bifrost.views.RegionDescriptor.extend(function() {
+<pre><code class="lang-javascript">doLittle.namespace(&quot;BoundedContext.Feature&quot;, {
+    RegionDescriptor: doLittle.views.RegionDescriptor.extend(function() {
         this.describe = function(region) {
             region.aCommonProperty = &quot;Something&quot;;
         }
     })
 });
 </code></pre><h2 id="operations">Operations</h2>
-<p>Bifrost has the concept of <a href="Interaction/operations.html">operations</a>. Basically an encapsulation
+<p>doLittle has the concept of <a href="Interaction/operations.html">operations</a>. Basically an encapsulation
 of work that the user wants performed. The operations are aggregated into the region they belong
 to and when not executed represents a possible change.</p>
 <h2 id="properties">Properties</h2>

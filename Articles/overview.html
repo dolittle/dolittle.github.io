@@ -78,7 +78,7 @@
             <article class="content wrap" id="_content" data-uid="">
               <h1 id="overview">Overview</h1>
               
-<p>Bifrost targets the line of business type of application development. In this space there are very often requirements that
+<p>doLittle targets the line of business type of application development. In this space there are very often requirements that
 are somewhat different than making other types of applications. Unlike creating a web page with content, line of business
 applications has more advanced business logic and rules associated with it. In addition, most line of business applications
 tend to live for a long time once they are being used by users. Big rewrites are often not an option, as it involves a lot of
@@ -91,27 +91,29 @@ software that is hard to maintain. According to <a href="https://en.wikipedia.or
 <a href="https://en.wikipedia.org/wiki/The_Mythical_Man-Month">&quot;The Mythical Man-Month&quot;</a>, 90% of the cost
 related to a typical system arise in the maintenance phase. This means that we should aim towards building our systems
 in a way that makes the maintenance phase as easy as possible.</p>
-<p>The goal of Bifrost is to help make this better by focusing on bringing together good software patterns and practices,
-and sticking to them without compromise. Bifrost embraces a set of practices described in this article and aims to adhere
+<p>The goal of doLittle is to help make this better by focusing on bringing together good software patterns and practices,
+and sticking to them without compromise. doLittle embraces a set of practices described in this article and aims to adhere
 to them fully.</p>
 <h2 id="history">History</h2>
 <p>The project got started by <a href="https://github.com/einari">Einar Ingebrigtsen</a> in late 2008 with the first public commits going out
-to Codeplex in early 2009. Source control History between 2009 and 2012 still sits <a href="http://bifrost.codeplex.com">there</a>. The
+to Codeplex in early 2009. It was originally called Bifrost. Source control History between 2009 and 2012 still sits <a href="http://bifrost.codeplex.com">there</a>. The
 initial thoughts behind the project was to encapsulate commonly used building blocks. In 2009, <a href="https://github.com/smithmx">Michael Smith</a>
-and <a href="https://github.com/einari">Einar</a> took the project in a completely different direction after real world experience with 
-traditional n-tier architecture and the discovery of commands. In 2012 it was moved to <a href="https://github.com/dolittle/bifrost">GitHub</a>.</p>
+and <a href="https://github.com/einari">Einar</a> took the project in a completely different direction after real world experience with
+traditional n-tier architecture and the discovery of commands. In 2012 it was moved to <a href="https://github.com/dolittle/DotNET.Core">GitHub</a>.</p>
+<div class="NOTE"><h5>Note</h5><p>The original Bifrost repository can be found <a href="https://github.com/dolittle/bifrost">here</a>.</p>
+</div>
 <p>From the beginning the project evolved through the needs we saw when consulting for different companies. Amongst these were <a href="https://www.komplett.no">Komplett</a>.
 It has always had a high focus on delivering the building blocks to be able to deliver the true business value. This has been
 possible by engaging very close with domain experts and developers working on line of business solutions.</p>
 <p>A presentation @ NDC 2011 showcases the work that was done, you can find it <a href="https://vimeo.com/45594255">here</a>.
 From 2012 to 2015 it got further developed @ Statoil and their needs for a critical LOB application; ProCoSys.
-In 2015, <a href="https://github.com/bnordli">Børge Nordli</a> became the primary Bifrost resource @ Statoil and late 2015 he started
-maintaining a <a href="https://github.com/ProCoSys/Bifrost">fork</a> that was used by the project. Pull Requests from the fork has been
+In 2015, <a href="https://github.com/bnordli">Børge Nordli</a> became the primary doLittle resource @ Statoil and late 2015 he started
+maintaining a <a href="https://github.com/ProCoSys/doLittle">fork</a> that was used by the project. Pull Requests from the fork has been
 coming in steadily.</p>
 <p>The effort of design and thoughtwork going into the project is a result of great collaboration over the years.
 Not only by the primary maintainers; Michael, Børge and Einar - but all colleagues and other contributors to the project.</p>
 <h2 id="domain-driven-design">Domain Driven Design</h2>
-<p>Bifrost got from the beginning set to embrace <a href="https://en.wikipedia.org/wiki/Domain-driven_design">Domain Driven Design</a> and
+<p>doLittle got from the beginning set to embrace <a href="https://en.wikipedia.org/wiki/Domain-driven_design">Domain Driven Design</a> and
 its concepts from. The reason for this is that part of modelling a system is understanding the domain that the system is targetting and
 understanding the vocabulary used by the domain experts in that domain and then be able to model exactly this.
 DDD is all about getting to a ubiquitous language that all team members use and understand.</p>
@@ -137,54 +139,54 @@ overview of the bounded context and its artifacts.</p>
 <p>At times bounded contexts needs a certain awareness of other contexts. This is often related to data and things that
 the certain context does not own, but needs a relationship to. A bounded context mediator can then provide a bridge between the
 contexts. This is something that is modelled directly. </p>
-<div class="NOTE"><h5>Note</h5><p>As of December 2016, Bifrost does not have a mechanism for this.
-It is under investigation in Issue <a href="https://github.com/dolittle/Bifrost/issues/684">#684</a></p>
+<div class="NOTE"><h5>Note</h5><p>As of December 2016, doLittle does not have a mechanism for this.
+It is under investigation in Issue <a href="https://github.com/dolittle/doLittle/issues/684">#684</a></p>
 </div>
 <h3 id="building-blocks">Building blocks</h3>
-<p>Domain Driven Design provides a set of building blocks to be able to model the domain. Bifrost aims to include most of these
+<p>Domain Driven Design provides a set of building blocks to be able to model the domain. doLittle aims to include most of these
 building blocks as long as it makes sense.</p>
 <h4 id="value-object">Value Object</h4>
 <p>A value object is an object that contains attributes but has no conceptual identity. They should be treated as immutable.
-In Bifrost you&#39;ll find the <a href="../Backend/concepts.md">concept</a> value object as a good example. Value objects does not hold
+In doLittle you&#39;ll find the <a href="../Backend/concepts.md">concept</a> value object as a good example. Value objects does not hold
 identity that make them unique in a system. For instance multiple persons can live on the same address, making the address
 a great candidate for a value object as it is not a unique identifier.</p>
 <h4 id="aggregate">Aggregate</h4>
-<p>Aggregates represents a collection of objects that are bound together to form a root entity. In Bifrost you&#39;ll find the
-<a href="../Backend/aggregate_root.html">AggregateRoot</a> that represents this. Important aspect of the aggregate in Bifrost is
+<p>Aggregates represents a collection of objects that are bound together to form a root entity. In doLittle you&#39;ll find the
+<a href="../Backend/aggregate_root.html">AggregateRoot</a> that represents this. Important aspect of the aggregate in doLittle is
 however that it does not expose any public state, whatever entities it relies on should only be used internally to
 be able to perform business logic. The <code>AggregateRoot</code>is also what is known as an <a href="../Backend/Events/event_sourcing.html">EventSource</a>.</p>
 <h3 id="entity">Entity</h3>
 <p>Entities are the artifacts that aggregates can use to form the root entity. They are uniquely identified in the system.
-For <a href="../Backend/aggregate_root.html">aggregate roots</a> in Bifrost, it is about modelling the business logic that belong together.</p>
-<div class="NOTE"><h5>Note</h5><p>As of December 2016, Bifrost does not have a specific construct for this
-It is under investigation in Issue <a href="https://github.com/dolittle/Bifrost/issues/685">#685</a></p>
+For <a href="../Backend/aggregate_root.html">aggregate roots</a> in doLittle, it is about modelling the business logic that belong together.</p>
+<div class="NOTE"><h5>Note</h5><p>As of December 2016, doLittle does not have a specific construct for this
+It is under investigation in Issue <a href="https://github.com/dolittle/doLittle/issues/685">#685</a></p>
 </div>
 <h4 id="repository">Repository</h4>
 <p>The repository pattern is all about providing an abstraction for working with domain objects and be storage agnostic, but focused
 around the needs of the domain model.
-Since Bifrost is built around the concept of <a href="https://en.wikipedia.org/wiki/Command–query_separation#Command_Query_Responsibility_Segregation">CQRS</a>,
+Since doLittle is built around the concept of <a href="https://en.wikipedia.org/wiki/Command–query_separation#Command_Query_Responsibility_Segregation">CQRS</a>,
 the domain repository is one that knows how to work with <a href="../Backend/aggregate_root.html">aggregate roots</a>.</p>
 <h4 id="service">Service</h4>
 <p>When operations conceptually does not belong to the domain object, you can pull in supporting services.
 These are not something the aggregate knows about, but something that knows about both and coordinates it.
-In Bifrost this would be the <a href="../Backend/Commands/command_handler.html">CommandHandler</a></p>
+In doLittle this would be the <a href="../Backend/Commands/command_handler.html">CommandHandler</a></p>
 <h4 id="domain-events">Domain Events</h4>
 <p>Important part of modelling the domain are the <a href="../Backend/Events/introduction.html">domain events</a>. These are the things
 the domain experts talk about, the consequences, the things that happens in the system. Domain events represents the actual
 state transitions in a system. The <a href="../Backend/aggregate_root.html">AggregateRoot</a> is the place where events are produced.</p>
 <h2 id="solid">SOLID</h2>
 <p>The <a href="https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)">SOLID principles</a> aims to make it easier to create more maintainable software.
-It has been the core principles at play from the beginning of Bifrost.
-Below is a quick summary and some relations into Bifrost.</p>
+It has been the core principles at play from the beginning of doLittle.
+Below is a quick summary and some relations into doLittle.</p>
 <h3 id="single-responsibility-principle">Single Responsibility Principle</h3>
 <p>Every class should have a single responsibility.</p>
 <h3 id="open--closed-principle">Open / Closed Principle</h3>
 <p>Systems and its entities should be open for extension, but closed for modification.
 A good examples of this is how you can extend your system quite easily by just putting in new <a href="../Backend/Events/event_processor.html">event processor</a>
-without having to change the internals of Bifrost.</p>
+without having to change the internals of doLittle.</p>
 <h3 id="liskov-substition-principle">Liskov Substition Principle</h3>
 <p>Objects in a program should be replacead with instances of their subtypes without altering the correctness of that program.
-An example of how Bifrost follows this is for instance the <a href="../Backend/Events/event_store.html">event store</a> works.
+An example of how doLittle follows this is for instance the <a href="../Backend/Events/event_store.html">event store</a> works.
 It has multiple implementations and the contract promises what it can do, implementations need to adhere to the contract.</p>
 <h3 id="interface-segregation-principle">Interface Segregation Principle</h3>
 <p>Interfaces should represent a single purpose, or concerns. A good example in .NET would be <code>IEnumerable</code> and <code>ICollection</code>.
@@ -195,17 +197,17 @@ the collection by providing support for adding and removing. A concrete implemen
 Rather than a system knowing about concrete types and taking also on the responsibility of the lifecycle of its dependencies.
 We can quite easily define on a constructor level the dependencies it needs and let a consumer provide the dependencies.
 This is often dealt with by introducing an <a href="https://en.wikipedia.org/wiki/Inversion_of_control">IOC</a> container into the system.
-Bifrost is built around this principle and relies on all dependencies to be provided to it.
+doLittle is built around this principle and relies on all dependencies to be provided to it.
 It also assumes one has a container in place, read more <a href="../Backend/container.html">here</a>.</p>
 <h2 id="seperation-of-concerns">Seperation of Concerns</h2>
 <p>Another part of breaking up the system is to identify and understand the different concerns and separate these out.
 An example of this is in the frontend, take a view for instance. It consists of flow, styling and logic. All these are
 different concerns that we can extract into their own respective files and treat independently; HTML, CSS, JavaScript.
 Other good examples are validation, instead of putting the validation as attributes on a model in C# - separate these into their
-own files like <a href="../Backend/validation.html">Bifrost enforces</a>.</p>
+own files like <a href="../Backend/validation.html">doLittle enforces</a>.</p>
 <p>Read more in details about it <a href="https://en.wikipedia.org/wiki/Separation_of_concerns">here</a>.</p>
 <h2 id="decoupling--microservices">Decoupling &amp; Microservices</h2>
-<p>At the heart of Bifrost sits the notion of decoupling. Making it possible to take a system and break it into small focused lego pieces
+<p>At the heart of doLittle sits the notion of decoupling. Making it possible to take a system and break it into small focused lego pieces
 that can be assembled together in any way one wants to. This is at the core of what is referred to as
 <a href="https://en.wikipedia.org/wiki/Microservices">Microservices</a>. The ability to break up the software into smaller more digestable components
 that makes our software in fact much easier to understand and maintain. When writing software in a decoupled manner, one gets the
@@ -214,54 +216,54 @@ process, or you could spread it across a cluster. It really is a deployment choi
 When it is broken up you get the benefit of scaling each individual piece on its own, rather than scaling the monolith
 equally across a number of machines. This gives a higher density, better resource utilization and ultimately better cost
 control. With all the principles mentioned in this article, one should be able to produce such a system and that is what
-Bifrost aims to help with.</p>
+doLittle aims to help with.</p>
 <h3 id="discovery">Discovery</h3>
-<p>Bifrost is heavily relying on different types of discovering mechanisms.
+<p>doLittle is heavily relying on different types of discovering mechanisms.
 For the C# code the discovery is all about types. It relies on being able to discover concrete types, but also implementations of interfaces.
 Through this it can find the things it needs. You can read more about the type discovery mechanism <a href="../Backend/type_discovery.html">here</a>.
 It automatically knows about all the assemblies and the types in your system through the <a href="../Backend/assembly_discovery.html">assembly discovery</a>
 done at startup.</p>
 <h2 id="cross-cutting-concerns">Cross Cutting Concerns</h2>
 <p>When concerns are seperated out, some of these can be applied cross cuttingly. <a href="https://en.wikipedia.org/wiki/Aspect-oriented_programming">Aspect-oriented programming</a>
-is one way of applying these. Other ways could be more explicitly built into the code; something that Bifrost enables.
+is one way of applying these. Other ways could be more explicitly built into the code; something that doLittle enables.
 The point of this is to be able to cross-cuttingly enforce code. Things that typically are repetitive tasks that a developer needs
 to remember to do are good candidates for this. It could also be more explicit like the <a href="../Backend/security_descriptor.html">security descriptors</a>
-in Bifrost that enables one to declaratively set up authorization rules across namespaces for instance.
+in doLittle that enables one to declaratively set up authorization rules across namespaces for instance.
 This type of thinking can enable a lot of productivity and makes the code base less errorprone to things that needs to be remembered,
 it can be put in place one time and one can rely on it. Patterns like <a href="https://en.wikipedia.org/wiki/Chain-of-responsibility_pattern">chain-of-responsibility</a>
 can help accomplishing this without going all in on AOP.</p>
 <h2 id="conventions-over-configuration">Conventions over Configuration</h2>
 <p>For a team to deliver consistency in the codebase, one should aim for a recipe that makes it easy to the right thing and
-hard to the wrong thing. Having conventions to govern the recipe forces the team to deliver in one way. Bifrost is highly
+hard to the wrong thing. Having conventions to govern the recipe forces the team to deliver in one way. doLittle is highly
 focused around the concept of conventions in place for things, rather than having to configure thing. The conventions instead
 are configurable. Since things are discovered and one does not need to configure everything, we adhere more easier to the
 Open / Closed principle as mentioned earlier. Meaning that we don&#39;t have to open up code to get new things in place, it will
 be discovered by how the conventions are and configured.</p>
-<p>The simplest example of a convention in play in Bifrost is during initialization, Bifrost will configure whatever <a href="https://en.wikipedia.org/wiki/Inversion_of_control">IOC container</a>
+<p>The simplest example of a convention in play in doLittle is during initialization, doLittle will configure whatever <a href="https://en.wikipedia.org/wiki/Inversion_of_control">IOC container</a>
 you have hooked with conventions. One default convention plays a part here saying that an interface named <code>IFoo</code>will be bound to <code>Foo</code>
-as long as they both sit in the same namespace. You&#39;ll see this throughout Bifrost internally as well, for instance <code>ICommandCoordinator</code> is 
+as long as they both sit in the same namespace. You&#39;ll see this throughout doLittle internally as well, for instance <code>ICommandCoordinator</code> is 
 bound to <code>CommandCoordinator</code>.</p>
-<p>Other good examples of conventions in Bifrost is in the Web frontend where one can specify a particular <em>View</em> to be loaded and it will
+<p>Other good examples of conventions in doLittle is in the Web frontend where one can specify a particular <em>View</em> to be loaded and it will
 automatically look for a <em>ViewModel</em> with the same name but instead of <em>.html</em> as extension, it looks for <em>.js</em>.</p>
 <p>The conventions at play are described throughout the documentation when it is relevant.</p>
 <h2 id="automated-testing">Automated testing</h2>
 <p>Part of being able to move fast with precision is having a good automated test regime. One that runst fast and can be relied upon for avoiding
-regressions. Bifrost was built from day one with automated tests, or rather Specs - specifications. You can read more about how Bifrost
+regressions. doLittle was built from day one with automated tests, or rather Specs - specifications. You can read more about how doLittle
 does this <a href="contributing.html">here</a>.</p>
 <h2 id="cqrs">CQRS</h2>
 <p>Most systems has different requirements for the read and the write part of each bounded context. The requirements vary on what is
 needed to be written in relation to what is being read and used. The performance characteristics are also for the most part different.
 Most line-of-business applications tend to read a lot more than they write. <a href="https://en.wikipedia.org/wiki/Command–query_separation#Command_Query_Responsibility_Segregation">CQRS</a>
 talks about totally segregating the read from the write and treat them uniquely.
-One finds <a href="../Backend/Events/event_sourcing.html">event sourcing</a> often associated with CQRS, something that Bifrost has embraced and helps
-bridge the two sides and stay completely decoupled. It is an optional part of Bifrost but hightly recommended together with an <a href="../Backend/Events/event_store.html">event store</a>.</p>
+One finds <a href="../Backend/Events/event_sourcing.html">event sourcing</a> often associated with CQRS, something that doLittle has embraced and helps
+bridge the two sides and stay completely decoupled. It is an optional part of doLittle but hightly recommended together with an <a href="../Backend/Events/event_store.html">event store</a>.</p>
 <p><img src="images/cqrs.png" alt="Simple CQRS Diagram"></p>
 <h2 id="model-view-view-model">Model View View Model</h2>
 <p>MVVM is a variation of <a href="https://en.wikipedia.org/wiki/Martin_Fowler">Martin Fowler&#39;s</a> <a href="http://martinfowler.com/eaaDev/PresentationModel.html">Presentation Model</a>.
 Its the most commonly used pattern in XAML based platforms such as WPF, Silverlight, UWP, Xamarin and more.</p>
 <h3 id="model">Model</h3>
 <p>The model refers to state being used typically originating from a server component such as a database.
-It is often referred to as the domain model. In the context of Bifrost, this would typically be the <a href="read_model.md">ReadModel</a>.</p>
+It is often referred to as the domain model. In the context of doLittle, this would typically be the <a href="read_model.md">ReadModel</a>.</p>
 <h3 id="view">View</h3>
 <p>The view represents the structure and layout on the screen. It observes the ViewModel.</p>
 <h3 id="viewmodel">ViewModel</h3>
@@ -269,9 +271,9 @@ It is often referred to as the domain model. In the context of Bifrost, this wou
 In XAML the behaviors is represented by a <a href="https://msdn.microsoft.com/en-us/library/system.windows.input.icommand(v=vs.110).aspx">command</a>,
 something that wraps the behavior and provides a point for execution but also the ability to check wether or not
 it can execute. This proves very handy when you want to validate things and not be able to execute unless one is valid or is authorized.
-Bifrost has the concept of commands, these are slightly different however. In fact, commands in Bifrost is a part of the domain.
+doLittle has the concept of commands, these are slightly different however. In fact, commands in doLittle is a part of the domain.
 It is the thing that describes the users intent. You can read more about them <a href="../Backend/Commands/introduction.html">here</a>.
-In the Bifrost JavaScript frontend however, the type of properties found with the XAML platforms
+In the doLittle JavaScript frontend however, the type of properties found with the XAML platforms
 can also be found here. Read more about the frontend commands <a href="../Frontend/JavaScript/commands.html">here</a>.</p>
 <h3 id="binding">Binding</h3>
 <p>Part of connecting the View with the ViewModel and enabling it to observe it is the concept of binding.
@@ -279,15 +281,15 @@ Binding sits between the View and the ViewModel and can with some implementation
 and automatically react to the change. In XAML, this is accomplished through implementing interfaces like <a href="https://msdn.microsoft.com/en-us/library/system.componentmodel.inotifypropertychanged(v=vs.110).aspx">INotifyPropertyChanged</a>
 and <a href="https://msdn.microsoft.com/en-us/library/system.collections.specialized.inotifycollectionchanged(v=vs.110).aspx">INotifyCollectionChanged</a>
 for collections.</p>
-<p>Bifrost have full client support for both XAML based clients and also for JavaScript / Web based.
+<p>doLittle have full client support for both XAML based clients and also for JavaScript / Web based.
 For XAML and what is supported, read more in detail <a href="../Frontend/XAML">here</a>.
-For the JavaScript support, Bifrost has been built on top of <a href="http://knockoutjs.com">Knockout</a> that provides <code>obervable()</code> and <code>observableArray()</code>.
+For the JavaScript support, doLittle has been built on top of <a href="http://knockoutjs.com">Knockout</a> that provides <code>obervable()</code> and <code>observableArray()</code>.
 Read more about the JavaScript support <a href="../Frontend/JavaScript">here</a>.</p>
 <h3 id="figures">Figures</h3>
 <p>A traditional MVVM would look something like this:</p>
 <p><img src="images/mvvm.png" alt="MVVM Architectural Diagram"></p>
-<p>With the artifacts found in Bifrost and more separation in place with CQRS, the diagram looks slightly different</p>
-<p><img src="images/mvvm_bifrost.png" alt="MVVM Architectural Diagram - Bifrost artifacts"></p>
+<p>With the artifacts found in doLittle and more separation in place with CQRS, the diagram looks slightly different</p>
+<p><img src="images/mvvm_doLittle.png" alt="MVVM Architectural Diagram - doLittle artifacts"></p>
 <p>You can read more details about the MVVM pattern <a href="https://en.wikipedia.org/wiki/Model–view–viewmodel">here</a>.</p>
 <h2 id="cohesion">Cohesion</h2>
 <p>Rather than grouping artifacts by its technical nature; keep the things that are relevant to each other close.
@@ -362,16 +364,16 @@ This makes it easier to navigate and provides a more consistent structure than h
 +-- Bounded Context 2
 ...
 </code></pre><h2 id="full-pipeline">Full Pipeline</h2>
-<p>Below is the full pipeline of Bifrost when utilizing all its capabilities.</p>
-<p><img src="images/full_pipeline.png" alt="Bifrost Pipeline"></p>
+<p>Below is the full pipeline of doLittle when utilizing all its capabilities.</p>
+<p><img src="images/full_pipeline.png" alt="doLittle Pipeline"></p>
 <h2 id="conclusion">Conclusion</h2>
-<p>This article described all the principles that has played a key role in building Bifrost and will remain key to the future development of
-Bifrost. The focus is to be able to break things into the smallest of problems and be very explicit about it.
+<p>This article described all the principles that has played a key role in building doLittle and will remain key to the future development of
+doLittle. The focus is to be able to break things into the smallest of problems and be very explicit about it.
 This gives you the freedom of chosing how to deploy your software. If you&#39;re starting out with something new, you might now have the
 luxury of running it scaled out in any way; nor should you, after all you don&#39;t know how it will be responded to in the market - nor
 do you know the performance characteristics of your system, therefor you should probably just deploy it in such a way that it runs
 as a single process on a single server and scale out when needed. It is all about providing the capability when needed, build the
-system in a way that makes this possible. This is what Bifrost aims at making simple without compromise.</p>
+system in a way that makes this possible. This is what doLittle aims at making simple without compromise.</p>
 <p><a href="https://github.com/einari">Einar Ingebrigtsen</a> has created a video for <a href="http://thecodelab.tv">The Code Lab</a> that explains architecture for Microservices, touching
 on most of the concepts described in this article:</p>
 <div class="video">

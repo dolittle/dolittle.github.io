@@ -81,10 +81,10 @@
 <p>An <em>EventProcessor</em> is responsible for processing specific events as they gets applied to
 the system.</p>
 <h2 id="iprocessevents">IProcessEvents</h2>
-<p>Bifrost has an interface called <code>IProcessEvents</code>. This interface is a marker interface and
-does not hold anything you need to implement. Instead, Bifrost is by convention looking for
+<p>doLittle has an interface called <code>IProcessEvents</code>. This interface is a marker interface and
+does not hold anything you need to implement. Instead, doLittle is by convention looking for
 specific method signatures. For <em>event processors</em> it is looking for a method called
-<code>Process</code>that takes the <a href="event.html">event</a> it can process. Bifrost will automatically
+<code>Process</code>that takes the <a href="event.html">event</a> it can process. doLittle will automatically
 manage and call this method. It will also manage ordering of the events, so that it calls
 the method with the events coming in the correct order. It will also make sure to not
 call the method twice for the same event.</p>
@@ -106,11 +106,11 @@ call the method twice for the same event.</p>
 </code></pre><p>You can easily add new processors as you go that deal with the same event but then
 generate different models that gets used by the system.</p>
 <h2 id="coordinating-dependencies">Coordinating dependencies</h2>
-<p>If you have ordering dependencies between processors, Bifrost does not deal with this.
+<p>If you have ordering dependencies between processors, doLittle does not deal with this.
 You would have to explicitly deal with the coordination yourself for this. You could have
 a coordinating event processor that delegates to others - just remember to not implement
 the <code>IProcessEvents</code> interface for these, as they would be automatically discovered and
-called by Bifrost.</p>
+called by doLittle.</p>
 <h2 id="scaling-out">Scaling out</h2>
 <div class="NOTE"><h5>Note</h5><p>Details coming soon</p>
 </div>

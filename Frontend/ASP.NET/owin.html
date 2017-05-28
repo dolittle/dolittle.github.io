@@ -78,11 +78,11 @@
             <article class="content wrap" id="_content" data-uid="">
               <h1 id="owin">OWIN</h1>
               
-<p>Bifrost hooks into the <a href="http://owin.org">OWIN</a> way of starting up and taking over the main initialization.
-The <a href="../../api/Bifrost.Web.BootStrapper.html">BootStrapper</a> in Bifrost uses the <a href="https://github.com/davidebbo/WebActivator">WebActivatorEx</a>
-to hook up the <code>PreApplicationStart</code> and <code>Start</code> methods. With this, the pipeline is configured and Bifrost uses
+<p>doLittle hooks into the <a href="http://owin.org">OWIN</a> way of starting up and taking over the main initialization.
+The <a href="../../api/doLittle.Web.BootStrapper.html">BootStrapper</a> in doLittle uses the <a href="https://github.com/davidebbo/WebActivator">WebActivatorEx</a>
+to hook up the <code>PreApplicationStart</code> and <code>Start</code> methods. With this, the pipeline is configured and doLittle uses
 its different conventions to discover and configure your application. The two most important being the
-<a href="../../api/Bifrost.Configuration.ICanConfigure.html">ICanConfigure</a> and <a href="../../api/Bifrost.Configuration.ICanCreateContainer.html">ICanCreateContainer</a>
+<a href="../../api/doLittle.Configuration.ICanConfigure.html">ICanConfigure</a> and <a href="../../api/doLittle.Configuration.ICanCreateContainer.html">ICanCreateContainer</a>
 interfaces. Read more about configuration <a href="../Backend/configuration.md">here</a> and containers <a href="../Backend/container.md">here</a>.</p>
 <h2 id="webconfig">Web.config</h2>
 <p>In order for this mechanism to work, you need to disable the automatic discovery of app startup. This is done by

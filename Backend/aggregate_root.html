@@ -86,7 +86,7 @@
 <p>An <em>Aggregate</em> is an object or collection of objects (Entities and Value Objects) that must be treated as a single unit for the
 purposes of a business transaction. The <em>Aggregate</em> will maintain all invariants for all objects that comprise the <em>Aggregate</em>,
 enforcing all business rules internal to the <em>Aggregate</em>.</p>
-<h1 id="aggregate-root">Aggregate Root</h1>
+<h2 id="aggregate-root">Aggregate Root</h2>
 <p>All <em>Aggregates</em> have a single point of entry that is know as the root.  The <em>Aggregate Root</em> is the interface to the external world.
 All interaction with an <em>Aggregate</em> is via the <em>Aggregate Root</em>.  As such, an <em>Aggregate Root</em> <strong>MUST</strong> have a globally unique identifier
 within the system.  Other Entites that are present in the <em>Aggregate</em> but are not <em>Aggregate Roots</em> require only a locally unique
@@ -112,12 +112,12 @@ Morpheus, The Matrix</p>
 <p>All rules are not created equal.  Business Rules are essentially business problems, not primarily technical problems.  It may be simpler and cheaper
 to break a rule and then clean it up later in a compensating transaction, than to expend a lot of time, energy and money ensuring the rule is not broken.</p>
 </div>
-<h1 id="aggregate-roots-in-bifrost">Aggregate Roots in Bifrost</h1>
-<p>Bifrost provides a base class <em>AggregateRoot</em> that implements functionality that makes it easier to rehydrate Aggregate Roots, generate events and persist these
+<h2 id="aggregate-roots-in-dolittle">Aggregate Roots in doLittle</h2>
+<p>doLittle provides a base class <em>AggregateRoot</em> that implements functionality that makes it easier to rehydrate Aggregate Roots, generate events and persist these
 to the Event Store.  The <em>AggregateRoot</em> is an implementation of an <a href="./Events/event_sourcing">Event Source</a>.  It is <em>recommended</em> that all your <em>Aggregate Root</em>
 classes inherit from this class.</p>
 <h2 id="state">State</h2>
-<p>In Bifrost, an <em>Aggregate</em> is a purely <em>WRITE</em> concern.  It plays no roll in reading or presentation.  As such, an <em>Aggregate</em> <strong>must not</strong> expose any public
+<p>In doLittle, an <em>Aggregate</em> is a purely <em>WRITE</em> concern.  It plays no roll in reading or presentation.  As such, an <em>Aggregate</em> <strong>must not</strong> expose any public
 state, via variables or properties.  Neither should the <em>Aggregate</em> return any of its internal entities or values objects, even in a transient state.
 The <em>Aggregate</em> is only required to keep such internal state that it requires to maintain its invariants.  Since no public state is exposed by the <em>Aggregate</em>
 it does not need to keep in state values that are not</p>
@@ -125,7 +125,7 @@ it does not need to keep in state values that are not</p>
 <p>All <em>AggregateRoot</em> classes must have a <em>Guid</em> key.  It is permissible to include other candidate keys, though these should have a map to the Guid.</p>
 <h2 id="rehydration">Rehydration</h2>
 <p><em>AggregateRoot</em>s are an <a href="Events/event_sourcing.html">Event Source</a> and their internal state is rehydrated from the persistance store by replaying the events associated
-with this instance.  Bifrost distinguishes between <em>CommittedEventStream</em>s, which are persisted to the <a href="Events/event_store.html">Event Store</a> and <em>UncommittedEventStream</em>s
+with this instance.  doLittle distinguishes between <em>CommittedEventStream</em>s, which are persisted to the <a href="Events/event_store.html">Event Store</a> and <em>UncommittedEventStream</em>s
 which are not persisted.  A <em>CommittedEventStream</em> can be replayed against an <em>AggregateRoot</em> and each <a href="Events/introduction.html">Event</a> re-applied.  Since the <a href="Events/introduction.html">Event</a>
 is responsible for setting an internal state, the <em>AggregateRoot</em> will be returned to its actual state when all <a href="Events/introduction.html">Events</a> are re-applied.  The
 <em>CommittedEventStream</em> is a perfect audit record of all changes of the <em>AggregateRoot</em>.</p>

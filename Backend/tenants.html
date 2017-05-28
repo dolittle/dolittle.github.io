@@ -80,7 +80,7 @@
               
 <p>A tenant is an entity that uses your system. In a multi-tenant solution, this is often seen as the customers
 represented as companies of your system. On a tenant you can have associated properties that you wish to make
-accessible in a transparent way. Bifrost provides a cross-cutting approach to dealing with tenants.
+accessible in a transparent way. doLittle provides a cross-cutting approach to dealing with tenants.
 There are mechanisms in place to populate the details of a tenant as you please.</p>
 <h2 id="itenant">ITenant</h2>
 <p>At the core sits the <code>ITenant</code> interface which holds the TenantId and a dynamic object of properties that you
@@ -88,7 +88,7 @@ want to associate with every tenant.</p>
 <h2 id="tenant-id">Tenant ID</h2>
 <p>Import part of a multi-tenant application is the ability to identify the tenant through the unique id that
 represents it. This type of identification is often found on claims, but could also be found elsewhere.
-By default Bifrost will try to resolve it from the most common claim types in the following order:</p>
+By default doLittle will try to resolve it from the most common claim types in the following order:</p>
 <ul>
 <li><a href="http://schemas.microsoft.com/identity/claims/tenantid">http://schemas.microsoft.com/identity/claims/tenantid</a></li>
 <li><a href="http://schemas.microsoft.com/identity/claims/identityprovider">http://schemas.microsoft.com/identity/claims/identityprovider</a></li>
@@ -100,7 +100,7 @@ The tenant id is a <a href="concepts_and_value_objects.html">concept of a string
 <p>The default behavior can be overridden if you don&#39;t want to associate the tenant id from a claim, but for
 instance from the incoming URL - for instance the domain or similar.
 By putting in an implementation of the <code>ICanResolveTenantId</code> interface you get the chance to do so.</p>
-<pre><code class="lang-csharp">using Bifrost.Tenancy;
+<pre><code class="lang-csharp">using doLittle.Tenancy;
 
 public class MyTenantIdResolver : ICanResolveTenantId
 {
@@ -112,11 +112,11 @@ public class MyTenantIdResolver : ICanResolveTenantId
 }
 </code></pre><p>There can only be one of these implementations. If you have two, an exception will be thrown.</p>
 <h2 id="populator---icanpopulatetenant">Populator - ICanPopulateTenant</h2>
-<p>In Bifrost you&#39;ll find an interface called <code>ICanPopulateTenant</code>. If you want to augment the dynamic object
+<p>In doLittle you&#39;ll find an interface called <code>ICanPopulateTenant</code>. If you want to augment the dynamic object
 associated with every tenant with details, you have to implement this interface. In fact, it is not possible
 to add content to the tenants details in arbitrary code, it only allows to be populated from an implementation
 of <code>ICanPopulateTenant</code>.</p>
-<pre><code class="lang-csharp">using Bifrost.Tenancy;
+<pre><code class="lang-csharp">using doLittle.Tenancy;
 
 public class MyTenantPopulator : ICanPopulateTenant
 {
@@ -127,8 +127,8 @@ public class MyTenantPopulator : ICanPopulateTenant
     }
 }
 </code></pre><p>Later in any code you&#39;ll be able to take a dependency in your constructor to the <code>ITenant</code>interface as long as
-it is being resolved by the <a href="container.html">IOC container</a> set up for Bifrost.</p>
-<pre><code class="lang-csharp">using Bifrost.Tenancy;
+it is being resolved by the <a href="container.html">IOC container</a> set up for doLittle.</p>
+<pre><code class="lang-csharp">using doLittle.Tenancy;
 
 public class MyCode
 {

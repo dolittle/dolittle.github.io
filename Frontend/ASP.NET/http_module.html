@@ -78,16 +78,16 @@
             <article class="content wrap" id="_content" data-uid="">
               <h1 id="http-module">Http Module</h1>
               
-<p>Bifrost knows how to deal with routes coming in. When it is deep linked routes into your application, Bifrost has
+<p>doLittle knows how to deal with routes coming in. When it is deep linked routes into your application, doLittle has
 a <a href="https://msdn.microsoft.com/en-us/library/bb398986.aspx">HttpModule</a> that knows how to serve the right file.
 Traditionally in <a href="https://en.wikipedia.org/wiki/Single-page_application">Single-page applications</a>, is has been popular to
 use of URLs containing a <code>#</code> as a route separator holding the deep linked route into the application after the <code>#</code>.
-With Bifrost, you don&#39;t need to - you can have traditional routes and Bifrost will give you back the correct landing
+With doLittle, you don&#39;t need to - you can have traditional routes and doLittle will give you back the correct landing
 page representing the entrypoint of the single-page application.</p>
 <p>All navigation in the application can assume this will work as well, as the JavaScript side of things picks up on this and
 does the right thing for the browser. This could mean that it uses the <code>#</code> strategy if necessary, which would also work
 with this implementation.</p>
-<p>The HttpModule that Bifrost has for this is hooked up by the <a href="../../api/Bifrost.Web.BootStrapper.html">BootStrapper</a> and
+<p>The HttpModule that doLittle has for this is hooked up by the <a href="../../api/doLittle.Web.BootStrapper.html">BootStrapper</a> and
 is completely transparent to you as a developer.</p>
 
             </article>

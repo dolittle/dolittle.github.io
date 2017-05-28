@@ -78,7 +78,7 @@
             <article class="content wrap" id="_content" data-uid="">
               <h1 id="queries">Queries</h1>
               
-<p>Bifrost has formalized queries into types. These types are then your contracts
+<p>doLittle has formalized queries into types. These types are then your contracts
 for your query capabilities. These queries can be as optimized for the
 datasource as you see fit for the feature they&#39;re being used in.</p>
 <h2 id="queryfor">QueryFor</h2>
@@ -87,10 +87,10 @@ The generic type argument should point to a <a href="read_model.html">read model
 This is a marker interface and does not require you implement anything specific.
 Instead it is relying on a convention; its looking for a property called <code>Query</code>.
 This property needs a getter and can effectively return any type. The type that it
-returns is recognized by Bifrost and Bifrost will look for a <a href="query_providers.html">query provider</a>
+returns is recognized by doLittle and doLittle will look for a <a href="query_providers.html">query provider</a>
 for the type returned. By default you could be returning an <code>IQueryable&lt;&gt;</code> - something
-Bifrost has a <a href="query_providers.html">query provider</a> for.</p>
-<pre><code class="lang-csharp">using Bifrost.Read;
+doLittle has a <a href="query_providers.html">query provider</a> for.</p>
+<pre><code class="lang-csharp">using doLittle.Read;
 
 public class AllEmployees : IQueryFor&lt;Employee&gt;
 {
@@ -99,13 +99,13 @@ public class AllEmployees : IQueryFor&lt;Employee&gt;
 </code></pre><p>The implementation of the query can be anything you want it to be. Use whatever
 underlying datastore and technique to get to the data. The only rule is that there
 must be a <a href="query_providers.html">query provider</a> for the return type.</p>
-<p>Bifrost has a very simple <a href="read_model_repository.html">repository for read models</a> that
+<p>doLittle has a very simple <a href="read_model_repository.html">repository for read models</a> that
 can be used.</p>
 <h3 id="arguments">Arguments</h3>
 <p>With queries, sometimes you need to filter based on input. Any public property with
 a getter and a setter is considered an argument for the query.</p>
 <p>These can then be part of your query.</p>
-<pre><code class="lang-csharp">using Bifrost.Read;
+<pre><code class="lang-csharp">using doLittle.Read;
 
 public class EmployeesHiredAfter : IQueryFor&lt;Employee&gt;
 {
@@ -124,8 +124,8 @@ public class EmployeesHiredAfter : IQueryFor&lt;Employee&gt;
 <p>The arguments can have validators associated with them. All you need to do is to create something
 that inherits from <code>QueryValidationDescriptorFor&lt;&gt;</code> and point the generic argument to the
 query type.</p>
-<pre><code class="lang-csharp">using Bifrost.Validation;
-using Bifrost.Read.Validation;
+<pre><code class="lang-csharp">using doLittle.Validation;
+using doLittle.Read.Validation;
 
 public class EmployeeHiredAfterValidator : QueryValidationDescriptorFor&lt;EmployeesHiredAfter&gt;
 {
@@ -144,10 +144,10 @@ The client representations of queries has functionality related to paging.</p>
 <p>Some features require filtering the read models on a model level. This could for instance be
 row level security with complex scenarios making it easier to do it as a post process after
 data has been received from the datasource.</p>
-<p>Bifrost has a global mechanism for filtering.</p>
+<p>doLittle has a global mechanism for filtering.</p>
 <pre><code class="lang-csharp">using System.Collections.Generic;
 using System.Linq;
-using Bifrost.Read;
+using doLittle.Read;
 
 public class MyReadModelFilter : ICanFilterReadModels
 {
@@ -167,7 +167,7 @@ public class MyReadModelFilter : ICanFilterReadModels
 <h2 id="security">Security</h2>
 <p>You secure the read models by adding a security descriptor, similar to how one does with validation in
 a fluent way.</p>
-<pre><code class="lang-csharp">using Bifrost.Security;
+<pre><code class="lang-csharp">using doLittle.Security;
 
 public class QuerySecurity : BaseSecurityDescriptor
 {

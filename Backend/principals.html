@@ -79,17 +79,17 @@
               <h1 id="principals">Principals</h1>
               
 <p>On the <a href="execution_context.html">execution context</a> you&#39;ll find a property for the current <code>ClaimsPrinicpal</code>.
-Bifrost is oppinionated with the choice of chosing <code>ClaimsPrincipal</code> over the interface <code>IPrincipal</code> in .NET.
+doLittle is oppinionated with the choice of chosing <code>ClaimsPrincipal</code> over the interface <code>IPrincipal</code> in .NET.
 The reasoning behind this is that modern applications are associated with claims based authorization. Since
 one can represents non claims based principals and its identities with the <code>ClaimsPrincipal</code> there really is
 no good reason to not base it on this.</p>
 <h2 id="default-principal">Default principal</h2>
-<p>By default Bifrost uses the <code>ClaimsPrincipal.Current</code> property to resolve. If the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.security.claims.claimsprincipal?view=netframework-4.7"><code>ClaimsPrincipal.ClaimsPrincipalSelector</code>
+<p>By default doLittle uses the <code>ClaimsPrincipal.Current</code> property to resolve. If the <a href="https://docs.microsoft.com/en-us/dotnet/api/system.security.claims.claimsprincipal?view=netframework-4.7"><code>ClaimsPrincipal.ClaimsPrincipalSelector</code>
 in .NET</a> returns
 null - a <code>ClaimsPrincipal</code> with the identity name of <code>[Anonymous]</code> is returned.</p>
 <h2 id="resolve---icanresolveprincipal">Resolve - ICanResolvePrincipal</h2>
 <p>You can override the default way of resolving a principal by dropping in your own implementation of <code>ICanResolvePrincipal</code>.</p>
-<pre><code class="lang-csharp">using Bifrost.Security;
+<pre><code class="lang-csharp">using doLittle.Security;
 
 public class MyPrincipalResolver : ICanResolvePrincipal
 {

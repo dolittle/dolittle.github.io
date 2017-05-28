@@ -90,7 +90,7 @@
 <p>To handle a <em>Command</em>, you simply create a method called <em>Handle</em> with a single parameter of the <em>Command</em> you wish to handle.  A <em>Command Handler</em> does not return anything.  It is not permitted to return a value from a <em>Command</em>.  When a <em>Command</em> is executed, you will receive a <em>CommandResult</em>
 which will indicate whether the <em>Command</em> succeeded and, in the case of failure, why the <em>Command</em> failed.  No artifacts that were created or updated as a result of the <em>Command</em> will be present on the <em>CommandResult</em>.</p>
 <pre><code class="lang-csharp">public void Handle(AddRecommendationToCart cmd)
-</code></pre><p>There <strong>MUST</strong> be a single handler for a Command.  Bifrost will throw an exception if there is no handler for a command or if there is more than one handler for a command.  There can only be a single handler for a command as there must be a clear and unambiguous
+</code></pre><p>There <strong>MUST</strong> be a single handler for a Command.  doLittle will throw an exception if there is no handler for a command or if there is more than one handler for a command.  There can only be a single handler for a command as there must be a clear and unambiguous
 indication of the result of the execution of the command.  Multiple command handlers for a single command would require co-ordination of multiple results with associated rollback of successful handlers after unsuccessful ones.  Where you wish multiple things
 to happen on receipt of a Command, you must implement and handle this yourself in your <em>Command Handler</em>.</p>
 <h2 id="responsibilities">Responsibilities</h2>
