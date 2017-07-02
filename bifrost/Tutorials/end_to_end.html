@@ -130,18 +130,6 @@ the core part:</p>
 for all kinds of combinations of IOC containers, database choices and so forth, but for this tutorial
 we will be very specific and use a set of extensions to Bifrost that we have neatly packed into a
 Nuget package called <code>Bifrost.Default</code>.</p>
-<div class="NOTE"><h5>Note</h5><p>Bifrost is currently dependending on pre-release versions of some of its dependencies (Ninject &amp; FluentValidation)
-Due to Bifrost being marked as a release package, NuGet inside Visual Studio will complain and not install correctly.
-This experience is not the same using the dotnet CLI and project.json.</p>
-<p>In order for you to get things running, you need to explicitly install the FluentValidation and Ninject parts before
-the <code>Bifrost.Default</code> package.</p>
-<p><img src="quickstart_images/ninject_prerelease.png" alt="Ninject PreRelease"></p>
-<p>Or through the package manager console:</p>
-<pre><code class="lang-PowerShell">   PM&gt; Install-Package Ninject -version 4.0.0-beta-0134
-</code></pre><p><img src="quickstart_images/fluentvalidation_prerelease.png" alt="FluentValidation PreRelease"></p>
-<p>Or through the package manager console:</p>
-<pre><code class="lang-PowerShell">   PM&gt; Install-Package FluentValidation -version 6.4.0-beta-9
-</code></pre></div>
 <p>So select the Web project and do:</p>
 <pre><code class="lang-PowerShell">    PM&gt; Install-Package Bifrost.Default
 </code></pre><p>What this does is setup Bifrost with Ninject as IOC Container, Newtonsoft JSON, FluentValidation and SignalR.
